@@ -1,0 +1,138 @@
+---
+permalink: help/reference-functions-window.html 
+sidebar: sidebar 
+keywords: functions, window, display, available, oncommand, workflow, automation, enable, manage 
+summary: 'La fenêtre fonctions affiche les fonctions OnCommand Workflow Automation (WFA) disponibles et vous permet de gérer ces fonctions.' 
+---
+= Fenêtre fonctions
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La fenêtre fonctions affiche les fonctions OnCommand Workflow Automation (WFA) disponibles et vous permet de gérer ces fonctions.
+
+Les fonctions sont des outils complémentaires permettant de réaliser des opérations importantes ou en boîte noire nécessaires à la planification des exécutions de flux de travail. Les fonctions sont traitées pendant la phase de planification. Les fonctions peuvent être utilisées pour effectuer des tâches répétitives et complexes, telles que la définition d'une convention de dénomination complexe. Les fonctions s'exécutent dans leur propre sandbox et peuvent utiliser d'autres fonctions lors de l'exécution. Les fonctions sont écrites dans MVFLEX expression Language (MVEL).
+
+
+
+== Tableau des fonctions
+
+Le tableau fonctions répertorie les fonctions WFA disponibles. Chaque entrée est identifiée comme l'une des suivantes :
+
+* image:../media/community_certification.gif[""] - contenu créé par les utilisateurs
+* image:../media/ps_certified_icon_wfa.gif[""] - Contenu développé par les Services professionnels (PS), qui n'est disponible que sur des installations personnalisées réalisées par les Services professionnels
+* image:../media/community_certification.gif[""] - packs développés par les utilisateurs
+* image:../media/lock_icon_wfa.gif[""] - contenu créé par les utilisateurs verrouillés
+* image:../media/netapp_certified.gif[""] - Contenu certifié NetApp
+
+
+Vous pouvez personnaliser l'affichage du tableau à l'aide des fonctions de filtrage et de tri disponibles pour chaque colonne, ainsi qu'en réorganisant l'ordre des colonnes.
+
+* image:../media/filter_icon_wfa.gif["Icône de filtre"] active ou désactive le filtrage pour l'ensemble de la table. Un "x" rouge apparaît sur l'icône si le filtrage est désactivé.
+* Double-cliquer image:../media/filter_icon_wfa.gif["Icône de filtre"] efface et réinitialise les sélections de filtrage.
+* image:../media/wfa_filter_icon.gif["Icône de filtre"] sur chaque en-tête de colonne, vous pouvez effectuer un filtrage en fonction du contenu des colonnes. Cliquez sur image:../media/wfa_filter_icon.gif["Icône de filtre"] dans une colonne, vous pouvez filtrer un élément spécifique dans la liste déroulante ou sur tous les éléments disponibles.
+* Cliquer sur l'en-tête de colonne permet de basculer entre l'ordre croissant et décroissant de tri. Vous pouvez identifier l'ordre de tri appliqué à l'aide des flèches de tri (image:../media/wfa_sortarrow_up_icon.gif["Icône de tri"] pour les valeurs ascendantes et image:../media/wfa_sortarrow_down_icon.gif["Icône de tri"] pour décroissant).
+* Pour réorganiser l'emplacement des colonnes, vous pouvez faire glisser et déposer les colonnes dans l'ordre voulu. Toutefois, vous ne pouvez pas masquer ou supprimer ces colonnes.
+* Cliquez sur la zone de texte filtre *Search* pour rechercher un contenu spécifique. En outre, vous pouvez effectuer une recherche à l'aide des opérateurs pris en charge pour le type de colonne applicable, alphabétique ou numérique.
+
+
+Le tableau fonctions contient les colonnes suivantes :
+
+* *Certification*
++
+Indique si la fonction est créée par l'utilisateur (image:../media/community_certification.gif[""]), PS (image:../media/ps_certified_icon_wfa.gif[""]), communauté (image:../media/community_certification.gif[""]), verrouillé par l'utilisateur (image:../media/lock_icon_wfa.gif[""]) Ou certifié NetApp (image:../media/netapp_certified.gif[""]).
+
+* *Nom*
++
+Affiche le nom de la fonction.
+
+* *Version entité*
++
+Affiche le numéro de version de l'objet dans `major.minor.revision` format--par exemple, 1.0.0.
+
+* *Description*
++
+Affiche la description des fonctions.
+
+* *Dernière mise à jour*
++
+Affiche la date et l'heure de la dernière mise à jour de la fonction.
+
+* *Mis à jour par*
++
+Affiche l'utilisateur qui a mis à jour la fonction.
+
+* *Verrouillé par*
++
+Affiche l'utilisateur qui a verrouillé la fonction.
+
+
+
+
+
+== Barre d'outils
+
+La barre d'outils se trouve au-dessus de l'en-tête de colonne. Vous pouvez utiliser les icônes de la barre d'outils pour effectuer diverses actions. Vous pouvez également accéder à ces actions à partir du menu contextuel de la fenêtre.
+
+* *image:../media/new_wfa_icon.gif["Nouvelle icône"] (Nouveau)*
++
+Ouvre la fenêtre Nouvelle fonction, qui permet de créer une nouvelle fonction.
+
+* *image:../media/edit_wfa_icon.gif["Icône Modifier"] (Modifier)*
++
+Ouvre la fenêtre de fonction <EntryName> de la fonction sélectionnée, qui vous permet de modifier la fonction.
+
+* *image:../media/clone_wfa_icon.gif["Icône cloner"] (Clone)*
++
+Ouvre la fenêtre Nouvelle fonction <EntryName>_copy, qui vous permet de créer une copie de la fonction sélectionnée.
+
+* *image:../media/lock_wfa_icon.gif["Icône de verrouillage"] (Verrouillage)*
++
+Ouvre la boîte de dialogue Verrouiller la confirmation de fonction, qui permet de verrouiller la fonction sélectionnée. Cette option n'est activée que pour les fonctions que vous avez créées.
+
+* *image:../media/unlock_wfa_icon.gif["Icône de déverrouillage"] (Déverrouiller)*
++
+Ouvre la boîte de dialogue déverrouiller la confirmation de fonction, qui permet de déverrouiller la fonction sélectionnée.
+
++
+Cette option n'est activée que pour les fonctions que vous avez verrouillées. Les administrateurs peuvent déverrouiller des fonctions verrouillées par d'autres utilisateurs.
+
+* *image:../media/delete_wfa_icon.gif["Icône Supprimer"] (Supprimer)*
++
+Ouvre la boîte de dialogue de confirmation de la fonction Supprimer, qui permet de supprimer la fonction créée par l'utilisateur sélectionnée.
+
++
+
+NOTE: Vous ne pouvez pas supprimer une fonction WFA ou PS.
+
+* *image:../media/export_wfa_icon.gif["Icône Exporter"] (Exportation)*
++
+Permet d'exporter la fonction créée par l'utilisateur sélectionnée.
+
++
+
+NOTE: Vous ne pouvez pas exporter une fonction WFA ou PS.
+
+* *image:../media/test_wfa_icon.gif["icône de test"] (Test)*
++
+Ouvre la boîte de dialogue Test, qui permet de tester la fonction sélectionnée.
+
+* *image:../media/add_to_pack.png["icône ajouter au pack"] (Ajouter au pack)*
++
+Ouvre la boîte de dialogue Ajouter aux fonctions du pack, qui permet d'ajouter la fonction et ses entités fiables à un pack, modifiable.
+
++
+
+NOTE: La fonction Ajouter au pack est activée pour les fonctions dont la certification est définie sur aucune et Verrouiller.
+
+* *image:../media/remove_from_pack.png["icône supprimer du pack"] (Retirer du paquet)*
++
+Ouvre la boîte de dialogue fonctions Supprimer du pack pour la fonction sélectionnée, qui vous permet de supprimer ou de supprimer la fonction du pack.
+
++
+
+NOTE: La fonction Supprimer du pack est activée pour les fonctions dont la certification est définie sur aucune et Verrouiller.
+
+

@@ -1,0 +1,19 @@
+---
+permalink: help/reference-log-viewer-directory-window.html 
+sidebar: sidebar 
+keywords: log, viewer, window, list, available, oncommand, workflow, automation, access, select, maintenance, click, log viewer 
+summary: La fenêtre Visionneuse de journal répertorie tous les journaux disponibles dans OnCommand Workflow Automation. Vous pouvez accéder à cette fenêtre en sélectionnant Paramètres, puis, sous Maintenance, cliquez sur Log Viewer. 
+---
+= Visionneuse de journaux
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La fenêtre Visionneuse de journal répertorie tous les journaux disponibles dans OnCommand Workflow Automation. Vous pouvez accéder à cette fenêtre en sélectionnant *Paramètres* et sous *Maintenance*, cliquez sur *Log Viewer*.
+
+La fenêtre Visionneuse de journal répertorie les fichiers journaux (par ordre alphabétique) et inclut la taille et la date de génération de chaque fichier.
+
+
+NOTE: Cette fonction n'est pas prise en charge sur Microsoft Windows Server 2003.

@@ -1,0 +1,74 @@
+---
+permalink: help/reference-new-category-dialog-box.html 
+sidebar: sidebar 
+keywords: new, category, dialog box, enable, create, workflow 
+summary: La boîte de dialogue Nouvelle catégorie vous permet de créer une nouvelle catégorie de flux de travail. 
+---
+= Nouvelle catégorie
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La boîte de dialogue Nouvelle catégorie vous permet de créer une nouvelle catégorie de flux de travail.
+
+* *Nom*
++
+Permet d'entrer un nom pour la catégorie. Vous devez saisir un nom pour enregistrer la catégorie.
+
+* *Description*
++
+Permet de saisir une description pour la catégorie.
+
+* *Flux de travail disponibles*
++
+Affiche tous les flux de travail disponibles qui ne sont pas déplacés vers la case *flux de travail sélectionnés*.
+
+* *Flux de travail sélectionnés*
++
+Affiche tous les workflows sélectionnés pour la catégorie.
+
+* *Catégorie utilisée pour l'autorisation de workflow*
++
+Permet de sélectionner des utilisateurs avec un rôle d'opérateur pouvant exécuter la catégorie. Par défaut, la case n'est pas cochée et la catégorie est disponible pour tous les utilisateurs.
+
+* *Limiter l'accès aux flux de travail de cette catégorie aux utilisateurs et aux groupes Active Directory suivants*
++
+Vous permet de limiter l'accès aux flux de travail de la catégorie sélectionnée aux utilisateurs sélectionnés et aux groupes Active Directory.
+
+* *Approbateurs et opérateurs disponibles*
++
+Affiche tous les utilisateurs avec des rôles d'approbateur et d'opérateur.
+
+* *Approbateurs et opérateurs sélectionnés*
++
+Affiche les utilisateurs autorisés à exécuter la catégorie.
+
+* *Approbateur et groupes d'opérateurs disponibles*
++
+Affiche tous les groupes avec des rôles d'approbateur et d'opérateur.
+
+* *Approbateur et groupes d'opérateurs sélectionnés*
++
+Affiche les groupes autorisés à exécuter la catégorie.
+
+
+
+
+
+== Boutons de commande
+
+* *Boutons de sélection*
++
+Vous permet de déplacer l'entrée sélectionnée d'une boîte à l'autre.
+
+* *Enregistrer*
++
+Enregistre la catégorie et ferme la boîte de dialogue.
+
+* *Annuler*
++
+N'enregistre pas la catégorie et ferme la boîte de dialogue.
+
+

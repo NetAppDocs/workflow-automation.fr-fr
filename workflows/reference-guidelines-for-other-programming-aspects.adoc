@@ -1,0 +1,129 @@
+---
+permalink: workflows/reference-guidelines-for-other-programming-aspects.html 
+sidebar: sidebar 
+keywords: aware, certain, important, considerations, convert, powershell, commands, perl, different, capabilities 
+summary: Vous devez prendre en compte certaines considérations importantes lorsque vous convertissez des commandes PowerShell en Perl, car PowerShell et Perl possèdent des fonctionnalités différentes. 
+---
+= Considérations relatives à la conversion des commandes PowerShell en Perl
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez prendre en compte certaines considérations importantes lorsque vous convertissez des commandes PowerShell en Perl, car PowerShell et Perl possèdent des fonctionnalités différentes.
+
+
+
+== Types d'entrée de commande
+
+OnCommand Workflow Automation (WFA) permet aux concepteurs de flux de production d'utiliser des baies et un hachage comme entrées pour la commande lors de la définition d'une commande. Ces types d'entrée ne peuvent pas être utilisés lorsque la commande est définie à l'aide de Perl. Si vous voulez qu'une commande Perl accepte les entrées de tableau et de hachage, vous pouvez définir l'entrée comme une chaîne dans le concepteur. La définition de la commande peut alors analyser l'entrée, qui est transmise pour créer une matrice ou un hachage selon les besoins. La description de l'entrée décrit le format dans lequel l'entrée est attendue.
+
+[listing]
+----
+my @input_as_array  = split(',', $InputString); #Parse the input string of format val1,val2 into an array
+
+my %input_as_hash = split /[;=]/, $InputString; #Parse the input string of format key1=val1;key2=val2 into a hash.
+----
+
+
+== Déclaration PowerShell
+
+Les exemples suivants montrent comment une entrée de tableau peut être transmise à PowerShell et Perl. Les exemples décrivent le CronMonth d'entrée, qui spécifie le mois où le travail cron est planifié pour s'exécuter. Les valeurs valides sont des nombres entiers compris entre -1 et 11. Une valeur de -1 indique que le planning s'exécute tous les mois. Toute autre valeur indique un mois donné, 0 étant janvier et 11 décembre.
+
+[listing]
+----
+[parameter(Mandatory=$false, HelpMessage="Months in which the schedule executes. This is a comma separated list of values from 0 through 11. Value -1 means all months.")]
+  [ValidateRange(-1, 11)]
+  [array]$CronMonths,
+----
+
+
+== Instructions Perl
+
+[listing]
+----
+GetOptions(
+    "Cluster=s"         => \$Cluster,
+    "ScheduleName=s"    => \$ScheduleName,
+    "Type=s"            => \$Type,
+    "CronMonths=s"      => \$CronMonths,
+) or die 'Illegal command parameters\n';
+
+sub get_cron_months {
+    return get_cron_input_hash('CronMonths', $CronMonths, 'cron-month', -1,
+        11);
+}
+
+sub get_cron_input_hash {
+    my $input_name   = shift;
+    my $input_value  = shift;
+    my $zapi_element = shift;
+    my $low          = shift;
+    my $high         = shift;
+    my $exclude      = shift;
+
+    if (!defined $input_value) {
+        return undef;
+    }
+
+    my @values = split(',', $input_value);
+
+    foreach my $val (@values) {
+        if ($val !~ /^[+-]?\d+$/) {
+            die
+                "Invalid value '$input_value' for $input_name: $val must be an integer.\n";
+        }
+        if ($val < $low || $val > $high) {
+            die
+                "Invalid value '$input_value' for $input_name: $val must be from $low to $high.\n";
+        }
+        if (defined $exclude && $val == $exclude) {
+            die
+                "Invalid value '$input_value' for $input_name: $val is not valid.\n";
+        }
+    }
+    # do something
+}
+----
+
+
+== Définition de commande
+
+Il peut être nécessaire d'étendre une expression à une seule ligne dans PowerShell à l'aide d'un opérateur de tuyauterie en plusieurs blocs d'instructions en Perl afin d'obtenir la même fonctionnalité. Le tableau suivant illustre un exemple de l'une des commandes d'attente.
+
+[cols="2*"]
+|===
+| Déclaration PowerShell | Instructions Perl 
+
+
+ a| 
+[listing]
+----
+# Get the latest job which moves the specified volume to the specified
+ aggregate.
+$job = Get-NcJob -Query $query | where
+{$_.JobDescription -eq "Split" + $VolumeCloneName} | Select-Object -First 1
+---- a| 
+[listing]
+----
+my $result = $server->job_get_iter(
+	'query' => {'job-type' => 'VOL_CLONE_SPLIT'},
+	'desired-attributes' => {
+		'job-type' => '',
+		'job-description' => '',
+		'job-progress' => '',
+		'job-state' => ''
+	}
+);
+my @jobarray;
+for my $job (@{ $result->{'attributes-list'}})
+{
+	my $description = $job->{'job-description'};
+	if($description =~ /$VolumeCloneName/)
+	{
+		push(@jobarray, $job)
+	}
+}
+----
+|===

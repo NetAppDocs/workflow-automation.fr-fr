@@ -1,0 +1,33 @@
+---
+permalink: windows-install/concept-restoring-the-wfa-database.html 
+sidebar: sidebar 
+keywords: restore, oncommand, workflow, automation, database 
+summary: 'La restauration de la base de données OnCommand Workflow Automation (WFA) inclut la restauration des paramètres de configuration système et des informations de cache, y compris la base de données de jeux.' 
+---
+= Restauration de la base de données OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La restauration de la base de données OnCommand Workflow Automation (WFA) inclut la restauration des paramètres de configuration système et des informations de cache, y compris la base de données de jeux.
+
+* La restauration d'une base de données WFA efface la base de données WFA actuelle.
+* Vous ne pouvez restaurer une sauvegarde de base de données WFA que sur un système qui exécute la même version ou une version plus récente de WFA.
++
+Par exemple, si vous avez créé une sauvegarde sur un système exécutant WFA 4.2, la sauvegarde ne peut être restaurée que sur des systèmes qui exécutent WFA 4.2 ou version ultérieure.
+
+* Une fois l'opération de restauration terminée, le certificat SSL WFA est remplacé par le certificat SSL dans le fichier de sauvegarde.
+
+
+[NOTE]
+====
+* Une opération complète de restauration des bases de données et des configurations WFA est requise pendant la reprise sur incident. Elle peut être utilisée dans des environnements autonomes et haute disponibilité.
+* Une sauvegarde complète ne peut pas être créée à l'aide de l'interface utilisateur Web.
++
+Vous pouvez utiliser uniquement les commandes ou les API REST de l'interface de ligne de commande pour sauvegarder et restaurer intégralement la base de données WFA pendant la reprise d'activité.
+
+
+
+====

@@ -1,0 +1,188 @@
+---
+permalink: rhel-install/task-install-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, install, linux 
+summary: 'Vous pouvez installer OnCommand Workflow Automation (WFA) à l"aide de l"interface de ligne de commandes.' 
+---
+= Installez OnCommand Workflow Automation sous Linux
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez installer OnCommand Workflow Automation (WFA) à l'aide de l'interface de ligne de commandes.
+
+* Vous devez avoir passé en revue les conditions préalables à l'installation.
++
+xref:reference-prerequisites-for-installing-workflow-automation.adoc[Conditions préalables à l'installation]
+
+* Vous devez avoir téléchargé le programme d'installation de WFA à partir du site de support NetApp.
+
+
+Si vous installez WFA sur une machine virtuelle (VM), le nom de la machine virtuelle ne doit pas inclure le caractère de soulignement (_).
+
+Vous pouvez modifier l'emplacement d'installation par défaut à l'invite du shell : `./WFA-version_number.bin [-i WFA_install_directory] [-d mysql_data_directory]`
+
+Si vous modifiez l'emplacement d'installation par défaut, le répertoire de données MySQL n'est pas supprimé lorsque vous désinstallez WFA. Vous devez supprimer manuellement le répertoire.
+
+
+NOTE: Avant de réinstaller WFA 4.2 ou version ultérieure, vous devez supprimer le répertoire de données MySQL si vous avez désinstallé MySQL.
+
+.Étapes
+. Connectez-vous au serveur Linux en tant que `root` utilisateur.
+. Accédez au répertoire où se trouve le fichier .bin exécutable.
+. Installez WFA en choisissant l'une des méthodes suivantes :
++
+** Installation interactive
++
+... Démarrer la session interactive : `./WFA-version_number.bin`
+... Entrez les informations d'identification de l'utilisateur admin par défaut, puis appuyez sur entrée.
++
+Vous devez noter les informations d'identification de l'utilisateur admin et vous assurer que le mot de passe répond aux critères suivants :
+
++
+**** Huit caractères minimum
+**** Un caractère en majuscules
+**** Un caractère en minuscules
+**** Un chiffre
+**** Un caractère spécial
+**** Les caractères spéciaux suivants ne sont pas pris en charge par un mot de passe et provoquent l'échec de l'installation :
++
+`" ; < > , = et {caret} |
+
+
+
+... Acceptez les ports par défaut pour la configuration WFA ou fournissez les ports personnalisés, puis appuyez sur entrée.
+... Indiquez le nom de votre entreprise et le nom du site, puis appuyez sur entrée.
++
+Le nom du site peut inclure l'emplacement de l'installation WFA, par exemple Pittsburgh, PA.
+
+... Vérifiez que WFA est installé correctement en choisissant l'une des actions suivantes :
++
+**** Accédez à WFA via un navigateur Web.
+**** Vérifiez que le service NetApp WFA Server et le service NetApp WFA Database sont exécutés :
++
+....
+service wfa-server status
+service wfa-db status
+....
+
+
+
+
+** Installation silencieuse
++
+À l'invite du shell :
+
++
+`./WFA-version_number.bin [-u admin_user_ name] [-p admin_user_password] [-m https_port] [-n http_port] [-c company_name] [-s site_name] [-i install_directory] [-d mysql_data_directory][-y] [-b]`
+
++
+Si vous souhaitez effectuer une installation silencieuse, vous devez spécifier des valeurs pour toutes les options de commande. Les options de commande sont les suivantes :
+
++
+[cols="2*"]
+|===
+| Option | Description 
+
+
+ a| 
+-y
+ a| 
+L'option permettant d'ignorer la confirmation d'installation
+
+
+
+ a| 
+-b
+ a| 
+Option permettant d'ignorer la création d'une sauvegarde de la base de données WFA lors d'une mise à niveau
+
+
+
+ a| 
+-u
+ a| 
+Nom d'utilisateur administrateur
+
+
+
+ a| 
+-p
+ a| 
+Mot de passe administrateur le mot de passe administrateur doit répondre aux critères suivants :
+
+*** Huit caractères minimum
+*** Un caractère en majuscules
+*** Un caractère en minuscules
+*** Un chiffre
+*** Un caractère spécial
+*** Les caractères suivants ne sont pas autorisés et entraînent l'échec de la saisie du mot de passe :
++
+`" ; < > , = et {caret} |
+
+
+
+
+
+ a| 
+-m.
+ a| 
+Port HTTPS
+
+
+
+ a| 
+-n
+ a| 
+Port HTTP
+
+
+
+ a| 
+ a| 
+
+
+
+ a| 
+-s
+ a| 
+Nom du site
+
+
+
+ a| 
+-c
+ a| 
+Nom de l'entreprise
+
+
+
+ a| 
+-i
+ a| 
+Chemin du répertoire d'installation
+
+
+
+ a| 
+-d
+ a| 
+Répertoire de données MySQL
+
+
+
+ a| 
+-h
+ a| 
+L'option d'affichage affiche l'aide
+
+|===
+
+
+
+
+*Informations connexes*
+
+https://mysupport.netapp.com/site/["Support NetApp"^]

@@ -1,0 +1,78 @@
+---
+permalink: help/reference-mvel-enabled-fields-in-wfa.html 
+sidebar: sidebar 
+keywords: field, oncommand, workflow, automation, enable, expression, language, syntax, design 
+summary: 'Plusieurs champs de OnCommand Workflow Automation (WFA) sont activés pour le langage d"expression MVFLEX (MVEL). Vous pouvez utiliser les syntaxes MVEL dans ces champs lors de la conception de flux de travail.' 
+---
+= Champs compatibles MVEL dans OnCommand Workflow Automation
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Plusieurs champs de OnCommand Workflow Automation (WFA) sont activés pour le langage d'expression MVFLEX (MVEL). Vous pouvez utiliser les syntaxes MVEL dans ces champs lors de la conception de flux de travail.
+
+Le tableau suivant explique quand et où vous pouvez utiliser MVEL syntaxes dans l'interface WFA:
+
+[cols="2*"]
+|===
+| Quand... | Où utiliser... 
+
+
+ a| 
+Création ou modification d'un flux de travail
+ a| 
+* _Menu:Workflow_[Détails > Paramètres de retour > valeur du paramètre]
+* _Menu:Workflow_[Détails > constantes > valeur]
+
+
+
+
+ a| 
+Création ou modification des détails de commande dans un flux de travail
+ a| 
+* Menu:commandes[Paramètres de _parameter_name_ > entrer critères de recherche > sélection des ressources > Finder > Paramètres]
+* Menu:commandes[Paramètres de _parameter_name_ > entrer critères de recherche > sélection de ressources > Avancé > Exécuter la recherche uniquement lorsque l'expression suivante est vraie]
+* Menu:commandes[Paramètres pour _parameter_name_ > Avancé > si l'expression suivante est VRAIE]
+* Menu:commandes[Paramètres de _parameter_name_ > autres paramètres]
+* Menu:commandes[_parameter_name_ > attributs]
+
+
+
+
+ a| 
+Création ou modification d'une commande
+ a| 
+* Menu:commandes[Définition de la commande _nom_commande_ > Propriétés > représentation de chaîne]
+
+
+
+
+ a| 
+Création ou modification d'une fonction
+ a| 
+* Menu:fonctions[fonction_nom_fonction_ > définition de fonction]
+
+
+
+
+ a| 
+Création ou modification d'un modèle
+ a| 
+* Menu:modèle[Paramètres pour _nom_paramètre_ > modèle _nom_modèle_ > attributs > valeur]
+
+
+
+
+ a| 
+Modification d'une ligne
+ a| 
+* _Menu:Workflow_[Workflow > répéter ligne > répétitions > nombre de fois]
+* _Menu:Workflow_[Workflow > répéter ligne > variables > variables pour _valeur_initiale_ et _expression_]
+* _Menu:Workflow_[Workflow > répéter ligne > répétitions > pour chaque ressource d'un groupe > critères de recherche de ressources > Paramètres à filtrer]
+* _Menu:Workflow_[Workflow > Ajouter une condition > si l'expression suivante est VRAIE]
+
+
+|===

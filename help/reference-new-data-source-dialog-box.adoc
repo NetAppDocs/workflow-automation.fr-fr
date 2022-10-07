@@ -1,0 +1,121 @@
+---
+permalink: help/reference-new-data-source-dialog-box.html 
+sidebar: sidebar 
+keywords: new, data, source, dialog box, enable, add 
+summary: 'La boîte de dialogue Nouvelle source de données vous permet d"ajouter une nouvelle source de données.' 
+---
+= Nouvelle source de données
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La boîte de dialogue Nouvelle source de données vous permet d'ajouter une nouvelle source de données.
+
+
+
+== Propriétés de configuration de la source de données
+
+* *Nom*
++
+Permet de spécifier un nom pour la source de données.
+
+* *Type de source de données*
++
+Permet de sélectionner le type de source de données, par exemple Active IQ Unified Manager - 6.0 (MYSQL).
+
++
+Lorsque vous sélectionnez un type de source de données, le port, le schéma, le nom d'utilisateur, le mot de passe, les champs intervalle (minutes) et délai (s) sont renseignés avec des données.
+
++
+
+NOTE: Si vous souhaitez exécuter des flux de production de protection des données OnCommand Workflow Automation (WFA) à partir d'un serveur Active IQ Unified Manager, vous devez configurer WFA au niveau du serveur Active IQ Unified Manager.
+
++
+Pour plus d'informations, reportez-vous à l'aide en ligne de _OnCommand Unified Manager_.
+
+* *Nom d'hôte*
++
+Permet de spécifier le nom d'hôte ou l'adresse IP (IPv4 ou IPv6) de la source de données.
+
++
+
+NOTE: Le type de source de données Active IQ Unified Manager ne prend pas en charge les adresses IPv6.
+
+* *Port*
++
+Affiche le numéro de port associé, le cas échéant, pour le type de source de données sélectionné.
+
++
+Vous pouvez modifier le port par défaut et spécifier un port différent pour la source de données.
+
+* *Schéma*
++
+Affiche le schéma associé au type de source de données sélectionné--par exemple _cm_Storage_ pour Active IQ Unified Manager - 6.0 (MYSQL).
+
++
+Cette propriété ne peut pas être modifiée.
+
+* *Nom d'utilisateur*
++
+Affiche le nom d'utilisateur associé, le cas échéant, pour le type de source de données sélectionné.
+
++
+Vous devez spécifier le nom d'utilisateur approprié pour que cette source de données remplace le nom d'utilisateur par défaut :
+
++
+** Pour les versions Active IQ Unified Manager antérieures à 6.0, vous devez entrer le nom d'utilisateur que vous avez utilisé pour remplacer les informations d'identification par défaut lors de l'exécution de ocsetup.
+** Pour Active IQ Unified Manager 6.0 et versions ultérieures, vous devez entrer le nom d'utilisateur du compte d'utilisateur de la base de données que vous avez créé sur le serveur Active IQ Unified Manager.
+** Pour Performance Advisor, vous devez saisir le nom d'utilisateur d'un utilisateur Active IQ Unified Manager ayant le rôle minimum GlobalRead.
+
+
+* *Mot de passe*
++
+Permet de spécifier un mot de passe pour le type de source de données sélectionné.
+
++
+Vous devez spécifier un mot de passe pour remplacer le mot de passe par défaut du nom d'utilisateur de cette source de données :
+
++
+** Pour les versions Active IQ Unified Manager antérieures à 6.0, vous devez saisir le mot de passe que vous avez utilisé pour remplacer les informations d'identification par défaut lors de l'exécution de ocsetup.
+** Pour Active IQ Unified Manager 6.0 et versions ultérieures, vous devez saisir le mot de passe du compte utilisateur de la base de données que vous avez créé sur le serveur Active IQ Unified Manager.
+** Pour Performance Advisor, vous devez saisir le mot de passe d'un utilisateur Active IQ Unified Manager ayant le rôle minimal de GlobalRead.
+
+
+* *Base de données*
+* *Intervalle (minutes)*
++
+Vous permet de cliquer sur la valeur et de sélectionner un intervalle (en minutes) à l'aide des flèches vers le haut et vers le bas.
+
++
+
+NOTE: Si l'intervalle est défini sur zéro (0), l'échantillonnage automatique est désactivé.
+
++
+L'intervalle par défaut pour l'échantillonnage des données est :
+
++
+** Type de source de données basé sur des scripts : 1440 (performance et vc)
+** Type de source de données SQL : 30 (cm_stockage, stockage et cm_performance)
+
+
+* *Voir le guide d'instructions de configuration*
++
+Ouvre la boîte de dialogue Guide d'instructions de configuration qui vous permet de spécifier les instructions de configuration de la source de données.
+
+
+
+
+
+== Boutons de commande
+
+* *Enregistrer*
++
+Enregistre les paramètres de configuration et ferme la boîte de dialogue.
+
+* *Annuler*
++
+Annule les modifications, le cas échéant, et ferme la boîte de dialogue.
+
+

@@ -1,0 +1,64 @@
+---
+permalink: workflows/reference-guidelines-for-indentation.html 
+sidebar: sidebar 
+keywords: aware, guidelines, indentation, writing, powershell, perl, script, oncommand, workflow, automation 
+summary: 'Vous devez connaître les consignes d"indentation lors de l"écriture d"un script PowerShell ou Perl pour OnCommand Workflow Automation (WFA).' 
+---
+= Directives pour la mise en retrait
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez connaître les consignes d'indentation lors de l'écriture d'un script PowerShell ou Perl pour OnCommand Workflow Automation (WFA).
+
+[cols="2*"]
+|===
+| Directives | Exemple 
+
+
+ a| 
+Un onglet est égal à quatre espaces vides.
+ a| 
+
+
+
+ a| 
+Utilisez les onglets et les accolades pour montrer le début et la fin d'un bloc.
+ a| 
+Script PowerShell
+
+[listing]
+----
+if
+($pair.length-ne 2)
+{
+throw "Got wrong input data"
+}
+----
+Script Perl
+
+[listing]
+----
+if
+(defined $MaxDirectorySize)
+{
+# convert from MBytes to Bytes
+my $MaxDirectorySizeBytes = $MaxDirectorySize *
+1024 * 1024;
+}
+----
+
+
+ a| 
+Ajoutez des lignes vides entre des ensembles d'opérations ou des segments de code.
+ a| 
+[listing]
+----
+$options=$option.trim();
+$pair=$option.split(" ");
+Get-WFAlogger -Info -messages $("split options: "+
+$Pair)
+----
+|===

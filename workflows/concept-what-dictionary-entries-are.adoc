@@ -1,0 +1,18 @@
+---
+permalink: workflows/concept-what-dictionary-entries-are.html 
+sidebar: sidebar 
+keywords: dictionary, entries, oncommand, workflow, automation, building, blocks, use, represent, object, types, relationships, storage, environments, filters, return, value, natural, keys 
+summary: 'Les entrées de dictionnaire sont l"un des éléments de base OnCommand Workflow Automation (WFA). Vous pouvez utiliser des entrées de dictionnaire pour représenter les types d"objets et leurs relations dans vos environnements de stockage et de stockage. Vous pouvez ensuite utiliser des filtres dans les flux de travail pour renvoyer la valeur des clés naturelles des entrées du dictionnaire.' 
+---
+= Quelles sont les entrées du dictionnaire
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les entrées de dictionnaire sont l'un des éléments de base OnCommand Workflow Automation (WFA). Vous pouvez utiliser des entrées de dictionnaire pour représenter les types d'objets et leurs relations dans vos environnements de stockage et de stockage. Vous pouvez ensuite utiliser des filtres dans les flux de travail pour renvoyer la valeur des clés naturelles des entrées du dictionnaire.
+
+Une entrée de dictionnaire est la définition d'un type d'objet pris en charge par WFA. Chaque entrée de dictionnaire représente un type d'objet et sa relation dans les environnements de stockage et de stockage pris en charge. Un objet de dictionnaire se compose d'une liste d'attributs, qui peuvent être vérifiés par type. Un objet de dictionnaire avec des valeurs complètes décrit une instance d'objet d'un type. En outre, les attributs de référence décrivent la relation de l'objet avec l'environnement ; par exemple, un objet dictionnaire de volume possède de nombreux attributs, tels que nom, taille_mb et volume_Guarantee. De plus, l'objet dictionnaire de volumes inclut des références à l'agrégat et à la baie contenant le volume sous la forme array_ID et Aggregate_ID
+
+La table cache d'un objet est une base de données contenant quelques-uns ou tous les attributs de l'entrée du dictionnaire marqués pour la mise en cache. Pour qu'une entrée de dictionnaire inclut une table de cache, au moins un des attributs de l'entrée de dictionnaire doit être marqué pour la mise en cache. Les entrées de dictionnaire incluent des clés naturelles, qui sont des identifiants uniques pour les objets (par exemple, les volumes 7-mode sont identifiés de façon unique par leur nom et l'adresse IP de la baie qui les contient). Les qtrees sont identifiés par le nom du qtree, le nom du volume et l'adresse IP de la baie. Vous devez identifier les attributs du dictionnaire qui font partie des clés naturelles de l'entrée du dictionnaire lors de la création d'entrées du dictionnaire.

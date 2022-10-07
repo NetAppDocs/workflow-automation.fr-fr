@@ -1,0 +1,50 @@
+---
+permalink: help/task-configure-authentication-settings.html 
+sidebar: sidebar 
+keywords: configure, oncommand, workflow, automation, use, microsoft, active, directory, lightweight, access, protocol, server, authentication, authorization 
+summary: 'Vous pouvez configurer OnCommand Workflow Automation (WFA) pour qu"il utilise un serveur Microsoft Active Directory (AD) LDAP (Lightweight Directory Access Protocol) à des fins d"authentification et d"autorisation.' 
+---
+= Configurer les paramètres d'authentification
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez configurer OnCommand Workflow Automation (WFA) pour qu'il utilise un serveur Microsoft Active Directory (AD) LDAP (Lightweight Directory Access Protocol) à des fins d'authentification et d'autorisation.
+
+*Ce dont vous aurez besoin*
+
+Vous devez avoir configuré un serveur LDAP Microsoft AD dans votre environnement.
+
+*À propos de cette tâche*
+
+Seule l'authentification LDAP Microsoft AD est prise en charge pour WFA. Vous ne pouvez pas utiliser d'autres méthodes d'authentification LDAP, notamment Microsoft AD Lightweight Directory Services (AD LDS) ou Microsoft Global Catalog.
+
+
+NOTE: Lors de la communication, LDAP envoie le nom d'utilisateur et le mot de passe en texte brut. Cependant, les communications LDAPS (LDAP Secure) sont cryptées et sécurisées.
+
+.Étapes
+. Connectez-vous à WFA via un navigateur Web en tant qu'administrateur.
+. Cliquez sur *Paramètres* et sous *Configuration*, cliquez sur *authentification*.
+. Cochez la case *Activer Active Directory*.
+. Entrez les informations requises dans les champs :
++
+.. *Facultatif:* si vous voulez utiliser le format _user@domain_ pour les utilisateurs de domaine, remplacez `sAMAccountName` avec `userPrincipalName` Dans le champ *Nom d'utilisateur attribut*.
+.. *Facultatif:* si des valeurs uniques sont requises pour votre environnement, modifiez les champs requis.
+.. Saisissez l'URI du serveur AD comme suit : + exemple : `ldap://active_directory_server_address\[:port\]`
++
+`ldap://NB-T01.example.com[:389]`
+
++
+Si vous avez activé LDAP sur SSL, vous pouvez utiliser le format URI suivant : `ldaps://active_directory_server_address\[:port\]`
+
+.. Ajouter une liste de noms de groupe AD aux rôles requis.
++
+
+NOTE: Vous pouvez ajouter une liste de noms de groupes AD aux rôles requis dans la fenêtre groupes Active Directory.
+
+
+
+. Cliquez sur *Enregistrer*.
+

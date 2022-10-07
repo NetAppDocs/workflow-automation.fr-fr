@@ -1,0 +1,462 @@
+---
+permalink: help/reference-supported-workflows-in-clustered-data-ontap.html 
+sidebar: sidebar 
+keywords: aware, workflow, supported, oncommand, workflow, automation, paired, different, version, unified manager, server 
+summary: 'Vous devez connaître les flux de travail pris en charge lorsque OnCommand Workflow Automation (WFA) est associé à différentes versions du serveur Unified Manager.' 
+---
+= Workflows pris en charge dans ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez connaître les flux de travail pris en charge lorsque OnCommand Workflow Automation (WFA) est associé à différentes versions du serveur Unified Manager.
+
+Le tableau suivant répertorie les flux de production pris en charge pour différentes versions de serveur Unified Manager.
+
+[cols="3*"]
+|===
+| Nom du flux de travail | Pris en charge par Unified Manager Server 6.3 et version ultérieure | Pris en charge par Unified Manager Server 5.x 
+
+
+ a| 
+Abandon de la relation SnapMirror
+ a| 
+Oui.
+ a| 
+Non
+
+
+
+ a| 
+Ajoutez ou étendez une classe de stockage de capacité à Infinite Volume
+ a| 
+Oui.
+ a| 
+Non
+
+
+
+ a| 
+Ajoutez ou étendez une classe de stockage aux performances à Infinite Volume
+ a| 
+Oui.
+ a| 
+Non
+
+
+
+ a| 
+Interrompre une relation SnapMirror
+ a| 
+Oui.
+ a| 
+Non
+
+
+
+ a| 
+Configuration des serveurs CIFS/SMB
+ a| 
+Oui.
+ a| 
+Non
+
+
+
+ a| 
+Mise à niveau du contrôleur et du tiroir d'une paire haute disponibilité
+ a| 
+Oui.
+ a| 
+Oui.
+
+Pris en charge uniquement pour les clusters exécutant des versions antérieures à Data ONTAP 8.3.
+
+
+
+ a| 
+Création d'un volume Data ONTAP de base
+ a| 
+Oui.
+ a| 
+Oui.
+
+
+
+ a| 
+Créez un volume NFS Data ONTAP en cluster
+ a| 
+Oui.
+ a| 
+Oui.
+
+
+
+ a| 
+Créez un partage CIFS en qtree Data ONTAP
+ a| 
+Oui.
+ a| 
+Oui.
+
+
+
+ a| 
+Créez un volume clustered Data ONTAP
+ a| 
+Oui.
+ a| 
+Oui.
+
+
+
+ a| 
+Créez un partage CIFS de volume Data ONTAP en cluster
+ a| 
+Oui.
+ a| 
+Oui.
+
+
+
+ a| 
+Création d'un volume clustered Data ONTAP avec groupe de règles de qualité de service
+ a| 
+Oui.
+ a| 
+Non
+
+
+
+ a| 
+Créer une planification cron
+ a| 
+Oui.
+ a| 
+Oui.
+
+
+
+ a| 
+Créez et configurez un Storage Virtual machine avec Infinite Volume
+ a| 
+Oui.
+ a| 
+Non
+
+
+
+ a| 
+Créez et configurez un SVM
+ a| 
+Oui.
+ a| 
+Oui.
+
+Pris en charge uniquement pour les clusters exécutant des versions antérieures à Data ONTAP 8.3.
+
+
+
+ a| 
+Création et configuration d'un ordinateur virtuel SAN Storage
+ a| 
+Oui.
+ a| 
+Oui.
+
+Pris en charge uniquement pour les clusters exécutant des versions antérieures à Data ONTAP 8.3.
+
+
+
+ a| 
+Création d'une relation SnapMirror clustered Data ONTAP sur 8.1.x
+ a| 
+Oui.
+ a| 
+Non
+
+
+
+ a| 
+Créer des programmes et des stratégies
+ a| 
+Oui.
+ a| 
+Non
+
+
+
+ a| 
+Créer une relation SnapMirror
+ a| 
+Oui.
+ a| 
+Non
+
+
+
+ a| 
+Créer des programmes et des stratégies
+ a| 
+Oui.
+ a| 
+Non
+
+
+
+ a| 
+Créer SnapMirror, puis SnapMirror en cascade
+ a| 
+Oui.
+ a| 
+Non
+
+
+
+ a| 
+Créer SnapMirror puis SnapVault cascade
+ a| 
+Oui.
+ a| 
+Non
+
+
+
+ a| 
+Créer une relation SnapVault
+ a| 
+Oui.
+ a| 
+Non
+
+
+
+ a| 
+Créer SnapVault puis SnapMirror en cascade
+ a| 
+Oui.
+ a| 
+Non
+
+
+
+ a| 
+Créer un datastore VMware NFS sur un système de stockage Data ONTAP en cluster
+ a| 
+Oui.
+ a| 
+Oui.
+
+
+
+ a| 
+Créez, mappez et protégez des LUN clustered Data ONTAP avec une relation SnapMirror
+ a| 
+Oui.
+ a| 
+Non
+
+
+
+ a| 
+Mettre en place le peering de cluster
+ a| 
+Oui.
+ a| 
+Non
+
+
+
+ a| 
+Étendez un Infinite Volume sans classes de stockage
+ a| 
+Oui.
+ a| 
+Non
+
+
+
+ a| 
+Modifier la relation SnapMirror
+ a| 
+Oui.
+ a| 
+Non
+
+
+
+ a| 
+Déplacez un volume clustered Data ONTAP
+ a| 
+Oui.
+ a| 
+Oui.
+
+
+
+ a| 
+Accès aux fichiers multiprotocole
+ a| 
+Oui.
+ a| 
+Non
+
+
+
+ a| 
+Configuration de serveur multiprotocole
+ a| 
+Oui.
+ a| 
+Non
+
+
+
+ a| 
+Accès aux fichiers NFSv3
+ a| 
+Oui.
+ a| 
+Non
+
+
+
+ a| 
+Configuration du serveur NFSv3
+ a| 
+Oui.
+ a| 
+Non
+
+
+
+ a| 
+Protection des volumes avec la relation SnapMirror
+ a| 
+Oui.
+ a| 
+Non
+
+
+
+ a| 
+Protection des volumes avec la relation SnapVault
+ a| 
+Oui.
+ a| 
+Non
+
+
+
+ a| 
+Relation SnapMirror de mise en veille
+ a| 
+Oui.
+ a| 
+Non
+
+
+
+ a| 
+Supprimer un volume clustered Data ONTAP
+ a| 
+Oui.
+ a| 
+Oui.
+
+
+
+ a| 
+Supprimer la relation SnapMirror
+ a| 
+Oui.
+ a| 
+Non
+
+
+
+ a| 
+Reprendre la relation SnapMirror
+ a| 
+Oui.
+ a| 
+Non
+
+
+
+ a| 
+Resynchroniser les relations SnapMirror
+ a| 
+Oui.
+ a| 
+Non
+
+
+
+ a| 
+Inversion de la relation SnapMirror de resynchronisation
+ a| 
+Oui.
+ a| 
+Non
+
+
+
+ a| 
+Configurez la protection des données pour un Infinite Volume
+ a| 
+Oui.
+ a| 
+Non
+
+
+
+ a| 
+Accès aux fichiers SMB
+ a| 
+Oui.
+ a| 
+Non
+
+
+
+ a| 
+Peering de serveurs virtuels de stockage
+ a| 
+Oui.
+ a| 
+Non
+
+
+
+ a| 
+Promotion du volume racine de l'ordinateur virtuel de stockage
+ a| 
+Oui.
+ a| 
+Non
+
+
+
+ a| 
+Protection des volumes racines de l'ordinateur virtuel du stockage
+ a| 
+Oui.
+ a| 
+Non
+
+
+
+ a| 
+Transférer la relation SnapMirror
+ a| 
+Oui.
+ a| 
+Non
+
+|===
+*Informations connexes*
+
+http://mysupport.netapp.com/matrix["Matrice d'interopérabilité"^]

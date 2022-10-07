@@ -1,0 +1,18 @@
+---
+permalink: workflows/concept-what-functions-are.html 
+sidebar: sidebar 
+keywords: use, functions, workflows, complex, task, complete, during, planning, phase 
+summary: Vous pouvez utiliser une fonction dans vos flux de travail pour une tâche complexe qui doit être terminée lors de la phase de planification du flux de travail. 
+---
+= Quelles sont les fonctions
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser une fonction dans vos flux de travail pour une tâche complexe qui doit être terminée lors de la phase de planification du flux de travail.
+
+Vous pouvez écrire des fonctions à l'aide du MVFLEX expression Language (MVEL). Vous pouvez utiliser les fonctions pour regrouper la logique couramment utilisée ainsi que la logique plus complexe dans une fonction nommée et la réutiliser comme valeurs pour les paramètres de commande ou de filtre. Vous pouvez écrire une fonction une seule fois et l'utiliser pour l'ensemble des flux de travail. Vous pouvez utiliser des fonctions pour gérer les tâches répétitives et les tâches qui peuvent être complexes, telles que la définition d'une convention de nommage complexe.
+
+Les fonctions peuvent utiliser d'autres fonctions pendant leur exécution.

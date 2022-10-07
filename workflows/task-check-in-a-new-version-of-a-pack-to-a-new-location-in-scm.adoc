@@ -1,0 +1,33 @@
+---
+permalink: workflows/task-check-in-a-new-version-of-a-pack-to-a-new-location-in-scm.html 
+sidebar: sidebar 
+keywords: update, version, pack, oncommand, workflow, automation, check, new, location, source, control, management, server 
+summary: 'Vous pouvez mettre à jour la version d"un pack dans OnCommand Workflow Automation (WFA), puis archiver le pack mis à jour à un nouvel emplacement dans le serveur SCM (Source Control Management).' 
+---
+= Archiver une nouvelle version d'un pack de flux de travail WFA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez mettre à jour la version d'un pack dans OnCommand Workflow Automation (WFA), puis archiver le pack mis à jour à un nouvel emplacement dans le serveur SCM (Source Control Management).
+
+Le SCM doit être configuré et vous devez disposer des informations d'identification admin ou architecte.
+
+.Étapes
+. Connectez-vous à la fenêtre *WFA* via un navigateur Web.
+. Cliquez sur *Content Management* > *Packs*.
+. Cliquez sur l'icône *Modifier Pack*.
+. Dans la boîte de dialogue *Pack <nom du pack>*, dans le champ *version*, mettez à jour la version du pack.
+. Cliquez sur *Enregistrer*.
+. Cliquez sur l'icône *Exporter vers le serveur* au niveau du pack.
+. Dans la boîte de dialogue *Exporter vers le dossier du serveur*, dans le champ *emplacement du dossier sur le système du serveur*, saisissez un nouvel emplacement du système de fichiers.
++
+Si le pack a déjà été enregistré dans le `C:\p4\cdot\1.0.0` emplacement du système de fichiers, enregistrez-le maintenant dans le `C:\p4\cdot\2.0.0` emplacement.
+
+. Dans l'emplacement du client SCM, vérifiez le contenu du pack à un nouvel emplacement dans le serveur SCM.
++
+Si le pack a déjà été enregistré dans le `//depot/wfa/packs/cdot/1.0.0` Chemin d'accès du serveur SCM, vous pouvez l'enregistrer à un autre emplacement, par exemple `//depot/wfa/packs/cdot/2.0.0.`
+
+

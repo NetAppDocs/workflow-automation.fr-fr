@@ -1,0 +1,14 @@
+---
+permalink: workflows/concept-coding-guidelines-for-wfa.html 
+sidebar: sidebar 
+keywords: understand, general, oncommand, workflow, automation, coding, guidelines, naming, conventions, recommendations, creating, various, building, blocks, filters, functions, commands 
+summary: 'Vous devez connaître OnCommand Workflow Automation les directives de codage, les conventions de nommage et les recommandations générales relatives à la création d"éléments de base comme les filtres, les fonctions, les commandes et les workflows.' 
+---
+= Consignes de codage pour WFA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez connaître OnCommand Workflow Automation les directives de codage, les conventions de nommage et les recommandations générales relatives à la création d'éléments de base comme les filtres, les fonctions, les commandes et les workflows.

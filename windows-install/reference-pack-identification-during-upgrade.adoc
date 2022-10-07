@@ -1,0 +1,27 @@
+---
+permalink: windows-install/reference-pack-identification-during-upgrade.html 
+sidebar: sidebar 
+keywords: pack, identification, during upgrade 
+summary: 'Lors du processus de mise à niveau, OnCommand Workflow Automation (WFA) identifie et classifie les entités en un pack. Si vous avez supprimé une entité d"un pack avant la mise à niveau, le pack ne sera pas identifié pendant la mise à niveau.' 
+---
+= Identification de l'emballage pendant la mise à niveau
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lors du processus de mise à niveau, OnCommand Workflow Automation (WFA) identifie et classifie les entités en un pack. Si vous avez supprimé une entité d'un pack avant la mise à niveau, le pack ne sera pas identifié pendant la mise à niveau.
+
+Lors du processus de mise à niveau, WFA compare les packs de la base de données à la liste de packs disponibles dans le Storage Automation Store afin d'identifier les packs qui ont été installés avant la mise à niveau. L'identification des packs classe ainsi les packs existants dans la base de données.
+
+WFA effectue les processus suivants pour identifier et classer les packs :
+
+* Maintient une liste des packs disponibles dans le Storage Automation Store afin de comparer et d'identifier les packs qui ont été installés avant la mise à niveau.
+* Classifie les entités d'un pack dans le cadre de la synchronisation Storage Automation Store, si Storage Automation Store est activé.
+* Classe les entités en packs à l'aide de la liste mise à jour.
+
+
+L'identification des packs est uniquement applicable aux packs certifiés NetApp qui ont été téléchargés depuis le Storage Automation Store.
+
+Si un pack n'est pas identifié lors de la mise à niveau, vous pouvez réimporter le pack pour l'identifier dans WFA. Les fichiers wfa.log fournissent des détails sur les entités qui n'ont pas été identifiées comme un pack pendant la mise à niveau.

@@ -1,0 +1,20 @@
+---
+permalink: rhel-install/concept-oncommand-workflow-automation-deployment-architecture.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, deployment, architecture 
+summary: 'Un serveur OnCommand Workflow Automation (WFA) est installé pour orchestrer les opérations de flux de travail dans plusieurs data centers.' 
+---
+= Architecture de déploiement de OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un serveur OnCommand Workflow Automation (WFA) est installé pour orchestrer les opérations de flux de travail dans plusieurs data centers.
+
+Vous pouvez gérer votre environnement d'automatisation de manière centralisée en connectant votre serveur WFA à plusieurs déploiements Active IQ Unified Manager et VMware vCenters.
+
+L'illustration suivante présente un exemple de déploiement :
+
+image::../media/wfa_arch_isg.gif[outil isg wfa arch]

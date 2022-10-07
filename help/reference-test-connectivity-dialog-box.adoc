@@ -1,0 +1,44 @@
+---
+permalink: help/reference-test-connectivity-dialog-box.html 
+sidebar: sidebar 
+keywords: test, connectivity, dialog box, enable, test, system, associated, credential, operation, trigger, search, path, first, look, exact, match, pattern, service, authentication 
+summary: 'La boîte de dialogue Tester la connectivité vous permet de tester la connexion au système associé à un identifiant. L"opération de test de connectivité déclenche le chemin de recherche et recherche d"abord une correspondance exacte, puis une correspondance de modèle et enfin l"authentification du service LDAP.' 
+---
+= Boîte de dialogue Tester la connectivité
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La boîte de dialogue Tester la connectivité vous permet de tester la connexion au système associé à un identifiant. L'opération de test de connectivité déclenche le chemin de recherche et recherche d'abord une correspondance exacte, puis une correspondance de modèle et enfin l'authentification du service LDAP.
+
+Le protocole ICMP (Internet Control message Protocol) est utilisé pour vérifier si le système est en cours d'exécution avant de tester la connectivité.
+
+
+
+== Tester les paramètres de connectivité
+
+* *Type*
++
+Vous permet de sélectionner le type d'informations d'identification dans la liste déroulante.
+
+* *Nom/IP*
++
+Vous permet de spécifier le nom d'hôte ou l'adresse IP pour les informations d'identification.
+
+
+
+
+
+== Boutons de commande
+
+* *Test*
++
+Ouvre une tentative de connexion au nom d'hôte ou à l'adresse IP.
+
+* *Fermer*
++
+Annule les modifications, le cas échéant, et ferme la boîte de dialogue.
+
+

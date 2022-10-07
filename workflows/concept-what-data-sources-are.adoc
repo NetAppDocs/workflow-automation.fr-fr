@@ -1,0 +1,20 @@
+---
+permalink: workflows/concept-what-data-sources-are.html 
+sidebar: sidebar 
+keywords: data, source, method, establishing, connection, systems, files, databases, order, extract, example, active iq, unified manager 9.4, type 
+summary: 'Une source de données est une méthode permettant d"établir une connexion avec d"autres systèmes, fichiers et bases de données afin d"extraire des données. Par exemple, une source de données peut être une connexion à une base de données Active IQ Unified Manager de type source de données Active IQ Unified Manager 9.4.' 
+---
+= La nature des sources de données
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Une source de données est une méthode permettant d'établir une connexion avec d'autres systèmes, fichiers et bases de données afin d'extraire des données. Par exemple, une source de données peut être une connexion à une base de données Active IQ Unified Manager de type source de données Active IQ Unified Manager 9.4.
+
+Vous pouvez ajouter une source de données personnalisée à OnCommand Workflow Automation (WFA) pour l'acquisition des données après avoir défini le type de source de données requis en associant le schéma de mise en cache, le port requis et la méthode d'acquisition au type de source de données.
+
+WFA met les informations en cache via différentes sources de données. WFA collecte des informations sur les ressources à partir des sources de données et les formats nécessaires au schéma de mise en cache. Les tables de cache, qui sont les tables à l'intérieur des schémas de mise en cache, sont formatées pour correspondre aux objets d'entrée du dictionnaire. Lorsque vous utilisez un Finder dans les flux de travail, il renvoie un objet dictionnaire et les données de l'objet dictionnaire sont renseignées à partir des tables de cache. Le processus d'acquisition de données à partir des sources de données est appelé _data source acquisition_. Vous pouvez utiliser une méthode basée sur des scripts ou une méthode basée sur des pilotes pour l'acquisition de sources de données. Les sources peuvent être différentes les unes des autres et l'acquisition de la source de données peut les échantillonner à des intervalles de temps différents. WFA fusionne ensuite ces informations dans la base de données et superpose les données de réservation afin de maintenir les informations de ressources mises à jour dans la base de données.
+
+La base de données WFA inclut plusieurs schémas de mise en cache différents. Un schéma de mise en cache est un ensemble de tables et chaque table inclut des informations provenant d'un certain type d'entrée de dictionnaire ; toutefois, les tables peuvent inclure des informations combinées provenant de plusieurs sources d'un type de source de données spécifique. WFA utilise les informations de base de données pour comprendre l'état des ressources, effectuer des calculs et exécuter des commandes sur les ressources.

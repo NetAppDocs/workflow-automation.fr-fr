@@ -1,0 +1,66 @@
+---
+permalink: help/reference-add-cache-query-dialog-box.html 
+sidebar: sidebar 
+keywords: add, cache, query, dialog, enable, create, new, dictionary, entry, associate, data, provide, type, specific, unified manager, version 
+summary: 'La boîte de dialogue Ajouter une requête de cache vous permet de créer une nouvelle requête de cache pour une entrée de dictionnaire et d"associer la requête à un type de source de données, tel qu"une version de Active IQ Unified Manager spécifique.' 
+---
+= Boîte de dialogue Ajouter une requête de cache
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La boîte de dialogue Ajouter une requête de cache vous permet de créer une nouvelle requête de cache pour une entrée de dictionnaire et d'associer la requête à un type de source de données, tel qu'une version de Active IQ Unified Manager spécifique.
+
+* *Entrée Dictionnaire*
++
+Vous permet de sélectionner une entrée de dictionnaire pour laquelle vous souhaitez créer une requête de cache.
+
+* *Version entité*
++
+Vous permet de saisir le numéro de version de la requête de cache dans `major.minor.revision` format--par exemple, 1.0.0.
+
+* *Types de sources de données*
++
+Vous permet de sélectionner les types de source de données que vous souhaitez associer à la requête de cache, par exemple Active IQ Unified Manager_6.0.
+
+
+
+
+
+== Structure de la table
+
+* *Onglet attributs*
++
+Affiche les attributs associés à l'entrée du dictionnaire.
+
+* *Créer onglet SQL de table*
++
+Affiche le script Créer une table pour cette entrée de dictionnaire.
+
+
+
+
+
+== Requête de sélection SQL
+
+Permet d'entrer la requête SQL Select qui récupère les données de la table du fournisseur de données spécifié.
+
+
+
+== Boutons de commande
+
+* *Test*
++
+Permet de tester la requête SQL saisie dans le champ *SQL Select request*.
+
+* *Enregistrer*
++
+Enregistre la requête de cache et ferme la boîte de dialogue.
+
+* *Annuler*
++
+Annule les modifications, le cas échéant, et ferme la boîte de dialogue.
+
+

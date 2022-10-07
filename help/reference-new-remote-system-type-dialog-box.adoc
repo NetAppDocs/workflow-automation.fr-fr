@@ -1,0 +1,76 @@
+---
+permalink: help/reference-new-remote-system-type-dialog-box.html 
+sidebar: sidebar 
+keywords: new, remote, system, type, dialog box, enable, add, oncommand, workflow, automation, predefined, meet, requirement, change, configuration 
+summary: 'La boîte de dialogue Nouveau type de système distant vous permet d"ajouter un nouveau type de système distant à OnCommand Workflow Automation (WFA) si un type de système prédéfini ne répond pas à vos besoins ou si vous souhaitez modifier la configuration d"un type de système prédéfini.' 
+---
+= Boîte de dialogue Nouveau type de système distant
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La boîte de dialogue Nouveau type de système distant vous permet d'ajouter un nouveau type de système distant à OnCommand Workflow Automation (WFA) si un type de système prédéfini ne répond pas à vos besoins ou si vous souhaitez modifier la configuration d'un type de système prédéfini.
+
+* Onglet Détails
+* Script de validation
+
+
+
+
+== Onglet Détails
+
+Permet de spécifier les détails du type de système distant, tels que le nom, la description, la version et le protocole de connexion.
+
+* *Nom*
++
+Permet de spécifier un nom pour le type de système distant. Vous devez spécifier un nom pour enregistrer le type de système distant.
+
+* *Description*
++
+Vous permet de saisir une description pour le type de système distant.
+
+* *Version*
++
+Permet de spécifier le numéro de version du type de système distant dans `major.minor.revision` format--par exemple, 1.0.0.
+
+* *Protocole de connexion*
++
+Permet de sélectionner l'un des protocoles suivants à utiliser par WFA lors de la connexion au système distant :
+
++
+** HTTPS avec retour au HTTP
++
+La connexion utilise principalement HTTPS. En cas d'échec de la connexion via HTTPS, HTTP est utilisé. Si la connexion via HTTP échoue également, la tentative de connexion est interrompue.
+
+** HTTPS uniquement
+** HTTP uniquement
+** Personnalisées
+
+
+
+
+Lorsque vous sélectionnez un protocole de connexion, les champs Protocole, Port par défaut et délai par défaut (sec) sont renseignés avec les données.
+
+
+
+== Script de validation
+
+Permet de tester la connectivité du protocole sélectionné avec le type de système distant.
+
+Vous pouvez cliquer sur *Tester Perl script* pour exécuter le script afin de tester la connectivité.
+
+
+
+== Boutons de commande
+
+* *Enregistrer*
++
+Enregistre les paramètres de configuration du type de système distant et ferme la boîte de dialogue.
+
+* *Annuler*
++
+Annule les modifications, le cas échéant, et ferme la boîte de dialogue.
+
+

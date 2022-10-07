@@ -1,0 +1,58 @@
+---
+permalink: help/reference-clone-cache-query-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, cache, query, dialog box, enable, associated, dictionary, entry 
+summary: La boîte de dialogue Modifier la requête de cache vous permet de modifier une requête de cache associée à une entrée de dictionnaire. 
+---
+= Boîte de dialogue Cloner la requête de cache
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La boîte de dialogue Modifier la requête de cache vous permet de modifier une requête de cache associée à une entrée de dictionnaire.
+
+* *Entrée Dictionnaire*
++
+Spécifie une entrée de dictionnaire associée à la requête de cache.
+
+* *Version entité*
++
+Vous permet de saisir le numéro de version de la requête de cache dans `major.minor.revision` format--par exemple, 1.0.0.
+
+* *Types de sources de données*
++
+Spécifie le type de source de données associé à la requête de cache.
+
+
+
+
+
+== Structure de la table
+
+Affiche les attributs et la syntaxe SQL associés à l'entrée du dictionnaire.
+
+* *Requête de sélection SQL*
++
+Spécifie la requête SQL associée à l'entrée du dictionnaire et au type de fournisseur de données sélectionné.
+
+
+
+
+
+== Boutons de commande
+
+* *Test*
++
+Vous permet de tester la requête SQL saisie dans le champ de requête SQL Select.
+
+* *Enregistrer*
++
+Enregistre la requête de cache en tant que nouvelle entrée dans la table requêtes de cache et ferme la boîte de dialogue.
+
+* *Annuler*
++
+Annule les modifications, le cas échéant, et ferme la boîte de dialogue.
+
+

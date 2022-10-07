@@ -1,0 +1,42 @@
+---
+permalink: workflows/task-create-a-dictionary-entry.html 
+sidebar: sidebar 
+keywords: create, wfa, dictionary, entry, define, object, type, relationship, storage, environment 
+summary: 'Vous pouvez créer une entrée de dictionnaire WFA lorsque vous souhaitez définir un nouveau type d"objet et sa relation dans votre environnement de stockage.' 
+---
+= Créer une entrée de dictionnaire
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez créer une entrée de dictionnaire WFA lorsque vous souhaitez définir un nouveau type d'objet et sa relation dans votre environnement de stockage.
+
+.Étapes
+. Cliquez sur *conception de la source de données* > *Dictionnaire*.
+. Cliquez sur image:../media/new_wfa_icon.gif["Nouvelle icône"] dans la barre d'outils.
+. Dans la boîte de dialogue *Nouvelle entrée de dictionnaire*, entrez les détails requis dans les champs *Nom du type d'objet* et *Description*.
+. Pour le champ *Schéma*, effectuez l'une des opérations suivantes :
++
+** Sélectionnez un schéma disponible dans la liste.
+** Cliquez sur *Ajouter un nouveau schéma*, entrez le *Nom du schéma* requis dans la boîte de dialogue Nouveau schéma, puis cliquez sur *Ajouter*.
+
+
+. Cliquez sur *Ajouter ligne* et procédez comme suit pour décrire l'attribut :
++
+.. Cliquez sur la colonne *Nom* et entrez le nom de l'attribut.
+.. Dans la colonne *Type*, sélectionnez le type requis.
++
+La colonne *String Length* est renseignée et modifiable si vous avez sélectionné la chaîne comme type. En outre, la colonne *valeurs* est modifiable si vous avez sélectionné *enum* comme type.
+
+.. Sélectionnez les cases à cocher appropriées pour l'attribut dans `Natural Key, To be Cached`, et `Can be Null columns`.
++
+Si vous avez coché la case *clé naturelle*, vous ne pouvez pas cocher la case *peut être nul*.
+
+.. Ajoutez les attributs requis pour l'objet dictionnaire.
+.. *Facultatif:* cochez la case *les valeurs dans les colonnes de clé naturelle sont sensibles à la casse* si vous souhaitez que les touches naturelles soient sensibles à la casse.
+
+
+. Cliquez sur *Enregistrer*.
+

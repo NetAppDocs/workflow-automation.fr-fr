@@ -1,0 +1,95 @@
+---
+permalink: help/reference-reserved-words.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, include, reserved, words, use, attribute, parameters, variable name, user, input, constants, return parameters 
+summary: 'OnCommand Workflow Automation (WFA) inclut des mots réservés. Vous ne devez pas utiliser les mots réservés dans les flux de travail pour des attributs ou des paramètres tels que les noms de variables, les entrées utilisateur, les constantes et les paramètres de retour.' 
+---
+= Mots réservés
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation (WFA) inclut des mots réservés. Vous ne devez pas utiliser les mots réservés dans les flux de travail pour des attributs ou des paramètres tels que les noms de variables, les entrées utilisateur, les constantes et les paramètres de retour.
+
+Voici la liste des mots réservés dans WFA:
+
+[cols="3*"]
+|===
+
+
+ a| 
+* et
+* Baie
+* assertion
+* Booléen
+* booléen
+* Octet
+* octet
+* car
+* Caractère
+* Séquence de caractères
+* Classe
+* Chargeur de classe
+* Compilateur
+* contient
+* convertable_to
+* def
+* à faire
+* Double
+* double
+* sinon
+* vide
+* faux
+
+ a| 
+* Flottement
+* flottement
+* pour
+* pour chaque élément
+* fonction
+* si
+* importer
+* import_statique
+* dans
+* instancede
+* int
+* Entier
+* est
+* isef
+* Longue
+* longue
+* Mathématiques
+* nouveau
+* nul
+* Nombre
+* Objet
+* ou
+
+ a| 
+* proto
+* retour
+* Exécution
+* SecurityManager
+* Court
+* court
+* son
+* StrictMath
+* Chaîne
+* Tampon de stringBuffer
+* StringBuilder
+* strsim
+* commutateur
+* Système
+* Filetage
+* Threadlocal
+* vrai
+* jusqu'à
+* var
+* Vide
+* pendant
+* avec
+
+
+|===

@@ -1,0 +1,303 @@
+---
+permalink: workflows/reference-guidelines-for-variables.html 
+sidebar: sidebar 
+keywords: aware, guidelines, powershell, perl, variables, oncommand, automation, create, command, data, source, type 
+summary: 'Avant de créer une commande ou un type de source de données, vous devez connaître les instructions relatives aux variables PowerShell et Perl dans OnCommand Workflow Automation (WFA).' 
+---
+= Instructions pour les variables
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant de créer une commande ou un type de source de données, vous devez connaître les instructions relatives aux variables PowerShell et Perl dans OnCommand Workflow Automation (WFA).
+
+
+
+== Variables PowerShell
+
+[cols="2*"]
+|===
+| Directives | Exemple 
+
+
+ a| 
+Pour les paramètres d'entrée de script :
+
+* Utilisez le cas de Pascal.
+* Ne pas utiliser de trait de soulignement.
+* N'utilisez pas d'abréviations.
+
+ a| 
+`$VolumeName`
+
+`$AutoDeleteOptions`
+
+`$Size`
+
+
+
+ a| 
+Pour les variables internes de script :
+
+* Utiliser l'étui Camel.
+* Ne pas utiliser de trait de soulignement.
+* N'utilisez pas d'abréviations.
+
+ a| 
+`$newVolume`
+
+`$qtreeName`
+
+`$time`
+
+
+
+ a| 
+Pour les fonctions :
+
+* Utilisez le cas de Pascal.
+* Ne pas utiliser de trait de soulignement.
+* N'utilisez pas d'abréviations.
+
+ a| 
+`GetVolumeSize`
+
+
+
+ a| 
+Les noms de variables ne sont pas sensibles à la casse. Cependant, pour améliorer la lisibilité, vous ne devez pas utiliser une majuscule différente pour le même nom.
+ a| 
+`$variable` est identique à `$Variable.`
+
+
+
+ a| 
+Les noms de variables doivent être en anglais brut et doivent être liés à la fonctionnalité du script.
+ a| 
+Utiliser `$name` et non `$a.`
+
+
+
+ a| 
+Déclarez explicitement le type de données pour chaque variable.
+ a| 
+[nom de chaîne]
+
+taille [int]
+
+
+
+ a| 
+N'utilisez pas de caractères spéciaux (! @ # & % , .) et espaces.
+ a| 
+Aucune
+
+
+
+ a| 
+N'utilisez pas de mots clés réservés PowerShell.
+ a| 
+Aucune
+
+
+
+ a| 
+Regroupez les paramètres d'entrée en plaçant les paramètres obligatoires d'abord suivis des paramètres facultatifs.
+ a| 
+[listing]
+----
+param(
+[parameter(Mandatory=$true)]
+[string]$Type,
+
+[parameter(Mandatory=$true)]
+[string]$Ip,
+
+[parameter(Mandatory=$false)]
+[string]$VolumeName
+)
+----
+
+
+ a| 
+Commenter toutes les variables d'entrée à l'aide de `_HelpMessage_` annotation avec un message d'aide significatif.
+ a| 
+[listing]
+----
+[parameter(Mandatory=$false,HelpMessage="LUN to map")]
+[string]$LUNName
+----
+
+
+ a| 
+N'utilisez pas « Filer » comme nom de variable ; utilisez plutôt « Array ».
+ a| 
+Aucune
+
+
+
+ a| 
+Utiliser `_ValidateSet_` annotation dans les cas où l'argument obtient des valeurs énumérées. Ceci se traduit automatiquement par le type de données Enum pour le paramètre.
+ a| 
+[listing]
+----
+[parameter(Mandatory=$false,HelpMessage="Volume state")]
+[ValidateSet("online","offline","restricted")]
+[string]$State
+----
+
+
+ a| 
+Ajoutez un alias à un paramètre qui se termine par "`_Capacity`" pour indiquer que le paramètre est de type de capacité.
+ a| 
+La commande « Create Volume » utilise les alias comme suit :
+
+[listing]
+----
+[parameter(Mandatory=$false,HelpMessage="Volume increment size in MB")]
+[Alias("AutosizeIncrementSize_Capacity")]
+[int]$AutosizeIncrementSize
+----
+
+
+ a| 
+Ajoutez un alias à un paramètre qui se termine par "`_Password`" pour indiquer que le paramètre est de type mot de passe.
+ a| 
+[listing]
+----
+param (
+  [parameter(Mandatory=$false, HelpMessage="In order to create an Active Directory machine account for the CIFS server or setup CIFS service for Storage Virtual Machine, you must supply the password of a Windows account with sufficient privileges")]  [Alias("Pwd_Password")]  [string]$ADAdminPassword
+)
+----
+|===
+
+
+== Variables Perl
+
+[cols="2*"]
+|===
+| Directives | Exemple 
+
+
+ a| 
+Pour les paramètres d'entrée de script :
+
+* Utilisez le cas de Pascal.
+* Ne pas utiliser de trait de soulignement.
+* N'utilisez pas d'abréviations.
+
+ a| 
+`$VolumeName`
+
+`$AutoDeleteOptions`
+
+`$Size`
+
+
+
+ a| 
+N'utilisez pas d'abréviations pour les variables internes de script.
+ a| 
+`$new_volume`
+
+`$qtree_name`
+
+`$time`
+
+
+
+ a| 
+N'utilisez pas d'abréviations pour les fonctions.
+ a| 
+`get_volume_size`
+
+
+
+ a| 
+Les noms de variables sont sensibles à la casse. Pour améliorer la lisibilité, vous ne devez pas utiliser de majuscules différentes pour le même nom.
+ a| 
+`$variable` n'est pas identique à `$Variable.`
+
+
+
+ a| 
+Les noms de variables doivent être en anglais brut et doivent être liés à la fonctionnalité du script.
+ a| 
+Utiliser `$name` et non `$a.`
+
+
+
+ a| 
+Regroupez les paramètres d'entrée en plaçant d'abord les paramètres obligatoires, puis les paramètres facultatifs.
+ a| 
+Aucune
+
+
+
+ a| 
+Dans la fonction GetOptions, déclarez explicitement le type de données de chaque variable pour les paramètres d'entrée.
+ a| 
+[listing]
+----
+GetOptions(
+	"Name=s"=>\$Name,
+	"Size=i"=>\$Size
+)
+----
+
+
+ a| 
+N'utilisez pas « Filer » comme nom de variable ; utilisez plutôt « Array ».
+ a| 
+Aucune
+
+
+
+ a| 
+Perl n'inclut pas le `_ValidateSet_` annotation des valeurs énumérées. Utilisez des déclarations explicites « si » pour les cas où l'argument obtient des valeurs énumérées.
+ a| 
+[listing]
+----
+if
+(defined$SpaceGuarantee&&!($SpaceGuaranteeeq'none'||$SpaceGuaranteeeq'volume'||$SpaceGuaranteeeq'file'))
+{
+	die'Illegal SpaceGuarantee argument: \''.$SpaceGuarantee.'\'';
+}
+----
+
+
+ a| 
+Toutes les commandes Perl WFA doivent utiliser le pragma "dit" pour décourager l'utilisation de constructions dangereuses pour les variables, les références et les sous-routines.
+ a| 
+[listing]
+----
+use strict;
+# the above is equivalent to
+use strictvars;
+use strictsubs;
+use strictrefs;
+----
+
+
+ a| 
+Toutes les commandes Perl WFA doivent utiliser les modules Perl suivants :
+
+* Getopt
++
+Ceci est utilisé pour spécifier les paramètres d'entrée.
+
+* Util. Wutil
++
+Cette fonction est utilisée pour les fonctions d'utilitaire fournies pour la journalisation des commandes, la génération de rapports sur la progression des commandes, la connexion aux contrôleurs de matrice, etc.
+
+
+ a| 
+[listing]
+----
+use Getopt::Long;
+use NaServer;
+use WFAUtil;
+----
+|===

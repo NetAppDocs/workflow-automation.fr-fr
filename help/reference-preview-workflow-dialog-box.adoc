@@ -1,0 +1,34 @@
+---
+permalink: help/reference-preview-workflow-dialog-box.html 
+sidebar: sidebar 
+keywords: preview, workflow, dialog box, enable, specify, value, user input, associated 
+summary: 'La boîte de dialogue Aperçu du flux de travail vous permet de spécifier des valeurs pour les entrées utilisateur associées à un flux de travail, puis de prévisualiser l"exécution de ce flux de travail avec les valeurs spécifiées.' 
+---
+= Aperçu du flux de travail
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La boîte de dialogue Aperçu du flux de travail vous permet de spécifier des valeurs pour les entrées utilisateur associées à un flux de travail, puis de prévisualiser l'exécution de ce flux de travail avec les valeurs spécifiées.
+
+
+
+== Valeurs des entrées utilisateur
+
+La boîte de dialogue Aperçu du flux de travail affiche les entrées utilisateur associées au flux de travail sélectionné et vous permet de définir les valeurs des entrées utilisateur.
+
+
+
+== Boutons de commande
+
+* *Aperçu*
++
+Ouvre la fenêtre surveillance du flux de travail associé.
+
+* *Annuler*
++
+Ferme la boîte de dialogue.
+
+

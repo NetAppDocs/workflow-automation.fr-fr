@@ -1,0 +1,131 @@
+---
+permalink: help/reference-packs-window.html 
+sidebar: sidebar 
+keywords: pack, window, display, oncommand, automation, pack, imported, available, server, contain, information, file, workflow, commands, filters, functions, finders, templates 
+summary: 'La fenêtre Packs affiche les packs WFA OnCommand Workflow Automation importés et disponibles dans le serveur WFA. Chaque pack contient le fichier d"informations pack et le contenu WFA, tels que les workflows, les commandes, les filtres, les fonctions finders et modèles.' 
+---
+= La fenêtre des packs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La fenêtre Packs affiche les packs WFA OnCommand Workflow Automation importés et disponibles dans le serveur WFA. Chaque pack contient le fichier d'informations pack et le contenu WFA, tels que les workflows, les commandes, les filtres, les fonctions finders et modèles.
+
+* Table des packs
+* Barre d'outils
+
+
+
+
+== Table des packs
+
+Le tableau des packs répertorie au format tabulaire les packs WFA disponibles au serveur WFA. Vous pouvez personnaliser l'affichage du tableau à l'aide des fonctions de filtrage et de tri disponibles pour chaque colonne, ainsi qu'en réorganisant l'ordre des colonnes.
+
+* image:../media/filter_icon_wfa.gif["Icône de filtre"] active ou désactive le filtrage pour l'ensemble de la table. Un "x" rouge apparaît sur l'icône si le filtrage est désactivé.
+* Double-cliquer image:../media/filter_icon_wfa.gif["Icône de filtre"] efface et réinitialise les sélections de filtrage.
+* image:../media/wfa_filter_icon.gif["Icône de filtre"] sur chaque en-tête de colonne, vous pouvez effectuer un filtrage en fonction du contenu des colonnes. Cliquez sur image:../media/wfa_filter_icon.gif["Icône de filtre"] dans une colonne, vous pouvez filtrer un élément spécifique dans la liste déroulante ou sur tous les éléments disponibles.
+* Cliquer sur l'en-tête de colonne permet de basculer entre l'ordre croissant et décroissant de tri. Vous pouvez identifier l'ordre de tri appliqué à l'aide des flèches de tri (image:../media/wfa_sortarrow_up_icon.gif["Icône de tri"] pour les valeurs ascendantes et image:../media/wfa_sortarrow_down_icon.gif["Icône de tri"] pour décroissant).
+* Pour réorganiser l'emplacement des colonnes, vous pouvez faire glisser et déposer les colonnes dans l'ordre voulu. Toutefois, vous ne pouvez pas masquer ou supprimer ces colonnes.
+* Cliquez sur la zone de texte filtre *Search* pour rechercher un contenu spécifique. En outre, vous pouvez effectuer une recherche à l'aide des opérateurs pris en charge pour le type de colonne applicable, alphabétique ou numérique.
+
+
+La table des packs contient les colonnes suivantes :
+
+* *Certification*
++
+Indique si le pack est créé par l'utilisateur (image:../media/community_certification.gif[""]), PS (image:../media/ps_certified_icon_wfa.gif[""]), communauté (image:../media/community_certification.gif[""]), verrouillé par l'utilisateur (image:../media/lock_icon_wfa.gif[""]) Ou certifié NetApp (image:../media/netapp_certified.gif[""])
+
++
+Vous pouvez rechercher des packs en cochant les cases d'option requises dans la liste des filtres.
+
+* *Nom*
++
+Affiche le nom du pack.
+
++
+Vous pouvez rechercher un pack en saisissant son nom dans la zone de texte filtre *Search*.
+
+* *Description*
++
+Affiche la description du pack.
+
++
+Vous pouvez rechercher un pack en saisissant sa description dans la zone de texte filtre *Search*.
+
+* *Version entité*
++
+Affiche le numéro de version du pack dans `major.minor.revision` format--par exemple, 1.0.0.
+
+* *Dernière mise à jour*
++
+Affiche la date et l'heure de la mise à jour du pack.
+
++
+Vous pouvez rechercher des boîtes en sélectionnant la catégorie de temps requise dans la liste déroulante de filtre.
+
+* *Mis à jour par*
++
+Affiche le nom de l'utilisateur qui a mis à jour le pack.
+
++
+Vous pouvez rechercher un pack en saisissant le nom d'utilisateur dans la zone de texte filtre *Search*.
+
+* *Détails*
++
+Affiche les détails du pack sur le site Web du Storage Automation Store.
+
+
+
+
+
+== Barre d'outils
+
+La barre d'outils se trouve au-dessus de l'en-tête de colonne. Vous pouvez utiliser les icônes de la barre d'outils pour effectuer diverses actions. Vous pouvez également accéder à ces actions à partir du menu contextuel de la fenêtre.
+
+* *image:../media/new_pack.png[""](Nouveau)*
++
+Ouvre la boîte de dialogue Nouveau pack qui vous permet de créer un nouveau pack.
+
+* *image:../media/details_wfa_icon.gif["Icône Détails"] (Modifier)*
++
+Ouvre la boîte de dialogue contenu du pack, qui contient les onglets suivants pour obtenir des informations détaillées sur le contenu des packs :
+
++
+** Flux de travail
+** Finders
+** Filtres
+** Commandes
+** Fonctions
+** Modèles
+** Dictionnaire
+** Schémas
+** Requêtes de cache
+** Types de sources de données SQL
+** Types de source de données de script
+** Types de système distant
+** Catégories
+
+
+* *image:../media/delete_wfa_icon.gif["Icône Supprimer"] (Supprimer)*
++
+Ouvre la boîte de dialogue de confirmation de la suppression du pack, qui permet de supprimer le pack sélectionné.
+
+* *image:../media/unlock_wfa_icon.gif["Icône de déverrouillage"] (Déverrouiller)*
++
+Ouvre la boîte de dialogue de confirmation de déverrouillage du pack, qui vous permet de déverrouiller le pack sélectionné. Cette option n'est activée que pour les boîtes verrouillées par vous. Toutefois, les administrateurs peuvent déverrouiller les packs verrouillés par d'autres utilisateurs.
+
+* *image:../media/export_wfa_icon.gif["Icône Exporter"] (Exportation)*
++
+Ouvre la boîte de dialogue Exporter, qui vous permet d'exporter le pack sélectionné.
+
+* *image:../media/import_from_server_folder.png[""] (Importer à partir du dossier serveur)*
++
+Ouvre la boîte de dialogue Importer à partir du dossier du serveur, qui vous permet d'importer le pack à partir de l'emplacement du dossier sélectionné dans le système serveur.
+
+* *image:../media/export_to_server_folder.png[""] (Exporter vers dossier serveur)*
++
+Ouvre la boîte de dialogue Exporter vers le dossier du serveur, qui permet d'exporter le pack vers l'emplacement du dossier sélectionné dans le système du serveur.
+
+

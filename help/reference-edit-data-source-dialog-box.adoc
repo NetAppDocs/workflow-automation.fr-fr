@@ -1,0 +1,119 @@
+---
+permalink: help/reference-edit-data-source-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, data, source, dialog box, enable, modify, existing 
+summary: La boîte de dialogue Modifier la source de données vous permet de modifier une source de données existante. 
+---
+= Boîte de dialogue Modifier la source de données
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La boîte de dialogue Modifier la source de données vous permet de modifier une source de données existante.
+
+
+
+== Propriétés de configuration de la source de données
+
+* *Nom*
++
+Permet de modifier le nom de la source de données.
+
+* *Type de source de données*
++
+Affiche le type de source de données pour la source de données. Vous ne pouvez pas modifier ce champ.
+
+* *Nom d'hôte*
++
+Permet de spécifier le nom d'hôte ou l'adresse IP (IPv4 ou IPv6) de la source de données.
+
++
+
+NOTE: Le type de source de données Active IQ Unified Manager ne prend pas en charge les adresses IPv6.
+
+* *Port*
++
+Affiche le numéro de port associé, le cas échéant, pour le type de source de données sélectionné. Vous pouvez modifier le numéro de port par défaut de la source de données.
+
+* *Schéma*
++
+Affiche le schéma associé au type de source de données sélectionné--par exemple _cm_Storage_ pour Unified Manager - 6.0 (MYSQL).
+
++
+Vous ne pouvez pas modifier cette propriété.
+
+* *Nom d'utilisateur*
++
+Affiche le nom d'utilisateur associé, le cas échéant, pour le type de source de données sélectionné.
+
++
+Vous devez spécifier le nom d'utilisateur approprié pour que cette source de données remplace le nom d'utilisateur par défaut :
+
++
+** Pour les versions de Unified Manager antérieures à 6.0, vous devez saisir le nom d'utilisateur que vous avez utilisé pour remplacer les informations d'identification par défaut lors de l'exécution de ocsetup.
+** Pour Unified Manager 6.0 et les versions ultérieures, vous devez saisir le nom d'utilisateur du compte d'utilisateur de la base de données que vous avez créé sur le serveur Unified Manager.
+** Pour Performance Advisor, vous devez saisir le nom d'utilisateur d'un utilisateur Active IQ Unified Manager ayant le rôle minimum GlobalRead.
+
+
+* *Mot de passe*
++
+Permet de spécifier un mot de passe pour le type de source de données sélectionné.
+
++
+Vous devez spécifier un mot de passe pour remplacer le mot de passe par défaut du nom d'utilisateur de cette source de données :
+
++
+** Pour les versions de Unified Manager antérieures à 6.0, vous devez saisir le mot de passe que vous avez utilisé pour remplacer les informations d'identification par défaut lors de l'exécution de ocsetup.
+** Pour Unified Manager 6.0 et versions ultérieures, vous devez saisir le mot de passe du compte utilisateur de la base de données que vous avez créé sur le serveur.
+** Pour Performance Advisor, vous devez saisir le mot de passe d'un utilisateur Unified Manager ayant le rôle minimal de GlobalRead.
+
+
+* *Base de données*
++
+Affiche le nom de la base de données associée, le cas échéant, pour le type de source de données sélectionné.
+
+* *Intervalle (minutes)*
++
+Vous permet de cliquer sur la valeur et de sélectionner un intervalle (en minutes) à l'aide des flèches vers le haut et vers le bas.
+
++
+
+NOTE: Si l'intervalle est défini sur zéro (0), l'échantillonnage automatique est désactivé.
+
++
+L'intervalle par défaut pour l'échantillonnage des données est :
+
++
+** Type de source de données basé sur des scripts : 1440 (performance et vc)
+** Type de source de données SQL : 30 (cm_stockage, stockage et cm_performance)
+
+
+* *Voir le guide d'instructions de configuration*
++
+Ouvre la boîte de dialogue Guide des instructions de configuration, qui décrit les étapes de configuration de la source de données.
+
+
+
+
+
+== Boutons de commande
+
+* *Réinit. Schéma*
++
+Ouvre la boîte de dialogue de confirmation de réinitialisation du schéma. Cette boîte de dialogue vous permet de réinitialiser le stockage du cache pour le schéma sélectionné, qui se produit lors de l'acquisition de données suivante.
+
++
+
+IMPORTANT: Le processus de réinitialisation supprime toutes les données mises en cache, y compris toutes les tables. L'intégralité du cache est créée à partir du début de l'acquisition de données suivante.
+
+* *Enregistrer*
++
+Enregistre les paramètres de configuration et ferme la boîte de dialogue.
+
+* *Annuler*
++
+Annule les modifications, le cas échéant, et ferme la boîte de dialogue.
+
+

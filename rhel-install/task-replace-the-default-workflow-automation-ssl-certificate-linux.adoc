@@ -1,0 +1,59 @@
+---
+permalink: rhel-install/task-replace-the-default-workflow-automation-ssl-certificate-linux.html 
+sidebar: sidebar 
+keywords: replace, default, workflow, automation, ssl, certificate 
+summary: 'Vous pouvez remplacer le certificat SSL par défaut de Workflow Automation (WFA) si le certificat a expiré ou si vous souhaitez augmenter la période de validité du certificat.' 
+---
+= Remplacez le certificat SSL par défaut de Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez remplacer le certificat SSL par défaut de Workflow Automation (WFA) si le certificat a expiré ou si vous souhaitez augmenter la période de validité du certificat.
+
+Vous devez disposer de privilèges root pour le système Linux sur lequel vous avez installé WFA.
+
+Le chemin d'installation par défaut de WFA est utilisé dans cette procédure. Si vous avez modifié l'emplacement par défaut lors de l'installation, vous devez utiliser le chemin d'installation personnalisé de WFA.
+
+.Étapes
+. Connectez-vous en tant qu'utilisateur root sur la machine hôte WFA.
+. À l'invite du shell, accédez au répertoire suivant sur le serveur WFA : WFA_install_location/wfa/bin
+. Arrêter les services serveur et base de données WFA :
++
+`./wfa --stop=WFA`
+
++
+`./wfa --stop=DB`
+
+. Supprimez le fichier wfa.keystore à l'emplacement suivant : WFA_install_location/wfa/jboss/autonome/configuration/keystore.
+. Ouvrez une invite de shell sur le serveur WFA, puis modifiez les répertoires à l'emplacement suivant : <OpenJDK_install_location>/bin
+. Obtenez la clé de base de données :
++
+`keytool -keysize 2048 -genkey -alias "ssl keystore" -keyalg RSA -keystore "WFA_install_location/wfa/jboss/standalone/configuration/keystore/wfa.keystore" -validity xxxx`
+
++
+xxxx correspond au nombre de jours de validité du nouveau certificat.
+
+. Lorsque vous y êtes invité, indiquez le mot de passe (par défaut ou nouveau).
++
+Le mot de passe par défaut est un mot de passe chiffré généré de manière aléatoire.
+
++
+Pour obtenir et décrypter le mot de passe par défaut, suivez les étapes de l'article de la base de connaissances link:https://kb.netapp.com/?title=Advice_and_Troubleshooting%2FData_Infrastructure_Management%2FOnCommand_Suite%2FHow_to_renew_the_self-signed_certificate_on_WFA_5.1.1.0.4%253F["Comment renouveler le certificat auto-signé sur WFA 5.1.1.0.4"^]
+
++
+Pour utiliser un nouveau mot de passe, suivez les étapes de l'article de la base de connaissances link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_update_a_new_password_for_the_keystore_in_WFA["Comment mettre à jour un nouveau mot de passe pour le magasin de clés dans WFA."^]
+
+. Entrez les détails requis pour le certificat.
+. Vérifiez les informations affichées, puis entrez `Yes`.
+. Appuyez sur *entrée* lorsque le message suivant s'affiche : saisissez le mot de passe de la clé pour <magasin de clés SSL> <RETURN si le mot de passe du magasin de clés est identique à celui du magasin de clés>.
+. Redémarrez les services WFA:
++
+`./wfa --start=DB`
+
++
+`./wfa --start=WFA`
+
+

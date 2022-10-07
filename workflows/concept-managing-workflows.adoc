@@ -1,0 +1,14 @@
+---
+permalink: workflows/concept-managing-workflows.html 
+sidebar: sidebar 
+keywords: customize, predefined, workflow, create, part, managing, understand, relevant, concepts 
+summary: Vous pouvez personnaliser des flux de travail prédéfinis ou créer de nouveaux flux de travail dans le cadre de la gestion de vos flux de travail. Avant de commencer à gérer vos workflows, vous devez également connaître les concepts pertinents. 
+---
+= Gestion des flux de travail
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez personnaliser des flux de travail prédéfinis ou créer de nouveaux flux de travail dans le cadre de la gestion de vos flux de travail. Avant de commencer à gérer vos workflows, vous devez également connaître les concepts pertinents.

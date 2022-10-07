@@ -1,0 +1,26 @@
+---
+permalink: workflows/task-add-approval-points.html 
+sidebar: sidebar 
+keywords: add, approval, point, checkpoint, workflow, pause, execution, resume, points, incremental, sections, certain condition, example, successful, validated 
+summary: 'Vous pouvez ajouter un point d"approbation en tant que point de contrôle dans un flux de travail pour interrompre l"exécution du flux de travail et le reprendre en fonction de votre approbation. Vous pouvez utiliser des points d"approbation pour l"exécution incrémentielle d"un flux de travail, où les sections du flux de travail sont exécutées uniquement après qu"une condition donnée est remplie, par exemple lorsque la section suivante doit être approuvée ou lorsque l"exécution de la première section est validée.' 
+---
+= Ajouter des points d'approbation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez ajouter un point d'approbation en tant que point de contrôle dans un flux de travail pour interrompre l'exécution du flux de travail et le reprendre en fonction de votre approbation. Vous pouvez utiliser des points d'approbation pour l'exécution incrémentielle d'un flux de travail, où les sections du flux de travail sont exécutées uniquement après qu'une condition donnée est remplie, par exemple lorsque la section suivante doit être approuvée ou lorsque l'exécution de la première section est validée.
+
+.Étapes
+. Connectez-vous à WFA via un navigateur Web en tant qu'architecte ou administrateur.
+. Cliquez sur *Workflow Design* > *Workflow*.
+. Dans la fenêtre *Workflow*, double-cliquez sur le flux de travail à modifier.
+. Dans la fenêtre *Workflow <nom du flux de travail>*, cliquez sur le bouton image:../media/approval_point_disabled.gif["Image du point d'approbation"] icône à gauche de l'étape pour laquelle vous souhaitez ajouter le point d'approbation.
++
+Vous pouvez ajouter des points d'approbation pour une ou plusieurs étapes.
+
+. Dans la boîte de dialogue *Nouveau point d'approbation*, indiquez le commentaire et les détails de la condition.
+. Cliquez sur *OK*.
+

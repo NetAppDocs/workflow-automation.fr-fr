@@ -1,0 +1,32 @@
+---
+permalink: windows-install/task-back-up-and-restore-the-wfa-database-and-configurations-windows.html 
+sidebar: sidebar 
+keywords: back up, restore, oncommand, workflow, automation, database, configurations windows 
+summary: 'Vous pouvez sauvegarder et restaurer la base de données OnCommand Workflow Automation (WFA) et les configurations prises en charge, afin de pouvoir restaurer les données en cas d"incident. Les configurations prises en charge incluent l"accès aux données, le délai d"attente HTTP et les certificats SSL.' 
+---
+= Sauvegarde et restauration de la base de données et des configurations OnCommand Workflow Automation sous Windows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez sauvegarder et restaurer la base de données OnCommand Workflow Automation (WFA) et les configurations prises en charge, afin de pouvoir restaurer les données en cas d'incident. Les configurations prises en charge incluent l'accès aux données, le délai d'attente HTTP et les certificats SSL.
+
+Vous devez disposer de privilèges d'administrateur ou d'informations d'identification d'architecte.
+
+Vous devez créer la sauvegarde dans un emplacement sécurisé, car la restauration de la sauvegarde permet d'accéder à tous les systèmes de stockage auxquels WFA accède.
+
+
+NOTE: Vous pouvez utiliser uniquement les commandes de l'interface de ligne de commandes ou les API REST pour réaliser des opérations de sauvegarde et de restauration complètes pendant la reprise d'activité. Vous ne pouvez pas utiliser l'interface utilisateur Web pour créer une sauvegarde pendant la reprise sur incident dans un environnement haute disponibilité.
+
+.Étapes
+. Sauvegardez vos bases de données et configurations existantes.
++
+link:reference-backing-up-of-the-oncommand-workflow-automation-database.html["Sauvegarde de la base de données OnCommand Workflow Automation"]
+
+. Restaurez une sauvegarde précédente de vos bases de données et configurations.
++
+link:concept-restoring-the-wfa-database.html["Restauration de la base de données OnCommand Workflow Automation"]
+
+

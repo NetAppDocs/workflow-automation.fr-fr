@@ -1,0 +1,59 @@
+---
+permalink: workflows/task-create-a-cache-query.html 
+sidebar: sidebar 
+keywords: define, cache, query, cache, information, dictionary, object, wfa database, data source, create, associate, entry, active iq, unified manager 
+summary: 'Vous pouvez définir une requête de cache lorsque vous souhaitez mettre en cache des informations sur un objet de dictionnaire dans la base de données WFA à partir d"un type de source de données. Vous pouvez créer une requête de cache et l"associer à une entrée de dictionnaire et à un ou plusieurs types de source de données, tels que Active IQ Unified Manager 6.1.' 
+---
+= Créez une requête de cache
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez définir une requête de cache lorsque vous souhaitez mettre en cache des informations sur un objet de dictionnaire dans la base de données WFA à partir d'un type de source de données. Vous pouvez créer une requête de cache et l'associer à une entrée de dictionnaire et à un ou plusieurs types de source de données, tels que Active IQ Unified Manager 6.1.
+
+Vous devez connaître les syntaxes SQL appropriées pour créer une requête de cache.
+
+.Étapes
+. Cliquez sur *Data Source Design* > *cache Queries*.
+. Cliquez sur image:../media/new_wfa_icon.gif["Nouvelle icône"] dans la barre d'outils.
+. Dans la boîte de dialogue *Add cache Query*, sélectionnez l'entrée de dictionnaire et le type de source de données requis.
+. Dans la section "``sélection de requête```, entrez la requête SQL appropriée.
++
+La requête SQL suivante met en cache des informations sur l'objet de dictionnaire de disques du type de source de données Active IQ Unified Manager 6.1 :
+
++
+[listing]
+----
+SELECT
+    disk.objId AS id,
+    disk.name AS NAME,
+    disk.uid AS uid,
+    disk.effectiveInterfaceType AS TYPE,
+    disk.rpm AS rpm,
+    disk.homeNodeId AS home_node_id,
+    disk.ownerNodeId AS owner_node_id,
+    disk.model AS model,
+    disk.serialNumber AS serial_number,
+    disk.totalBytes/1024/1024 AS size_mb,
+    disk.shelf AS shelf,
+    disk.shelfBay AS shelf_bay,
+    disk.pool AS pool,
+    disk.vendor AS vendor,
+    LOWER(disk.raidPosition) AS raid_position,
+    disk.containerTypeRaw AS container_type,
+    disk.clusterId AS cluster_id
+FROM
+    netapp_model_view.disk disk
+----
+. Pour tester la requête SQL, cliquez sur *Test*.
++
+Si vous avez sélectionné plusieurs types de source de données, la boîte de dialogue Tester la requête de cache s'ouvre et vous permet de sélectionner le type de source de données requis.
+
++
+Le résultat du test s'affiche.
+
+. Fermez la boîte de dialogue.
+. Cliquez sur *Enregistrer*.
+

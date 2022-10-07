@@ -1,0 +1,32 @@
+---
+permalink: workflows/task-delete-wfa-packs.html 
+sidebar: sidebar 
+keywords: delete, pack, oncommand, workflow, automation, require, entities, associated 
+summary: 'Vous pouvez supprimer un pack de OnCommand Workflow Automation (WFA) si vous n"en avez plus besoin. Si vous supprimez un pack, toutes les entités associées au pack sont supprimées.' 
+---
+= Supprimez les packs OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez supprimer un pack de OnCommand Workflow Automation (WFA) si vous n'en avez plus besoin. Si vous supprimez un pack, toutes les entités associées au pack sont supprimées.
+
+.Description de la tâche
+* Vous ne pouvez pas supprimer un pack s'il existe des dépendances sur les entités qui font partie du pack.
++
+Par exemple, si vous tentez de supprimer un pack qui inclut une commande faisant partie d'un flux de travail personnalisé, l'opération de suppression échouera car le flux de travail personnalisé dépend du pack. Vous ne pouvez supprimer le pack qu'après avoir supprimé le flux de travail personnalisé.
+
+* Les entités faisant partie d'un pack ne peuvent pas être supprimées individuellement.
++
+Pour supprimer une entité faisant partie d'un pack, vous devez supprimer le pack contenant cette entité. Si une entité fait partie de plusieurs packs, l'entité sera supprimée du serveur WFA uniquement lorsque tous les packs contenant cette entité sont supprimés.
+
+
+
+.Étapes
+. Connectez-vous à WFA via un navigateur Web en tant qu'administrateur.
+. Cliquez sur *Content Management* > *Packs*.
+. Sélectionnez le pack à supprimer et cliquez sur image:../media/delete_wfa_icon.gif["Icône Supprimer"].
+. Dans la boîte de dialogue de confirmation *Delete Pack*, cliquez sur *OK*.
+

@@ -1,0 +1,27 @@
+---
+permalink: windows-install/task-configure-the-timeout-value-for-windows.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, configure, timeout value 
+summary: 'Vous pouvez configurer la valeur de temporisation pour l"interface graphique Web WFA (Workflow Automation), au lieu d"utiliser la valeur de délai par défaut.' 
+---
+= Configurez la valeur du délai d'expiration pour Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez configurer la valeur de temporisation pour l'interface graphique Web WFA (Workflow Automation), au lieu d'utiliser la valeur de délai par défaut.
+
+La valeur par défaut du délai d'expiration pour l'interface graphique Web de WFA est de 180 minutes. Vous pouvez configurer la valeur du délai d'expiration pour répondre à vos exigences via l'interface de ligne de commande. Vous ne pouvez pas définir la valeur de temporisation à partir de l'interface Web de WFA.
+
+
+NOTE: La valeur de temporisation que vous avez définie correspond à un délai d'inactivité absolu plutôt qu'à un délai d'inactivité. Par exemple, si vous définissez cette valeur sur 30 minutes, vous êtes déconnecté après 30 minutes, même si vous êtes actif à la fin de cette période.
+
+.Étapes
+. Connectez-vous en tant qu'administrateur sur la machine hôte WFA.
+. Définissez la valeur de temporisation :
++
+`installdir bin/wfa -S=timeout value in minutes`
+
+

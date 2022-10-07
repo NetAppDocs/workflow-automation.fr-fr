@@ -1,0 +1,117 @@
+---
+permalink: workflows/reference-guidelines-for-wfa-dictionary-entry.html 
+sidebar: sidebar 
+keywords: aware, guidelines, create, dictionary, entries, oncommand, workflow, automation 
+summary: 'Vous devez connaître les instructions de création d"entrées de dictionnaire dans OnCommand Workflow Automation (WFA).' 
+---
+= Instructions pour les entrées de dictionnaire WFA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez connaître les instructions de création d'entrées de dictionnaire dans OnCommand Workflow Automation (WFA).
+
+[cols="2*"]
+|===
+| Directives | Exemple 
+
+
+ a| 
+Les noms d'entrée du dictionnaire ne doivent contenir que des caractères alphanumériques et des traits de soulignement.
+ a| 
+Licence_cluster
+
+Switch_23
+
+
+
+ a| 
+Les noms d'entrée du dictionnaire doivent commencer par un caractère en majuscules. Commencez chaque mot du nom par un caractère en majuscule et séparez chaque mot par un trait de soulignement (_).
+ a| 
+Volumétrie
+
+Licence_baie
+
+
+
+ a| 
+Les noms des attributs d'entrée du dictionnaire ne doivent pas inclure le nom de l'entrée du dictionnaire.
+ a| 
+Aucune
+
+
+
+ a| 
+Les attributs et les références d'une entrée de dictionnaire doivent être en caractères minuscules.
+ a| 
+agrégat, size_mb
+
+
+
+ a| 
+Séparez les mots par un trait de soulignement. Les espaces ne sont pas autorisés.
+ a| 
+pool_ressources
+
+
+
+ a| 
+Les entrées du dictionnaire ne peuvent pas inclure de références provenant d'un schéma différent. Lorsqu'une entrée de dictionnaire nécessite une référence croisée à un objet dans un autre schéma, assurez-vous que toutes les clés naturelles de l'objet auquel il est fait référence sont présentes dans l'entrée du dictionnaire.
+ a| 
+L'entrée du dictionnaire Array_Performance nécessite toutes les clés naturelles de l'entrée du dictionnaire Array comme attributs directs.
+
+
+
+ a| 
+Utilisez les types de données appropriés pour les attributs.
+ a| 
+Aucune
+
+
+
+ a| 
+Utilisez le type de données long pour les attributs relatifs à la taille ou à l'espace.
+ a| 
+Size_mb et Available_size_mb dans Storage.Volume Dictionary
+
+
+
+ a| 
+Utilisez Enum lorsqu'un attribut possède un ensemble de valeurs fixe.
+ a| 
+raid_type dans l'entrée Storage.Volume Dictionary
+
+
+
+ a| 
+Définissez « à mettre en cache » comme vrai pour un attribut ou une référence lorsqu'une source de données fournit une valeur pour cet attribut ou cette référence.pour la source de données Active IQ Unified Manager, ajoutez des attributs de mise en cache si la source de données peut lui fournir la valeur.
+ a| 
+Aucune
+
+
+
+ a| 
+Définissez « peut être nul » comme vrai si la source de données fournissant la valeur de cet attribut ou de cette référence peut renvoyer NULL.
+ a| 
+Aucune
+
+
+
+ a| 
+Fournissez une description pertinente à chaque attribut et référence.la description s'affiche dans les détails de la commande lors de la conception d'un flux de travail.
+ a| 
+Aucune
+
+
+
+ a| 
+N'utilisez pas « ID » comme nom d'attribut dans les entrées de dictionnaire. Il est réservé à l'utilisation interne de WFA.
+ a| 
+Aucune
+
+|===
+*Informations connexes*
+
+xref:reference-references-to-learning-material.adoc[Références à du matériel d'apprentissage]

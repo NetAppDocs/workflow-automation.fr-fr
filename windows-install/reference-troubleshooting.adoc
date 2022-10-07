@@ -1,0 +1,14 @@
+---
+permalink: windows-install/reference-troubleshooting.html 
+sidebar: sidebar 
+keywords: troubleshoot, installation, configuration issues 
+summary: 'Vous pouvez résoudre les problèmes susceptibles de se produire lors de l"installation et de la configuration de OnCommand Workflow Automation (WFA).' 
+---
+= Résolution des problèmes d'installation et de configuration
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez résoudre les problèmes susceptibles de se produire lors de l'installation et de la configuration de OnCommand Workflow Automation (WFA).

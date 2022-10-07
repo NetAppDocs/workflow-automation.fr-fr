@@ -1,0 +1,41 @@
+---
+permalink: windows-install/task-back-up-full-the-wfa-database-using-perl-script-linux.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, back up, wfa, database, cli 
+summary: 'Vous pouvez effectuer une sauvegarde complète de la base de données OnCommand Workflow Automation (WFA) à l"aide de l"interface de ligne de commandes WFA. Dans une sauvegarde complète, la base de données WFA, la configuration WFA et la clé sont sauvegardées.' 
+---
+= Sauvegardez (complet) la base de données WFA à l'aide de l'interface de ligne de commande
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez effectuer une sauvegarde complète de la base de données OnCommand Workflow Automation (WFA) à l'aide de l'interface de ligne de commandes WFA. Dans une sauvegarde complète, la base de données WFA, la configuration WFA et la clé sont sauvegardées.
+
+Vous devez disposer d'informations d'identification administrateur ou d'architecte.
+
+Dans un environnement à haute disponibilité, vous devez créer des sauvegardes planifiées à l'aide d'API REST. Vous ne pouvez pas créer de sauvegardes via l'interface de ligne de commandes lorsque WFA est en mode de basculement.
+
+Pour plus d'informations, consultez la documentation REST.
+
+.Étapes
+. À l'invite du shell, accédez au répertoire suivant sur le serveur WFA : `WFA_install_location\WFA\bin.`
++
+WFA_install_location est le répertoire d'installation de WFA.
+
+. Sauvegarder la base de données WFA :
++
+`.\wfa --backup --user=USER [--password=PASS] [--location=PATH] [--full]`
+
++
+** user est le nom d'utilisateur de l'utilisateur de sauvegarde.
+** mot de passe est le mot de passe de l'utilisateur de sauvegarde.
++
+Si vous n'avez pas fourni le mot de passe, vous devez entrer le mot de passe lorsque vous y êtes invité.
+
+** chemin est le chemin complet du répertoire vers le fichier de sauvegarde.
+
+
+. Vérifiez que le fichier de sauvegarde a été créé à l'emplacement spécifié.
+

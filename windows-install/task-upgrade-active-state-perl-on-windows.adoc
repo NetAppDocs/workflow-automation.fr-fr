@@ -1,0 +1,36 @@
+---
+permalink: windows-install/task-upgrade-active-state-perl-on-windows.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, upgrade, activestate perl 
+summary: 'OnCommand Workflow Automation (WFA) fonctionne avec l"édition Enterprise d"ActiveState Perl sur Windows. Vous pouvez effectuer une mise à niveau vers une version plus récente de ActiveState Perl pour obtenir des correctifs pour les vulnérabilités de sécurité sur le serveur Windows.' 
+---
+= Mettre à niveau ActiveState Perl
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation (WFA) fonctionne avec l'édition Enterprise d'ActiveState Perl sur Windows. Vous pouvez effectuer une mise à niveau vers une version plus récente de ActiveState Perl pour obtenir des correctifs pour les vulnérabilités de sécurité sur le serveur Windows.
+
+Vous devez disposer de privilèges d'administrateur Windows sur le serveur WFA. ActiveState Perl ne prend pas en charge les mises à niveau « sur place ».
+
+WFA 5.1 utilise l'édition Enterprise de ActiveState Perl.
+
+Vous pouvez effectuer la mise à niveau de ActiveState Perl 5.26.3 vers des versions ultérieures. Vous ne pouvez pas effectuer la mise à niveau vers une version majeure d'ActiveState Perl.
+
+.Étapes
+. Connectez-vous en tant qu'utilisateur admin sur la machine hôte WFA.
+. Téléchargez la dernière version de ActiveState Enterprise Edition 5.26.3 64 bits sur le système cible.
+. Utilisez la console des services Windows pour arrêter les services WFA suivants :
++
+** WFA Database ou MYSQL57
+** Serveur WFA
+
+
+. Désinstallez la version actuelle de ActiveState Perl sur le système cible à partir du panneau de commande.
+. Effectuez une sauvegarde du dossier C:\Perl64\site\lib.
+. Installez la nouvelle édition ActiveState Enterprise sur la machine cible.
+. Restaurez le dossier \site\lib de ActiveState Enterprise Edition dont vous avez créé la sauvegarde à l'étape 5.
+. Redémarrez les services WFA en utilisant la console des services Windows.
+

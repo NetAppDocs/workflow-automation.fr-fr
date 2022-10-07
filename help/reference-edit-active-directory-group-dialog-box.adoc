@@ -1,0 +1,95 @@
+---
+permalink: help/reference-edit-active-directory-group-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, active directory, dialog box, enable, view, modify, oncommand, workflow, automation, group 
+summary: 'La boîte de dialogue Modifier le groupe Active Directory vous permet d"afficher et de modifier les paramètres du groupe Active Directory OnCommand Workflow Automation.' 
+---
+= Boîte de dialogue Modifier le groupe Active Directory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La boîte de dialogue Modifier le groupe Active Directory vous permet d'afficher et de modifier les paramètres du groupe Active Directory OnCommand Workflow Automation.
+
+En fonction de vos privilèges de groupe et de votre rôle Active Directory, il se peut que vous n'ayez pas accès à la fenêtre groupes Active Directory. Cependant, vous pouvez modifier les paramètres de votre groupe Active Directory en sélectionnant *Paramètres*, et sous *gestion*, cliquez sur *groupes Active Directory*.
+
+
+NOTE: Les champs que vous pouvez modifier dépendent de vos privilèges de groupe Active Directory.
+
+* *Nom du groupe*
++
+Affiche le nom du groupe Active Directory.
+
+* *Rôle*
++
+Affiche le rôle attribué au compte utilisateur.
+
++
+Affiche l'un des rôles de groupe suivants affectés au groupe Active Directory :
+
++
+** *Invité*
++
+Ce groupe peut uniquement afficher l'état d'exécution d'un flux de travail ou être notifié d'une modification de l'état d'exécution d'un flux de travail.
+
+** *Opérateur*
++
+Ce groupe est autorisé à prévisualiser et à exécuter les flux de travail pour lesquels le groupe a accès.
+
+** *Approbateur*
++
+Ce groupe est autorisé à prévisualiser, exécuter, approuver et rejeter les flux de travail pour lesquels le groupe a accès.
+
++
+
+NOTE: Vous devez fournir l'ID e-mail de l'approbateur et l'état du flux de travail qui doit être notifié à l'approbateur. S'il existe plusieurs approbateurs, vous pouvez fournir un ID d'e-mail de groupe dans le champ *E-mail*.
+
+** *Architecte*
++
+Ce groupe dispose d'un accès complet pour créer des flux de travail, mais ne peut pas modifier les paramètres globaux du serveur WFA.
+
+** *Admin*
++
+Ce groupe dispose d'un accès complet au serveur WFA.
+
++
+
+NOTE: Vous devez configurer au moins un groupe d'administration.
+
+
+
+* *E-mail*
++
+Spécifie l'e-mail du groupe Active Directory auquel les notifications sont envoyées si l'option *notifier On* est sélectionnée.
+
+* *Notifier le*
++
+Permet de sélectionner le moment où le groupe de répertoires actif doit être averti par e-mail pendant l'exécution du flux de travail déclenchée par ce groupe de répertoires actif. Vous pouvez sélectionner n'importe quelle combinaison des options suivantes :
+
++
+** Début de l'exécution du workflow : informe l'utilisateur lors du démarrage de l'exécution du workflow.
+** Échec/échec partiel de l'exécution du workflow : informe l'utilisateur en cas d'échec de l'exécution du workflow ou si le flux de travail a été exécuté avec succès, même si une ou plusieurs étapes ont échoué.
++
+L'exécution est terminée car les étapes ayant échoué ont été configurées pour permettre à l'exécution du flux de travail de continuer même lorsque l'étape échoue.
+
+** Exécution du workflow réussie : informe l'utilisateur lorsque l'exécution du workflow a réussi.
+** Exécution du workflow en attente d'approbation : notifie l'utilisateur si l'exécution du workflow attend l'approbation d'un utilisateur opérateur ou architecte, en fonction du paramètre de configuration WFA.
+
+
+
+
+
+
+== Boutons de commande
+
+* *Enregistrer*
++
+Enregistre les paramètres de configuration et ferme la boîte de dialogue.
+
+* *Annuler*
++
+Annule les modifications, le cas échéant, et ferme la boîte de dialogue.
+
+

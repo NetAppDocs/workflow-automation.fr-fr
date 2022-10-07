@@ -1,0 +1,20 @@
+---
+permalink: windows-install/concept-backing-up-the-wfa-database-using-rest-apis.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, back up, wfa, database, rest apis 
+summary: 'Vous pouvez sauvegarder la base de données OnCommand Workflow Automation (WFA) à l"aide des API REST. Si WFA est en mode de basculement dans un environnement haute disponibilité, vous pouvez utiliser les API REST pour créer des sauvegardes planifiées. Vous ne pouvez pas utiliser l"interface de ligne de commande pour créer des sauvegardes pendant un basculement.' 
+---
+= Sauvegarde de la base de données WFA à l'aide d'API REST
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez sauvegarder la base de données OnCommand Workflow Automation (WFA) à l'aide des API REST. Si WFA est en mode de basculement dans un environnement haute disponibilité, vous pouvez utiliser les API REST pour créer des sauvegardes planifiées. Vous ne pouvez pas utiliser l'interface de ligne de commande pour créer des sauvegardes pendant un basculement.
+
+Les deux types de sauvegarde sont les suivants :
+
+* Sauvegarde complète
+* Sauvegarde régulière
+

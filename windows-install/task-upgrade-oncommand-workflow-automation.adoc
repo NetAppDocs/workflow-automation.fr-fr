@@ -1,0 +1,47 @@
+---
+permalink: windows-install/task-upgrade-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: upgrade, oncommand, workflow, automation 
+summary: 'Si vous avez installé une version antérieure de OnCommand Workflow Automation (WFA), vous pouvez effectuer une mise à niveau vers la dernière version de WFA en vue d"utiliser les nouvelles fonctionnalités et améliorations.' 
+---
+= Mettez à niveau OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si vous avez installé une version antérieure de OnCommand Workflow Automation (WFA), vous pouvez effectuer une mise à niveau vers la dernière version de WFA en vue d'utiliser les nouvelles fonctionnalités et améliorations.
+
+* Vous pouvez effectuer la mise à niveau vers WFA 5.1 depuis WFA 5.0 ou 4.2 uniquement.
++
+Si vous exécutez WFA 4.1 ou des versions antérieures de WFA, vous devez d'abord effectuer une mise à niveau vers WFA 5.0 ou 4.2, puis procéder à une mise à niveau vers WFA 5.1.
+
+* Vous pouvez restaurer une sauvegarde effectuée à l'aide de WFA 5.0 ou 4.2 sur WFA 5.1. Une sauvegarde de base de données WFA peut uniquement être restaurée sur un système qui exécute la même version ou une version plus récente de WFA.
++
+Par exemple, si vous avez créé une sauvegarde sur un système exécutant WFA 4.2, la sauvegarde ne peut être restaurée que sur des systèmes qui exécutent WFA 4.2 ou version ultérieure.
+
+* Vous ne pouvez pas installer MySQL seul lors de la mise à niveau à partir de versions antérieures à WFA 4.2.
++
+Cependant, vous pouvez installer MySQL seul :
+
++
+** Lors d'une nouvelle installation de WFA 4.2 et version ultérieure ou
+** Lorsque vous effectuez une mise à niveau depuis WFA 4.2 vers des versions ultérieures de WFA.
++
+... Sauvegardez la base de données WFA en utilisant l'une des options suivantes :
+
+
+** Portail Web WFA
+** Script PowerShell si vous souhaitez revenir à la même version de WFA, vous pouvez utiliser la sauvegarde que vous avez créée pour restaurer votre base de données WFA.
++
+... Désinstallez la version existante de WFA.
+... Installez la dernière version de WFA.
+... Restaurez la base de données WFA.
+
+
+
+
+
+
+Vous pouvez vérifier l'exhaustivité du contenu restauré dans les fonctionnalités, par exemple vous pouvez vérifier le fonctionnement de vos flux de travail personnalisés.

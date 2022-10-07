@@ -1,0 +1,14 @@
+---
+permalink: rhel-install/reference-configuring-a-database-user-on-datafabric-manager.html 
+sidebar: sidebar 
+keywords: configure, database, user, datafabric, manager 
+summary: 'Vous devez créer un utilisateur de base de données sur DataFabric Manager 5.x pour configurer l"accès en lecture seule de la base de données DataFabric Manager 5.x vers OnCommand Workflow Automation.' 
+---
+= Configuration d'un utilisateur de base de données sur DataFabric Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez créer un utilisateur de base de données sur DataFabric Manager 5.x pour configurer l'accès en lecture seule de la base de données DataFabric Manager 5.x vers OnCommand Workflow Automation.

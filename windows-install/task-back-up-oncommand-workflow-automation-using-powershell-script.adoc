@@ -1,0 +1,43 @@
+---
+permalink: windows-install/task-back-up-oncommand-workflow-automation-using-powershell-script.html 
+sidebar: sidebar 
+keywords: back up, wfa, database, powershell script 
+summary: 'Si vous souhaitez sauvegarder fréquemment la base de données OnCommand Workflow Automation (WFA), vous pouvez utiliser le script PowerShell fourni avec le pack d"installation de WFA.' 
+---
+= Sauvegardez la base de données WFA à l'aide du script PowerShell
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si vous souhaitez sauvegarder fréquemment la base de données OnCommand Workflow Automation (WFA), vous pouvez utiliser le script PowerShell fourni avec le pack d'installation de WFA.
+
+Vous devez disposer des informations d'identification de l'utilisateur administrateur, des informations d'identification d'architecte ou des informations d'identification de l'utilisateur de sauvegarde.
+
+Pour plus d'informations, consultez la documentation REST.
+
+.Étapes
+. Ouvrez Windows PowerShell en tant qu'administrateur, puis sauvegardez la base de données WFA : `<WFA_install_location\WFA\bin\Backup.ps1> -User user_name -Password password -Path backup_file_path`
++
+** WFA_install_location est le répertoire d'installation de WFA.
+** nom_utilisateur est le nom d'utilisateur de l'utilisateur admin, de l'architecte ou de l'utilisateur de sauvegarde.
+** le mot de passe est le mot de passe de l'utilisateur administrateur, de l'architecte ou de la sauvegarde.
+** backup_file_path est le chemin complet du répertoire du fichier de sauvegarde.
+
+
+
+
+[NOTE]
+====
+Le fichier de sauvegarde est un fichier zip dont le nom est au format suivant : wfa_backup_servername_.zip
+
+====
+* wfa_backup_ est une partie fixe du nom de fichier, qui est le nom du serveur de sauvegarde.
+* Servername est extrait de l'environnement du serveur Windows.
+* _.zip est une partie fixe du nom de fichier.
+`C:\Program Files\NetApp\WFA\bin\Backup.ps1 -User backup -Password MyPassword123 -Path C:\WFA_backups\backup_10_08_12`
++
+Une fois la sauvegarde terminée, le résultat suivant s'affiche : C:\WFA_backups\backup_10__08_12\wfa_backup_myserver__.zip . Vérifiez que le fichier de sauvegarde a été créé à l'emplacement spécifié.
+
+

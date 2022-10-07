@@ -1,0 +1,38 @@
+---
+permalink: workflows/concept-what-conditional-execution-is.html 
+sidebar: sidebar 
+keywords: condition, execution, help, design, workflows, execute, commands, specified, meet 
+summary: 'L"exécution conditionnelle vous aide à concevoir des flux de travail pouvant exécuter des commandes lorsque les conditions spécifiées sont remplies.' 
+---
+= Quelle est l'exécution conditionnelle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'exécution conditionnelle vous aide à concevoir des flux de travail pouvant exécuter des commandes lorsque les conditions spécifiées sont remplies.
+
+L'exécution des commandes dans un flux de travail peut être dynamique. Vous pouvez spécifier une condition pour l'exécution de chaque commande ou une ligne de commandes dans votre flux de travail. Par exemple, vous pouvez souhaiter l'exécution de la commande « Ajouter un volume au jeu de données » uniquement lorsqu'un jeu de données spécifique est trouvé et que vous ne souhaitez pas que le flux de travail échoue si le jeu de données est introuvable. Dans ce cas, vous pouvez activer la commande « Ajouter un volume au jeu de données » pour rechercher un jeu de données spécifique et, s'il n'est pas trouvé, vous pouvez désactiver la commande dans le flux de travail.
+
+Les options d'exécution conditionnelle des commandes sont disponibles dans le `Dictionary object` Et l'onglet Avancé des paramètres pour `commands` boîte de dialogue.
+
+Vous pouvez abandonner un flux de travail ou désactiver une commande spécifique dans le flux de travail. En outre, vous pouvez définir une commande à exécuter à l'aide de l'une des options suivantes :
+
+* Sans aucune condition
+* Lorsque les variables que vous avez spécifiées sont trouvées
+* Lorsque les variables que vous avez spécifiées sont introuvables
+* Lorsque l'expression que vous avez spécifiée est vraie
+
+
+Vous pouvez également définir une commande pour attendre un intervalle de temps spécifique.
+
+
+
+== Exemples d'exécution conditionnelle dans des flux de travail prédéfinis
+
+Vous pouvez ouvrir les détails de la commande des flux de travail prédéfinis suivants dans le concepteur pour comprendre comment l'exécution conditionnelle des commandes est utilisée :
+
+* Création d'un volume Data ONTAP de base
+* Créez un volume NFS Data ONTAP en cluster
+

@@ -1,0 +1,84 @@
+---
+permalink: help/reference-clone-filter-dialog-box.html 
+sidebar: sidebar 
+keywords: clone, filter, dialog box, enable, copy, edit 
+summary: La boîte de dialogue Cloner le filtre vous permet de copier et de modifier le filtre. 
+---
+= Boîte de dialogue Cloner le filtre
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La boîte de dialogue Cloner le filtre vous permet de copier et de modifier le filtre.
+
+* Onglet Propriétés
+* Onglet requête
+
+
+
+
+== Onglet Propriétés
+
+L'onglet *Propriétés* vous permet de modifier le nom du filtre, de sélectionner un objet dictionnaire et de modifier la description du filtre.
+
+* *Nom*
++
+Permet de modifier le nom du filtre. Le nom du filtre que vous avez sélectionné pour le clone est utilisé comme nom du clone et ajouté _copy par défaut.
+
+* *Type de dictionnaire*
++
+Permet de sélectionner un objet de dictionnaire dans la liste.
+
+* *Version entité*
++
+Vous permet de saisir le numéro de version du filtre dans `major.minor.revision` format--par exemple, 1.0.0.
+
+* *Description*
++
+Permet de modifier la description du filtre.
+
+
+
+
+
+== Onglet requête
+
+Vous permet de modifier la requête SQL, le libellé et la description des attributs.
+
+* *Requête SQL*
++
+Permet de modifier la requête SQL du filtre.
+
+* *Tableau des paramètres d'entrée*
++
+Affiche la liste des paramètres de la requête SQL que vous avez saisie qui nécessitent une entrée utilisateur lorsque le filtre est utilisé. Vous pouvez cliquer sur la colonne *Label* ou *Description* d’un paramètre pour modifier l’étiquette ou la description.
+
+* *Table attributs renvoyés*
++
+Affiche la liste des attributs renvoyés à partir de la requête SQL.
+
+
+
+
+
+== Boutons de commande
+
+* *Test*
++
+Permet de tester le filtre.
+
+* * Actualiser*
++
+Remplit la table *Paramètres d'entrée* et la table *attributs renvoyés* avec des valeurs modifiées, le cas échéant.
+
+* *Enregistrer*
++
+Enregistre le filtre et ferme la boîte de dialogue.
+
+* *Annuler*
++
+N'enregistre pas le filtre et ferme la boîte de dialogue.
+
+

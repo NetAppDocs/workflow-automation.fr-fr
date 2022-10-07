@@ -1,0 +1,64 @@
+---
+permalink: workflows/task-create-a-data-source-type.html 
+sidebar: sidebar 
+keywords: create, data, source, type, enable, acquisition, predefined, oncommand, workflow, automation 
+summary: 'Vous devez créer un type de source de données pour permettre l"acquisition des données à partir d"une source de données, qui n"est pas prédéfinie dans OnCommand Workflow Automation (WFA).' 
+---
+= Créer un type de source de données
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez créer un type de source de données pour permettre l'acquisition des données à partir d'une source de données, qui n'est pas prédéfinie dans OnCommand Workflow Automation (WFA).
+
+.Ce dont vous avez besoin, 8217;ll
+* Vous devez avoir créé l'entrée et le schéma de dictionnaire requis si vous créez un type de source de données personnalisé qui n'est pas prédéfini dans WFA.
+* Vous devez avoir recours à des scripts PowerShell pour créer un type de source de données utilisant la méthode de script.
+
+
+.Étapes
+. Cliquez sur *conception de la source de données* > *types de sources de données*.
+. Cliquez sur image:../media/new_wfa_icon.gif["Nouvelle icône"] dans la barre d'outils.
+. Dans la boîte de dialogue *Nouveau type de source de données* , entrez ou sélectionnez les détails requis dans les champs *Source de données*, *version de source de données* et *Schéma*.
+. Dans le champ *port par défaut*, entrez le numéro de port.
++
+`2638`
+
++
+Le numéro de port que vous avez saisi est renseigné lorsque vous ajoutez ce type de source de données pour l'acquisition de données. Par défaut, le port est utilisé par WFA pour communiquer avec la source de données et le port doit être ouvert sur le serveur source de données.
+
+. Dans la liste *méthode*, sélectionnez la méthode que WFA doit utiliser pour acquérir des données :
++
+[cols="2*"]
+|===
+| Si vous avez sélectionné... | Alors... 
+
+
+ a| 
+SQL
+ a| 
+Dans la liste *Driver type*, sélectionnez l'un des pilotes suivants qui convient à la source de données :
+
+** *Sybase jConnect3*
+** *Connecteur MySQL/J*
+** *Pilote JDBC serveur MySQL 3.0*
+** *Pilote JDBC Oracle 11.2.0.3*
+
+
+
+
+ a| 
+SCRIPT
+ a| 
+Dans le champ *script*, entrez le script PowerShell utilisé pour se connecter et récupérer les données de la source de données.
+
+[NOTE]
+====
+Les données contenues dans les fichiers CSV équivalents d'entrée de dictionnaire doivent inclure des onglets comme séparateur de champ. Par exemple, consultez le script PowerShell pour le type de source de données VMware vCenter.
+
+====
+|===
+. Cliquez sur *Enregistrer*.
+

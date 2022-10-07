@@ -1,0 +1,26 @@
+---
+permalink: help/concept-what-remote-system-types-are.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, communicate, remote, system, types, remote, specify, configure, example, data, ontap, system 
+summary: 'OnCommand Workflow Automation (WFA) communique avec les types de systèmes distants. Un type de système distant spécifie le type de systèmes distants avec lesquels WFA peut communiquer. Vous pouvez configurer les types de systèmes distants dans WFA. Par exemple, le système Data ONTAP peut être configuré comme un type de système distant.' 
+---
+= Quels sont les types de systèmes distants
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation (WFA) communique avec les types de systèmes distants. Un type de système distant spécifie le type de systèmes distants avec lesquels WFA peut communiquer. Vous pouvez configurer les types de systèmes distants dans WFA. Par exemple, le système Data ONTAP peut être configuré comme un type de système distant.
+
+Un type de système distant comporte les attributs suivants :
+
+* Nom
+* Description
+* Version
+* Protocole
+* Port
+* Délai dépassé
+
+
+Vous pouvez avoir un script Perl pour chaque type de système distant pour valider les informations d'identification du système distant. Vous pouvez stocker les identifiants des systèmes distants configurés sur WFA. Vous pouvez ajouter ou modifier un nouveau type de système distant personnalisé. Vous pouvez également cloner un type de système distant existant. Vous pouvez supprimer un type de système distant uniquement si aucun système n'est associé à ce type.

@@ -1,0 +1,23 @@
+---
+permalink: windows-install/task-back-up-regular-oncommand-workflow-automation-database-using-rest-api.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation 
+summary: 'Vous pouvez effectuer une sauvegarde régulière de la base de données OnCommand Workflow Automation (WFA) à l"aide des API REST. Lors d"une sauvegarde régulière, seule la base de données WFA est sauvegardée.' 
+---
+= Effectuez une sauvegarde régulière de la base de données WFA à l'aide d'API REST
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez effectuer une sauvegarde régulière de la base de données OnCommand Workflow Automation (WFA) à l'aide des API REST. Lors d'une sauvegarde régulière, seule la base de données WFA est sauvegardée.
+
+Vous devez disposer des identifiants d'administration, d'architecte ou de sauvegarde.
+
+.Étape
+. Saisissez l'URL suivante dans votre navigateur Web : `+https://IP address of the WFA server/rest/backups+`
++
+Pour plus d'informations, consultez la documentation REST.
+
+

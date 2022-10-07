@@ -1,0 +1,32 @@
+---
+permalink: help/task-edit-a-scheme.html 
+sidebar: sidebar 
+keywords: edit, display, name, description, entity, version, scheme, create 
+summary: 'Vous pouvez modifier le nom d"affichage, la description et la version d"entité d"un schéma que vous avez créé.' 
+---
+= Modifier un schéma
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez modifier le nom d'affichage, la description et la version d'entité d'un schéma que vous avez créé.
+
+*Ce dont vous aurez besoin*
+
+* Vous devez avoir installé WFA.
+* Vous devez disposer des privilèges d'administrateur ou des identifiants d'architecte pour WFA.
+
+
+*À propos de cette tâche*
+
+Vous ne pouvez pas modifier des schémas prédéfinis.
+
+.Étapes
+. Connectez-vous à WFA via un navigateur Web en tant qu'administrateur ou architecte.
+. Cliquez sur *conception de la source de données* > *schémas*.
+. Sélectionnez le schéma à modifier, puis cliquez sur image:../media/edit_wfa_icon.gif["Icône Modifier"] dans la barre d'outils.
+. Modifiez les informations requises dans la boîte de dialogue *schémas <SchemeName>*.
+. Cliquez sur *Enregistrer*.
+

@@ -1,0 +1,115 @@
+---
+permalink: rhel-install/reference-system-requirements-for-oncommand-workflow-automation-linux.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, install, system requirements 
+summary: 'Avant d"installer WFA, vous devez connaître la configuration matérielle et logicielle requise pour OnCommand Workflow Automation (WFA).' 
+---
+= Configuration système requise pour l'installation de OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant d'installer WFA, vous devez connaître la configuration matérielle et logicielle requise pour OnCommand Workflow Automation (WFA).
+
+
+
+== Configuration matérielle requise pour l'installation de WFA
+
+Le tableau suivant répertorie la configuration matérielle minimale requise et les spécifications matérielles recommandées pour le serveur WFA.
+
+[cols="3*"]
+|===
+| Composant | Configuration minimale requise | Spécifications recommandées 
+
+
+ a| 
+CPU
+ a| 
+2.27 GHz ou plus, 4 cœurs, 64 bits
+ a| 
+2.27 GHz ou plus, 4 cœurs, 64 bits
+
+
+
+ a| 
+RAM
+ a| 
+4 Go
+ a| 
+8 Go
+
+
+
+ a| 
+Espace disque disponible
+ a| 
+5 GO
+ a| 
+20 GO
+
+|===
+[NOTE]
+====
+Si vous installez WFA sur une machine virtuelle, il est recommandé de réserver la mémoire et le processeur nécessaires afin que cette dernière dispose de ressources suffisantes. Le programme d'installation ne vérifie pas la vitesse de la CPU.
+
+====
+
+
+== Configuration logicielle requise pour l'installation de WFA
+
+Le tableau suivant répertorie toutes les versions du système d'exploitation compatibles avec le serveur WFA.
+
+[cols="2*"]
+|===
+| Système d'exploitation | Version 
+
+
+ a| 
+Red Hat Enterprise Linux
+ a| 
+7.0, 7.1, 7.2, 7.3, 7.4, systèmes d'exploitation 7.5 et 7.6 64 bits
+
+
+
+ a| 
+CentOS
+ a| 
+systèmes d'exploitation 7.1, 7.2, 7.3, 7.4, 7.5 et 7.6 64 bits
+
+|===
+[NOTE]
+====
+WFA doit être installé sur des machines virtuelles ou physiques dédiées. Vous ne devez pas installer d'autres applications sur le serveur qui exécute WFA.
+
+====
+* L'un des navigateurs pris en charge suivants :
++
+** Mozilla Firefox
+** Microsoft Internet Explorer
+** Google Chrome
+
+
+* Perl v5.x
++
+Vous pouvez obtenir des informations sur les modules Perl qui doivent être installés à l'aide du `./WFA-version_number.bin -l` commande.
+
+
+
+Pour plus de détails, consultez le https://mysupport.netapp.com/matrix/["Matrice d'interopérabilité"^].
+
+
+NOTE: Les applications antivirus peuvent empêcher le démarrage des services WFA.
+
+Pour éviter ce problème, configurez les exclusions d'analyse antivirus pour les répertoires WFA suivants :
+
+* Répertoire dans lequel vous avez installé WFA
+* Répertoire dans lequel vous avez installé Perl
+* Répertoire dans lequel vous avez installé OpenJDK
+* Le répertoire des données MySQL
+
+
+*Informations connexes*
+
+https://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^]

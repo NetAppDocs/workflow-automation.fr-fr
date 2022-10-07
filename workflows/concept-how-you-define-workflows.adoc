@@ -1,0 +1,32 @@
+---
+permalink: workflows/concept-how-you-define-workflows.html 
+sidebar: sidebar 
+keywords: break down, goal, workflow, steps, executed, workflow, arrange, complete 
+summary: 'Vous devez diviser l"objectif d"un workflow en étapes à exécuter par le workflow. Vous pouvez ensuite organiser les étapes pour terminer votre flux de travail.' 
+---
+= Comment définir les flux de travail
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez diviser l'objectif d'un workflow en étapes à exécuter par le workflow. Vous pouvez ensuite organiser les étapes pour terminer votre flux de travail.
+
+Un flux de travail est un algorithme qui comprend une série d'étapes requises pour terminer un processus de bout en bout. La portée du processus peut varier en fonction de l'objectif du workflow. L'objectif d'un flux de travail peut être défini de manière à ne gérer que les opérations de stockage ou des processus plus complexes, tels que la gestion de la mise en réseau, la virtualisation, les systèmes IT et d'autres applications, dans le cadre d'un processus unique. Les flux de travail OnCommand Workflow Automation (WFA) sont conçus par les architectes du stockage et exécutés par les opérateurs de stockage.
+
+La définition de votre flux de travail inclut la découpe de l'objectif de votre flux de travail en plusieurs étapes. Par exemple, la création d'un volume NFS comprend les étapes suivantes :
+
+. Création d'un objet de volume
+. Création d'une export-policy et association de la policy avec le volume
+
+
+Vous pouvez utiliser une commande WFA ou un workflow pour chaque étape de votre workflow. WFA inclut des commandes et des workflows prédéfinis, basés sur des cas d'utilisation courants du stockage. Si vous ne trouvez pas de commande ou de flux de travail prédéfinis pouvant être utilisés pour une étape particulière, vous pouvez effectuer l'une des opérations suivantes :
+
+* Choisissez une commande ou un workflow prédéfini correspondant étroitement à l'étape, puis clonez et modifiez la commande ou le workflow prédéfini en fonction de vos besoins.
+* Créez une nouvelle commande ou un nouveau flux de travail.
+
+
+Vous pouvez ensuite organiser les commandes ou les flux de travail dans un nouveau flux de travail pour créer le flux de travail qui réalise votre objectif.
+
+Au début de l'exécution du workflow, WFA planifie l'exécution et vérifie que le workflow peut être exécuté à l'aide des entrées du workflow et des commandes. Lors de la planification du flux de travail, toutes les sélections de ressources et entrées utilisateur sont résolues pour créer un plan d'exécution. À la fin de la planification, WFA exécute le plan d'exécution, composé d'un ensemble de commandes WFA avec des paramètres applicables.

@@ -1,0 +1,48 @@
+---
+permalink: workflows/task-remove-entities-from-a-pack.html 
+sidebar: sidebar 
+keywords: remove, pack, entities, oncommand, workflow, automation, check, updated, source, control, management, server 
+summary: 'Vous pouvez supprimer un pack des entités dans OnCommand Workflow Automation (WFA) et archiver le pack mis à jour sur le serveur SCM (Source Control Management).' 
+---
+= Supprimez les packs de flux de production WFA des entités
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez supprimer un pack des entités dans OnCommand Workflow Automation (WFA) et archiver le pack mis à jour sur le serveur SCM (Source Control Management).
+
+Le SCM doit être configuré et vous devez disposer des informations d'identification admin ou architecte.
+
+Vous pouvez supprimer un pack des entités suivantes :
+
+* Flux de travail
+* Finders
+* Filtres
+* Commandes
+* Fonctions
+* Modèles
+* Schémas
+* Dictionnaire
+* Types de sources de données
+* Types de système distant
+* Requêtes de cache
+* Catégories
+
+
+.Étapes
+. Connectez-vous à la fenêtre *WFA* via un navigateur Web.
+. Dans le portail de conception *Workflow,* naviguez jusqu'à l'entité que vous souhaitez supprimer et cliquez sur *<entité>*.
+. Cliquez sur l'icône *Supprimer de Pack*.
+. Dans la boîte de dialogue *Supprimer de Pack <entité>*, sélectionnez le pack que vous souhaitez supprimer de cette entité.
+. Cliquez sur *OK*.
+. Cliquez sur l'onglet *Packs*.
+. Cliquez sur l'icône *Exporter vers le serveur*.
+. Dans la boîte de dialogue *Exporter vers le dossier du serveur*, dans le champ *emplacement du dossier sur le système du serveur*, entrez l'emplacement du dossier du serveur où le pack est enregistré sur le serveur.
++
+Ceci exporte le pack sous forme éclatée dans le système de fichiers où le client SCM est créé.
+
+. Dans l'emplacement du client SCM, vérifiez le contenu du pack sur le serveur SCM.
+. Utilisez les outils de différentiel fournis par le SCM pour vérifier les changements par rapport à la version SCM du pack.
+

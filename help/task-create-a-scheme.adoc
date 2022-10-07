@@ -1,0 +1,36 @@
+---
+permalink: help/task-create-a-scheme.html 
+sidebar: sidebar 
+keywords: create, scheme, data, cached, new, data, source, type, store, workflows, directly, database 
+summary: 'Vous devez créer un schéma lorsque les données doivent être mises en cache à partir d"un nouveau type de source de données ou lorsque les données doivent être stockées par des flux de travail directement dans la base de données.' 
+---
+= Créer un schéma
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez créer un schéma lorsque les données doivent être mises en cache à partir d'un nouveau type de source de données ou lorsque les données doivent être stockées par des flux de travail directement dans la base de données.
+
+*Ce dont vous aurez besoin*
+
+* Vous devez avoir installé WFA.
+* Vous devez disposer des privilèges d'administrateur ou des identifiants d'architecte pour WFA.
+
+
+*À propos de cette tâche*
+
+Par défaut, WFA prend en charge deux types de schémas : l'acquisition des sources de données et autres.
+
+* Schémas d'acquisition des sources de données : les tables de ces schémas sont mises en cache par des sources de données définies pour acquérir des données à partir de systèmes distants.
+* Autres schémas : les tables de ces schémas sont remplies de données via des workflows personnalisés pour résoudre des problèmes spécifiques.
+
+
+.Étapes
+. Connectez-vous à WFA via un navigateur Web en tant qu'administrateur ou architecte.
+. Cliquez sur *conception de la source de données* > *schémas*.
+. Créez un nouveau schéma en cliquant sur image:../media/new_wfa_icon.gif["Nouvelle icône"] dans la barre d'outils.
+. Entrez les informations requises telles que le nom, le type, la description et la version d'entité du schéma dans la boîte de dialogue *nouveaux schémas*.
+. Cliquez sur *Enregistrer*.
+

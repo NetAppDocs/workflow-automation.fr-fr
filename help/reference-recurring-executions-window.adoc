@@ -1,0 +1,122 @@
+---
+permalink: help/reference-recurring-executions-window.html 
+sidebar: sidebar 
+keywords: recurring, execution, window, enable, suspend, resume, delete, associate, workflow, specified, frequency, access 
+summary: La fenêtre exécutions récurrentes vous permet de suspendre, de reprendre ou de supprimer une exécution récurrente associée à un flux de travail. Un flux de travail avec une exécution récurrente est exécuté de façon récurrente à une fréquence spécifiée. Vous pouvez accéder à cette fenêtre en sélectionnant exécution > exécutions récurrentes. 
+---
+= La fenêtre exécutions récurrentes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La fenêtre *exécutions récurrentes* vous permet de suspendre, de reprendre ou de supprimer une exécution récurrente associée à un flux de travail. Un flux de travail avec une exécution récurrente est exécuté de façon récurrente à une fréquence spécifiée. Vous pouvez accéder à cette fenêtre en sélectionnant *exécution* > *exécutions récurrentes*.
+
+* Table exécutions récurrentes
+* Barre d'outils
+
+
+
+
+== Table exécutions récurrentes
+
+Le tableau planifications récurrentes répertorie les planifications récurrentes existantes associées à un flux de travail au format table. Vous pouvez personnaliser l'affichage du tableau à l'aide des fonctions de filtrage et de tri disponibles pour chaque colonne, ainsi qu'en réorganisant l'ordre des colonnes.
+
+* image:../media/filter_icon_wfa.gif["Icône de filtre"] active ou désactive le filtrage pour l'ensemble de la table. Un "x" rouge apparaît sur l'icône si le filtrage est désactivé.
+* Double-cliquer image:../media/filter_icon_wfa.gif["Icône de filtre"] efface et réinitialise les sélections de filtrage.
+* image:../media/wfa_filter_icon.gif["Icône de filtre"] sur chaque en-tête de colonne, vous pouvez effectuer un filtrage en fonction du contenu des colonnes. Cliquez sur image:../media/wfa_filter_icon.gif["Icône de filtre"] dans une colonne, vous pouvez filtrer un élément spécifique dans la liste déroulante ou sur tous les éléments disponibles.
+* Cliquer sur l'en-tête de colonne permet de basculer entre l'ordre croissant et décroissant de tri. Vous pouvez identifier l'ordre de tri appliqué à l'aide des flèches de tri (image:../media/wfa_sortarrow_up_icon.gif["Icône de tri"] pour les valeurs ascendantes et image:../media/wfa_sortarrow_down_icon.gif["Icône de tri"] pour décroissant).
+* Pour réorganiser l'emplacement des colonnes, vous pouvez faire glisser et déposer les colonnes dans l'ordre voulu. Toutefois, vous ne pouvez pas masquer ou supprimer ces colonnes.
+* Cliquez sur la zone de texte filtre *Search* pour rechercher un contenu spécifique. En outre, vous pouvez effectuer une recherche à l'aide des opérateurs pris en charge pour le type de colonne applicable, alphabétique ou numérique.
+
+
+Le tableau suivant présente les opérateurs pris en charge pour les colonnes alphabétiques et numériques dans la table exécutions récurrentes, disponible dans la zone de texte filtre *recherche*.
+
+[cols="2*"]
+|===
+| Alphabétique | Valeur numérique 
+
+
+ a| 
+* Contient
+* Ne contient pas
+* Commence par
+* Se termine par
+* Égal à
+* N'est pas égal
+* Réinitialiser
+
+ a| 
+* Égal à
+* N'est pas égal
+* Inférieur à
+* Supérieur à
+* Inférieur ou égal à
+* Supérieur ou égal à
+* Entre
+* Réinitialiser
+
+
+|===
+La table Recurring Schedules contient les colonnes suivantes :
+
+* *ID*
++
+Affiche l'identifiant de la planification.
+
+* *Nom de flux de travail*
++
+Affiche le nom du flux de travail.
+
+* *Entrées utilisateur*
++
+Affiche les noms et valeurs des entrées utilisateur associées au flux de travail.
+
+* *Annexe*
++
+Affiche le nom du planning associé au flux de travail.
+
+* *Statut*
++
+Affiche l'état de la planification. Les valeurs possibles sont actif et suspendu.
+
+* *Prochaine date d'exécution*
++
+Affiche la date et l'heure auxquelles le flux de travail associé au planning sera exécuté ensuite.
+
++
+Vous pouvez rechercher un programme en saisissant la date et l'heure d'exécution dans la zone de texte filtre *Search*.
+
+* *Mis à jour le*
++
+Affiche la date et l'heure de mise à jour de l'association du flux de travail au planning.
+
++
+Cliquez sur l'icône du calendrier dans la zone de texte filtre *Search* pour rechercher des horaires récurrents à une date spécifique.
+
+* *Mis à jour par*
++
+Affiche le nom de l'utilisateur qui a modifié l'association du flux de travail avec le planning.
+
+
+
+
+
+== Barre d'outils
+
+La barre d'outils se trouve au-dessus de l'en-tête de colonne. Vous pouvez utiliser les icônes de la barre d'outils pour effectuer diverses actions. Vous pouvez également accéder à ces actions à partir du menu contextuel de la fenêtre.
+
+* *image:../media/suspend_icon.gif[""] (Suspendre)*
++
+Ouvre la boîte de dialogue interrompre l'exécution récurrente, qui vous permet de suspendre l'exécution d'un flux de travail actif.
+
+* *image:../media/resume_wfa_icon.gif["Icône reprendre"] (Reprise)*
++
+Reprend l'exécution d'un flux de travail suspendu.
+
+* *image:../media/delete_wfa_icon.gif["Icône Supprimer"] (Supprimer)*
++
+Ouvre la boîte de dialogue Supprimer la confirmation d'exécution récurrente, qui vous permet de supprimer le planning sélectionné.
+
+

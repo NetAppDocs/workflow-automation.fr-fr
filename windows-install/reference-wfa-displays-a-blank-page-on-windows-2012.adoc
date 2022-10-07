@@ -1,0 +1,26 @@
+---
+permalink: windows-install/reference-wfa-displays-a-blank-page-on-windows-2012.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, wfa, displays, blank page, windows 2012 
+summary: 'Une page blanche peut s"afficher si vous avez téléchargé et installé Adobe Flash Player séparément du site Web d"Adobe. Vous ne devez pas télécharger et installer le lecteur Flash séparément car il est fourni avec Internet Explorer dans Windows 2012. Les mises à jour de Flash Player sont installées par le biais des mises à jour de Windows.' 
+---
+= OnCommand Workflow Automation (WFA) affiche une page vierge sous Windows 2012
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Une page blanche peut s'afficher si vous avez téléchargé et installé Adobe Flash Player séparément du site Web d'Adobe. Vous ne devez pas télécharger et installer le lecteur Flash séparément car il est fourni avec Internet Explorer dans Windows 2012. Les mises à jour de Flash Player sont installées par le biais des mises à jour de Windows.
+
+Si vous avez téléchargé et installé le lecteur Flash séparément, vous devez effectuer les opérations suivantes :
+
+.Étapes
+. Désinstallez le lecteur Flash que vous avez déjà installé.
+. Sous Windows, ouvrez *Server Manager* > *local Server* > *RÔLES ET FONCTIONNALITÉS* > *TÂCHES* et sélectionnez *Ajouter rôles et fonctionnalités*.
+. Dans l'Assistant Ajout de rôles et fonctionnalités, cliquez sur *fonctionnalités* > *interface utilisateur et infrastructure*, sélectionnez *Desktop Experience*, puis ajoutez la fonction.
++
+L'ajout de l'expérience de bureau ajoute le lecteur Flash à Windows.
+
+. Redémarrez Windows.
+

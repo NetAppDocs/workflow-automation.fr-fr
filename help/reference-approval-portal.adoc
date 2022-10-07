@@ -1,0 +1,46 @@
+---
+permalink: help/reference-approval-portal.html 
+sidebar: sidebar 
+keywords: approval, portal, window, enable, reject, workflow 
+summary: 'La fenêtre approbation Portal vous permet d"approuver ou de rejeter un flux de travail.' 
+---
+= Portail d'approbation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La fenêtre approbation Portal vous permet d'approuver ou de rejeter un flux de travail.
+
+Vous pouvez vous connecter à la fenêtre Portail d'approbation à partir du lien fourni dans la notification par e-mail pour l'approbation du flux de travail.
+
+* *Retour à WFA*
++
+Vous ramène à l'application WFA à partir de la fenêtre du portail d'approbation.
+
+
+
+
+
+== Portail d'approbation
+
+* *Entrer un commentaire*
++
+Vous permet de saisir votre commentaire pour l'approbation ou le rejet du flux de travail.
+
+
+
+
+
+== Boutons de commande
+
+* *Approuver et reprendre*
++
+Permet d'approuver le flux de travail, qui reprend le flux de travail.
+
+* *Rejet et abandon*
++
+Vous permet de rejeter le flux de travail, qui interrompt le flux de travail.
+
+

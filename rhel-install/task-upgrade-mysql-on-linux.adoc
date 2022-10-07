@@ -1,0 +1,57 @@
+---
+permalink: rhel-install/task-upgrade-mysql-on-linux.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, upgrade, mysql, linux 
+summary: 'Vous pouvez mettre à niveau vers une version plus récente de MySQL sur le serveur Linux sur lequel OnCommand Workflow Automation est installé afin d"obtenir des correctifs pour les vulnérabilités de sécurité.' 
+---
+= Mettez à niveau MySQL sur Linux
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez mettre à niveau vers une version plus récente de MySQL sur le serveur Linux sur lequel OnCommand Workflow Automation est installé afin d'obtenir des correctifs pour les vulnérabilités de sécurité.
+
+Vous devez disposer de privilèges root pour le système Linux sur lequel WFA est installé.
+
+
+NOTE: Avant de réinstaller WFA 4.2, vous devez supprimer le répertoire de données MySQL si vous avez désinstallé MySQL.
+
+Vous pouvez uniquement mettre à niveau vers des mises à jour mineures de MySQL 5.7, par exemple 5.7.22 à 5.7.26. Vous ne pouvez pas effectuer la mise à niveau vers les versions principales de MySQL, par exemple la version 5.8.
+
+.Étapes
+. Connectez-vous en tant qu'utilisateur root sur la machine hôte WFA.
+. Téléchargez le dernier bundle MySQL Community Server .rpm sur le système cible.
+. Décompressez le bundle dans un répertoire du système cible.
+. Vous obtenez plusieurs paquets .rpm dans le répertoire après avoir détarbré le bundle, mais WFA a besoin uniquement des packages rpm suivants :
++
+** mysql-community-client-5.7.x
+** mysql-community-libs-5.7.x
+** mysql-community-server-5.7.x
+** mysql-community-common-5.7.x
+** mysql-community-libs-compat-5.7.x Supprimer tous les autres paquets .rpm. L'installation de tous les paquets dans un ensemble RPM ne causera aucun problème.
+
+
+. À l'invite du shell, arrêter la base de données WFA et les services serveur :
++
+`service wfa-db stop`
+
++
+`service wfa-server stop`
+
+. Appelez la mise à niveau de MySQL à l'aide de la commande suivante :
++
+`rpm -uvh *.rpm`
+
++
+`*.rpm` Fait référence aux packages .rpm dans le répertoire où vous avez téléchargé la version la plus récente de MySQL.
+
+. Démarrer les services WFA :
++
+`service wfa-db start`
+
++
+`service wfa-server start`
+
+

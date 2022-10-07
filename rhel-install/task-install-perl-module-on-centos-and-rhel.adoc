@@ -1,0 +1,171 @@
+---
+permalink: rhel-install/task-install-perl-module-on-centos-and-rhel.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, install, perl modules, centos, rhel 
+summary: Certains modules Perl ne sont pas inclus par défaut avec le package Perl pour Linux. 
+---
+= Installez les modules Perl sur CentOS et RHEL
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Certains modules Perl ne sont pas inclus par défaut avec le package Perl pour Linux.
+
+Au cours de l'installation de WFA, le programme d'installation de WFA vérifie que tous les modules Perl sont disponibles dans le système, puis procède lorsque cette exigence est remplie. Vous devez installer les modules Perl avant d'installer OnCommand Workflow Automation (WFA).
+
+
+NOTE: Le programme d'installation de WFA tente d'installer automatiquement les modules Perl si les modules perl sont disponibles dans les référentiels yum configurés sur le système. Si les modules Perl ne sont pas disponibles, le programme d'installation invite l'utilisateur à installer les modules Perl manuellement. La seule exception est le module « perl-core ». Ce module n'est pas installé automatiquement sur le système, même s'il est disponible dans les référentiels yum configurés sur le système. Il s'agit d'un problème connu.
+
+[cols="2*"]
+|===
+| Module Perl | Nom du package RPM 
+
+
+ a| 
+Modules de base Perl
+ a| 
+perl-core
+
+
+
+ a| 
+DBI
+ a| 
+perl-DBI
+
+
+
+ a| 
+XML::DOM
+ a| 
+perl-XML-DOM
+
+
+
+ a| 
+Terme::ReadKey
+ a| 
+perl-TermReadKey
+
+
+
+ a| 
+HTTP::requête
+ a| 
+perl-libwww-perl
+
+
+
+ a| 
+XML::libxml perl-XML-libxml
+ a| 
+perl-XML-libxml
+
+
+
+ a| 
+DBD::mysql
+ a| 
+perl-DBD-MySQL
+
+
+
+ a| 
+URI ::URL
+ a| 
+Perl-URI
+
+
+
+ a| 
+HTTP::réponse
+ a| 
+perl-libwww-perl
+
+
+
+ a| 
+HTTP::en-têtes
+ a| 
+perl-libwww-perl
+
+
+
+ a| 
+Net::SSLeay
+ a| 
+perl-Net-SSLeay
+
+
+
+ a| 
+URI::Échap
+ a| 
+Perl-URI
+
+
+
+ a| 
+LWP::Protocol::https perl-LWP-Protocol-https
+ a| 
+perl-LWP-Protocol-https
+
+
+
+ a| 
+XML::Parser
+ a| 
+Perl-XML-Parser
+
+
+
+ a| 
+LWP::UserAgent
+ a| 
+perl-libwww-perl
+
+
+
+ a| 
+Net::LDAP
+ a| 
+perl-LDAP
+
+
+
+ a| 
+Date ::Calc
+ a| 
+perl-Date-CalcaXML
+
+|===
+.Étapes
+. Connectez-vous au serveur Linux en tant que `root` utilisateur.
+. Vérifiez que tous les modules Perl requis pour WFA sont installés sur le système :
++
+`./WFA-4.2.0.0.0.bin -l`
+
+. Si aucun module Perl n'est détecté, vérifiez qu'ils sont disponibles dans le référentiel configuré :
++
+`yum search Perl-module-name`
+
++
+Si le module DBD::mysql n'est pas détecté :
+
++
+`yum search perl-DBD-MySQL`
+
+. Si des modules Perl ne figurent pas dans le référentiel, configurez le référentiel contenant le module Perl ou téléchargez le module Perl à partir d'Internet.
+. Installez les modules Perl manquants à partir du référentiel configuré :
++
+`yum -y install Perl-module-name`
+
++
+Installez le module DBD::mysql à partir du référentiel configuré :
+
++
+`yum -y install perl-DBD-MySQL`
+
+

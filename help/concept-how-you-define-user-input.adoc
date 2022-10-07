@@ -1,0 +1,153 @@
+---
+permalink: help/concept-how-you-define-user-input.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, wfa, user, input, data, options, available, execution, define, parameters, enhance, flexibility, usability 
+summary: 'Les entrées utilisateur OnCommand Workflow Automation (WFA) sont des options d"entrée de données disponibles lors de l"exécution des flux de travail. Vous devez définir les paramètres d"entrée utilisateur pour vos flux de travail afin d"améliorer la flexibilité et la facilité d"utilisation de vos flux de travail.' 
+---
+= Comment sont définies les entrées utilisateur
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les entrées utilisateur OnCommand Workflow Automation (WFA) sont des options d'entrée de données disponibles lors de l'exécution des flux de travail. Vous devez définir les paramètres d'entrée utilisateur pour vos flux de travail afin d'améliorer la flexibilité et la facilité d'utilisation de vos flux de travail.
+
+Les entrées utilisateur sont affichées sous forme de champs de saisie, qui peuvent être remplis avec des données pertinentes lors de l'aperçu ou de l'exécution des flux de travail. Vous pouvez créer un champ de saisie utilisateur lorsque vous spécifiez les détails de la commande dans un workflow en préfixant une étiquette ou une variable avec le signe dollar ($). Par exemple : `$VolumeName` crée un `Volume Name` champ de saisie utilisateur. WFA renseigne automatiquement l'onglet entrées utilisateur dans la fenêtre Workflow <nom du flux de travail> avec les étiquettes d'entrée utilisateur que vous avez créées. Vous pouvez également définir le type d'entrée utilisateur et personnaliser les champs d'entrée en modifiant les attributs d'entrée utilisateur, tels que le type, le nom d'affichage, les valeurs par défaut et les valeurs de validation.
+
+
+
+== Options de type d'entrée utilisateur
+
+* *String*
++
+Vous pouvez utiliser une expression régulière pour des valeurs valides--par exemple, a*.
+
++
+Chaînes, telles que `0d` et `0f`, sont évalués comme des nombres similaires à `0d` évalué comme 0 du type double.
+
+* *Numéro*
++
+Vous pouvez définir une plage numérique pouvant être sélectionnée--par exemple, 1 à 15.
+
+* *Enum*
++
+Vous pouvez créer des valeurs d'énumération qui peuvent être sélectionnées lors du remplissage du champ de saisie utilisateur à l'aide du type d'énumération. Vous pouvez éventuellement verrouiller les valeurs d'énumération que vous avez créées pour vous assurer que seules les valeurs que vous avez créées sont sélectionnées pour l'entrée utilisateur.
+
+* *Requête*
++
+Vous pouvez sélectionner le type de requête lorsque vous souhaitez sélectionner l'entrée utilisateur à partir des valeurs disponibles dans le cache WFA. Par exemple, vous pouvez utiliser la requête suivante pour remplir automatiquement les champs d'entrée utilisateur avec l'adresse IP et les valeurs de nom du cache WFA : `SELECT ip, name FROM storage.array.` Vous pouvez éventuellement verrouiller les valeurs récupérées par une requête de sorte que seuls les résultats rétribués par la requête soient sélectionnés.
+
+* *Requête (sélection multiple)*
++
+Le type de requête (sélection multiple), similaire au type de requête, permet de sélectionner plusieurs valeurs pendant l'exécution du flux de travail. Par exemple, les utilisateurs peuvent sélectionner plusieurs volumes ou un volume avec ses partages et ses exportations. Vous pouvez autoriser les utilisateurs à sélectionner plusieurs lignes ou restreindre la sélection à une seule ligne. La sélection d'une ligne sélectionne les valeurs de toutes les colonnes de la ligne sélectionnée.
+
++
+Vous pouvez utiliser les fonctions suivantes lorsque vous utilisez le type de requête (sélection multiple) d'entrée utilisateur :
+
++
+** GetSize
+** GetValueAt
+** GetValueAt2D
+** GetValueFrom2DByRowKey
+
+
+* *Booléen*
++
+Vous pouvez utiliser le type booléen pour afficher une case à cocher dans la boîte de dialogue de saisie utilisateur. Vous devez utiliser le type booléen pour les entrées utilisateur qui ont « vrai » et « faux » comme valeurs possibles.
+
+* *Tableau*
++
+Vous pouvez utiliser le type de table d'entrée utilisateur pour spécifier les en-têtes de colonne d'une table qui peut être utilisée pour entrer plusieurs valeurs pendant l'exécution du flux de travail. Par exemple, une table qui peut être utilisée pour spécifier une liste de noms de nœuds et de ports. Vous pouvez également spécifier l'un des types d'entrée utilisateur suivants pour les en-têtes de colonne afin de valider les valeurs saisies pendant l'exécution :
+
++
+** Chaîne
+** Nombre
+** Enum
+** Booléen
+** Requête
+
+
+
+
+Chaîne est le type d'entrée utilisateur par défaut pour les en-têtes de colonne. Vous devez double-cliquer sur la colonne Type pour spécifier un autre type d'entrée utilisateur.
+
+Vous pouvez ouvrir le workflow de règles et de règles de création SnapMirror dans le concepteur pour voir comment les types d'entrées utilisateur sont utilisés dans l'entrée utilisateur « `SANPsorPolicyRule`.
+
+Vous pouvez utiliser les fonctions suivantes lors de l'utilisation du type de table d'entrée utilisateur :
+
+* GetSize
+* GetValueAt
+* GetValueAt2D
+* GetValueFrom2DByRowKey
+
+
+Vous pouvez ouvrir le flux de travail *Créer et configurer une machine virtuelle de stockage avec Infinite Volume* dans le concepteur pour voir comment le type de table est utilisé.
+
+* *Mot de passe*
++
+Vous pouvez utiliser le type de mot de passe pour les entrées utilisateur destinées à saisir des mots de passe. Le mot de passe saisi par l'utilisateur est chiffré et affiché sous la forme d'une séquence de caractères astérisque dans l'application WFA et dans les fichiers journaux. Vous pouvez utiliser les fonctions suivantes pour décrypter le mot de passe, qui peut ensuite être utilisé par la commande :
+
++
+** Pour les commandes Perl : WFAUtil::getWfaInputPassword ($password)
+** Pour les commandes PowerShell : get-WfaInputPassword -EncryptedPassword $password
++
+Ici, $password est le mot de passe chiffré qui est transmis par WFA à la commande.
+
+
+
+* *Dictionnaire*
++
+Vous pouvez ajouter les données de table pour l'entrée de dictionnaire sélectionnée. L'attribut d'entrée du dictionnaire sélectionne l'attribut à renvoyer. Vous pouvez sélectionner une ou plusieurs valeurs lors de l'exécution du flux de travail. Par exemple, vous pouvez sélectionner un ou plusieurs volumes. Par défaut, les valeurs uniques sont sélectionnées. Vous pouvez également sélectionner règles pour le filtrage. Une règle se compose d'un attribut d'entrée de dictionnaire, d'un opérateur et d'une valeur. L'attribut peut également inclure des attributs de ses références.
+
++
+Vous pouvez, par exemple, spécifier une règle pour les agrégats en répertoriant tous les agrégats dont le nom commence par la chaîne « aggr » et dont la taille disponible est supérieure à 5 Go. La première règle du groupe est l'attribut `name`, avec l'opérateur `starts-with`, et la valeur aggr. La deuxième règle du même groupe est l'attribut `available_size_mb`, avec l'opérateur `>` et la valeur 5000.
+
+
+
+Le tableau suivant répertorie les options que vous pouvez appliquer aux types d'entrées utilisateur :
+
+[cols="2*"]
+|===
+| Option | Description 
+
+
+ a| 
+Validation
+ a| 
+Vous pouvez valider le type d'entrées utilisateur de manière à ce que seules les valeurs valides soient saisies par les utilisateurs :
+
+* Les types de chaîne et de nombre d'entrées utilisateur peuvent être validés avec les valeurs saisies pendant l'exécution du flux de travail.
+* Le type de chaîne peut également être validé avec une expression régulière.
+* Le type de numéro est un champ numérique à virgule flottante qui peut être validé à l'aide d'une plage numérique spécifiée.
+
+
+
+
+ a| 
+Valeurs de verrouillage
+ a| 
+Vous pouvez verrouiller les valeurs des types de requête et d'énumération pour empêcher l'utilisateur d'écraser les valeurs déroulantes et pour activer la sélection des valeurs affichées uniquement.
+
+
+
+ a| 
+Marquage obligatoire
+ a| 
+Vous pouvez marquer les entrées utilisateur comme obligatoires de sorte que les utilisateurs doivent saisir certaines entrées utilisateur pour poursuivre l'exécution du flux de travail.
+
+
+
+ a| 
+Regroupement
+ a| 
+Vous pouvez regrouper les entrées utilisateur associées et fournir un nom au groupe d'entrées utilisateur. Les groupes peuvent être développés et réduits dans la boîte de dialogue de saisie utilisateur. Vous pouvez sélectionner un groupe qui doit être développé par défaut.
+
+
+
+ a| 
+Conditions d'application
+ a| 
+Grâce à la fonctionnalité de saisie utilisateur conditionnelle, vous pouvez définir la valeur d'une entrée utilisateur en fonction de la valeur saisie pour une autre entrée utilisateur. Par exemple, dans un workflow qui configure le protocole NAS, vous pouvez spécifier l'entrée utilisateur requise pour le protocole NFS pour activer l'entrée utilisateur « listes d'hôtes en lecture/écriture ».
+
+|===

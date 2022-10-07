@@ -1,0 +1,52 @@
+---
+permalink: workflows/task-create-a-filter.html 
+sidebar: sidebar 
+keywords: create, wfa, filter, search, resources, predefined, suitable, task 
+summary: 'Vous pouvez créer un filtre WFA qui peut rechercher des ressources s"il n"existe pas de filtre WFA prédéfini adapté à la tâche.' 
+---
+= Créer un filtre
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez créer un filtre WFA qui peut rechercher des ressources s'il n'existe pas de filtre WFA prédéfini adapté à la tâche.
+
+Vous devez connaître les syntaxes SQL appropriées pour créer le filtre.
+
+.Étapes
+. Cliquez sur *Workflow Design* > *Filters*.
+. Cliquez sur image:../media/new_wfa_icon.gif["Nouvelle icône"] dans la barre d'outils.
+. Dans l'onglet *Propriétés* de la boîte de dialogue *Nouveau filtre*, entrez ou sélectionnez les détails requis dans les champs *Nom*, *Type de dictionnaire* et *Description*.
+. Dans l'onglet *Query*, entrez la requête SQL appropriée pour le filtre.
++
+Vous devez entrer une requête SQL unique et utiliser éventuellement des paramètres d'entrée. Vous devez utiliser la syntaxe suivante pour utiliser un paramètre d'entrée : `+${ParameterName}+`.
+
++
+[listing]
+----
+SELECT
+	array.ip
+FROM
+	storage.array
+WHERE
+	array.name = '${ArrayName}'
+----
+. Cliquez sur *Actualiser* pour remplir la table *Paramètres d'entrée* et la liste *attributs renvoyés*.
++
+Ces informations sont obtenues à partir de la requête SQL que vous avez saisie. Par exemple, si vous utilisez l'exemple de requête SQL de l'étape précédente, ip s'affiche dans attributs retournés et ArrayName s'affiche dans Paramètres d'entrée. Vous pouvez modifier les entrées dans les colonnes *Label* et *Description*.
+
+. *Facultatif:* cliquez sur *Test* pour tester le filtre.
++
+.. Dans la boîte de dialogue *Test Filter <FilterName>*, entrez les paramètres de test requis.
+.. Décochez la case *utiliser les données de réservation dans test* si vous ne souhaitez pas utiliser les données de réservation pour tester le filtre.
+.. Cliquez sur *Test*.
++
+Le résultat du test s'affiche.
+
+.. Fermez les boîtes de dialogue.
+
+
+. Cliquez sur *Enregistrer*.
+

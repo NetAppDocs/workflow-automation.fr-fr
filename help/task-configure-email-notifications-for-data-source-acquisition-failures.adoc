@@ -1,0 +1,59 @@
+---
+permalink: help/task-configure-email-notifications-for-data-source-acquisition-failures.html 
+sidebar: sidebar 
+keywords: control, notifications, generate, oncommand, workflow, automation, data, source, acquisition, fail, configure, threshold, interval, factor, notifications 
+summary: 'Vous pouvez contrôler les notifications générées dans OnCommand Workflow Automation (WFA) en cas d"échec de l"acquisition d"une source de données. Vous pouvez configurer le seuil et le facteur d"intervalle pour les notifications.' 
+---
+= Configurez les notifications par e-mail en cas d'échec de l'acquisition des sources de données
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez contrôler les notifications générées dans OnCommand Workflow Automation (WFA) en cas d'échec de l'acquisition d'une source de données. Vous pouvez configurer le seuil et le facteur d'intervalle pour les notifications.
+
+*Ce dont vous aurez besoin*
+
+Vous devez avoir configuré les notifications par e-mail dans OnCommand Workflow Automation (WFA).
+
+.Étapes
+. Connectez-vous à WFA via un navigateur Web en tant qu'administrateur.
+. Configurez le seuil de notification :
++
+.. Cliquez sur *Paramètres* et sous *Configuration*, cliquez sur *Paramètres de workflow*.
+.. Faites défiler jusqu'à la section *Avancé*.
+.. Dans le champ *seuil de notification d'acquisition*, saisissez la valeur requise.
++
+La valeur par défaut est 2.
+
++
+Si la valeur spécifiée est 2, WFA attend deux échecs consécutifs d'acquisition de source de données avant d'envoyer une notification par e-mail.
+
+
+
+. Cliquez sur *Enregistrer*.
+. Configurez le facteur d'intervalle de notification :
++
+.. Cliquez sur *Paramètres* et sous *Configuration*, cliquez sur *sources de données*.
+.. Notez l'intervalle spécifié pour la source de données requise.
++
+La valeur par défaut est 30. Vous pouvez modifier la source de données pour modifier la durée de l'intervalle.
+
+.. Cliquez sur *Paramètres* et sous *Configuration*, cliquez sur *Paramètres de workflow*.
+.. Faites défiler jusqu'à la section *Avancé*.
+.. Dans le champ *facteur d'intervalle de notification d'acquisition*, saisissez la valeur requise.
++
+La valeur par défaut est 6.
+
++
+Si l'intervalle spécifié pour une source de données est de 30 minutes et que le facteur de multiplication est de 6, une notification par e-mail est envoyée lorsque l'acquisition de la source de données pour la source de données n'a pas lieu pendant 180 minutes.
+
++
+
+NOTE: Si vous spécifiez 12 heures ou plus comme intervalle d'acquisition pour une source de données, WFA considère le facteur d'intervalle comme 1 et envoie une notification après l'intervalle d'acquisition spécifié pour la source de données.
+
+
+
+. Cliquez sur *Enregistrer*.
+

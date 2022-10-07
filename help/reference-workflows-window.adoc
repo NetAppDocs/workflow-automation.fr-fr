@@ -1,0 +1,175 @@
+---
+permalink: help/reference-workflows-window.html 
+sidebar: sidebar 
+keywords: workflow, window, display, available, workflow, alphabetical order, access, design 
+summary: La fenêtre flux de travail affiche tous les flux de travail disponibles, par ordre alphabétique. Vous pouvez accéder à cette fenêtre en sélectionnant Workflow Design > Workflow. 
+---
+= Fenêtre de flux de travail
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La fenêtre flux de travail affiche tous les flux de travail disponibles, par ordre alphabétique. Vous pouvez accéder à cette fenêtre en sélectionnant *Workflow Design* > *Workflow*.
+
+En fonction de votre rôle et de vos privilèges de compte, il se peut que cette fenêtre ne s'affiche pas.
+
+* Tableau des flux de travail
+* Barre d'outils
+
+
+
+
+== Tableau des flux de travail
+
+Le tableau flux de travail répertorie les flux de travail disponibles. Vous pouvez personnaliser l'affichage du tableau à l'aide des fonctions de filtrage et de tri disponibles pour chaque colonne, ainsi qu'en réorganisant l'ordre des colonnes.
+
+* image:../media/filter_icon_wfa.gif["Icône de filtre"] active ou désactive le filtrage pour l'ensemble de la table. Un "x" rouge apparaît sur l'icône si le filtrage est désactivé.
+* Double-cliquer image:../media/filter_icon_wfa.gif["Icône de filtre"] efface et réinitialise les sélections de filtrage.
+* image:../media/wfa_filter_icon.gif["Icône de filtre"] sur chaque en-tête de colonne, vous pouvez effectuer un filtrage en fonction du contenu des colonnes. Cliquez sur image:../media/wfa_filter_icon.gif["Icône de filtre"] dans une colonne, vous pouvez filtrer un élément spécifique dans la liste déroulante ou sur tous les éléments disponibles.
+* Cliquer sur l'en-tête de colonne permet de basculer entre l'ordre croissant et décroissant de tri. Vous pouvez identifier l'ordre de tri appliqué à l'aide des flèches de tri (image:../media/wfa_sortarrow_up_icon.gif["Icône de tri"] pour les valeurs ascendantes et image:../media/wfa_sortarrow_down_icon.gif["Icône de tri"] pour décroissant).
+* Pour réorganiser l'emplacement des colonnes, vous pouvez faire glisser et déposer les colonnes dans l'ordre voulu. Toutefois, vous ne pouvez pas masquer ou supprimer ces colonnes.
+* Cliquez sur la zone de texte filtre *Search* pour rechercher un contenu spécifique. En outre, vous pouvez effectuer une recherche à l'aide des opérateurs pris en charge pour le type de colonne applicable, alphabétique ou numérique.
+
+
+Le tableau flux de travail contient les colonnes suivantes :
+
+* *Certification*
++
+Indique si le flux de travail est créé par l'utilisateur (image:../media/community_certification.gif[""]), PS (image:../media/ps_certified_icon_wfa.gif[""]), communauté (image:../media/community_certification.gif[""]), verrouillé par l'utilisateur (image:../media/lock_icon_wfa.gif[""]) Ou certifié NetApp (image:../media/netapp_certified.gif[""]).
+
++
+Vous pouvez rechercher des flux de travail en cochant les cases d'option requises dans la liste des filtres.
+
+* *Nom*
++
+Affiche le nom du flux de travail.
+
++
+Vous pouvez rechercher un flux de travail en saisissant son nom dans la zone de texte filtre *Search*.
+
+* *Schéma*
++
+Affiche les schémas associés aux flux de travail. Un schéma représente le modèle de données d'un système. Par exemple, un schéma vc contient les données pertinentes pour votre environnement virtuel, telles que les machines virtuelles, les hôtes et les datastores.
+
++
+Vous pouvez rechercher un flux de travail en entrant l'un de ses schémas dans la zone de texte filtre *Search*.
+
+* *Version entité*
++
+Affiche le numéro de version de l'objet dans `major.minor.revision` format--par exemple, 1.0.0.
+
++
+Vous pouvez rechercher un flux de travail en saisissant le numéro de version dans la zone de texte filtre *Search*.
+
+* *Description*
++
+Affiche la description du flux de travail.
+
++
+Vous pouvez rechercher un flux de travail en saisissant sa description dans la zone de texte filtre *Search*.
+
+* * Compatibilité OS*
++
+Indique si le flux de travail est compatible avec le système d'exploitation hôte.
+
+* *Min. Versions de logiciel*
++
+Spécifie les versions minimales du logiciel requises pour exécuter le flux de travail. À titre d'exemple, le logiciel peut être Clustered Data ONTAP 8.2.0 et vCenter 6.0. Les versions s'affichent sous forme de valeurs séparées par des virgules.
+
+* *Catégories*
++
+Affiche les étiquettes définies par l'utilisateur associées aux flux de production.
+
++
+Vous pouvez utiliser les catégories pour organiser des ensembles de flux de travail. Par exemple, pour aider à distinguer les flux de travail, il peut y avoir une catégorie distincte pour les tâches de provisionnement, une catégorie pour les tâches de maintenance et une catégorie pour les tâches de déclassement. En outre, les catégories sont utilisées pour limiter l'exécution de flux de travail pour des opérateurs spécifiques.
+
++
+Vous pouvez rechercher des flux de travail en entrant une catégorie dans la zone de texte filtre *Search*.
+
+* *Dernière mise à jour*
++
+Affiche la date et l'heure de la dernière mise à jour du flux de travail.
+
++
+Vous pouvez rechercher des flux de travail en sélectionnant la catégorie de temps requise dans la liste déroulante de filtre.
+
+* *Mis à jour par*
++
+Affiche le nom de l'utilisateur qui a mis à jour le flux de travail.
+
++
+Vous pouvez rechercher des flux de travail en saisissant le nom d'utilisateur dans la zone de texte filtre *Search*.
+
+* *Verrouillé par*
++
+Affiche le nom de l'utilisateur qui a verrouillé le flux de travail.
+
++
+Vous pouvez rechercher des flux de travail en saisissant le nom d'utilisateur dans la zone de texte filtre *Search*.
+
+* * Prêt pour la production*
++
+Identifie si le flux de travail est marqué prêt pour la production (vrai ou faux).
+
++
+Vous pouvez rechercher des flux de travail en cochant la case d'option de production requise dans la liste des filtres.
+
+
+
+
+
+== Barre d'outils
+
+La barre d'outils se trouve au-dessus de l'en-tête de colonne. Vous pouvez utiliser les icônes de la barre d'outils pour effectuer diverses actions. Vous pouvez également accéder à ces actions à partir du menu contextuel de la fenêtre.
+
+* *image:../media/new_wfa_icon.gif["Nouvelle icône"] (Nouveau)*
++
+Ouvre la fenêtre Nouveau flux de travail, qui vous permet de saisir les détails du nouveau flux de travail.
+
+* *image:../media/edit_wfa_icon.gif["Icône Modifier"] (Modifier)*
++
+Ouvre l'éditeur de flux de travail pour le flux de travail sélectionné, qui vous permet de modifier le flux de travail. Vous pouvez également double-cliquer sur le flux de travail pour ouvrir l'éditeur de flux de travail.
+
+* *image:../media/clone_wfa_icon.gif["Icône cloner"] (Clone)*
++
+Ouvre la fenêtre Nouveau flux de travail <Selected_workflow_name> - copie, qui permet de créer un clone ou une copie du flux de travail sélectionné.
+
+* *image:../media/lock_wfa_icon.gif["Icône de verrouillage"] (Verrouillage)*
++
+Ouvre la boîte de dialogue Verrouiller le workflow de confirmation, qui permet de verrouiller le flux de travail sélectionné. Cette option n'est activée que pour les flux de travail que vous avez créés.
+
+* *image:../media/unlock_wfa_icon.gif["Icône de déverrouillage"] (Déverrouiller)*
++
+Ouvre la boîte de dialogue de confirmation de déverrouillage du workflow, qui vous permet de déverrouiller le flux de travail sélectionné. Cette option n'est activée que pour les flux de travail verrouillés par vous. Toutefois, les administrateurs peuvent déverrouiller des flux de travail verrouillés par d'autres utilisateurs.
+
+* *image:../media/delete_wfa_icon.gif["Icône Supprimer"] (Supprimer)*
++
+Ouvre la boîte de dialogue Supprimer la confirmation du workflow, qui permet de supprimer le flux de travail sélectionné. Cette option n'est activée que pour les flux de travail que vous avez créés.
+
+* *image:../media/export_wfa_icon.gif["Icône Exporter"] (Exportation)*
++
+Ouvre la boîte de dialogue Téléchargement de fichier qui vous permet d'enregistrer le flux de travail sélectionné en tant que fichier .dar. Cette option n'est activée que pour les flux de travail que vous avez créés.
+
+* *image:../media/execute_wfa_icon.gif["Icône d'exécution"] (Exécuter)*
++
+Ouvre la boîte de dialogue Exécuter le flux de travail <Selected_workflow_name> pour le flux de travail sélectionné, qui vous permet d'exécuter le flux de travail.
+
+* *image:../media/add_to_pack.png["icône ajouter au pack"] (Ajouter au pack)*
++
+Ouvre la boîte de dialogue Ajouter au workflow de composition à emporter, qui permet d'ajouter le flux de travail et ses entités fiables à un pack, modifiable.
+
++
+
+NOTE: La fonction Ajouter au pack est activée uniquement pour les workflows pour lesquels la certification est définie sur *aucun.*
+
+* *image:../media/remove_from_pack.png["icône supprimer du pack"] (Retirer du paquet)*
++
+Ouvre la boîte de dialogue Supprimer du flux de production du pack pour le flux de travail sélectionné, qui vous permet de supprimer ou de supprimer le flux de travail du pack.
+
++
+
+NOTE: La fonction Supprimer du pack n'est activée que pour le flux de travail pour lequel la certification est définie sur *aucun.*
+
+

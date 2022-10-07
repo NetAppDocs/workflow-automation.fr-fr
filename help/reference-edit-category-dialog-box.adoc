@@ -1,0 +1,62 @@
+---
+permalink: help/reference-edit-category-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, category, dialog box, enable, workflow 
+summary: La boîte de dialogue Modifier la catégorie vous permet de modifier une catégorie de flux de travail. 
+---
+= Boîte de dialogue Modifier la catégorie
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La boîte de dialogue Modifier la catégorie vous permet de modifier une catégorie de flux de travail.
+
+* *Nom*
++
+Permet de modifier le nom de la catégorie.
+
+* *Description*
++
+Permet de modifier la description de la catégorie.
+
+* *Flux de travail disponibles*
++
+Affiche tous les flux de travail disponibles qui ne sont pas déplacés vers la zone flux de travail sélectionnés.
+
+* *Flux de travail sélectionnés*
++
+Affiche tous les workflows sélectionnés pour la catégorie.
+
+* *Catégorie utilisée pour l'autorisation de workflow*
++
+Vous permet d'accorder l'accès aux utilisateurs ayant un rôle d'opérateur pour exécuter la catégorie. La case n'est pas cochée par défaut.
+
+* *Opérateurs disponibles*
++
+Affiche tous les utilisateurs ayant un rôle d'opérateur qui n'ont pas accès à la catégorie.
+
+* *Opérateurs sélectionnés*
++
+Affiche les utilisateurs qui ont accès à la catégorie.
+
+
+
+
+
+== Boutons de commande
+
+* *Boutons de sélection*
++
+Déplace l'entrée sélectionnée d'une case à l'autre.
+
+* *Enregistrer*
++
+Enregistre la catégorie et ferme la boîte de dialogue.
+
+* *Annuler*
++
+N'enregistre pas la catégorie et ferme la boîte de dialogue.
+
+

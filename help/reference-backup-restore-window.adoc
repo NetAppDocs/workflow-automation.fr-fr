@@ -1,0 +1,50 @@
+---
+permalink: help/reference-backup-restore-window.html 
+sidebar: sidebar 
+keywords: backup, restore, window, enable, backup, oncommand, workflow, automation, database, contain, system, configuration, settings, cache, information, core, include, powershell, toolkits, perl toolkits, save, upgrade, reinstall 
+summary: 'La fenêtre sauvegarde et restauration vous permet de sauvegarder la base de données OnCommand Workflow Automation (WFA), qui contient les paramètres de configuration du système, les informations relatives au cache et les packs principaux incluant les kits d"outils PowerShell et les kits d"outils Perl. Vous pouvez également restaurer la base de données enregistrée lorsque vous mettez à niveau ou réinstallez WFA.' 
+---
+= Fenêtre sauvegarde et restauration
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La fenêtre sauvegarde et restauration vous permet de sauvegarder la base de données OnCommand Workflow Automation (WFA), qui contient les paramètres de configuration du système, les informations relatives au cache et les packs principaux incluant les kits d'outils PowerShell et les kits d'outils Perl. Vous pouvez également restaurer la base de données enregistrée lorsque vous mettez à niveau ou réinstallez WFA.
+
+
+
+== Section sauvegarde
+
+Vous pouvez accéder à cette fenêtre en sélectionnant *Paramètres* et sous *Maintenance*, cliquez sur *Sauvegarder et restaurer*.
+
+* *Sauvegarde*
++
+Ouvre la boîte de dialogue Téléchargement de fichier, qui vous permet d'enregistrer la base de données actuelle en tant que fichier compressé à un emplacement spécifié.
+
+
+
+
+
+== Section Restauration
+
+* *Choisissez fichier*
++
+Permet de rechercher le fichier de base de données de sauvegarde.
+
+* *Restaurer*
++
+Vous permet de rétablir les paramètres de configuration et de mettre en cache les informations du fichier de base de données de sauvegarde vers la configuration WFA actuelle, le cas échéant.
+
++
+La dernière version des kits d'outils et des packs de base est disponible après une opération de restauration.
+
++
+
+NOTE: Si la sauvegarde inclut des packs plus récents que les packs présents sur le système, après restauration, les nouveaux packs à partir de la sauvegarde sont disponibles.
+
++
+Vous devez arrêter tous les workflows en cours d'exécution avant d'importer un core pack.
+
+

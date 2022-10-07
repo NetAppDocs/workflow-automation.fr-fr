@@ -1,0 +1,187 @@
+---
+permalink: help/reference-edit-command-definition-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, command, definition, dialog box, enable, select 
+summary: La boîte de dialogue Edition de la définition de commande vous permet de modifier la commande sélectionnée. 
+---
+= Boîte de dialogue Edition de la définition de commande
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La boîte de dialogue *Edit Command Definition* permet de modifier la commande sélectionnée.
+
+* Onglet Propriétés
+* Onglet Code
+* Onglet Définition des paramètres
+* Mappage des paramètres
+* Onglet réservation
+* Onglet Vérification
+
+
+
+
+== Onglet Propriétés
+
+L'onglet Propriétés vous permet de modifier les propriétés de la commande, telles que le nom, la description et le langage de script.
+
+* *Nom*
++
+Permet de modifier le nom de la commande. Vous devez saisir un nom pour enregistrer la commande.
+
+* *Version entité*
++
+Vous permet de saisir le numéro de version de la commande dans `major.minor.revision` format--par exemple, 1.0.0.
+
+* *Description*
++
+Permet de modifier la description de la commande.
+
+* *Représentation de chaîne*
++
+Permet de spécifier une représentation de chaîne pour la commande à l'aide de la syntaxe MVEL. Vous devez spécifier la représentation de chaîne pour enregistrer la commande.
+
+* *Délai (s)*
++
+Vous permet de spécifier la valeur de temporisation (en secondes) pour la commande. La valeur par défaut est 600 secondes.
+
+* *Type de commande*
++
+Vous permet de spécifier le type d'exécution de la commande.
+
++
+** *Exécution standard*
++
+Permet d'exécuter la commande sans délai d'attente. L'exécution standard est sélectionnée par défaut.
+
+** *Attendre la condition*
++
+Vous permet de spécifier le temps (en secondes) d'attente de la commande avant l'exécution. La valeur par défaut est 60 secondes.
+
+
+
+* *Versions logicielles minimales*
++
+Spécifie les versions minimales du logiciel requises pour le fonctionnement de la commande. À titre d'exemple, le logiciel peut être Clustered Data ONTAP 8.2.0 et vCenter 6.0. Les versions s'affichent sous forme de valeurs séparées par des virgules.
+
+
+
+
+
+== Onglet Code
+
+Cet onglet vous permet de modifier le code de la commande dans Perl, PowerShell ou les deux. Vous pouvez ajouter une nouvelle langue de script en cliquant sur image:../media/add_lang_icon.gif[""] Puis sélectionnez la langue requise dans la liste déroulante langage de script.
+
+* *Test*
++
+Ouvre la boîte de dialogue Vérification, qui permet de tester les paramètres du script de vérification spécifié.
+
+* *Paramètres de découverte*
++
+Copie les paramètres définis dans le code PowerShell dans la table Définition des paramètres et dans la table mappage des paramètres. Le bouton découvrir les paramètres est désactivé pour les codes Perl.
+
+
+
+
+
+== Onglet Définition des paramètres
+
+Cet onglet affiche les paramètres définis dans le code que vous avez saisi dans l'onglet Code.
+
+* *Nom*
++
+Affiche le nom du paramètre.
+
+* *Description*
++
+Affiche la description du paramètre.
+
+* *Obligatoire*
++
+Affiche une case à cocher sélectionnée pour les paramètres obligatoires.
+
+* *Type*
++
+Affiche le type du paramètre, tel que chaîne et enum.
+
+* *Valeurs*
++
+Affiche la valeur définie pour le paramètre.
+
+* *Ajouter un paramètre*
++
+Permet d'ajouter un paramètre à la commande si le langage de script sélectionné est Perl.
+
+* *Supprimer le paramètre*
++
+Permet de supprimer un paramètre de la commande si le langage de script sélectionné est Perl.
+
+
+
+
+
+== Mappage des paramètres
+
+Cet onglet vous permet de mapper les paramètres aux objets du dictionnaire et de spécifier l'attribut et le nom de l'objet.
+
+* *Nom*
++
+Affiche le nom du paramètre.
+
+* *Type*
++
+Vous permet de sélectionner l'objet dictionnaire du paramètre.
+
+* *Attribut*
++
+Vous permet de spécifier l'attribut requis. Vous pouvez sélectionner l'attribut, si disponible, ou saisir l'attribut.
+
+* *Nom de l'objet*
++
+Permet de saisir un nom pour l'objet.
+
+
+
+
+
+== Onglet réservation
+
+Cet onglet vous permet de réserver des ressources nécessaires à la commande. Pour plus d'informations sur les réservations, reportez-vous au _OnCommand Workflow Automation Workflow Developer's Guide_.
+
+* *Script de réservation*
++
+Vous permet de saisir une requête SQL pour réserver les ressources requises par la commande. Cela permet de garantir que les ressources sont disponibles lors de l'exécution d'un flux de travail planifié.
+
+* * Représentation de réservation*
++
+Permet de spécifier une représentation de chaîne pour la réservation à l'aide de la syntaxe MVEL. La représentation de chaîne est utilisée pour afficher les détails de la réservation dans la fenêtre Réservations.
+
+
+
+
+
+== Onglet Vérification
+
+Cet onglet vous permet de vérifier une réservation et de la supprimer une fois l'exécution de la commande terminée. Pour plus d'informations sur la vérification des réservations, reportez-vous au _OnCommand Workflow Automation Workflow Developer's Guide_.
+
+* *Script de vérification*
++
+Vous permet d'entrer une requête SQL pour vérifier l'utilisation des ressources réservées par le script de réservation. Il vérifie également si le cache WFA est mis à jour et supprime la réservation après l'acquisition d'un cache.
+
+
+
+
+
+== Boutons de commande
+
+* *Enregistrer*
++
+Enregistre les modifications et ferme la boîte de dialogue.
+
+* *Annuler*
++
+Annule les modifications, le cas échéant, et ferme la boîte de dialogue.
+
+

@@ -1,0 +1,44 @@
+---
+permalink: rhel-install/reference-considerations-of-importing-wfa-content.html 
+sidebar: sidebar 
+keywords: considerations, import, oncommand, workflow, automation, content 
+summary: 'Lors de l"importation du contenu créé par les utilisateurs, du contenu exporté depuis une autre installation OnCommand Workflow Automation (WFA) ou du contenu téléchargé depuis le site Storage Automation Store ou la communauté WFA, vous devez tenir compte de certains critères.' 
+---
+= Considérations relatives à l'importation de contenu OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lors de l'importation du contenu créé par les utilisateurs, du contenu exporté depuis une autre installation OnCommand Workflow Automation (WFA) ou du contenu téléchargé depuis le site Storage Automation Store ou la communauté WFA, vous devez tenir compte de certains critères.
+
+* Le contenu WFA est enregistré en tant que fichier .dar et peut inclure tout le contenu créé par l'utilisateur à partir d'un autre système ou d'éléments spécifiques, tels que les flux de travail, les finders, les commandes et les termes du dictionnaire.
+* Lorsqu'une catégorie existante est importée d'un fichier .dar, le contenu importé est fusionné avec le contenu existant de la catégorie.
++
+Prenons l'exemple de deux flux de travail WF1 et WF2 dans la catégorie A du serveur WFA. Si les flux de travail WF3 et WF4 de la catégorie A sont importés dans le serveur WFA, la catégorie A contient les flux de travail WF1, WF2, WF3 et WF4 après l'importation.
+
+* Si le fichier .dar contient des entrées de dictionnaire, les tables de cache correspondant aux entrées de dictionnaire sont automatiquement mises à jour.
++
+Si les tables de cache ne sont pas mises à jour automatiquement, un message d'erreur est consigné dans le fichier wfa.log.
+
+* Lors de l'importation d'un fichier .dar dépendant d'un pack qui n'est pas présent dans le serveur WFA, WFA essaie d'identifier si toutes les dépendances sur les entités sont satisfaites.
++
+** Si une ou plusieurs entités sont manquantes ou si une version inférieure d'une entité est trouvée, l'importation échoue et un message d'erreur s'affiche.
++
+Le message d'erreur fournit des détails sur les packs qui doivent être installés afin de répondre aux dépendances.
+
+** Si une version supérieure d'une entité est trouvée ou si la certification a changé, une boîte de dialogue générique concernant la non-concordance de version s'affiche et l'importation est terminée.
++
+Les détails de non-concordance de version sont consignés dans un fichier wfa.log.
+
+
+
+* Les questions et demandes d'assistance concernant les éléments suivants doivent être adressées à la communauté WFA :
++
+** Tout contenu téléchargé depuis la communauté WFA
+** Contenu WFA personnalisé que vous avez créé
+** Contenu WFA que vous avez modifié
+
+
+

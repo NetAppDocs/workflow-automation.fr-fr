@@ -1,0 +1,141 @@
+---
+permalink: help/reference-active-directory-groups-window.html 
+sidebar: sidebar 
+keywords: active, directory, group, window, enable, view, create, edit, delete, oncommand, workflow, automation, access, select, settings, management, click 
+summary: 'La fenêtre groupes Active Directory vous permet d"afficher, de créer, de modifier et de supprimer les groupes Active Directory OnCommand Workflow Automation (WFA). Vous pouvez accéder à cette fenêtre en sélectionnant Paramètres, puis, sous gestion, cliquez sur groupes Active Directory.' 
+---
+= La fenêtre groupes Active Directory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La fenêtre groupes Active Directory vous permet d'afficher, de créer, de modifier et de supprimer les groupes Active Directory OnCommand Workflow Automation (WFA). Vous pouvez accéder à cette fenêtre en sélectionnant *Paramètres* et sous *gestion*, cliquez sur *groupes Active Directory*.
+
+
+NOTE: En fonction de votre rôle et de vos privilèges de compte, il se peut que cette fenêtre ne s'affiche pas.
+
+* Tableau groupes Active Directory
+* Barre d'outils
+
+
+
+
+== Tableau groupes Active Directory
+
+La fenêtre groupes Active Directory affiche les groupes Active Directory existants. Vous pouvez personnaliser l'affichage du tableau à l'aide des fonctions de filtrage et de tri disponibles pour chaque colonne, ainsi qu'en réorganisant l'ordre des colonnes.
+
+* image:../media/filter_icon_wfa.gif["Icône de filtre"] active ou désactive le filtrage pour l'ensemble de la table. Un "x" rouge apparaît sur l'icône si le filtrage est désactivé.
+* Double-cliquer image:../media/filter_icon_wfa.gif["Icône de filtre"] efface et réinitialise les sélections de filtrage.
+* image:../media/wfa_filter_icon.gif["Icône de filtre"] sur chaque en-tête de colonne, vous pouvez effectuer un filtrage en fonction du contenu des colonnes. Cliquez sur image:../media/wfa_filter_icon.gif["Icône de filtre"] dans une colonne, vous pouvez filtrer un élément spécifique dans la liste déroulante ou sur tous les éléments disponibles.
+* Cliquer sur l'en-tête de colonne permet de basculer entre l'ordre croissant et décroissant de tri. Vous pouvez identifier l'ordre de tri appliqué à l'aide des flèches de tri (image:../media/wfa_sortarrow_up_icon.gif["Icône de tri"] pour les valeurs ascendantes et image:../media/wfa_sortarrow_down_icon.gif["Icône de tri"] pour décroissant).
+* Pour réorganiser l'emplacement des colonnes, vous pouvez faire glisser et déposer les colonnes dans l'ordre voulu. Toutefois, vous ne pouvez pas masquer ou supprimer ces colonnes.
+* Cliquez sur la zone de texte filtre *Search* pour rechercher un contenu spécifique. En outre, vous pouvez effectuer une recherche à l'aide des opérateurs pris en charge pour le type de colonne applicable, alphabétique ou numérique.
+
+
+Le tableau suivant répertorie les opérateurs pris en charge pour les colonnes alphabétiques et numériques dans la table groupes Active Directory, disponible dans la zone de texte filtre *Search*.
+
+[cols="2*"]
+|===
+| Alphabétique | Valeur numérique 
+
+
+ a| 
+* Contient
+* Ne contient pas
+* Commence par
+* Se termine par
+* Égal à
+* N'est pas égal
+* Réinitialiser
+
+ a| 
+* Égal à
+* N'est pas égal
+* Inférieur à
+* Supérieur à
+* Inférieur ou égal à
+* Supérieur ou égal à
+* Entre
+* Réinitialiser
+
+
+|===
+Le tableau groupes Active Directory contient les colonnes suivantes :
+
+* *Nom du groupe*
++
+Affiche le nom du groupe pour Active Directory.
+
+* *Rôle*
++
+Affiche le rôle attribué au groupe. Les rôles peuvent comprendre l'un des éléments suivants :
+
++
+** *Invité*
++
+Ce groupe peut uniquement afficher l'état d'exécution d'un flux de travail ou être notifié d'une modification de l'état d'exécution d'un flux de travail.
+
+** *Opérateur*
++
+Ce groupe est autorisé à afficher un aperçu et à exécuter des workflows pour lesquels le groupe a accès.
+
+** *Approbateur*
++
+Ce groupe est autorisé à afficher un aperçu, à exécuter, à approuver et à refuser des flux de travail pour lesquels le groupe a accès.
+
++
+
+NOTE: Vous devez fournir l'ID e-mail de l'approbateur et l'état du flux de travail qui doit être notifié à l'approbateur. S'il existe plusieurs approbateurs, vous pouvez fournir un ID d'e-mail de groupe dans le champ *E-mail*.
+
+** *Architecte*
++
+Ce groupe dispose d'un accès complet pour créer des flux de travail, mais ne peut pas modifier les paramètres globaux du serveur WFA.
+
+** *Admin*
++
+Ce groupe dispose d'un accès complet au serveur WFA.
+
+
+
+* *Catégories*
++
+Affiche la catégorie de flux de travail attribuée à un opérateur, qui fournit l'autorisation et les privilèges de flux de travail à l'opérateur désigné.
+
++
+Vous pouvez définir ce paramètre d'autorisation en cliquant sur *Content Management* > *Categories*.
+
+* *E-mail*
++
+Affiche l'adresse électronique du groupe. Vous pouvez utiliser cet e-mail pour recevoir une notification sur l'état du flux de travail.
+
+* *Notifications activées*
++
+Indique si le groupe peut recevoir des notifications par e-mail (vrai ou faux) sur l'état des exécutions de flux de travail déclenchées par ce groupe.
+
+
+
+
+
+== Barre d'outils
+
+La barre d'outils se trouve au-dessus de l'en-tête de colonne. Vous pouvez utiliser les icônes de la barre d'outils pour effectuer diverses actions. Vous pouvez également accéder à ces actions à partir du menu contextuel de la fenêtre.
+
+* *image:../media/new_wfa_icon.gif["Nouvelle icône"] (Nouveau)*
++
+Ouvre la boîte de dialogue Nouveau groupe Active Directory, qui permet d'ajouter un nouveau groupe Active Directory.
+
++
+
+NOTE: Avant d'ajouter le groupe Active Directory, vous devez activer ou configurer le groupe Active Directory.
+
+* *image:../media/edit_wfa_icon.gif["Icône Modifier"] (Modifier)*
++
+Ouvre la boîte de dialogue Modifier le groupe Active Directory, qui permet de modifier le groupe Active Directory sélectionné.
+
+* *image:../media/delete_wfa_icon.gif["Icône Supprimer"] (Supprimer)*
++
+Ouvre la boîte de dialogue de confirmation Supprimer le groupe Active Directory, qui permet de supprimer le groupe Active Directory sélectionné.
+
+

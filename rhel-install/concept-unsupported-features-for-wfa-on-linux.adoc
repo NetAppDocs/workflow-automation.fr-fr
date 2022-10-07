@@ -1,0 +1,48 @@
+---
+permalink: rhel-install/concept-unsupported-features-for-wfa-on-linux.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, limitations 
+summary: 'OnCommand Workflow Automation (WFA) 5.1 inclut certaines limites et fonctionnalités non prises en charge que vous devez connaître avant d"installer et de configurer WFA.' 
+---
+= Limitations connues de OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation (WFA) 5.1 inclut certaines limites et fonctionnalités non prises en charge que vous devez connaître avant d'installer et de configurer WFA.
+
+* *Authentification LDAP*
++
+** Vous pouvez utiliser uniquement le serveur LDAP (Lightweight Directory Access Protocol) de Microsoft Active Directory pour l'authentification LDAP.
+** Vous devez être membre d'un groupe LDAP pour pouvoir utiliser l'authentification LDAP.
+** Vous ne devez pas utiliser un nom d'utilisateur LDAP faisant partie d'une structure hiérarchique de plusieurs domaines pour l'authentification ou la notification.
+
+
+
+
+[NOTE]
+====
+Microsoft Active Directory Lightweight Directory Services (AD LDS) n'est pas pris en charge.
+
+====
+* *Types de sources de données WFA*
++
+Les types de sources de données OnCommand Unified Manager 6.0, 6.1 et 6.2 sont obsolètes dans la version WFA 4.1, et ces types de sources de données ne seront pas pris en charge dans les versions ultérieures.
+
+* * WFA installé sous Linux*
++
+** Les contenus certifiés de Data ONTAP fonctionnant en 7-mode ne sont pas disponibles pour le moment.
+** Les commandes qui incluent uniquement du code PowerShell ne sont pas compatibles avec Linux.
+** Les commandes certifiées for7-mode et VMware ne sont actuellement pas portées en Perl, et ne sont donc pas compatibles avec Linux.
+
+
+* *Création de noms de catégories*
++
+** Lorsqu'un tiret (-) est utilisé dans un nom de catégorie, il est remplacé par un espace une fois la catégorie enregistrée. Par exemple, si la catégorie « abc-xyz » est fournie, le nom de la catégorie est enregistré comme « abc xyz », le tiret étant supprimé. Pour éviter ce problème, n'utilisez pas de tirets dans les noms de catégories.
+** Lorsqu'un signe deux-points (:) est utilisé dans un nom de catégorie, la chaîne de texte avant le signe deux-points est ignorée une fois la catégorie enregistrée. Par exemple, si la catégorie "abc : xyz" est fournie, le nom de la catégorie est enregistré comme "xyz", la chaîne "abc" étant supprimée. Pour éviter ce problème, n'utilisez pas de points-virgules dans les noms de catégories.
+** Il n'y a pas de vérification pour empêcher que deux catégories aient le même nom. Toutefois, cela provoque un problème lors de la sélection de ces catégories dans le volet de navigation. Pour éviter ce problème, assurez-vous que chaque nom de catégorie est unique.
+
+
+

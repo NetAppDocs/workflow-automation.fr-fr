@@ -1,0 +1,25 @@
+---
+permalink: rhel-install/task-upgrade-openjdk-on-linux-wfa.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, upgrade, openjdk 
+summary: 'Oracle JRE n"est plus pris en charge dans OnCommand Workflow Automation. Dans cette version, OpenJDK remplace Oracle JRE pour Linux. Vous pouvez mettre à niveau vers une version plus récente d"OpenJDK sur le serveur Linux sur lequel OnCommand Workflow Automation est installé pour obtenir des correctifs de vulnérabilités de sécurité.' 
+---
+= Mettre à niveau OpenJDK
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Oracle JRE n'est plus pris en charge dans OnCommand Workflow Automation. Dans cette version, OpenJDK remplace Oracle JRE pour Linux. Vous pouvez mettre à niveau vers une version plus récente d'OpenJDK sur le serveur Linux sur lequel OnCommand Workflow Automation est installé pour obtenir des correctifs de vulnérabilités de sécurité.
+
+Vous devez disposer de privilèges root pour le système Linux sur lequel WFA est installé.
+
+Vous pouvez mettre à jour les versions OpenJDK dans les familles de versions. Par exemple, vous pouvez effectuer une mise à niveau d'OpenJDK 11.0.1 vers OpenJDK 11.0.2, mais vous ne pouvez pas mettre à jour directement d'OpenJDK 11 vers OpenJDK 12.
+
+.Étapes
+. Connectez-vous en tant qu'utilisateur root sur la machine hôte WFA.
+. Installez la dernière version d'OpenJDK 11 à partir du référentiel yum sur le système cible.
+. À l'invite du shell, arrêter le serveur WFA.
+. Redémarrez le serveur WFA.
+

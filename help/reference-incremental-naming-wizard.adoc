@@ -1,0 +1,43 @@
+---
+permalink: help/reference-incremental-naming-wizard.html 
+sidebar: sidebar 
+keywords: incremental, naming, wizard, enable, define, value, attribute, search, existing, parameter 
+summary: 'L"assistant d"attribution de nom incrémentielle vous permet de définir la valeur d"un attribut en fonction d"une recherche de paramètre existant.' 
+---
+= Assistant d'attribution de nom incrémentielle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'assistant d'attribution de nom incrémentielle vous permet de définir la valeur d'un attribut en fonction d'une recherche de paramètre existant.
+
+* *Critères de recherche pour <objet dictionnaire>* existant
++
+Ouvre la boîte de dialogue *Resource Selection*, qui permet de spécifier des critères de recherche pour l'objet dictionnaire.
+
+* *Entrez une valeur pour <attribut> si aucun <objet dictionnaire> ne correspond aux critères de recherche ci-dessus*
++
+Vous permet de spécifier une valeur pour le <attribut> lorsque l'objet <dictionnaire> est introuvable à l'aide des critères de recherche spécifiés.
+
+* *Si <dictionnaire object> a été trouvé en utilisant les critères de recherche ci-dessus, définissez la valeur de <attribut> by*
++
+Vous permet de spécifier une valeur pour le <attribut> lorsque l'objet <dictionnaire> est introuvable à l'aide des critères de recherche spécifiés.
+
+* *Entrez une valeur pour <attribut> si aucun <objet dictionnaire> ne correspond aux critères de recherche ci-dessus*
++
+Vous permet de sélectionner une méthode de définition de la valeur pour <attribut> si le <dictionnaire object> est trouvé à l'aide des critères de recherche spécifiés.
+
++
+** *fournissant une valeur d'incrément et un suffixe*
++
+Vous permet de saisir une valeur numérique pour les incréments et, éventuellement, de saisir un suffixe du nom d'attribut.
+
+** *fourniture d'une expression personnalisée*
++
+Vous permet de saisir une expression personnalisée pour la valeur de l'attribut. Vous pouvez utiliser la syntaxe MVFLEX expression Language (MVEL) pour spécifier la valeur.
+
+
+
+

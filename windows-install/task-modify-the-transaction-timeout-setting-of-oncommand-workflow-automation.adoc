@@ -1,0 +1,37 @@
+---
+permalink: windows-install/task-modify-the-transaction-timeout-setting-of-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: modify, transaction, timeout, set, oncommand, workflow, automation 
+summary: 'Par défaut, le délai de transaction de la base de données OnCommand Workflow Automation (WFA) est fixée à 300 secondes. Vous pouvez augmenter la durée du délai par défaut lors de la restauration d"une base de données WFA de grande taille à partir d"une sauvegarde pour éviter toute défaillance potentielle de la restauration de la base de données.' 
+---
+= Modifiez le paramètre d'expiration de transaction de OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Par défaut, le délai de transaction de la base de données OnCommand Workflow Automation (WFA) est fixée à 300 secondes. Vous pouvez augmenter la durée du délai par défaut lors de la restauration d'une base de données WFA de grande taille à partir d'une sauvegarde pour éviter toute défaillance potentielle de la restauration de la base de données.
+
+Vous devez avoir ouvert une session sur le système hôte WFA en tant qu'administrateur.
+
+Le chemin d'installation par défaut de WFA est utilisé dans cette procédure. Si vous avez modifié l'emplacement par défaut lors de l'installation, vous devez utiliser le chemin d'installation WFA modifié.
+
+.Étapes
+. Ouvrez l'Explorateur Windows et accédez au répertoire suivant :
++
+`WFA_install_location\WFA\bin`
+
+. Double-cliquez sur le fichier ps.cmd.
++
+Une invite d'interface de ligne de commande PowerShell s'ouvre avec les modules ONTAP et WFA chargés.
+
+. À l'invite, saisissez les informations suivantes :
++
+`Set-WfaConfig -Name TransactionTimeOut -Seconds NumericValue`
+
++
+`Set-WfaConfig -Name TransactionTimeOut -Seconds 1000`
+
+. Lorsque vous y êtes invité, redémarrez les services WFA.
+

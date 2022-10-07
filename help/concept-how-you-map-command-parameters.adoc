@@ -1,0 +1,133 @@
+---
+permalink: help/concept-how-you-map-command-parameters.html 
+sidebar: sidebar 
+keywords: parameter, workflow, automation, commands, specific, attribute, dictionary, entry, reference, certain, rule, aware, edit 
+summary: 'Les paramètres des commandes WFA (Workflow Automation) sont mappés à des attributs spécifiques et à des références d"entrée de dictionnaire basées sur certaines règles. Lorsque vous créez ou modifiez une commande WFA, vous devez connaître les règles permettant de mapper les paramètres des commandes.' 
+---
+= Mappage des paramètres de commande
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les paramètres des commandes WFA (Workflow Automation) sont mappés à des attributs spécifiques et à des références d'entrée de dictionnaire basées sur certaines règles. Lorsque vous créez ou modifiez une commande WFA, vous devez connaître les règles permettant de mapper les paramètres des commandes.
+
+Le mappage des paramètres de commande définit la façon dont les détails de commande sont définis dans les flux de travail. Les paramètres de commande mappés d'une commande sont affichés dans des onglets lorsque vous spécifiez les détails de la commande pour les commandes dans les flux de travail. Les onglets sont nommés en fonction du nom de groupe spécifié dans la colonne Nom de l'objet de l'onglet mappage des paramètres. Les paramètres qui ne sont pas mappés s'affichent dans l'onglet autres paramètres lorsque vous spécifiez les détails de la commande dans les flux de travail.
+
+Les règles de mappage des paramètres de commande sont applicables en fonction de la catégorie de commande et de la façon dont les commandes sont représentées dans l'éditeur de flux de travail.
+
+Les catégories de commande sont les suivantes :
+
+* Commandes qui créent des objets
+* Commandes qui mettent à jour les objets
+* Commandes permettant de supprimer des objets
+* Commandes prenant en charge les objets parent et enfant facultatifs
+* Commandes qui mettent à jour les associations entre les objets
+
+
+Les règles sont répertoriées ci-dessous pour chaque catégorie :
+
+
+
+== Toutes les catégories de commandes
+
+Lors du mappage d'un paramètre de commande, vous devez utiliser le chemin naturel en fonction de la façon dont la commande est utilisée dans les flux de production.
+
+Les exemples suivants montrent comment définir un chemin naturel :
+
+* Pour le `ArrayIP` suivant la commande, vous devez utiliser le paramètre `aggregate.array.ip` attribut du `Volume` entrée de dictionnaire et non pas `array.ip` attribut.
++
+Ceci est important lorsqu'un flux de travail crée un volume, puis effectue une étape supplémentaire avec le volume créé en le faisant référence. Voici des exemples similaires :
+
++
+** `volume.aggregate.array.ip` du `Qtree` entrée du dictionnaire
+** `volume.aggregate.array.ip` du `LUN` entrée du dictionnaire
+
+
+* Pour `Cluster` utilisé dans les commandes, vous devez utiliser l'une des commandes suivantes :
++
+** `vserver.cluster.primary_address` du `Volume` entrée du dictionnaire
+** `volume.vserver.cluster.primary_address` du `Qtree` entrée du dictionnaire
+
+
+
+
+
+
+== Commandes qui créent des objets
+
+Cette catégorie de commandes est utilisée pour l'une des commandes suivantes :
+
+* Recherche d'un objet parent et définition de nouveaux objets
+* Recherche d'un objet et création de l'objet si celui-ci n'existe pas
+
+
+Vous devez utiliser les règles de mappage de paramètres suivantes pour cette catégorie de commandes :
+
+* Mapper les paramètres pertinents de l'objet créé à l'entrée du dictionnaire de l'objet.
+* Mappez l'objet parent via les références de l'entrée de dictionnaire créée.
+* Assurez-vous que l'attribut approprié est présent dans l'entrée du dictionnaire lors de l'ajout d'un nouveau paramètre.
++
+Les scénarios d'exception de cette règle sont les suivants :
+
++
+** Certains objets créés ne disposent pas d'une entrée de dictionnaire correspondante et seul l'objet parent est mappé à l'entrée de dictionnaire parent pertinente (par exemple, la commande *Create vif*--in dans laquelle seule une baie peut être mappée à une entrée de dictionnaire de tableau.
+** Le mappage des paramètres n'est pas requis
++
+Par exemple, le `ExecutionTimeout` Le paramètre de la commande *Créer ou redimensionner agrégat* est un paramètre non mappé.
+
+
+
+
+
+Les commandes certifiées suivantes sont des exemples pour cette catégorie :
+
+* Créer un volume
+* Créer une LUN
+
+
+
+
+== Commandes qui mettent à jour les objets
+
+Cette catégorie de commandes permet de rechercher un objet et de mettre à jour les attributs.
+
+Vous devez utiliser les règles de mappage de paramètres suivantes pour cette catégorie de commandes :
+
+* Mapper les objets mis à jour à l'entrée du dictionnaire.
+* Ne pas mapper les paramètres mis à jour pour l'objet.
++
+Par exemple, dans la commande *set Volume State*, le `Volume` le paramètre est mappé, mais le nouveau `State` n'est pas mappée.
+
+
+
+
+
+== Commandes permettant de supprimer des objets
+
+Cette catégorie de commandes est utilisée pour trouver un objet et le supprimer.
+
+Vous devez mapper l'objet qui est supprimé par la commande à son entrée de dictionnaire. Par exemple, dans la commande *Remove Volume*, le `Volume` à supprimer est mappé sur les attributs et références pertinents du `Volume` entrée du dictionnaire.
+
+
+
+== Commandes prenant en charge les objets parent et enfant facultatifs
+
+Vous devez utiliser les règles de mappage de paramètres suivantes pour cette catégorie de commandes :
+
+* Ne pas mapper un paramètre obligatoire d'une commande comme référence à partir d'un paramètre facultatif de la commande.
++
+Cette règle est plus pertinente lorsqu'une commande traite des objets enfants facultatifs d'un objet parent spécifique. Dans ce cas, l'objet enfant et l'objet parent doivent être mappés explicitement. Par exemple, dans la commande *Stop Deduplication Jobs*, la commande arrête l'exécution d'une tâche de déduplication sur un volume spécifique lorsque celle-ci est spécifiée avec `Array` ou sur tous les volumes du donné `Array`. Dans ce cas, le paramètre de tableau doit être mappé directement au `array` entrée de dictionnaire et non à `Volume.Array` parce que `Volume` est un paramètre facultatif dans cette commande.
+
+* Si une relation parent-enfant existe entre les entrées du dictionnaire au niveau logique mais pas entre les instances réelles d'une commande spécifique, ces objets doivent être mappés séparément.
++
+Par exemple, dans la commande *Move Volume*, `Volume` est déplacé de son agrégat parent actuel vers un nouvel agrégat de destination. Par conséquent, `Volume` les paramètres sont mappés à un `Volume` l'entrée du dictionnaire et les paramètres d'agrégat de destination sont mappés séparément à l' `Aggregate` entrée de dictionnaire mais pas comme `volume.aggregate.name.`
+
+
+
+
+
+== Commandes qui mettent à jour les associations entre les objets
+
+Pour cette catégorie de commandes, vous devez mapper l'association et les objets aux entrées de dictionnaire pertinentes. Par exemple, dans le `Add Volume to vFiler` commande, le `Volume` et `vFiler` les paramètres sont mappés aux attributs pertinents du `Volume` et `vFiler` entrées du dictionnaire.

@@ -1,0 +1,37 @@
+---
+permalink: workflows/task-test-the-wfa-reservation-script-for-commands.html 
+sidebar: sidebar 
+keywords: test, reservation, scripts, written, oncommand, workflow, automation, commands, playground, database, ensure, affect, table 
+summary: 'Vous pouvez tester les scripts de réservation que vous avez écrits pour les commandes OnCommand Workflow Automation (WFA) sur la base de données de jeux de données afin de vous assurer que les scripts fonctionnent correctement et qu"ils n"affectent pas les tables de base de données WFA.' 
+---
+= Testez le script de réservation pour les commandes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez tester les scripts de réservation que vous avez écrits pour les commandes OnCommand Workflow Automation (WFA) sur la base de données de jeux de données afin de vous assurer que les scripts fonctionnent correctement et qu'ils n'affectent pas les tables de base de données WFA.
+
+Le chemin d'installation par défaut de WFA est utilisé dans cette procédure. Si vous avez modifié l'emplacement par défaut lors de l'installation, vous devez utiliser le chemin d'installation WFA modifié.
+
+.Étapes
+. Ouvrez une invite de commandes sur le serveur WFA et modifiez les répertoires à l'emplacement suivant : `c:\Program Files\NetApp\WFA\mysql\bin`
+. Créer un dump de la base de données WFA à l'aide de la commande suivante : `mysqldump -u wfa -pWfa123 --single-transaction --skip-add-drop-table database_tables> dump_location`
++
+Commande pour créer un dump des tables de base de données cm_Storage : `mysqldump -u wfa -pWfa123 --single-transaction --skip-add-drop-table cm_storage> c:\tmp\cmSt2.sql`
+
+. Restaurez le dump que vous avez créé sur la base de données WFA Playy à l'aide de la commande suivante : `mysql -u wfa -pWfa123 playground < dump_location`
++
+`mysql -u wfa -pWfa123 playground < c:\tmp\cmSt2.sql`
+
+. Créez ou modifiez une commande WFA et écrivez le script de réservation dans l'onglet *réservation*.
++
+Vous devez vous assurer que les scripts de réservation et de vérification n'utilisent que la base de données du terrain de jeu.
+
+. Créez ou modifiez un flux de travail, incluez la commande dans le flux de travail, puis exécutez le flux de travail.
+. Vérifiez que les scripts de réservation et de vérification fonctionnent comme prévu.
++
+Le processus d'acquisition de la source de données WFA ne met pas à jour la base de données du terrain de jeu. Vous devez supprimer manuellement les réservations créées par la commande.
+
+

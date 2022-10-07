@@ -1,0 +1,142 @@
+---
+permalink: help/reference-reservations-window.html 
+sidebar: sidebar 
+keywords: reservations, window, display, workflow, marked, reservation, enable, manage, access, selecting, execution 
+summary: La fenêtre Reservations affiche chaque flux de travail marqué pour la réservation et vous permet de gérer les réservations. Vous pouvez accéder à cette fenêtre en sélectionnant exécution > Réservations. 
+---
+= Fenêtre réservations
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La fenêtre Reservations affiche chaque flux de travail marqué pour la réservation et vous permet de gérer les réservations. Vous pouvez accéder à cette fenêtre en sélectionnant *exécution* > *Réservations*.
+
+Une réservation permet de s'assurer qu'une ressource sélectionnée est disponible pour un flux de travail planifié spécifique lors de l'exécution de ce flux de travail.
+
+* Table de réservations
+* Barre d'outils
+
+
+
+
+== Table de réservations
+
+Le tableau Réservations répertorie les flux de travail soumis pour réservation. Vous pouvez personnaliser l'affichage du tableau à l'aide des fonctions de filtrage et de tri disponibles pour chaque colonne, ainsi qu'en réorganisant l'ordre des colonnes.
+
+* image:../media/filter_icon_wfa.gif["Icône de filtre"] active ou désactive le filtrage pour l'ensemble de la table. Un "x" rouge apparaît sur l'icône si le filtrage est désactivé.
+* Double-cliquer image:../media/filter_icon_wfa.gif["Icône de filtre"] efface et réinitialise les sélections de filtrage.
+* image:../media/wfa_filter_icon.gif["Icône de filtre"] sur chaque en-tête de colonne, vous pouvez effectuer un filtrage en fonction du contenu des colonnes. Cliquez sur image:../media/wfa_filter_icon.gif["Icône de filtre"] dans une colonne, vous pouvez filtrer un élément spécifique dans la liste déroulante ou sur tous les éléments disponibles.
+* Cliquer sur l'en-tête de colonne permet de basculer entre l'ordre croissant et décroissant de tri. Vous pouvez identifier l'ordre de tri appliqué à l'aide des flèches de tri (image:../media/wfa_sortarrow_up_icon.gif["Icône de tri"] pour les valeurs ascendantes et image:../media/wfa_sortarrow_down_icon.gif["Icône de tri"] pour décroissant).
+* Pour réorganiser l'emplacement des colonnes, vous pouvez faire glisser et déposer les colonnes dans l'ordre voulu. Toutefois, vous ne pouvez pas masquer ou supprimer ces colonnes.
+* Cliquez sur la zone de texte filtre *Search* pour rechercher un contenu spécifique. En outre, vous pouvez effectuer une recherche à l'aide des opérateurs pris en charge pour le type de colonne applicable, alphabétique ou numérique.
+
+
+Le tableau suivant répertorie les opérateurs pris en charge pour les colonnes alphabétiques et numériques dans le tableau Réservations, disponibles dans la zone de texte filtre *Search*.
+
+[cols="2*"]
+|===
+| Alphabétique | Valeur numérique 
+
+
+ a| 
+* Contient
+* Ne contient pas
+* Commence par
+* Se termine par
+* Égal à
+* N'est pas égal
+* Réinitialiser
+
+ a| 
+* Égal à
+* N'est pas égal
+* Inférieur à
+* Supérieur à
+* Inférieur ou égal à
+* Supérieur ou égal à
+* Entre
+* Réinitialiser
+
+
+|===
+Le tableau Réservations contient les colonnes suivantes :
+
+* *Numéro de travail*
++
+Affiche le numéro d'identification du travail.
+
++
+Le numéro d'identification du travail est unique et est attribué par le serveur lorsqu'il démarre le travail.
+
+* *Workflow*
++
+Affiche le nom du flux de travail.
+
+* *Heure d'exécution*
++
+Affiche l'heure à laquelle l'exécution du travail est programmée ou à laquelle le travail a été exécuté.
+
++
+Cliquez sur l'icône du calendrier dans la zone de texte filtre *Search* pour rechercher une date d'exécution spécifique.
+
+* * Heure de la réservation*
++
+Affiche l'heure à laquelle le travail a été planifié, c'est-à-dire l'heure à laquelle la réservation a été créée.
+
++
+Cliquez sur l'icône du calendrier dans la zone de texte filtre *Search* pour rechercher une date de réservation spécifique.
+
+* *Nom de commande*
++
+Affiche la commande pour laquelle la réservation a été effectuée. Par exemple, pour un workflow exécutant la commande `Create Volume myVolume of size 20MB`, Créer un volume s'affiche.
+
+* *Réservation*
++
+Affiche la description de la réservation, qui est générée à partir de la représentation de chaîne de la commande.
+
+* *Statut du workflow*
++
+Affiche l'état du travail d'exécution du flux de travail. Les options d'état sont les suivantes :
+
++
+** Tout
+** Échec
+** Exécution
+** Réussi
+** Annulée
+** En attente d'approbation
+** Planifié
+** Abandon
+** Obsolète
+** Planification
+** En attente
+** Réussite partielle
+
+
+* * Mise à jour du cache*
++
+Indique si la réservation a été vérifiée et reflétée dans les données mises en cache (OUI ou NON). Cette mise à jour du cache est effectuée par le processus d'acquisition des données.
+
+* *Dernière erreur*
++
+Affiche le message d'erreur généré lors de la simulation de la réservation.
+
+
+
+
+
+== Barre d'outils
+
+La barre d'outils se trouve au-dessus de l'en-tête de colonne. Vous pouvez utiliser les icônes de la barre d'outils pour effectuer diverses actions. Vous pouvez également accéder à ces actions à partir du menu contextuel de la fenêtre.
+
+* *image:../media/delete_wfa_icon.gif["Icône Supprimer"] (Supprimer)*
++
+Ouvre la boîte de dialogue de confirmation de suppression de réservations, qui vous permet de supprimer la réservation sélectionnée.
+
+* *image:../media/refresh_wfa_icon.gif["Icône Réfrech"] (Actualiser)*
++
+Actualise le contenu de la table Reservations.
+
+

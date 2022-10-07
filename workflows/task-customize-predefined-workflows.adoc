@@ -1,0 +1,38 @@
+---
+permalink: workflows/task-customize-predefined-workflows.html 
+sidebar: sidebar 
+keywords: customize, predefined, workflow, automation, suitable, requirement 
+summary: 'Vous pouvez personnaliser un workflow Workflow Automation (WFA) prédéfini s"il n"existe pas de workflow adapté à vos besoins.' 
+---
+= Personnaliser des flux de travail prédéfinis
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez personnaliser un workflow Workflow Automation (WFA) prédéfini s'il n'existe pas de workflow adapté à vos besoins.
+
+Vous devez avoir identifié les modifications requises pour le flux de travail prédéfini.
+
+Les questions et demandes de support relatives aux éléments suivants doivent être adressées à la communauté WFA :
+
+* Tout contenu téléchargé depuis la communauté WFA
+* Contenu WFA personnalisé que vous avez créé
+* Contenu WFA que vous avez modifié
+
+
+.Étapes
+. Cliquez sur *Workflow Design* > *Workflow*.
+. Sélectionnez le workflow prédéfini qui correspond le mieux à vos besoins, puis cliquez sur image:../media/clone_wfa_icon.gif["Icône cloner"] dans la barre d'outils.
+. Dans le concepteur de flux de travail, apportez les modifications requises dans les onglets appropriés, tels que la modification de la description, l'ajout ou la suppression d'une commande, la modification des détails de la commande et la modification de l'entrée utilisateur.
+. Cliquez sur *Preview*, entrez les entrées utilisateur requises pour prévisualiser l'exécution du workflow, puis cliquez sur *Preview* pour afficher les détails de planification du workflow.
+. Cliquez sur *OK* pour fermer la fenêtre d'aperçu.
+. Cliquez sur *Enregistrer*.
+
+
+
+
+== Une fois que vous avez terminé
+
+Vous pouvez tester le flux de travail modifié dans votre environnement de test, puis le marquer comme prêt pour la production.

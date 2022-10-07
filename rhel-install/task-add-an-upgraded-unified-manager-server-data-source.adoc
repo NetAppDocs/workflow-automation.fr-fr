@@ -1,0 +1,29 @@
+---
+permalink: rhel-install/task-add-an-upgraded-unified-manager-server-data-source.html 
+sidebar: sidebar 
+keywords: add, upgraded, unified manager, server, data source 
+summary: 'Si le serveur Unified Manager (5.x ou 6.x) est ajouté en tant que source de données à WFA, le serveur Unified Manager est mis à niveau, Vous devez ajouter le serveur Unified Manager mis à niveau en tant que source de données, car les données associées à la version mise à niveau ne sont pas renseignées dans WFA sauf si elles sont ajoutées manuellement en tant que source de données.' 
+---
+= Ajoutez un serveur Unified Manager mis à niveau en tant que source de données
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si le serveur Unified Manager (5.x ou 6.x) est ajouté en tant que source de données à WFA, le serveur Unified Manager est mis à niveau, Vous devez ajouter le serveur Unified Manager mis à niveau en tant que source de données, car les données associées à la version mise à niveau ne sont pas renseignées dans WFA sauf si elles sont ajoutées manuellement en tant que source de données.
+
+.Étapes
+. Connectez-vous à l'interface graphique WFA en tant qu'administrateur.
+. Cliquez sur *Paramètres* et sous *Configuration*, cliquez sur *sources de données*.
+. Cliquez sur image:../media/new_wfa_icon.gif["Nouvelle icône"] dans la barre d'outils.
+. Dans la boîte de dialogue Nouvelle source de données, sélectionnez le type de source de données requis, puis entrez un nom pour la source de données et le nom d'hôte.
++
+En fonction du type de source de données sélectionné, les champs port, nom d'utilisateur, mot de passe et délai d'attente peuvent être automatiquement renseignés avec les données par défaut, si disponibles. Vous pouvez modifier ces entrées si nécessaire.
+
+. Cliquez sur *Enregistrer*.
+. Sélectionnez la version précédente du serveur Unified Manager, puis cliquez sur image:../media/delete_wfa_icon.gif["Icône Supprimer"] dans la barre d'outils.
+. Dans la boîte de dialogue de confirmation Supprimer le type de source de données, cliquez sur *Oui*.
+. Dans le tableau sources de données, sélectionnez la source de données, puis cliquez sur image:../media/acquire_now_wfa_icon.gif["Icône acquérir maintenant"] dans la barre d'outils.
+. Vérifiez l'état de l'acquisition de données dans la table Historique.
+

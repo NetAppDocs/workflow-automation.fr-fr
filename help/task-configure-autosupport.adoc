@@ -1,0 +1,62 @@
+---
+permalink: help/task-configure-autosupport.html 
+sidebar: sidebar 
+keywords: configure, several, autosupport, settings, schedule, content, messages, proxy, server, weekly, logs, select, technical, support, archiving, issue, analysis 
+summary: 'Vous pouvez configurer plusieurs paramètres AutoSupport tels que la planification, le contenu des messages AutoSupport et le serveur proxy. AutoSupport envoie chaque semaine des journaux du contenu que vous avez sélectionné à des fins de support technique pour l"archivage et l"analyse des problèmes.' 
+---
+= Configurez AutoSupport
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez configurer plusieurs paramètres AutoSupport tels que la planification, le contenu des messages AutoSupport et le serveur proxy. AutoSupport envoie chaque semaine des journaux du contenu que vous avez sélectionné à des fins de support technique pour l'archivage et l'analyse des problèmes.
+
+.Étapes
+. Connectez-vous à WFA via un navigateur Web en tant qu'administrateur.
+. Cliquez sur *Paramètres* et sous *Configuration*, cliquez sur *AutoSupport*.
+. Assurez-vous que la case *Activer AutoSupport* est sélectionnée.
+. Entrez les informations requises.
+. Sélectionnez l'une des options suivantes dans la liste *contenu* :
++
+[cols="2*"]
+|===
+| Si vous souhaitez inclure... | Choisissez ensuite cette option... 
+
+
+ a| 
+Uniquement les détails de configuration, tels que les utilisateurs, les flux de production et les commandes de votre installation WFA
+ a| 
+envoyer uniquement les données de configuration
+
+
+
+ a| 
+Détails de la configuration WFA et données dans des tables cache WFA telles que le schéma
+ a| 
+envoi des données de configuration et de mise en cache (par défaut)
+
+
+
+ a| 
+Détails de la configuration WFA, données dans les tables cache WFA et données dans le répertoire d'installation
+ a| 
+envoi de la configuration et mise en cache des données étendues
+
+|===
++
+[NOTE]
+====
+Le mot de passe d'un utilisateur WFA est _not_ inclus dans les données AutoSupport.
+
+====
+. *Facultatif:* Test que vous pouvez télécharger un message AutoSupport:
++
+.. Cliquez sur *Télécharger*.
+.. Dans la boîte de dialogue qui s'ouvre, sélectionnez l'emplacement d'enregistrement du `.7z` fichier.
+
+
+. *Facultatif:* Testez l'envoi d'un message AutoSupport à la destination spécifiée en cliquant sur *Envoyer maintenant*.
+. Cliquez sur *Enregistrer*.
+

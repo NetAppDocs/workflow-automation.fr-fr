@@ -1,0 +1,34 @@
+---
+permalink: workflows/task-check-in-a-new-pack-to-scm.html 
+sidebar: sidebar 
+keywords: create, new, workflow, pack, oncommand, automation, check, source, control, management 
+summary: 'Vous pouvez créer un nouveau pack de flux de travail avec OnCommand Workflow Automation (WFA) et le vérifier dans gestion du contrôle source (SCM).' 
+---
+= Archiver un nouveau pack de workflow dans SCM
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez créer un nouveau pack de flux de travail avec OnCommand Workflow Automation (WFA) et le vérifier dans gestion du contrôle source (SCM).
+
+SCM doit être configuré et vous devez disposer des informations d'identification admin ou Architect.
+
+.Étapes
+. Connectez-vous à la fenêtre *WFA* via un navigateur Web.
+. Créez un nouveau pack de flux de production.
++
+xref:task-create-a-workflow-automation-pack.adoc[Créez un pack d'automatisation de flux de travail]
+
+. Ajoutez des entités au pack que vous avez créé.
++
+xref:task-add-entity-to-a-workflow-automation-pack.adoc[Ajoutez des entités à un pack OnCommand Workflow Automation]
+
+. Cliquez sur l'icône *Exporter vers le serveur*.
+. Dans la boîte de dialogue Exporter vers le dossier du serveur, dans le champ *emplacement du dossier sur le système du serveur*, entrez l'emplacement du système de fichiers où le pack doit être enregistré sur le serveur contenant le client SCM.
++
+Pour modifier ou réexporter le pack ou le contenu, cliquez sur l'icône *déverrouiller*.
+
+. Dans l'emplacement du client SCM, vérifiez le contenu du pack sur le serveur SCM.
+

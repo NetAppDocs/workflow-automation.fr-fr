@@ -1,0 +1,95 @@
+---
+permalink: windows-install/reference-system-requirements-for-oncommand-workflow-automation-windows.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, system requirements, install 
+summary: 'Avant d"installer WFA, vous devez connaître la configuration matérielle et logicielle requise pour OnCommand Workflow Automation (WFA).' 
+---
+= Configuration système requise pour l'installation de OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant d'installer WFA, vous devez connaître la configuration matérielle et logicielle requise pour OnCommand Workflow Automation (WFA).
+
+
+
+== Configuration matérielle requise pour l'installation de WFA
+
+Le tableau suivant répertorie la configuration matérielle minimale requise et les spécifications matérielles recommandées pour le serveur WFA.
+
+[cols="3*"]
+|===
+| Composant | Configuration minimale requise | Spécifications recommandées 
+
+
+ a| 
+CPU
+ a| 
+2.27 GHz ou plus, 4 cœurs, 64 bits
+ a| 
+2.27 GHz ou plus, 4 cœurs, 64 bits
+
+
+
+ a| 
+RAM
+ a| 
+4 Go
+ a| 
+8 Go
+
+
+
+ a| 
+Espace disque disponible
+ a| 
+5 GO
+ a| 
+20 GO
+
+|===
+Si vous installez WFA sur une machine virtuelle, il est recommandé de réserver la mémoire et le processeur nécessaires afin que cette dernière dispose de ressources suffisantes. Le programme d'installation ne vérifie pas la vitesse de la CPU.
+
+
+
+== Configuration logicielle requise pour l'installation de WFA
+
+WFA s'exécute sur un système d'exploitation Windows 64 bits et doit être installé sur des machines virtuelles ou des machines physiques dédiées. Vous ne devez pas installer d'autres applications sur le serveur qui exécute WFA.
+
+WFA s'exécute de Microsoft Windows Server 2012 Enterprise Edition à Microsoft Windows Server 2016 (toutes éditions). Enterprise Edition est le système d'exploitation Windows recommandé.
+
+Pour les serveurs Windows 2012, .NET Framework version 4.5.2 doit être installé sur votre système Windows. Si .NET Framework version 4.5.2 n'est pas installé, l'installation de WFA 5.1 échoue.
+
+* L'un des navigateurs pris en charge suivants :
++
+** Mozilla Firefox
+** Microsoft Internet Explorer
+** Google Chrome
+
+
+* PowerShell 3.0
+* VMware PowerCLI version 5
++
+
+NOTE: L'extension PowerShell pour les API VMware est uniquement nécessaire si vous utilisez WFA pour exécuter des flux de travail sur VMware vSphere.
+
+
+
+
+NOTE: Les applications antivirus peuvent empêcher le démarrage des services WFA.
+
+Pour éviter ce problème, configurez les exclusions d'analyse antivirus pour les répertoires WFA suivants :
+
+* Répertoire dans lequel vous avez installé WFA
+* Répertoire dans lequel vous avez installé Perl
+* Répertoire dans lequel vous avez installé OpenJDK
+* Le répertoire des données MySQL
+
+
+Pour plus d'informations, consultez la matrice d'interopérabilité.
+
+*Informations connexes*
+
+https://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^]

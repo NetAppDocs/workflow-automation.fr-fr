@@ -1,0 +1,23 @@
+---
+permalink: windows-install/concept-advanced-configuring-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: configure, oncommand, workflow, automation 
+summary: 'OnCommand Workflow Automation (WFA) vous permet de configurer divers paramètres, par exemple, AutoSupport et notifications.' 
+---
+= Configuration d'OnCommand Workflow Automation en cours
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation (WFA) vous permet de configurer différents paramètres, par exemple AutoSupport et les notifications.
+
+Lors de la configuration de WFA, vous pouvez configurer un ou plusieurs des éléments suivants, si nécessaire :
+
+* AutoSupport pour l'envoi de messages AutoSupport au support technique
+* Serveur Microsoft Active Directory Lightweight Directory Access Protocol (LDAP) pour l'authentification LDAP et l'autorisation pour les utilisateurs de WFA
+* Recevez des notifications par e-mail concernant le fonctionnement du workflow et l'envoi de messages AutoSupport
+* Simple Network Management Protocol (SNMP) pour les notifications sur les opérations de workflow
+* Syslog pour la consignation de données à distance
+

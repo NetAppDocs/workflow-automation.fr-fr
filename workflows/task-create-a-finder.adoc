@@ -1,0 +1,39 @@
+---
+permalink: workflows/task-create-a-finder.html 
+sidebar: sidebar 
+keywords: create, wfa, finder, search, resources, predefined, suitable, required 
+summary: 'Vous pouvez créer un outil de recherche WFA qui peut rechercher des ressources si il n"existe pas de outil de recherche WFA prédéfini adapté pour rechercher les ressources requises.' 
+---
+= Créer un viseur
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez créer un outil de recherche WFA qui peut rechercher des ressources si il n'existe pas de outil de recherche WFA prédéfini adapté pour rechercher les ressources requises.
+
+Vous devez avoir créé les filtres requis qui sont utilisés dans le Finder.
+
+.Étapes
+. Cliquez sur *Workflow Design* > *Finders*.
+. Cliquez sur image:../media/new_wfa_icon.gif["Nouvelle icône"] dans la barre d'outils.
+. Dans l'onglet *Propriétés* de la boîte de dialogue *Nouveau Finder*, entrez ou sélectionnez les détails requis dans les champs *Nom*, *Type* et *Description*.
+. Dans l'onglet *filtres*, sélectionnez les filtres requis dans la liste *filtres disponibles* et cliquez sur image:../media/right_arrow_button.gif["Bouton flèche droite"].
++
+Vous pouvez ajouter ou supprimer des filtres en fonction de vos besoins.
+
+. Dans l'onglet attributs renvoyés, sélectionnez les attributs requis pour le filtre dans la liste *Available* et cliquez sur image:../media/right_arrow_button.gif["Bouton flèche droite"].
+. *Facultatif:* cliquez sur *Test* pour tester le Finder.
++
+.. Dans la boîte de dialogue *Test Finder <FinderName>*, entrez les paramètres de test requis.
+.. Décochez la case *utiliser les données de réservation dans test* si vous ne souhaitez pas utiliser les données de réservation pour tester le Finder.
+.. Cliquez sur *Test*.
++
+Le résultat du test s'affiche.
+
+.. Fermez la boîte de dialogue.
+
+
+. Cliquez sur *Enregistrer*.
+

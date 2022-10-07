@@ -1,0 +1,46 @@
+---
+permalink: rhel-install/reference-backing-up-of-the-oncommand-workflow-automation-database.html 
+sidebar: sidebar 
+keywords: back up, oncommand, workflow, automation, database 
+summary: 'La sauvegarde de la base de données OnCommand Workflow Automation (WFA) inclut les paramètres de configuration du système et des informations sur le cache, y compris la base de données de jeux. Vous pouvez utiliser la sauvegarde à des fins de restauration sur le même système ou sur un système différent.' 
+---
+= Sauvegarde de la base de données OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La sauvegarde de la base de données OnCommand Workflow Automation (WFA) inclut les paramètres de configuration du système et des informations sur le cache, y compris la base de données de jeux. Vous pouvez utiliser la sauvegarde à des fins de restauration sur le même système ou sur un système différent.
+
+Une sauvegarde automatique de la base de données est créée tous les jours à 2 heures du matin Et est enregistré sous la forme d'un fichier .zip à l'emplacement suivant : wfa_install_location/WFA-backups.
+
+WFA enregistre jusqu'à cinq sauvegardes dans le répertoire WFA-backups et remplace la sauvegarde la plus ancienne par la dernière sauvegarde. Le répertoire WFA-backups n'est pas supprimé lors de la désinstallation de WFA. Vous pouvez utiliser la sauvegarde créée automatiquement pour la restauration si vous n'avez pas créé de sauvegarde de la base de données WFA lors de la désinstallation de WFA.
+
+Vous pouvez également sauvegarder manuellement la base de données WFA lorsque vous devez enregistrer des modifications spécifiques pour la restauration. Par exemple, si vous souhaitez sauvegarder les modifications effectuées avant la sauvegarde automatique.
+
+[NOTE]
+====
+* Vous ne pouvez restaurer une sauvegarde de base de données WFA que sur un système qui exécute la même version ou une version plus récente de WFA.
++
+Par exemple, si vous avez créé une sauvegarde sur un système exécutant WFA 4.2, la sauvegarde ne peut être restaurée que sur des systèmes qui exécutent WFA 4.2 ou version ultérieure.
+
+* Vous ne pouvez pas utiliser l'interface utilisateur Web pour sauvegarder la base de données WFA pendant la reprise d'activité dans une configuration haute disponibilité.
+
+
+====
+
+
+== Sauvegarde et restauration des identifiants de l'utilisateur
+
+La sauvegarde de la base de données WFA inclut les identifiants de l'utilisateur WFA.
+
+
+NOTE: La base de données WFA est également incluse dans les données AutoSupport. Toutefois, le mot de passe des utilisateurs WFA n'est pas inclus dans les données AutoSupport.
+
+Lors de la restauration d'une base de données WFA à partir d'une sauvegarde, les éléments suivants sont conservés :
+
+* Identifiants utilisateur admin créés lors de l'installation WFA actuelle.
+* Si un utilisateur avec des privilèges d'administrateur autres que l'utilisateur administrateur par défaut restaure la base de données, les informations d'identification des deux utilisateurs admin.
+* Tous les autres identifiants utilisateur de l'installation WFA actuelle sont remplacés par les identifiants utilisateur de la sauvegarde.
+

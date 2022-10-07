@@ -1,0 +1,36 @@
+---
+permalink: workflows/concept-how-reservation-works.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, resource, capability, reserve, required, ensure, available, successful, execution 
+summary: La fonctionnalité de réservation de ressources OnCommand Workflow Automation se réserve les ressources nécessaires pour garantir la disponibilité des ressources pour permettre la bonne exécution des workflows. 
+---
+= Fonctionnement de la réservation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La fonctionnalité de réservation de ressources OnCommand Workflow Automation se réserve les ressources nécessaires pour garantir la disponibilité des ressources pour permettre la bonne exécution des workflows.
+
+Les commandes WFA peuvent réserver les ressources requises et supprimer la réservation une fois la ressource disponible dans la base de données WFA cache, généralement après l'acquisition d'un cache. La fonctionnalité de réservation assure que les ressources réservées sont disponibles pour le workflow jusqu'à la période d'expiration de la réservation que vous avez configurée dans les paramètres de configuration WFA.
+
+Vous pouvez utiliser la fonction de réservation pour exclure les ressources réservées par d'autres flux de travail lors de la sélection de ressources. Par exemple, si un flux de travail ayant réservé 100 Go d'espace sur un agrégat est planifié pour être exécuté après une semaine, Et vous exécutez un autre flux de travail qui utilise la commande *Create Volume*, le flux de travail en cours d'exécution ne consomme pas l'espace réservé par le flux de travail planifié pour créer un nouveau volume. De plus, la fonctionnalité de réservation permet l'exécution en parallèle des workflows.
+
+Lors de l'aperçu d'un flot de travaux pour exécution, WFA Planner prend en compte tous les objets réservés, y compris les objets existants dans la base de données du cache. Si vous avez activé la réservation, les effets des flux de travail planifiés et des flux de travail qui s'exécutent en parallèle et l'existence d'éléments de stockage sont pris en compte lors de la planification du flux de travail.
+
+La flèche de l'illustration suivante montre que la réservation est activée pour le workflow :
+
+image::../media/reservation.png[réservation]
+
+
+
+== Exemples de réservation dans des flux de travail prédéfinis
+
+Vous pouvez ouvrir les flux de travail prédéfinis suivants dans le concepteur pour comprendre comment la réservation est utilisée :
+
+* Environnement de clonage
+* Créez un volume clustered Data ONTAP
+* Mettre en place le peering de cluster
+* Supprimer un volume clustered Data ONTAP
+

@@ -1,0 +1,45 @@
+---
+permalink: workflows/reference-guidelines-for-data-source-type.html 
+sidebar: sidebar 
+keywords: aware, guidelines, create, data, source, type, use, define, custom, oncommand, workflow, automation 
+summary: 'Vous devez connaître les consignes de création de types de sources de données utilisées pour définir des sources de données personnalisées pour OnCommand Workflow Automation (WFA).' 
+---
+= Instructions pour la création de types de sources de données
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez connaître les consignes de création de types de sources de données utilisées pour définir des sources de données personnalisées pour OnCommand Workflow Automation (WFA).
+
+Vous pouvez définir un type de source de données à l'aide de l'une des méthodes suivantes :
+
+* SQL : vous pouvez utiliser les instructions de WFA SQL pour définir des requêtes de sélection à partir de sources de données basées sur une base de données externe.
+* SCRIPT : vous pouvez écrire un script PowerShell qui fournit les données d'un schéma spécifique d'entrées de dictionnaire.
+
+
+Les instructions de création de types de sources de données sont les suivantes :
+
+* Vous devez utiliser le langage PowerShell pour créer un script.
+* Le script PowerShell doit fournir la sortie de chaque entrée de dictionnaire dans son répertoire de travail courant.
+* Les fichiers de données doivent être nommés `dictionary_entry.csv,` où le nom de l'entrée du dictionnaire doit être en caractères minuscules.
++
+Le type de source de données prédéfini qui collecte les informations de Performance Advisor utilise un type de source de données BASÉ SUR DES SCRIPTS. Les fichiers de sortie sont nommés `array_performance.csv` et `aggregate_performance.csv.`
+
+* Le `.csv` le fichier doit inclure le contenu dans l'ordre exact des attributs d'entrée du dictionnaire.
++
+Une entrée de dictionnaire inclut des attributs dans l'ordre suivant : Array_ip, date, jour, heure, cpu_Busy, total_ops_per_sec, débit_disque_par_sec
+
++
+Le script PowerShell ajoute des données au `.csv` fichier dans le même ordre.
+
++
+[listing]
+----
+$values = get-Array-CounterValueString ([REF]$data)
+Add-Content $arrayFile ([byte[]][char[]] "\N t$arrayIP't$date't$day't$hour't$values'n")
+----
+* Vous devez utiliser le codage pour vous assurer que les données issues du script sont correctement chargées dans le cache WFA.
+* Vous devez utiliser \N lors de la saisie d'une valeur nulle dans `.csv` fichier.
+

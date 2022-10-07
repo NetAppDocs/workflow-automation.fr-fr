@@ -1,0 +1,71 @@
+---
+permalink: workflows/concept-how-commands-work.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, commands, execution, blocks, step 
+summary: 'Les commandes OnCommand Workflow Automation sont les blocs d"exécution pour les flux de travail. Vous pouvez utiliser une commande pour chaque étape de votre workflow.' 
+---
+= Fonctionnement des commandes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les commandes OnCommand Workflow Automation sont les blocs d'exécution pour les flux de travail. Vous pouvez utiliser une commande pour chaque étape de votre workflow.
+
+Les commandes WFA sont écrites à l'aide de scripts PowerShell et Perl. Les commandes PowerShell utilisent le kit Data ONTAP PowerShell et VMware PowerCLI, si le pack est installé. Les commandes Perl utilisent la distribution Perl et les modules Perl installés sur le serveur WFA. Si vous incluez plusieurs langages script dans une commande, par exemple PowerShell et Perl, les scripts appropriés sont choisis par WFA en fonction du système d'exploitation sur lequel ils sont installés et de l'ordre de préférence de la langue spécifiée dans le menu de configuration WFA.
+
+Les scripts des commandes WFA incluent plusieurs paramètres. Ces paramètres peuvent être mappés à des attributs d'entrée du dictionnaire.
+
+Notez que chaque commande WFA peut inclure plusieurs commandes Data ONTAP.
+
+Certaines commandes WFA sont appelées commandes d'attente, car elles peuvent attendre les opérations longues et interroger régulièrement, par exemple la commande *wait for multiple volume déplacent*. L'intervalle d'attente auquel la commande d'interrogation est exécutée peut être configuré pour vérifier si l'opération est terminée.
+
+Une commande WFA est initiée par WFA, alors que le workflow est en phase d'exécution. WFA exécute les commandes en série, en séquence gauche-à-droite et de haut en bas. La planification du workflow confirme la disponibilité et la validité des paramètres fournis à la commande. Le serveur WFA fournit tous les paramètres requis pour les commandes avant leur exécution.
+
+Les paramètres des commandes sont finalisés lors de la planification du workflow. Le workflow transmet ensuite ces paramètres aux commandes pendant le temps d'exécution. Les commandes ne peuvent pas renvoyer les paramètres au workflow. Toutefois, si vous souhaitez échanger des informations obtenues lors de l'exécution entre les commandes d'un workflow, vous pouvez utiliser les applets de commande WFA PowerShell ou les fonctions Perl désignées.
+
+Les commandes WFA PowerShell n'utilisent pas l'indicateur -ErrorAction stop pour les applets de commande PowerShell. Par conséquent, les exécutions de flux de travail se poursuivent même lorsque les applets de commande échouent à cause d'une erreur. Si vous souhaitez que l'indicateur -ErrorAction stop soit inclus dans une commande spécifique, vous pouvez cloner la commande et modifier le script PowerShell pour ajouter l'indicateur.
+
+Les applets de commande PowerShell et les fonctions Perl incluses dans WFA permettent d'échanger des informations entre les commandes :
+
+[cols="2*"]
+|===
+| Applets de commande PowerShell | Fonctions Perl 
+
+
+ a| 
+Add-WfaWorkflowParameter
+ a| 
+Paramètre addWfaWorkflowParameter
+
+
+
+ a| 
+Paramètre GET-WfaWorkflowParameter
+ a| 
+GetWfaWorkflowParameter
+
+|===
+Les paramètres ajoutés par les applets de commande « Add » ou les fonctions à une commande peuvent être récupérés par une commande exécutée ultérieurement et utilise les applets de commande « Get » ou les fonctions. Par exemple, dans une commande WFA PowerShell, vous pouvez utiliser les éléments suivants dans le code pour ajouter un paramètre nommé Volume Id : `Add-WfaWorkflowParameter -Name "VolumeUUID" -Value “12345” -AddAsReturnParameter $true`. Vous pouvez ensuite utiliser la commande suivante pour extraire la valeur de Volume Id : `$volumeId = Get-WfaWorkflowParameter -Name volumeId`.
+
+Les commandes WFA peuvent interroger la base de données WFA et obtenir le résultat requis. Cela vous permet de construire une commande sans utiliser de filtres et de finders. Vous pouvez utiliser les fonctions suivantes pour interroger la base de données :
+
+[cols="2*"]
+|===
+| Cmdlet PowerShell | Fonction Perl 
+
+
+ a| 
+Invoke-MySqlQuery par exemple : `Invoke-MySqlQuery -Query "SELECT cluster.name AS 'Cluster Name' FROM cm_storage.cluster"`
+ a| 
+InvokeMySqlQuery
+
+|===
+*Informations connexes*
+
+xref:task-create-a-filter.adoc[Créer un filtre]
+
+xref:task-create-a-finder.adoc[Créer un viseur]
+
+xref:task-create-a-command.adoc[Créer une commande]

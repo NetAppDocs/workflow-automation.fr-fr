@@ -1,0 +1,84 @@
+---
+permalink: help/reference-new-filter-dialog-box.html 
+sidebar: sidebar 
+keywords: use, new, filter, dialog box, create, develop, finders 
+summary: Vous pouvez utiliser la boîte de dialogue Nouveau filtre pour créer un nouveau filtre. Vous pouvez utiliser le filtre pour développer des finders. 
+---
+= Boîte de dialogue Nouveau filtre
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser la boîte de dialogue Nouveau filtre pour créer un nouveau filtre. Vous pouvez utiliser le filtre pour développer des finders.
+
+* Onglet Propriétés
+* Onglet requête
+
+
+
+
+== Onglet Propriétés
+
+L'onglet *Propriétés* vous permet de spécifier un nom pour le filtre, de sélectionner un objet de dictionnaire et de saisir une description pour le filtre.
+
+* *Nom*
++
+Vous permet d'entrer un nom pour le filtre.
+
+* *Type*
++
+Permet de sélectionner un objet de dictionnaire dans la liste.
+
+* *Version entité*
++
+Vous permet de saisir le numéro de version du filtre dans `major.minor.revision` format--par exemple, 1.0.0.
+
+* *Description*
++
+Vous permet de saisir une description pour le filtre.
+
+
+
+
+
+== Onglet requête
+
+Vous permet d'entrer une requête SQL et de modifier le libellé et la description des attributs.
+
+* *Requête SQL*
++
+Vous permet de saisir une requête SQL pour le filtre.
+
+* *Tableau des paramètres d'entrée*
++
+Affiche la liste des paramètres de la requête SQL que vous avez saisie qui nécessitent une entrée utilisateur lorsque le filtre est utilisé. Vous pouvez cliquer sur la colonne *Label* ou *Description* d'un paramètre pour modifier le libellé ou entrer une description.
+
+* *Table attributs renvoyés*
++
+Affiche la liste des attributs renvoyés à partir de la requête SQL.
+
+
+
+
+
+== Boutons de commande
+
+* *Test*
++
+Vous permet de tester le filtre que vous avez défini.
+
+* * Actualiser*
++
+Remplit la table *Paramètres d'entrée* et la table *attributs renvoyés* avec des valeurs modifiées, le cas échéant.
+
+* *Enregistrer*
++
+Enregistre le filtre et ferme la boîte de dialogue.
+
+* *Annuler*
++
+N'enregistre pas le filtre et ferme la boîte de dialogue.
+
+

@@ -1,0 +1,109 @@
+---
+permalink: help/reference-parameters-for-commands-dialog-box.html 
+sidebar: sidebar 
+keywords: specify, parameters, settings, execution, commands, through, parameters, dialog box 
+summary: 'Vous pouvez spécifier des paramètres et d"autres paramètres pour l"exécution des commandes via la boîte de dialogue Paramètres pour les commandes.' 
+---
+= Paramètres de la boîte de dialogue commandes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez spécifier des paramètres et d'autres paramètres pour l'exécution des commandes via la boîte de dialogue Paramètres pour les commandes.
+
+La boîte de dialogue affiche un ou plusieurs onglets d'objet du dictionnaire et les onglets suivants :
+
+* Autres paramètres
+* Avancé
+
+
+
+
+== <objets Dictionnaire> onglets
+
+* *Définir <objet dictionnaire>*
++
+Vous permet de spécifier les paramètres de commande mappés à l'objet dictionnaire en spécifiant des attributs, en utilisant un objet défini précédemment ou en recherchant un objet existant.
+
++
+** *en remplissant les attributs*
++
+Vous permet de saisir des attributs pour cette variable. Vous pouvez utiliser la boîte de dialogue sélection de ressource pour les champs marqués avec image:../media/resource_selection_icon_wfa.gif[""]. Vous pouvez également utiliser un modèle qui inclut des valeurs prédéfinies pour certains attributs de l'objet. Vous pouvez afficher et utiliser des attributs supplémentaires en décochant la case *Afficher uniquement les attributs utilisés par <objet dictionnaire>*. La zone située en regard de *définir <objet dictionnaire>* affiche le nom par défaut de la variable sélectionnée. Vous pouvez modifier le nom de la variable. Les attributs obligatoires sont marqués d'un astérisque (*) et d'une bordure rouge pour la case.
+
+** *en utilisant un <objet dictionnaire précédemment défini>*
++
+Vous permet de sélectionner une variable définie précédemment. Vous pouvez sélectionner l'objet de dictionnaire précédemment défini dans la case à côté de *définir <objet de dictionnaire>*.
+
+** *en recherchant un <objet dictionnaire>* existant
++
+Vous permet de définir une variable en recherchant un objet de dictionnaire existant. Vous pouvez spécifier les critères de recherche de l'objet dictionnaire. Vous pouvez spécifier l'une des actions suivantes si l'objet dictionnaire est trouvé :
+
++
+*** Abandonner le flux de travail
+*** Désactiver la commande
+*** Remplir les attributs pour <dictionnaire object> et exécuter la commande
++
+
+NOTE: Cette option est similaire à l'option *en remplissant les attributs*.
+
+
+
+
+
+
+
+
+
+== Autres paramètres
+
+Vous permet de spécifier les paramètres de commande qui ne sont mappés à aucun objet de dictionnaire pour l'exécution de la commande.
+
+
+
+== Avancé
+
+Vous permet de spécifier des conditions pour l'exécution de la commande et de fournir une description. Vous pouvez également configurer le flux de travail de sorte que l'exécution du flux de travail se poursuit même si une ou plusieurs commandes du flux de travail ont échoué.
+
+* *Exécuter cette commande*
++
+** *Toujours*
++
+Exécute la commande sans condition.
+
+** *Si la variable suivante a été trouvée*
++
+Permet d'exécuter une commande uniquement lorsque la variable spécifiée est trouvée. Vous pouvez spécifier la variable dans la zone adjacente.
+
+** *Si la variable suivante n'a pas été trouvée*
++
+Permet d'exécuter une commande uniquement lorsque la variable spécifiée est introuvable. Vous pouvez spécifier la variable dans la zone adjacente.
+
+** *Si l'expression suivante est VRAIE*
++
+Vous permet d'exécuter une commande uniquement lorsque l'expression MVFLEX expression Language (MVEL) spécifiée est « true ». Vous pouvez spécifier l'expression dans la zone adjacente.
+
+
+
+* *Description*
++
+Permet de saisir une description pour la commande.
+
+* *Si l'exécution échoue*
++
+** *Abandonner l'exécution du workflow*
++
+Permet de mettre fin à l'exécution du flux de travail.
+
+** *Continuer l'exécution à partir de l'étape suivante*
++
+Vous permet de continuer l'exécution du flux de travail à partir de l'étape suivante.
+
+** *Continuer l'exécution à partir de la ligne suivante*
++
+Permet de poursuivre l'exécution du flux de travail à partir de la ligne suivante.
+
+
+
+

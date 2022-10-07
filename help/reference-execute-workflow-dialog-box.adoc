@@ -1,0 +1,46 @@
+---
+permalink: help/reference-execute-workflow-dialog-box.html 
+sidebar: sidebar 
+keywords: execute, workflow, dialog box, enable, specify, user, iputs, time, execution, comment 
+summary: 'La boîte de dialogue Exécuter le workflow vous permet de spécifier les entrées utilisateur requises, le temps d"exécution et le commentaire d"exécution pour un flux de travail.' 
+---
+= Boîte de dialogue Exécuter le flux de travail
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La boîte de dialogue Exécuter le workflow vous permet de spécifier les entrées utilisateur requises, le temps d'exécution et le commentaire d'exécution pour un flux de travail.
+
+
+
+== Entrées utilisateur
+
+Vous permet de spécifier les entrées du flux de travail. Les attributs obligatoires sont marqués d'un astérisque (*) et la bordure des cases est rouge.
+
+
+
+== Options
+
+Vous permet de spécifier l'heure d'exécution du flux de travail.
+
+* *Exécuter maintenant*
++
+Vous permet d'exécuter le flux de travail immédiatement.
+
+* *Exécuter de façon récurrence*
++
+Vous permet de régler le flux de travail pour qu'il se réproduise régulièrement. Cette option s'affiche uniquement lorsqu'un planning a été créé.
+
+* *Exécuter une fois*
++
+Permet de planifier l'exécution du flux de travail.
+
+
+
+
+
+== Commentaire d'exécution
+
+Vous permet de spécifier un commentaire pour l'exécution du flux de travail. Ce commentaire s'affiche dans la fenêtre Statut d'exécution.

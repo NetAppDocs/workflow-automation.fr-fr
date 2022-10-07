@@ -1,0 +1,304 @@
+---
+permalink: workflows/reference-guidelines-for-workflows.html 
+sidebar: sidebar 
+keywords: aware, guidelines, create, modify, predefined, workflow, oncommand, workflow, automation 
+summary: 'Vous devez connaître les instructions de création ou de modification d"un workflow prédéfini pour OnCommand Workflow Automation (WFA).' 
+---
+= Instructions pour les flux de travail
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez connaître les instructions de création ou de modification d'un workflow prédéfini pour OnCommand Workflow Automation (WFA).
+
+
+
+== Directives générales
+
+[cols="2*"]
+|===
+| Directives | Exemple 
+
+
+ a| 
+Nommez le flux de travail de sorte qu'il reflète l'opération exécutée par l'opérateur de stockage.
+ a| 
+`Create a CIFS Share`
+
+
+
+ a| 
+Pour les noms de flux de travail, mettez en majuscule la lettre initiale du premier mot et chaque mot qui est un objet. Lettres de majuscule pour les abréviations et les acronymes.
+ a| 
+Volumétrie
+
+Qtree
+
+Créez un partage CIFS en qtree Data ONTAP
+
+
+
+ a| 
+Pour les descriptions de flux de travail, incluez toutes les étapes importantes du flux de travail, y compris les prérequis, le résultat du flux de travail ou les aspects conditionnels de l'exécution.
+ a| 
+Voir la description de l'exemple de flux de travail `Create VMware NFS Datastore on Clustered Data ONTAP Storage,` qui inclut les prérequis.
+
+
+
+ a| 
+Définissez « prêt pour la production » sur `true` uniquement lorsque le flux de travail est prêt pour la production et peut être affiché sur la page portail.
+ a| 
+Aucune
+
+
+
+ a| 
+Par défaut, définissez « considérer les éléments réservés » sur vrai. Lors de l'aperçu d'un flot de travaux pour exécution, WFA Planner prend en compte tous les objets réservés avec les objets existants dans la base de données de cache. Les effets d'autres flux de travail planifiés ou de flux de travail s'exécutant en parallèle sont pris en compte lors de la planification d'un flux de travail spécifique si cette option est définie sur `true.`
+ a| 
+* Scénario 1
++
+Le flux de travail 1 crée un volume et est programmé pour l'exécuter une semaine plus tard. Il crée des qtrees ou des LUN dans des volumes recherchés. Si le workflow 2 est exécuté en une journée environ, vous devez désactiver « considérer les éléments réservés » pour le workflow 2 afin d'éviter qu'il ne considère le volume à créer en une semaine.
+
+* Scénario 2
++
+Le flux de travail 1 utilise le `Create Volume` commande. Si un flux de travail planifié 2 consomme 100 Go d'un agrégat, celui-ci doit prendre en compte les exigences du flux de travail 2 lors de la planification.
+
+
+
+
+
+ a| 
+Par défaut, « Activer la validation de l'existence d'élément » est défini sur `true.`
+ a| 
+* Scénario 1
++
+Si vous créez un flux de travail qui supprime d'abord un volume par son nom à l'aide de la commande `Remove Volume` ce n'est que si le volume existe et que le recrée à l'aide d'une autre commande telle que `Create Volume` ou `Clone Volume,` le flux de travail ne doit alors pas utiliser cet indicateur. L'effet de la suppression du volume ne sera pas disponible pour le `Create volume` entraînant l'échec du workflow.
+
+* Scénario 2
++
+Le `Create Volume` la commande est utilisée dans un workflow portant un nom spécifique « vol198 ».
+
++
+Si cette option est définie sur true, WFA Planner vérifie lors de la planification pour vérifier si un volume dont ce nom existe dans la baie donnée. Si le volume existe, le flux de travail échoue pendant la planification.
+
+
+
+
+
+ a| 
+Lorsque la même commande est sélectionnée plusieurs fois dans un flux de travail, indiquez les noms d'affichage appropriés pour les instances de commande.
+ a| 
+L'exemple de workflow « Créer, mapper et protéger des LUN avec SnapVault » utilise le `Create Volume` commande deux fois. Toutefois, il utilise les noms d'affichage comme `Create Primary Volume` et `Create Secondary Volume` adapté au volume primaire et au volume de destination en miroir.
+
+|===
+
+
+== Entrées utilisateur
+
+[cols="2*"]
+|===
+| Directives | Exemple 
+
+
+ a| 
+Noms :
+
+* Commencez le nom par le caractère «»$».
+* Utilisez une lettre majuscule au début de chaque mot.
+* Utilisez des lettres majuscules pour tous les termes et abréviations.
+* Ne pas utiliser de trait de soulignement.
+
+ a| 
+`$Array`
+
+`$VolumeName`
+
+
+
+ a| 
+Noms d'affichage :
+
+* Utilisez une lettre majuscule au début de chaque mot.
+* Séparez les mots par des espaces.
+* Si les entrées ont des unités spécifiques, spécifiez l'unité entre crochets dans le nom d'affichage directement.
+
+ a| 
+`Volume Name`
+
+`Volume Size (MB)`
+
+
+
+ a| 
+Descriptions :
+
+* Fournissez une description pertinente pour chaque entrée utilisateur.
+* Fournissez des exemples lorsque cela est nécessaire.
++
+Vous devez le faire particulièrement lorsque la saisie utilisateur doit avoir un format spécifique.
+
+
+
+Les descriptions des entrées utilisateur sont affichées sous forme d'info-bulles pour les entrées utilisateur lors de l'exécution du workflow.
+ a| 
+Initiateurs à ajouter à un « iGroup ». Par exemple, IQN ou WWPN de l'initiateur.
+
+
+
+ a| 
+Type : sélectionnez Enum comme type si vous souhaitez limiter l'entrée à un ensemble spécifique de valeurs.
+ a| 
+Protocole : « iscsi », « fcp », « mixed »
+
+
+
+ a| 
+Type : sélectionnez Query comme type lorsque l'utilisateur peut sélectionner parmi les valeurs disponibles dans le cache WFA.
+ a| 
+$Array : type DE REQUÊTE avec requête comme suit :
+
+[listing]
+----
+SELECT
+	ip, name
+FROM
+	storage.array
+----
+
+
+ a| 
+Type : permet de marquer l'entrée utilisateur comme verrouillée lorsque l'entrée utilisateur doit être limitée aux valeurs obtenues à partir d'une requête ou uniquement aux types d'Enum pris en charge.
+ a| 
+$Array: Locked Query type: Seules les matrices du cache peuvent être sélectionnées.$Protocol: Locked Enum type avec des valeurs valides iSCSI, fcp, mixte. Aucune autre valeur que la valeur valide n'est prise en charge.
+
+
+
+ a| 
+Type : Query TypeAjoutez des colonnes supplémentaires en tant que valeurs de retour dans la requête lorsqu'il aide l'opérateur de stockage à faire le bon choix d'entrée utilisateur.
+ a| 
+$aggrate : indiquez le nom, la taille totale, la taille disponible pour que l'opérateur connaisse les attributs avant de sélectionner l'agrégat.
+
+
+
+ a| 
+Type : la requête TypeSQL pour les entrées utilisateur peut faire référence à toute autre entrée utilisateur qui la précède. Il peut être utilisé pour limiter les résultats d'une requête basée sur d'autres entrées utilisateur telles que les unités vFiler d'une baie, les volumes d'un agrégat ou les LUN d'un SVM (Storage Virtual machine).
+ a| 
+Dans l'exemple de flux de travail `Create a Clustered Data ONTAP Volume,` La requête de VserverName est la suivante :
+
+[listing]
+----
+SELECT
+    vserver.name
+FROM
+    cm_storage.cluster cluster,
+    cm_storage.vserver vserver
+WHERE
+    vserver.cluster_id = cluster.id
+    AND cluster.name = '${ClusterName}'
+    AND vserver.type = 'cluster'
+ORDER BY
+    vserver.name ASC
+----
+La requête fait référence à $\{clustername}, où $clustername est le nom de l'entrée utilisateur précédant l'entrée utilisateur $VserverName.
+
+
+
+ a| 
+Type : utilisez le type booléen avec des valeurs comme « vrai, faux » pour les entrées utilisateur qui sont de nature booléenne. Cela permet d'écrire des expressions internes dans la conception du flux de travail à l'aide de l'entrée utilisateur directement. Par exemple, $UserInputName plutôt que $UserInputName == ''Oui'.
+ a| 
+`$CreateCIFSShare`: Type booléen avec des valeurs valides comme « vrai » ou « faux »
+
+
+
+ a| 
+Type:pour le type de chaîne et de nombre, utilisez des expressions régulières dans la colonne valeurs pour valider la valeur avec des formats spécifiques.
+
+Utilisez des expressions régulières pour les entrées d'adresse IP et de masque réseau.
+ a| 
+L'entrée utilisateur spécifique à un emplacement peut être exprimée comme « »[A-Z][A-Z]\-0[1-9]». Cette entrée utilisateur accepte des valeurs telles que « US-01 », « NB-02 », mais pas « nb-00 ».
+
+
+
+ a| 
+Type : pour le type de nombre, une validation basée sur une plage peut être spécifiée dans la colonne valeurs.
+ a| 
+Pour le nombre de LUN à créer, l'entrée de la colonne valeurs est 1-20.
+
+
+
+ a| 
+Groupe : regroupe les entrées utilisateur associées dans les compartiments appropriés et nommez le groupe.
+ a| 
+« Détails de stockage » pour toutes les entrées utilisateur liées au stockage. "`détails du magasins'" pour toutes les entrées utilisateur relatives à VMware.
+
+
+
+ a| 
+Obligatoire : si la valeur d'une entrée utilisateur est nécessaire pour que le flux de travail s'exécute, marquez l'entrée utilisateur comme obligatoire. Cela permet de s'assurer que l'écran de saisie de l'utilisateur accepte cette entrée de la part de l'utilisateur.
+ a| 
+« »$VolumeName » dans le workflow « Create NFS Volume ».
+
+
+
+ a| 
+Valeur par défaut : si une entrée utilisateur a une valeur par défaut qui peut fonctionner pour la plupart des exécutions de flux de travail, fournissez les valeurs. Cela permet à l'utilisateur de fournir moins d'entrées lors de l'exécution, si la valeur par défaut sert le but.
+ a| 
+Aucune
+
+|===
+
+
+== Constantes, variables et renvoie les paramètres
+
+|===
+
+
+| Directives | Exemple 
+
+
+ a| 
+Constantes : définissez des constantes lors de l'utilisation d'une valeur commune pour la définition de paramètres sur plusieurs commandes.
+ a| 
+_AGGREGATE_OVERENGAGEMENT_THRESHOLD_ dans l' `Create, map, and protect LUNs with SnapVault sample workflow`.
+
+
+
+ a| 
+Constantes:noms
+
+* Utilisez une lettre majuscule au début de chaque mot.
+* Utilisez des lettres majuscules pour tous les termes et abréviations.
+* Ne pas utiliser de trait de soulignement.
+* Utilisez des lettres majuscules pour toutes les lettres de noms constants.
+
+ a| 
+_AGGREGATE_USED_SPACE_THRESHOLD_
+
+_ActualVolumeSizeInMB_
+
+
+
+ a| 
+Variables : fournissez un nom à un objet défini dans l'une des zones de paramètres de commande. Les variables sont générées automatiquement et peuvent être modifiées.
+ a| 
+Aucune
+
+
+
+ a| 
+Variables : les noms utilisent des caractères minuscules pour les noms de variables.
+ a| 
+volume1
+
+partage cifs
+
+
+
+ a| 
+Paramètres de retour : utilisez les paramètres de retour lorsque la planification et l'exécution du flux de travail doivent renvoyer certaines valeurs calculées ou sélectionnées pendant la planification. Les valeurs sont disponibles en mode aperçu lorsque le flux de travail est exécuté à partir d'un service Web également.
+ a| 
+Agrégat : si l'agrégat est sélectionné à l'aide de la logique de sélection des ressources, alors l'agrégat sélectionné réel peut être défini comme paramètre de retour.
+
+|===

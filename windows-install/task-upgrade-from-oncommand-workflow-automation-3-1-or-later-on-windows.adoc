@@ -1,0 +1,62 @@
+---
+permalink: windows-install/task-upgrade-from-oncommand-workflow-automation-3-1-or-later-on-windows.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, upgrade, later versions 
+summary: 'Vous pouvez effectuer une mise à niveau sans déplacement des données depuis OnCommand Workflow Automation (WFA) 3.1 ou versions ultérieures vers les dernières versions disponibles de WFA afin d"utiliser les nouvelles fonctionnalités et améliorations.' 
+---
+= Mise à niveau depuis OnCommand Workflow Automation 3.1 ou versions ultérieures
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez effectuer une mise à niveau sans déplacement des données depuis OnCommand Workflow Automation (WFA) 3.1 ou versions ultérieures vers les dernières versions disponibles de WFA afin d'utiliser les nouvelles fonctionnalités et améliorations.
+
+Vous devez avoir téléchargé le fichier binaire .exe depuis le site de support NetApp vers la machine hôte WFA.
+
+La connexion au cluster WFA 5.1 doit accepter le certificat SSL. Lors de la mise à jour d'une version antérieure de WFA vers WFA 5.1, vous devez certifier la connexion au cluster. Enregistrez les détails de la connexion au cluster pour la certification du cluster après la mise à niveau sans déplacement.
+
+Vous ne pouvez pas installer MySQL seul lors de la mise à niveau à partir de versions antérieures de WFA. Cependant, vous pouvez installer MySQL seul :
+
+* Lors d'une nouvelle installation de WFA 4.2 et version ultérieure ou
+* Lorsque vous effectuez une mise à niveau depuis WFA 4.2 vers des versions ultérieures de WFA.
+
+
+.Étape
+. Mettre à niveau à partir de WFA 3.1 ou versions ultérieures en choisissant l'une des méthodes suivantes :
++
+** Installation interactive
++
+... Accédez au fichier binaire .exe dans la machine hôte WFA, puis exécutez le fichier.
+... Suivez les instructions à l'écran de l'assistant pour terminer la mise à niveau.
+
+
+** Installation silencieuse
++
+Saisissez la commande suivante à l'invite de commande :
+
++
+`WFA-version_number-build_number.exe /s /v"WFA_ADMIN_USERNAME_UP=wfa username WFA_ADMIN_PASSWORD_UP=password /qr /l*v C:\upgrade.log"`
+
++
+*Exemple* :
+
++
+`WFA-x64-v4.2.0.0.0-B2973881.exe /s /v"WFA_ADMIN_USERNAME_UP=admin WFA_ADMIN_PASSWORD_UP=password*123 /qr /l*v C:\upgrade.log"`
+
++
+
+NOTE: L'option /qn n'est pas prise en charge par WFA.
+
++
+Si vous souhaitez effectuer une mise à niveau silencieuse, vous devez inclure des valeurs pour tous les paramètres de la commande :
+
++
+*** WFA_ADMIN_USERNAME_UP est le nom d'utilisateur d'un utilisateur WFA ayant la permission de créer une sauvegarde de base de données WFA.
+*** WFA_ADMIN_PASSWORD_UP est le mot de passe de l'utilisateur.
+
+
+
+
+

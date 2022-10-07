@@ -1,0 +1,111 @@
+---
+permalink: help/reference-schedules-window.html 
+sidebar: sidebar 
+keywords: schedules, window, enable, create, edit, delete, schedule, workflow, particular, date, time, execution 
+summary: 'La fenêtre programmes vous permet de créer, de modifier et de supprimer la planification d"un flux de travail. Vous pouvez planifier l"exécution d"un flux de travail à une date et une heure particulières. Vous pouvez accéder à cette fenêtre en sélectionnant exécution > plannings.' 
+---
+= La fenêtre plannings
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La fenêtre programmes vous permet de créer, de modifier et de supprimer la planification d'un flux de travail. Vous pouvez planifier l'exécution d'un flux de travail à une date et une heure particulières. Vous pouvez accéder à cette fenêtre en sélectionnant *exécution* > *programmes*.
+
+* Tableau des planifications
+* Barre d'outils
+
+
+
+
+== Tableau des planifications
+
+Le tableau Schedules répertorie les plannings existants pour l'exécution du workflow dans un format de tableau. Vous pouvez personnaliser l'affichage du tableau à l'aide des fonctions de filtrage et de tri disponibles pour chaque colonne, ainsi qu'en réorganisant l'ordre des colonnes.
+
+* image:../media/filter_icon_wfa.gif["Icône de filtre"] active ou désactive le filtrage pour l'ensemble de la table. Un "x" rouge apparaît sur l'icône si le filtrage est désactivé.
+* Double-cliquer image:../media/filter_icon_wfa.gif["Icône de filtre"] efface et réinitialise les sélections de filtrage.
+* image:../media/wfa_filter_icon.gif["Icône de filtre"] sur chaque en-tête de colonne, vous pouvez effectuer un filtrage en fonction du contenu des colonnes. Cliquez sur image:../media/wfa_filter_icon.gif["Icône de filtre"] dans une colonne, vous pouvez filtrer un élément spécifique dans la liste déroulante ou sur tous les éléments disponibles.
+* Cliquer sur l'en-tête de colonne permet de basculer entre l'ordre croissant et décroissant de tri. Vous pouvez identifier l'ordre de tri appliqué à l'aide des flèches de tri (image:../media/wfa_sortarrow_up_icon.gif["Icône de tri"] pour les valeurs ascendantes et image:../media/wfa_sortarrow_down_icon.gif["Icône de tri"] pour décroissant).
+* Pour réorganiser l'emplacement des colonnes, vous pouvez faire glisser et déposer les colonnes dans l'ordre voulu. Toutefois, vous ne pouvez pas masquer ou supprimer ces colonnes.
+* Cliquez sur la zone de texte filtre *Search* pour rechercher un contenu spécifique. En outre, vous pouvez effectuer une recherche à l'aide des opérateurs pris en charge pour le type de colonne applicable, alphabétique ou numérique.
+
+
+Le tableau suivant répertorie les opérateurs pris en charge pour les colonnes alphabétiques et numériques dans le tableau programmes, disponible dans la zone de texte filtre *Search*.
+
+[cols="2*"]
+|===
+| Alphabétique | Valeur numérique 
+
+
+ a| 
+* Contient
+* Ne contient pas
+* Commence par
+* Se termine par
+* Égal à
+* N'est pas égal
+* Réinitialiser
+
+ a| 
+* Égal à
+* N'est pas égal
+* Inférieur à
+* Supérieur à
+* Inférieur ou égal à
+* Supérieur ou égal à
+* Entre
+* Réinitialiser
+
+
+|===
+La table Schedules contient les colonnes suivantes :
+
+* *ID*
++
+Affiche l'identifiant de la planification.
+
+* *Nom*
++
+Affiche le nom du planning.
+
+* *Description*
++
+Affiche la description de la planification.
+
+* *Nombre d'associations*
++
+Affiche le nombre de flux de travail associés à la planification.
+
+* *Mis à jour le*
++
+Affiche la date et l'heure auxquelles la planification a été modifiée.
+
++
+Cliquez sur l'icône du calendrier dans la zone de texte filtre *Search* pour rechercher les horaires mis à jour à une date spécifique.
+
+* *Mis à jour par*
++
+Affiche le nom de l'utilisateur qui a modifié le planning.
+
+
+
+
+
+== Barre d'outils
+
+La barre d'outils se trouve au-dessus de l'en-tête de colonne. Vous pouvez utiliser les icônes de la barre d'outils pour effectuer diverses actions. Vous pouvez également accéder à ces actions à partir du menu contextuel de la fenêtre.
+
+* *image:../media/new_wfa_icon.gif["Nouvelle icône"] (Nouveau)*
++
+Ouvre la boîte de dialogue Nouvelle planification qui permet d'ajouter une nouvelle planification.
+
+* *image:../media/edit_wfa_icon.gif["Icône Modifier"] (Modifier)*
++
+Ouvre la boîte de dialogue Modifier le programme, qui permet de modifier le programme sélectionné.
+
+* *image:../media/delete_wfa_icon.gif["Icône Supprimer"] (Supprimer)*
++
+Ouvre la boîte de dialogue de confirmation de suppression d'horaires, qui permet de supprimer l'horaire sélectionné.
+
+

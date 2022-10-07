@@ -1,0 +1,32 @@
+---
+permalink: workflows/task-rollback-pack-to-a-previous-version-in-scm.html 
+sidebar: sidebar 
+keywords: roll, pack, previous, version, source, control, management, import, oncommand, workflow, automation 
+summary: 'Vous pouvez restaurer un pack vers la version précédente dans la gestion du contrôle source (SCM) et l"importer dans OnCommand Workflow Automation (WFA).' 
+---
+= Restauration d'un pack de flux de travail WFA dans sa version précédente de SCM
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez restaurer un pack vers la version précédente dans la gestion du contrôle source (SCM) et l'importer dans OnCommand Workflow Automation (WFA).
+
+Le SCM doit être configuré et vous devez disposer des informations d'identification admin ou architecte.
+
+.Étapes
+. Dans l'emplacement du client SCM, retournez le pack à une version précédente dans l'emplacement du système de fichiers à l'aide des outils SCM.
++
+Le client SCM est synchronisé avec le numéro de changement exact qui vous intéresse.
+
+. Connectez-vous à la fenêtre WFA via un navigateur Web.
+. Importez le pack mis à jour dans WFA.
++
+link:task-import-an-oncommand-workflow-automation-pack.html["Importer les packs de workflows WFA"]
+
++
+
+NOTE: Cela ramène la base de données WFA à la version précédente.
+
+

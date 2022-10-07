@@ -1,0 +1,44 @@
+---
+permalink: rhel-install/task-enable-remote-access-to-the-oncommand-workflow-automation-database-linux.html 
+sidebar: sidebar 
+keywords: enable, disable, remote access, oncommand, workflow, automation, database 
+summary: 'Par défaut, la base de données OnCommand Workflow Automation (WFA) est accessible uniquement aux clients qui s"exécutent sur le système hôte WFA. Vous pouvez modifier les paramètres par défaut pour activer l"accès à la base de données WFA à partir d"un système distant.' 
+---
+= Activez ou désactivez l'accès à distance à la base de données OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Par défaut, la base de données OnCommand Workflow Automation (WFA) est accessible uniquement aux clients qui s'exécutent sur le système hôte WFA. Vous pouvez modifier les paramètres par défaut pour activer l'accès à la base de données WFA à partir d'un système distant.
+
+* Vous devez avoir ouvert une session sur le système hôte WFA en tant qu'utilisateur root.
+* Si un pare-feu est installé sur le système hôte WFA, vous devez avoir configuré vos paramètres de pare-feu pour autoriser l'accès au port MySQL (3306) à partir du système distant.
+
+
+Le chemin d'installation par défaut de WFA est utilisé dans cette procédure. Si vous avez modifié l'emplacement par défaut lors de l'installation, vous devez utiliser le chemin d'installation WFA modifié.
+
+.Étapes
+. Accédez au répertoire suivant sur le serveur WFA : WFA_install_location/wfa/bin/.
+. Effectuez l'une des opérations suivantes :
++
+[cols="2*"]
+|===
+| Pour... | Saisissez la commande suivante... 
+
+
+ a| 
+Activer l'accès à distance
+ a| 
+`./wfa --db-access=public --restart`
+
+
+
+ a| 
+Désactiver l'accès à distance
+ a| 
+`./wfa --db-access=default --restart`
+
+|===
+

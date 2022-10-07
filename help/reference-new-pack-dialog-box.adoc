@@ -1,0 +1,46 @@
+---
+permalink: help/reference-new-pack-dialog-box.html 
+sidebar: sidebar 
+keywords: new, pack, dialog box, enable, create 
+summary: La boîte de dialogue Nouveau pack vous permet de créer un nouveau pack. 
+---
+= Boîte de dialogue Nouveau pack
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La boîte de dialogue Nouveau pack vous permet de créer un nouveau pack.
+
+* *Nom*
++
+Permet d'entrer un nom et d'enregistrer le pack.
+
+* *Version*
++
+Permet d'entrer une version et d'enregistrer le pack.
+
+* *Auteur*
++
+Permet d'entrer le nom de l'auteur et d'enregistrer le pack.
+
+* *Description*
++
+Permet de saisir une description et d'enregistrer le pack.
+
+
+
+
+
+== Boutons de commande
+
+* *Enregistrer*
++
+Enregistre le pack et ferme la boîte de dialogue.
+
+* *Annuler*
++
+Ferme la boîte de dialogue sans enregistrer.
+
+

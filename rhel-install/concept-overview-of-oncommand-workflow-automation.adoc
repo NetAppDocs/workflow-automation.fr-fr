@@ -1,0 +1,52 @@
+---
+permalink: rhel-install/concept-overview-of-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: overview, oncommand, workflow, automation 
+summary: 'OnCommand Workflow Automation (WFA) est une solution logicielle qui permet d"automatiser les tâches de gestion du stockage, telles que le provisionnement, la migration, la désaffectation, les configurations de protection des données et le stockage de clonage. WFA permet de créer des flux de production qui permettent d"effectuer des tâches spécifiées par vos processus. WFA prend en charge ONTAP.' 
+---
+= Présentation de OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation (WFA) est une solution logicielle qui permet d'automatiser les tâches de gestion du stockage, telles que le provisionnement, la migration, la désaffectation, les configurations de protection des données et le stockage de clonage. WFA permet de créer des flux de production qui permettent d'effectuer des tâches spécifiées par vos processus. WFA prend en charge ONTAP.
+
+Un flux de travail est une tâche répétitive et procédurale qui comprend des étapes séquentielles, y compris les types de tâches suivants :
+
+* Le stockage de provisionnement, de migration ou de désaffectation pour les bases de données ou les systèmes de fichiers
+* Configuration d'un nouvel environnement de virtualisation, notamment des commutateurs de stockage et des datastores
+* La configuration du stockage pour une application dans le cadre d'un processus complet d'orchestration
+
+
+Les architectes du stockage peuvent définir des workflows afin de respecter les bonnes pratiques et de répondre aux exigences de l'entreprise :
+
+* Respecter les conventions de nom requises
+* Définition d'options uniques pour les objets de stockage
+* Sélection des ressources
+* L'intégration des bases de données de gestion de la configuration (CMDB) internes et des applications de gestion des tickets
+
+
+
+
+== Fonctionnalités WFA
+
+* Portail de conception des flux de travail pour créer des flux de travail
++
+Le portail de conception de flux de travail inclut plusieurs éléments de base, tels que des commandes, des modèles, des finders, des filtres, et fonctions utilisées pour créer des flux de travail. Le concepteur vous permet d'inclure des fonctionnalités avancées aux workflows tels que la sélection automatique des ressources, la répétition de ligne (boucle) et les points d'approbation.
+
++
+Le portail de conception de flux de travail inclut également des blocs de construction, tels que les entrées de dictionnaire, les requêtes de cache et les types de source de données, pour la mise en cache de données provenant de systèmes externes.
+
+* Portail d'exécution pour exécuter des flux de travail, vérifier l'état de l'exécution des flux de travail et accéder aux journaux
+* Option Administration/Paramètres pour des tâches telles que la configuration de WFA, la connexion aux sources de données et la configuration des informations d'identification des utilisateurs
+* Interfaces de service Web pour appeler des flux de travail depuis des portails externes et un logiciel d'orchestration de data Center
+* Storage Automation Store pour télécharger les packs WFA. Le pack ONTAP 9.7.0 est inclus avec WFA 5.1.
+
+
+
+
+== Informations sur les licences WFA
+
+Aucune licence n'est requise pour utiliser le serveur OnCommand Workflow Automation.

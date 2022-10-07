@@ -1,0 +1,53 @@
+---
+permalink: windows-install/task-configure-snmp-version-3.html 
+sidebar: sidebar 
+keywords: snmp Version 3, snmp traps, configure 
+summary: 'Vous pouvez également configurer OnCommand Workflow Automation (WFA) pour envoyer des interruptions SNMP (simple Network Management Protocol) version 3 concernant l"état des opérations des flux de travail.' 
+---
+= Configurez SNMP version 3
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez également configurer OnCommand Workflow Automation (WFA) pour envoyer des interruptions SNMP (simple Network Management Protocol) version 3 concernant l'état des opérations des flux de travail.
+
+La version 3 offre deux options de sécurité supplémentaires :
+
+* Version 3 avec authentification
++
+Les interruptions sont envoyées de manière non chiffrée sur le réseau. Les applications de gestion SNMP, qui sont configurées par les mêmes paramètres d'authentification que les messages d'interruption SNMP, peuvent recevoir des traps.
+
+* Version 3 avec authentification et cryptage
++
+Les interruptions sont envoyées chiffrées sur le réseau. Pour recevoir et décrypter ces traps, vous devez configurer des applications de management SNMP avec les mêmes paramètres d'authentification et clé de cryptage que les traps SNMP.
+
+
+
+.Étapes
+. Connectez-vous à WFA via un navigateur Web en tant qu'utilisateur administrateur, puis accédez au serveur WFA.
+. Cliquez sur *Paramètres* et sous *Configuration*, cliquez sur *SNMP*.
+. Cochez la case *Activer SNMP*.
+. Dans la liste déroulante *version*, sélectionnez l'une des options suivantes :
++
+** Version 3
+** Version 3 avec authentification
+** Version 3 avec authentification et cryptage
+
+
+. Sélectionnez les options de configuration SNMP correspondant à l'option SNMP version 3 spécifique que vous avez choisie à l'étape 4.
+. Entrez une adresse IPv4 ou IPv6 ou le nom d'hôte, ainsi que le numéro de port de l'hôte de gestion. WFA envoie des traps SNMP au numéro de port spécifié. Le numéro de port par défaut est 162.
+. Dans la section notifier sur, cochez une ou plusieurs des cases suivantes :
++
+** Planification du workflow démarrée/échouée/terminée
+** L'exécution du workflow a démarré
+** L'exécution du workflow a réussi
+** Échec/échec partiel de l'exécution du workflow
+** Exécution du workflow en attente d'approbation
+** Échec de l'acquisition
+
+
+. Cliquez sur *Envoyer notification de test* pour vérifier les paramètres.
+. Cliquez sur *Enregistrer*.
+

@@ -1,0 +1,51 @@
+---
+permalink: help/task-create-workflow-help-content.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, admins, architects, design, create, help, content, include 
+summary: 'Les administrateurs et architectes OnCommand Workflow Automation (WFA), qui conçoivent des workflows, peuvent créer du contenu d"aide pour les workflows et l"inclure dans le workflow.' 
+---
+= Créez le contenu de l'aide sur le workflow
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les administrateurs et architectes OnCommand Workflow Automation (WFA), qui conçoivent des workflows, peuvent créer du contenu d'aide pour les workflows et l'inclure dans le workflow.
+
+*Ce dont vous aurez besoin*
+
+Vous devez savoir comment créer des pages Web à l'aide de HTML.
+
+*À propos de cette tâche*
+
+L'aide doit fournir des informations sur le workflow et les entrées utilisateur pour le workflow à l'opérateur de stockage qui exécute le workflow.
+
+.Étapes
+. Créez un dossier portant le nom suivant : Workflow-help.
+. Créez le contenu de l'aide à l'aide d'un éditeur HTML ou d'un éditeur de texte et enregistrez-le en tant que `index.htm` fichier dans le `workflow-help` dossier.
++
+Vous ne devez pas inclure de fichiers JavaScript dans le contenu de l'aide. Les extensions de fichier prises en charge sont les suivantes :
+
++
+** `.jpg`
+** `.jpeg`
+** `.gif`
+** `.png`
+** `.xml`
+** `.thmx`
+** `.htm`
+** `.html`
+** `.css`
+
+
++
+Vous pouvez également inclure le `Thumbs.db` Fichier créé par Windows.
+
+. Vérifiez que le `index.htm` les fichiers et autres fichiers associés au contenu de l'aide, tels que des images, sont disponibles dans le `workflow-help` dossier.
+. Créer un `.zip` fichier du dossier et assurez-vous que la taille du `.zip` Le fichier ne dépasse pas 2 Mo.
++
+*Exemple:* `Create an NFS volume-help.zip`
+
+. Modifiez le flux de travail pour lequel vous avez créé le contenu de l'aide, puis cliquez sur *Configuration* > *aide contenu* > *Parcourir* pour télécharger le `.zip` fichier.
+

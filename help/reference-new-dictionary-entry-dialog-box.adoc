@@ -1,0 +1,94 @@
+---
+permalink: help/reference-new-dictionary-entry-dialog-box.html 
+sidebar: sidebar 
+keywords: new, dictionary, entry, dialog box, enable, create, object, specify, definition 
+summary: 'La boîte de dialogue Nouvelle entrée de dictionnaire vous permet de créer un nouvel objet de dictionnaire et de spécifier une définition pour l"objet.' 
+---
+= Nouvelle entrée de dictionnaire
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La boîte de dialogue Nouvelle entrée de dictionnaire vous permet de créer un nouvel objet de dictionnaire et de spécifier une définition pour l'objet.
+
+* *Nom du type d'objet*
++
+Vous permet de spécifier un nom pour l'objet dictionnaire.
+
+* *Description*
++
+Vous permet de fournir une description pour l'objet dictionnaire.
+
+* *Schéma*
++
+Permet de sélectionner un schéma qui doit être associé à l'objet. Vous pouvez ajouter des entrées de dictionnaire personnalisées aux schémas certifiés.
+
+* *Version entité*
++
+Vous permet d'entrer le numéro de version de l'entrée du dictionnaire dans `major.minor.revision` format--par exemple, 1.0.0.
+
+
+
+
+
+== Table d'attributs
+
+Vous permet de spécifier une liste d'attributs qui définissent l'objet de dictionnaire.
+
+* *Nom*
++
+Vous permet d'entrer un nom pour l'attribut.
+
+* *Type*
++
+Permet de sélectionner le type de l'attribut, tel que chaîne, booléen et entier--pour la vérification de type. Vous pouvez également référencer une entrée de dictionnaire à partir du schéma sélectionné.
+
+* *Longueur de chaîne*
++
+Permet de spécifier la longueur de la chaîne en chiffres, si le type de chaîne est sélectionné pour l'attribut.
+
+* *Valeurs*
++
+Vous permet de spécifier une liste de valeurs séparées par des virgules si le type d'énumération est sélectionné pour l'attribut.
+
+* *Clé naturelle*
++
+Permet de spécifier si l'attribut de dictionnaire fait partie de la clé naturelle de l'objet dictionnaire.
+
++
+Une clé naturelle est l'identifiant unique d'un objet de dictionnaire. Par exemple, les qtrees sont identifiés par le nom du qtree, le nom du volume et l'adresse IP de la baie.
+
+* *À mettre en cache*
++
+Vous permet de spécifier si l'attribut doit être mis en cache.
+
++
+Une entrée de dictionnaire peut inclure à la fois des attributs mis en cache et des attributs qui ne sont pas mis en cache. Une table de cache est créée et remplie avec les attributs marqués pour la mise en cache lors de l'acquisition du cache du système. Une table de cache est créée pour un objet de dictionnaire lorsqu'au moins un attribut est sélectionné pour être mis en cache.
+
+* *Peut être nul*
++
+Vous permet de spécifier si la valeur de l'attribut peut être nulle. Ce paramètre n'est valide que pour les attributs sélectionnés pour être mis en cache.
+
+* *Description*
++
+Vous permet de spécifier une description pour l'attribut.
+
+* *Les valeurs des colonnes de clé naturelle sont sensibles à la casse*
++
+Vous permet de spécifier que les clés naturelles sont sensibles à la casse.
+
+* *Boutons de commande*
++
+** *Ajouter ligne*
++
+Permet d'ajouter une ligne à la table utilisée pour spécifier un attribut.
+
+** *Supprimer la ligne*
++
+Permet de supprimer la ligne sélectionnée.
+
+
+
+

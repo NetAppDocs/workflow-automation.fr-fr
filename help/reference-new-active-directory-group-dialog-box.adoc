@@ -1,0 +1,87 @@
+---
+permalink: help/reference-new-active-directory-group-dialog-box.html 
+sidebar: sidebar 
+keywords: active, directory, group, enable, create, new, oncommand, workflow, automation 
+summary: La boîte de dialogue Nouveau groupe Active Directory vous permet de créer un nouveau groupe Active Directory OnCommand Workflow Automation. 
+---
+= Nouvelle boîte de dialogue Groupe Active Directory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La boîte de dialogue Nouveau groupe Active Directory vous permet de créer un nouveau groupe Active Directory OnCommand Workflow Automation.
+
+* *Nom du groupe*
++
+Spécifie le nom du groupe.
+
+* *Rôle*
++
+Vous permet de sélectionner l'un des rôles de groupe suivants :
+
++
+** *Invité*
++
+Ce groupe peut uniquement afficher l'état d'exécution d'un flux de travail ou être notifié d'une modification de l'état d'exécution d'un flux de travail.
+
+** *Opérateur*
++
+Ce groupe est autorisé à afficher un aperçu et à exécuter des workflows pour lesquels le groupe a accès.
+
+** *Approbateur*
++
+Ce groupe est autorisé à afficher un aperçu, à exécuter, à approuver et à refuser des flux de travail pour lesquels le groupe a accès.
+
++
+
+NOTE: Vous devez fournir l'ID e-mail de l'approbateur et l'état du flux de travail qui doit être notifié à l'approbateur. S'il existe plusieurs approbateurs, vous pouvez fournir un ID d'e-mail de groupe dans le champ *E-mail*.
+
+** *Architecte*
++
+Ce groupe dispose d'un accès complet pour créer des flux de travail, mais ne peut pas modifier les paramètres globaux du serveur WFA.
+
+** *Admin*
++
+Ce groupe dispose d'un accès complet au serveur WFA.
+
++
+
+NOTE: Vous devez configurer au moins un groupe d'administration.
+
+
+
+* *E-mail*
++
+Vous permet de spécifier l'adresse électronique du groupe à laquelle les notifications sont envoyées si l'option *notifier On* est sélectionnée.
+
+* *Notifier le*
++
+Permet de sélectionner le moment où le groupe d'annuaire actif doit être averti par e-mail. Les notifications d'état d'exécution du workflow sont spécifiques aux flux de travail exécutés par le groupe. Vous pouvez sélectionner n'importe quelle combinaison des options suivantes :
+
++
+** Début de l'exécution du workflow : informe le groupe lorsque l'exécution du workflow commence.
+** Echec/réussite partielle de l'exécution du workflow : informe le groupe si l'exécution du workflow échoue ou si le flux de travail a été exécuté avec succès, même si une ou plusieurs étapes ont échoué.
++
+L'exécution est terminée car les étapes ayant échoué ont été configurées pour permettre à l'exécution du flux de travail de continuer même lorsque l'étape échoue.
+
+** Exécution du workflow réussie : informe le groupe lorsque l'exécution du flux de travail a réussi.
+** Exécution du workflow en attente d'approbation : notifie le groupe si l'exécution du flux de travail attend l'approbation de l'approbateur, de l'architecte ou du groupe d'opérateurs, en fonction du paramètre de configuration WFA.
+
+
+
+
+
+
+== Boutons de commande
+
+* *Enregistrer*
++
+Enregistre les paramètres de configuration et ferme la boîte de dialogue.
+
+* *Annuler*
++
+Annule les modifications, le cas échéant, et ferme la boîte de dialogue.
+
+

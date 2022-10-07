@@ -1,0 +1,117 @@
+---
+permalink: workflows/reference-guidelines-for-comments.html 
+sidebar: sidebar 
+keywords: aware, guidelines, powershell, perl, commnents, scripts, oncommand, workflow, automaion 
+summary: 'Vous devez connaître les instructions relatives aux commentaires PowerShell et Perl dans les scripts pour OnCommand Workflow Automation (WFA).' 
+---
+= Lignes directrices pour les commentaires
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez connaître les instructions relatives aux commentaires PowerShell et Perl dans les scripts pour OnCommand Workflow Automation (WFA).
+
+
+
+== Commentaires de PowerShell
+
+[cols="2*"]
+|===
+| Directives | Exemple 
+
+
+ a| 
+Utilisez le caractère # pour un commentaire sur une seule ligne.
+ a| 
+[listing]
+----
+# Single line comment
+$options=$option.trim();
+----
+
+
+ a| 
+Utilisez le caractère # pour un commentaire de fin de ligne.
+ a| 
+[listing]
+----
+$options=$option.trim(); # End of line
+comment
+----
+
+
+ a| 
+Utilisez les caractères <# et #> pour un commentaire de bloc.
+ a| 
+[listing]
+----
+<#
+This is
+a
+block comment
+#>
+$options=$option.trim();
+----
+|===
+
+
+== Commentaires Perl
+
+[cols="2*"]
+|===
+| Directives | Exemple 
+
+
+ a| 
+Utilisez le caractère # pour un commentaire sur une seule ligne.
+ a| 
+[listing]
+----
+# convert from MBytes to Bytes
+my $MaxDirectorySizeBytes = $MaxDirectorySize *
+1024 * 1024;
+----
+
+
+ a| 
+Utilisez le caractère # pour le commentaire de fin de ligne.
+ a| 
+[listing]
+----
+my $MaxDirectorySizeBytes = $MaxDirect
+orySiZe * 1024 * 1024; # convert to Bytes
+----
+
+
+ a| 
+Utilisez le caractère # dans chaque ligne avec un # vide au début et à la fin pour créer une bordure de commentaire pour les commentaires multilignes.
+ a| 
+[listing]
+----
+#
+# This is a multi-line comment. Perl 5, unlike
+# Powershell, does not have direct support for
+# multi-line comments. Please use a '#'in every line
+# with an empty '#' at the beginning and end to create
+# a comment border
+#
+----
+
+
+ a| 
+N'incluez pas de code commenté et mort dans les commandes WFA. Cependant, à des fins de test, vous pouvez utiliser le mécanisme POD (Plain Old Documentation) pour commenter le code.
+ a| 
+[listing]
+----
+=begin comment
+	# Set deduplication
+	if(defined $Deduplication && $Deduplication eq "enabled")
+	{
+		$wfaUtil->sendLog("Enabling Deduplication");
+	}
+=end comment
+=cut
+----
+|===

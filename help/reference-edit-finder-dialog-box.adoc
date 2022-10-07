@@ -1,0 +1,117 @@
+---
+permalink: help/reference-edit-finder-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, finder, dialog box, enable 
+summary: La boîte de dialogue Modifier le Finder vous permet de modifier le Finder. 
+---
+= Boîte de dialogue Edit Finder
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La boîte de dialogue Modifier le Finder vous permet de modifier le Finder.
+
+* Onglet Propriétés
+* Filtres
+* Onglet attributs retournés
+
+
+
+
+== Onglet Propriétés
+
+L'onglet *Propriétés* vous permet de modifier le nom du Finder, le type d'objet dictionnaire WFA et la description du Finder. L'onglet affiche également les paramètres d'entrée du filtre utilisé dans le Finder.
+
+* *Nom*
++
+Permet de modifier le nom du Finder.
+
+* *Type*
++
+Permet de sélectionner le type d'objet de dictionnaire WFA dans la liste telle que agrégat, igroup et cluster. Les filtres de l'objet sélectionné sont affichés dans l'onglet *filtres*.
+
+* *Version entité*
++
+Permet de saisir le numéro de version du Finder dans `major.minor.revision` format--par exemple, 1.0.0.
+
+* *Description*
++
+Permet de modifier la description du Finder.
+
+* *Tableau des paramètres d'entrée*
++
+Affiche les paramètres d'entrée des filtres sélectionnés.
+
+
+
+
+
+== L'onglet filtres
+
+Vous permet de sélectionner les filtres requis dans la liste des filtres disponibles.
+
+* *Filtres disponibles*
++
+Affiche la liste des filtres disponibles pour l'objet sélectionné dans l'onglet *Propriétés*.
+
+* *Filtres sélectionnés*
++
+Affiche la liste des filtres sélectionnés dans les filtres disponibles.
+
+* *Boutons de sélection*
++
+Déplace l'entrée sélectionnée d'une case à l'autre.
+
+
+
+
+
+== Onglet attributs retournés
+
+Vous permet d'afficher des détails sur les filtres disponibles, de sélectionner les attributs requis des filtres disponibles et de spécifier l'ordre de tri des attributs.
+
+* *Disponible*
++
+Affiche les filtres disponibles et les attributs des filtres.
+
+* *Sélectionné*
++
+Affiche les filtres sélectionnés et les attributs, les alias et l'ordre de tri des filtres sélectionnés.
+
+* *Boutons de commande*
++
+** *Haut*
++
+Déplace l'entrée sélectionnée d'une ligne vers le haut dans le tableau sélectionné.
+
+** *Bas*
++
+Déplace l'entrée sélectionnée d'une ligne vers le bas dans le tableau sélectionné.
+
+** *Boutons de sélection*
++
+Déplace l'entrée sélectionnée d'une table vers une autre.
+
+
+
+
+
+
+
+== Boutons de commande
+
+* *Test*
++
+Vous permet de tester le viseur que vous avez sélectionné pour modifier.
+
+* *Enregistrer*
++
+Enregistre les modifications et ferme la boîte de dialogue.
+
+* *Annuler*
++
+N'enregistre pas les modifications, le cas échéant, et ferme la boîte de dialogue.
+
+

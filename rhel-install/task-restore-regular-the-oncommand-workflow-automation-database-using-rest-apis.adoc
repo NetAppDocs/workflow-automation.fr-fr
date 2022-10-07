@@ -1,0 +1,36 @@
+---
+permalink: rhel-install/task-restore-regular-the-oncommand-workflow-automation-database-using-rest-apis.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, restore, regular, wfa, database, rest apis 
+summary: 'Vous pouvez effectuer une restauration régulière de la base de données OnCommand Workflow Automation (WFA) à l"aide d"API REST. Lors d"une restauration régulière, vous ne pouvez restaurer que la base de données WFA.' 
+---
+= Restaurez (standard) la base de données WFA à l'aide d'API REST
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez effectuer une restauration régulière de la base de données OnCommand Workflow Automation (WFA) à l'aide d'API REST. Lors d'une restauration régulière, vous ne pouvez restaurer que la base de données WFA.
+
+* Vous devez avoir créé une sauvegarde .zip de la base de données WFA.
+* Vous devez disposer d'informations d'identification admin ou Architect.
+* Si vous restaurez la base de données dans le cadre de la procédure de migration, vous devez effectuer une restauration complète.
+
+
+.Étapes
+. Entrez l'URL suivante dans le navigateur du client REST : `+https://IP address of WFA server/rest/backups+`
+. Dans la fenêtre sauvegarde, sélectionnez la méthode *POST*.
+. Dans la liste déroulante *part*, sélectionnez *corps multipièce*.
+. Dans le champ *fichier*, saisissez les informations suivantes :
++
+.. Dans la liste déroulante *Type de contenu*, sélectionnez *multipièce/données-formulaire*.
+.. Dans la liste déroulante *Charset*, sélectionnez *ISO-8859-1*.
+.. Dans le champ **Nom du fichier**, entrez le nom du fichier de sauvegarde en tant que fichier de sauvegarde.
+.. Cliquez sur *Parcourir*.
+.. Sélectionnez l'emplacement du fichier de sauvegarde .zip.
+
+
+. Accédez au répertoire /opt/netapp/wfa/bin et redémarrez les services WFA.
+. Vérifiez que l'opération de restauration est réussie et que WFA est accessible.
+

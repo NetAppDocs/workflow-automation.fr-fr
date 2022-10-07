@@ -1,0 +1,171 @@
+---
+permalink: help/reference-monitoring-window.html 
+sidebar: sidebar 
+keywords: monitoring, window, display, details, result, planning, execution, phase, workflow, tab, read-only, content, areas, application, select, preview, option 
+summary: 'La fenêtre surveillance affiche des détails sur les résultats de la phase de planification ou d"exécution du flux de travail. Les onglets de la fenêtre affichent du contenu en lecture seule. Vous pouvez accéder à cette fenêtre à partir de différentes zones de l"application WFA lors de la sélection des options Détails, Aperçu ou exécution.' 
+---
+= Fenêtre de surveillance
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La fenêtre surveillance affiche des détails sur les résultats de la phase de planification ou d'exécution du flux de travail. Les onglets de la fenêtre affichent du contenu en lecture seule. Vous pouvez accéder à cette fenêtre à partir de différentes zones de l'application WFA lorsque vous sélectionnez les options *Détails*, *Aperçu* ou *Exécuter*.
+
+* Zone d'état
+* Onglet flux
+* Onglet Détails
+* Plan d'exécution
+* Entrées utilisateur
+* Paramètres de retour
+* Historique
+
+
+
+
+== Zone d'état
+
+La zone Etat au-dessus des onglets affiche des informations détaillées sur le résultat du processus de planification ou d'exécution.
+
+* *Etat du flux de travail*
++
+En haut de la fenêtre, un en-tête à code couleur affiche le résultat du processus de planification ou d'exécution :
+
++
+** Le vert indique une action réussie, par exemple, planification terminée ou exécution terminée.
+** Le rouge indique échec, par exemple, échec de la planification ou échec de l'exécution.
+
+
+* *Moins/plus d'info action*
++
+Ce lien d'action est disponible lorsque le processus d'aperçu ou d'exécution échoue. Vous pouvez basculer entre *moins d'info* et *plus d'info* en utilisant le lien d'action. Selon l'action, le lien ouvre ou ferme la zone d'informations pour afficher plus ou moins d'informations sur le résultat de l'échec.
+
+* *État détaillé*
++
+Cette case est disponible lorsque le processus d'aperçu ou d'exécution échoue. Elle affiche des détails sur le processus de planification ou d'exécution. Lorsqu'un processus échoue, cette case est ouverte par défaut et fournit des détails sur la cause de l'échec.
+
+
+
+
+
+== Onglet flux
+
+L'onglet flux fournit une présentation graphique du flux de travail.
+
+Les commandes et les flux de travail enfant sont affichés dans la ligne supérieure avec leurs objets et variables affichés ci-dessous. L'état des détails de la commande et des flux de travail enfant pendant l'aperçu ou l'exécution est affiché en utilisant différentes couleurs.
+
+Le tableau suivant est présenté comme suit :
+
+* Schéma de couleurs utilisé pour afficher l'état de l'exécution de la commande ou du workflow
+* Les icônes utilisées dans la fenêtre
+
+
+[cols="25h,~"]
+|===
+| Combinaison de couleurs et icône | État 
+
+
+ a| 
+image:../media/execution_successful.gif["zone verte"]
+ a| 
+Exécution réussie
+
+
+
+ a| 
+image:../media/execution_failed.gif["boîte rouge"]
+ a| 
+Échec de l'exécution
+
+
+
+ a| 
+image:../media/execution_in_progress.gif["boîte bleue"]
+ a| 
+Exécution en cours
+
+
+
+ a| 
+image:../media/execution_skipped.gif["boîte grise"]
+ a| 
+Exécution ignorée
+
+
+
+ a| 
+image:../media/waiting_for_approval.gif["boîte bleue"]
+ a| 
+En-tête de flux de travail enfant
+
+
+
+ a| 
+image:../media/info_icon_execute_wfa.gif[""]
+ a| 
+Ouvre les journaux
+
+
+
+ a| 
+image:../media/approval_point_icon.gif["Icône de point d'approbation"]
+ a| 
+Le flux de travail enfant inclut un point d'approbation
+
+|===
+
+
+== Onglet Détails
+
+L'onglet Détails fournit des informations plus détaillées sur le flux de travail. Les informations sont fournies au format tableau, avec les commandes dans la ligne d'en-tête et les objets et variables associés répertoriés ci-dessous. Cet onglet fournit chaque commande avec tous ses arguments et paramètres.
+
+Cet onglet est utile pour déboguer un aperçu ou une exécution échoués du flux de travail.
+
+
+
+== Plan d'exécution
+
+L'onglet Plan d'exécution fournit une liste traduite des commandes de workflow et de leurs arguments qui sont exécutés (scripts ou commandes).
+
+Vous pouvez utiliser cet onglet pour déboguer un aperçu ou une exécution échoués du flux de travail.
+
+
+
+== Entrées utilisateur
+
+L'onglet entrées utilisateur affiche les valeurs saisies par les utilisateurs pendant l'aperçu ou l'exécution du flux de travail.
+
+Vous pouvez utiliser les flèches de tri (image:../media/wfa_sortarrow_down_icon.gif["Icône de tri"] ou image:../media/wfa_sortarrow_up_icon.gif["Icône de tri"]) dans l'en-tête de colonne pour trier les entrées de colonne par ordre croissant ou décroissant.
+
+
+
+== Paramètres de retour
+
+L'onglet Paramètres de retour répertorie la sortie du flux de travail, par nom de paramètre et valeur de paramètre.
+
+Vous pouvez accéder à ces paramètres de retour à l'aide des services Web.
+
+
+
+== Historique
+
+L'onglet Historique répertorie les changements d'état du flux de travail, lorsque le changement d'état s'est produit, qui a lancé l'action et le message associé au changement d'état.
+
+
+
+== Boutons de commande
+
+* *Télécharger les journaux*
++
+Permet de télécharger un `zip` fichier de tous les fichiers journaux, y compris les journaux d'exécution spécifiques.
+
+* *Visibilité des colonnes*
++
+Permet d'afficher ou de masquer des colonnes dans l'onglet Détails.
+
+* *OK*
++
+Ferme la fenêtre surveillance.
+
+

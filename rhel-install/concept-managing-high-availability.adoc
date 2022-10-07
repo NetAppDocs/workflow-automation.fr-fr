@@ -1,0 +1,14 @@
+---
+permalink: rhel-install/concept-managing-high-availability.html 
+sidebar: sidebar 
+keywords: manage, high availability 
+summary: 'Vous pouvez configurer une configuration haute disponibilité afin d"assurer un support constant pour les opérations réseau. Si l"un des composants tombe en panne, le composant mis en miroir dans la configuration prend le relais et fournit des ressources réseau sans interruption. Vous pouvez également sauvegarder la base de données WFA et les configurations prises en charge, de façon à pouvoir restaurer les données en cas d"incident.' 
+---
+= Gestion de la haute disponibilité
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez configurer une configuration haute disponibilité afin d'assurer un support constant pour les opérations réseau. Si l'un des composants tombe en panne, le composant mis en miroir dans la configuration prend le relais et fournit des ressources réseau sans interruption. Vous pouvez également sauvegarder la base de données WFA et les configurations prises en charge, de façon à pouvoir restaurer les données en cas d'incident.

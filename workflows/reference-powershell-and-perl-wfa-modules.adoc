@@ -1,0 +1,102 @@
+---
+permalink: workflows/reference-powershell-and-perl-wfa-modules.html 
+sidebar: sidebar 
+keywords: aware, powershell, perl, modules, oncommand, workflow, automation, write, scripts 
+summary: 'Pour écrire des scripts pour vos flux de production, vous devez avoir connaissance des modules PowerShell ou Perl pour OnCommand Workflow Automation (WFA).' 
+---
+= Modules PowerShell et Perl WFA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour écrire des scripts pour vos flux de production, vous devez avoir connaissance des modules PowerShell ou Perl pour OnCommand Workflow Automation (WFA).
+
+
+
+== Modules PowerShell
+
+[cols="2*"]
+|===
+| Directives | Exemple 
+
+
+ a| 
+Utilisez le kit d'outils PS Data ONTAP pour appeler des API dès que le kit d'outils est disponible.
+ a| 
+Le `Add VLAN` la commande utilise la boîte à outils comme suit :
+
+`Add-NaNetVlan-Interface $Interface-Vlans$VlanID`
+
+
+
+ a| 
+S'il n'y a pas d'applets de commande disponibles dans le kit d'outils Data ONTAP PS, utilisez le `Invoke-SSH` Commande permettant d'appeler l'interface de ligne de commandes sur Data ONTAP.
+ a| 
+`Invoke-NaSsh-Name $ArrayName-Command "ifconfig -a"-Credential $Credentials`
+
+|===
+
+
+== Modules Perl
+
+Le module NaServer est utilisé dans les commandes WFA. Le module NaServer permet l'invocation des API Data ONTAP, utilisées dans la gestion active des systèmes Data ONTAP.
+
+[cols="2*"]
+|===
+| Directives | Exemple 
+
+
+ a| 
+Utilisez le module NaServer pour appeler des API dès que le SDK de gestion NetApp est disponible.
+ a| 
+L'exemple suivant montre comment le module NaServer est utilisé pour une opération de reprise SnapMirror :
+
+[listing]
+----
+  eval {
+
+    $wfa_util->sendLog('INFO',
+        "Connecting to the cluster: $DestinationCluster"
+    );
+    my $server
+        = $wfa_util->connect($DestinationClusterIp, $DestinationVserver);
+
+    my $sm_info = $server->snapmirror_get(
+        'destination-vserver' => $DestinationVserver,
+        'destination-volume'  => $DestinationVolume
+    );
+
+    my $sm_state  = $sm_info->{'attributes'}->{'snapmirror-info'}->{'mirror-state'};
+    my  $sm_status = $sm_info->{'attributes'}->{'snapmirror-info'}->{'relationship-status'};
+
+    $wfa_util->sendLog('INFO',
+        "SnapMirror relationship is $sm_state ($sm_status)");
+
+    if ($sm_status ne 'quiesced') {
+        $wfa_util->sendLog('INFO',
+            'The status needs to be quiesced to resume transfer.');
+    } else {
+        my $result = $server->snapmirror_resume(
+            'destination-vserver' => $DestinationVserver,
+            'destination-volume'  => $DestinationVolume
+        );
+        $wfa_util->sendLog('INFO', "Result of resume:  $result");
+        $wfa_util->sendLog('INFO', 'Resume operation started successfully.');
+    }
+}
+----
+
+
+ a| 
+Si une API Data ONTAP n'est pas disponible, appelez l'interface de ligne de commande Data ONTAP à l'aide de la méthode utilitaire executeSystemsmake.
+
+[NOTE]
+====
+ExecuteSystemsmaTM n'est pas pris en charge et n'est actuellement disponible que pour Data ONTAP 7-mode.
+
+==== a| 
+Aucune
+
+|===

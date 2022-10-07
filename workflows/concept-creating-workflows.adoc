@@ -1,0 +1,14 @@
+---
+permalink: workflows/concept-creating-workflows.html 
+sidebar: sidebar 
+keywords: predefined, workflows, match, requirements, create, understand, capabilities, available, designer, checklist 
+summary: Si les flux de travail prédéfinis ne correspondent pas à vos exigences, vous pouvez créer le flux de travail requis. Avant de créer vos flux de travail, vous devez comprendre les fonctionnalités disponibles dans le concepteur WFA et créer une liste de contrôle des flux de travail. 
+---
+= Création de flux de travail
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si les flux de travail prédéfinis ne correspondent pas à vos exigences, vous pouvez créer le flux de travail requis. Avant de créer vos flux de travail, vous devez comprendre les fonctionnalités disponibles dans le concepteur WFA et créer une liste de contrôle des flux de travail.

@@ -1,0 +1,135 @@
+---
+permalink: workflows/reference-guidelines-for-sql-in-wfa.html 
+sidebar: sidebar 
+keywords: aware, guidelines, use, sql, oncommand, workflow, automation, write, sql, queries, wfa 
+summary: 'Vous devez connaître les instructions relatives à l"utilisation de SQL dans OnCommand Workflow Automation (WFA) pour écrire des requêtes SQL pour WFA.' 
+---
+= Instructions pour SQL dans WFA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez connaître les instructions relatives à l'utilisation de SQL dans OnCommand Workflow Automation (WFA) pour écrire des requêtes SQL pour WFA.
+
+SQL est utilisé dans les emplacements suivants de WFA :
+
+* Requêtes SQL permettant de renseigner les entrées utilisateur pour la sélection
+* Requêtes SQL pour la création de filtres permettant de filtrer des objets d'un type d'entrée de dictionnaire spécifique
+* Données statiques dans les tables de la base de données du terrain de jeu
+* Type de source de données personnalisé de type SQL où les données doivent être extraites d'une source de données externe telle qu'une base de données de gestion de configuration personnalisée (CMDB).
+* Requêtes SQL pour les scripts de réservation et de vérification
+
+
+[cols="2*"]
+|===
+| Directives | Exemple 
+
+
+ a| 
+Les mots-clés réservés SQL doivent être en majuscules.
+ a| 
+[listing]
+----
+SELECT
+    vserver.name
+FROM
+    cm_storage.vserver vserver
+----
+
+
+ a| 
+Les noms de tables et de colonnes doivent être en caractères minuscules.
+ a| 
+Tableau : agrégat
+
+Colonne : espace_utilisé_mb
+
+
+
+ a| 
+Séparez les mots par un caractère de soulignement (_). Les espaces ne sont pas autorisés.
+ a| 
+performances_de_la_baie
+
+
+
+ a| 
+Le nom de la table est défini en singulier. Une table est une collection d'une ou plusieurs entrées.
+ a| 
+« fonction », et non « fonctions »
+
+
+
+ a| 
+Utilisez des alias de table avec des noms significatifs dans LES requêtes DE SÉLECTION.
+ a| 
+[listing]
+----
+SELECT
+	vserver.name
+FROM
+	cm_storage.cluster cluster,
+	cm_storage.vserver vserver
+WHERE
+	vserver.cluster_id = cluster.id
+	AND cluster.name = '${ClusterName}'
+	AND vserver.type = 'cluster'
+ORDER BY
+	vserver.name ASC
+----
+
+
+ a| 
+Si vous devez faire référence à un paramètre d'entrée de filtre ou à un paramètre d'entrée utilisateur dans une requête de filtre ou d'utilisateur, utilisez la syntaxe comme '$\{inputVariableName}.vous pouvez également utiliser la syntaxe pour faire référence à un paramètre de définition de commande dans les scripts de réservation et de vérification.
+ a| 
+[listing]
+----
+SELECT
+	volume.name AS Name,
+	aggregate.name as Aggregate,
+	volume.size_mb AS 'Total Size (MB)',
+	voulme.used_size_mb AS 'Used Size (MB)',
+	volume.space_guarantee AS 'Space Guarantee'
+FROM
+	cm_storage.cluster,
+	cm_storage.aggregate,
+	cm_storage.vserver,
+	cm_storage.volume
+WHERE
+	cluster.id = vserver.cluster_id
+	AND aggregate.id = volume.aggregate_id
+	AND vserver.id = voulme.vserver_id
+	AND vserver.name = '${VserverName}'
+	AND cluster.name = '${ClusterName}'
+ORDER BY
+	volume.name ASC
+----
+
+
+ a| 
+Utilisez des commentaires pour les requêtes complexes. Certains styles de commentaires pris en charge dans les requêtes sont les suivants :
+
+* «»--» jusqu'à la fin de la ligne
++
+Un espace est obligatoire après le second tiret dans ce style de commentaire.
+
+* D'un caractère «»#» jusqu'à la fin de la ligne
+* À partir d'un ""/*`" to the following "`*/« séquence
+
+ a| 
+[listing]
+----
+/*
+multi-line
+comment
+*/
+--line comment
+SELECT
+	ip as ip, # comment till end of this line
+	NAME as name
+FROM --end of line comment
+	storage.array
+----
+|===

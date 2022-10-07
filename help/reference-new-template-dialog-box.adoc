@@ -1,0 +1,50 @@
+---
+permalink: help/reference-new-template-dialog-box.html 
+sidebar: sidebar 
+keywords: new, template, dialog box, enable, create, new 
+summary: La boîte de dialogue Nouveau modèle vous permet de créer un nouveau modèle. 
+---
+= Boîte de dialogue Nouveau modèle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La boîte de dialogue Nouveau modèle vous permet de créer un nouveau modèle.
+
+* *Nom*
++
+Permet de saisir un nom pour le modèle.
+
+* *Type*
++
+Permet de sélectionner un objet de dictionnaire dans la liste.
+
+* *Version entité*
++
+Vous permet de saisir le numéro de version du modèle dans `major.minor.revision` format--par exemple, 1.0.0.
+
+* *Description*
++
+Vous permet de saisir une description pour le modèle.
+
+* *Attributs*
++
+Affiche les attributs de l'objet dictionnaire sélectionné et vous permet de saisir une valeur pour chaque attribut, tel que l'énumération et la fonction.
+
+
+
+
+
+== Boutons de commande
+
+* *Enregistrer*
++
+Enregistre le modèle et ferme la boîte de dialogue.
+
+* *Annuler*
++
+N'enregistre pas le modèle et ferme la boîte de dialogue.
+
+

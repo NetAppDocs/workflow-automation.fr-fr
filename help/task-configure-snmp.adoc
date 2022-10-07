@@ -1,0 +1,23 @@
+---
+permalink: help/task-configure-snmp.html 
+sidebar: sidebar 
+keywords: configure, oncommand, workflow, automation, send, simple, network, management, protocol, traps, status, operations 
+summary: 'Vous pouvez configurer OnCommand Workflow Automation (WFA) pour envoyer des interruptions SNMP (simple Network Management Protocol) concernant l"état des opérations des flux de travail.' 
+---
+= Configurez SNMP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez configurer OnCommand Workflow Automation (WFA) pour envoyer des interruptions SNMP (simple Network Management Protocol) concernant l'état des opérations des flux de travail.
+
+WFA supporte désormais les protocoles SNMP v1 et SNMP v3. SNMP v3 offre des fonctions de sécurité supplémentaires.
+
+L'WFA `.mib` File fournit des informations sur les traps envoyés par le serveur WFA. Le `.mib` le fichier se trouve dans le `<WFA_install_location>\wfa\bin\wfa.mib` Sur le serveur WFA.
+
+
+NOTE: Le serveur WFA envoie toutes les notifications d'interruption avec un identificateur d'objet générique (1.3.6.1.4.1.789.1.1.12.0).
+
+Vous ne pouvez pas utiliser de chaînes de communauté SNMP telles que `community_string@SNMP_host` Pour la configuration SNMP.

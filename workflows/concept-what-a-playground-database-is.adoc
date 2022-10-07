@@ -1,0 +1,85 @@
+---
+permalink: workflows/concept-what-a-playground-database-is.html 
+sidebar: sidebar 
+keywords: playground, database, mysql, include, Workflow, automation, server, installation, add, tables, information, filters, queries, user, input 
+summary: 'La base de données de jeu est une base de données MySQL, qui est incluse dans l"installation du serveur Workflow Automation (WFA). Vous pouvez ajouter des tables à la base de données de jeu pour inclure des informations, qui peuvent être utilisées par des filtres et des requêtes SQL pour les entrées utilisateur.' 
+---
+= Ce qu'est une base de données de terrain de jeu
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La base de données de jeu est une base de données MySQL, qui est incluse dans l'installation du serveur Workflow Automation (WFA). Vous pouvez ajouter des tables à la base de données de jeu pour inclure des informations, qui peuvent être utilisées par des filtres et des requêtes SQL pour les entrées utilisateur.
+
+La base de données de terrain de jeu est un schéma qui n'est pas accessible via le portail Web WFA. Vous pouvez utiliser un client MySQL, tel que SQLyog, Toad pour MySQL et MySQL Workbench ou une interface de ligne de commande (CLI), pour accéder à la base de données.
+
+Vous devez utiliser les informations d'identification suivantes pour accéder à la base de données du terrain de jeu :
+
+* Nom d'utilisateur : wfa
+* Mot de passe : Wfa123
+
+
+Les références fournissent un accès complet à la base de données de jeu et un accès en lecture seule aux autres schémas définis dans la base de données MySQL de WFA. Vous pouvez créer les tables requises dans la base de données du terrain de jeu.
+
+Vous pouvez ajouter les balises ou métadonnées que vous utilisez pour les objets de stockage de votre environnement à une table de la base de données de jeu. Les balises ou métadonnées peuvent ensuite être utilisées avec les informations d'autres tables de cache WFA par les filtres WFA et les requêtes en entrée utilisateur.
+
+Par exemple, vous pouvez utiliser la base de données terrain de jeu pour les utilisations suivantes :
+
+* Il faut étiqueter les agrégats avec le nom d'unité commerciale (BU) et allouer les volumes sur le bus en fonction de ces balises
+* Balisage des unités vFiler avec des noms BU
+* Ajout de détails géographiques ou d'emplacement aux objets de stockage
+* Définition de l'accès des administrateurs de bases de données aux bases de données
+
+
+Par exemple, si vous utilisez le nom de l'unité commerciale comme balise pour les objets de stockage, tels que les agrégats et les unités vFiler, vous pouvez créer une table dans la base de données de jeu qui inclut le nom de l'unité commerciale. Le nom de la BU peut ensuite être utilisé par des filtres et des requêtes d'entrée utilisateur pour vos flux de travail.
+
+Voici un exemple de table de base de données de jeu (Playground.volume_bu) :
+
+[cols="3*"]
+|===
+| array_ip | nom_du_volume | BU 
+
+
+ a| 
+10.225.126.23
+ a| 
+data_11
+ a| 
+Marketing
+
+
+
+ a| 
+10.225.126.28
+ a| 
+arch_11
+ a| 
+RH
+
+|===
+Voici un exemple de requête SQL que vous pouvez utiliser pour filtrer les volumes par BU :
+
+[listing]
+----
+SELECT
+    vol.name,
+    array.ip AS 'array.ip'
+FROM
+    storage.volume AS vol,
+    storage.array AS array,
+    playground.volume_bu AS vol_bu
+WHERE
+    vol.array_id = array.id
+    AND array.ip = vol_bu.array_ip
+    AND vol.name = vol_bu.volume_name
+    AND vol_bu.bu = '{$bu}'
+----
+*Informations connexes*
+
+https://www.webyog.com/["SQLyog"^]
+
+http://www.mysql.com/products/workbench/["MySQL Workbench"^]
+
+http://www.quest.com/toad-for-mysql/["Toad pour MySQL"^]

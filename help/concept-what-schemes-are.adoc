@@ -1,0 +1,48 @@
+---
+permalink: help/concept-what-schemes-are.html 
+sidebar: sidebar 
+keywords: scheme, represent, data, model, system, collection, dictionary, entries, define, source, type, acquire, populate, example, virtual, environment, machines, hosts, datastores 
+summary: 'Un schéma représente le modèle de données d"un système. Un modèle de données est un ensemble d"entrées de dictionnaire. Vous pouvez définir un schéma, puis définir un type de source de données. La source de données définit la façon dont les données sont acquises et le schéma est rempli. Par exemple, un système vc fait l"acquisition de données relatives à votre environnement virtuel, telles que des ordinateurs virtuels, des hôtes et des datastores.' 
+---
+= Quels sont les schémas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un schéma représente le modèle de données d'un système. Un modèle de données est un ensemble d'entrées de dictionnaire. Vous pouvez définir un schéma, puis définir un type de source de données. La source de données définit la façon dont les données sont acquises et le schéma est rempli. Par exemple, un système vc fait l'acquisition de données relatives à votre environnement virtuel, telles que des ordinateurs virtuels, des hôtes et des datastores.
+
+Ces schémas peuvent également être remplis directement avec des données via des workflows personnalisés pour résoudre des problèmes spécifiques.
+
+Les entrées du dictionnaire sont associées à un schéma existant lors de la création des entrées du dictionnaire. Les entrées de dictionnaire sont également associées aux requêtes de cache et les requêtes de mise en cache incluent des requêtes SQL.
+
+Les schémas peuvent acquérir des données en utilisant soit le type de source de données par script, soit le type de source de données SQL. Les scripts sont définis lors de la création du type de source de données et les requêtes SQL sont définies dans les requêtes de cache.
+
+WFA comprend les schémas suivants :
+
+* *7-mode (stockage)*
++
+Schéma d'acquisition de données via Active IQ Unified Manager à partir de Data ONTAP sous 7-mode.
+
+* *Data ONTAP en cluster (cm_Storage)*
++
+Acquisition de données via Active IQ Unified Manager à partir de clustered Data ONTAP
+
+* *Performances 7-mode (performances)*
++
+Schéma d'acquisition des données de performance de Data ONTAP sous 7-mode via Performance Advisor.
+
+* *Performances de Data ONTAP en cluster (cm_performance)*
++
+Schéma d'acquisition des données de performances de clustered Data ONTAP grâce à Performance Advisor.
+
+* *VMware vCenter (vc)*
++
+Projet d'acquisition de données auprès de VMware vCenter.
+
+* *Terrain de jeu*
++
+Schéma pouvant être renseigné directement avec les données.
+
+

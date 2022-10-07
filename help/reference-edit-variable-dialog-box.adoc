@@ -1,0 +1,119 @@
+---
+permalink: help/reference-edit-variable-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, variable, dialog box, enable, user, input, attributes, workflow 
+summary: 'La boîte de dialogue Modifier la variable : <UserInputName> vous permet de modifier les attributs d"entrée utilisateur d"un flux de travail.' 
+---
+= Boîte de dialogue Modifier la variable
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La boîte de dialogue Modifier la variable : <UserInputName> vous permet de modifier les attributs d'entrée utilisateur d'un flux de travail.
+
+
+
+== Propriétés
+
+* *Nom de variable*
++
+Permet de modifier le nom de l'entrée utilisateur. Le changement de nom de l'entrée utilisateur met à jour toutes les références à l'entrée utilisateur dans le flux de travail.
+
+* *Nom d'affichage*
++
+Permet de spécifier ou de modifier le nom d'affichage de l'entrée utilisateur. Vous pouvez spécifier un nom d'affichage unique si vous avez créé des attributs d'entrée utilisateur avec un nom similaire.
+
+* *Description*
++
+Vous permet de spécifier ou de modifier une description pour l'entrée utilisateur. La description apparaît sous forme d'info-bulle lorsque vous exécutez ou prévisualisez le flux de travail.
+
+* *Type*
++
+Permet de sélectionner le type d'entrée utilisateur. Les champs ou un lien vers une boîte de dialogue s'affichent en fonction des options sélectionnées. Les options disponibles sont les suivantes :
+
++
+** Chaîne : permet de saisir une expression régulière pour les valeurs valides dans le champ regex, par exemple, a*.
+** Nombre : permet de saisir une plage numérique dans le champ Plage, par exemple, 1 à 15.
+** Enum : permet de saisir une liste de valeurs fermée dans le champ valeurs num.
+** Requête : permet de saisir une requête SQL simple pour obtenir le résultat.
++
+Les utilisateurs ne peuvent sélectionner que les valeurs de la première colonne du résultat.
+
+** Requête (sélection multiple) : permet de saisir une requête SQL qui obtient une liste de valeurs.
++
+Les utilisateurs peuvent sélectionner une ou plusieurs valeurs lors de l'exécution du flux de travail, par exemple, vous pouvez sélectionner un volume unique, plusieurs volumes ou volumes avec leurs partages et exportations.
+
++
+Vous pouvez sélectionner des valeurs dans n'importe quelle colonne affichée dans le résultat. La sélection d'une ligne sélectionne les valeurs de toutes les colonnes de la ligne sélectionnée.
+
+** Booléen : permet d'afficher une case à cocher dans la boîte de dialogue entrées utilisateur.
+** Tableau : permet de spécifier les en-têtes de colonne de la table qui peuvent être utilisés pour entrer plusieurs valeurs pendant l'exécution du flux de travail, par exemple une table qui peut être utilisée pour spécifier une liste de noms de nœuds et de ports.
++
+Vous pouvez également configurer le type d'entrée utilisateur de colonne et les propriétés associées à l'entrée utilisateur de colonne. Une boîte de dialogue s'affiche en fonction du type d'entrée utilisateur sélectionné. Les options disponibles sont les suivantes :
+
++
+*** Chaîne : permet de saisir une expression régulière pour les valeurs valides dans le champ regex, par exemple, a*.
+*** Nombre : permet de saisir une plage numérique dans le champ Plage, par exemple, 1 à 15.
+*** Enum : permet de saisir une liste de valeurs fermée dans le champ valeurs num.
+*** Requête : permet de saisir une requête SQL simple pour obtenir le résultat.
++
+Les utilisateurs ne peuvent sélectionner que les valeurs de la première colonne du résultat. Une requête dans la colonne de l'entrée utilisateur de la table ne peut pas référencer d'autres entrées utilisateur dans la requête.
+
+*** Booléen : permet de sélectionner « vrai » ou « faux » comme valeur booléenne dans la liste déroulante.
+
+
+** Mot de passe : permet de crypter un mot de passe fourni comme entrée par l'utilisateur.
++
+Lorsqu'il est crypté, le mot de passe s'affiche sous la forme d'une séquence de caractères astérisque dans l'application WFA et dans les fichiers journaux.
+
+** Dictionnaire : permet d'ajouter les données de table pour l'entrée de dictionnaire sélectionnée.
++
+L'attribut d'entrée du dictionnaire sélectionne l'attribut à renvoyer. Vous pouvez sélectionner une ou plusieurs valeurs lors de l'exécution du flux de travail. Par exemple, vous pouvez sélectionner un seul volume, plusieurs volumes ou volumes avec leurs partages et exportations. Par défaut, les valeurs uniques sont sélectionnées. Vous pouvez également sélectionner règles pour le filtrage. Une règle se compose d'un attribut d'entrée de dictionnaire, d'un opérateur et d'une valeur. L'attribut peut également inclure des attributs de ses références. Vous pouvez, par exemple, spécifier une règle pour les agrégats en répertoriant tous les agrégats dont le nom commence par la chaîne « aggr » et dont la taille disponible est supérieure à 5 Go. La première règle du groupe est l'attribut `name`, avec l'opérateur `starts-with`, et la valeur kaggr. La deuxième règle du même groupe est l'attribut `available_size_mb`, avec l'opérateur `>` et la valeur 5000.
+
+
+
+* *Valeurs de verrouillage*
++
+Permet de spécifier si l'utilisateur est autorisé à saisir une valeur autre que les valeurs renvoyées par la requête. La sélection de la case à cocher ne permet pas à l'utilisateur de fournir une valeur ; seules les valeurs renvoyées par la requête peuvent être sélectionnées. Cette option est utilisée avec les options Enum et Type de requête.
+
+* *Valeur par défaut*
++
+Permet de définir la valeur par défaut de l'entrée utilisateur.
+
+* *Obligatoire*
++
+Vous permet de spécifier si l'entrée utilisateur est obligatoire pour l'exécution du flux de travail.
+
+
+
+
+
+== Groupe
+
+* *Nom du groupe*
++
+Permet de regrouper les attributs d'entrée utilisateur associés. Les attributs d'entrée utilisateur sont affichés dans des groupes que vous avez définis lors de l'aperçu ou de l'exécution du flux de travail. Par exemple, vous pouvez regrouper les attributs d'entrée utilisateur associés aux détails du volume.
+
+* *Développer le groupe par défaut*
++
+Vous permet d'afficher tous les attributs d'entrée utilisateur spécifiés dans un groupe sous la forme d'une liste développée. Si la case n'est pas cochée, le groupe d'entrées utilisateur s'affiche réduit.
+
+
+
+
+
+== Dépendance
+
+Vous permet d'activer une entrée utilisateur en fonction de la valeur saisie pour une autre entrée utilisateur. Par exemple, dans un workflow qui configure le protocole NAS, vous pouvez spécifier l'entrée utilisateur requise pour le protocole en tant que « NFS » pour activer l'entrée utilisateur « listes d'hôtes de réécriture » ou « CIFS » pour activer « configuration ACL CIFS ».
+
+* *Sélectionnez l'entrée utilisateur qui dépend de*
++
+Vous permet de sélectionner l'entrée utilisateur requise pour activer l'entrée utilisateur affichée dans le champ Nom de la variable.
+
+* *Valeurs applicables (séparées par des virgules)*
++
+Permet de spécifier la valeur de l'entrée utilisateur conditionnelle qui active l'entrée utilisateur affichée dans le champ Nom de la variable.
+
+

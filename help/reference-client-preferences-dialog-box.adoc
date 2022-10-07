@@ -1,0 +1,61 @@
+---
+permalink: help/reference-client-preferences-dialog-box.html 
+sidebar: sidebar 
+keywords: preference, window, enable, view, modify, refresh, logging, options, client, associated specific, workflow, automation, server, access, settings, setup, click 
+summary: 'La fenêtre Préférences vous permet d"afficher et de modifier les options d"actualisation et de journalisation de tous les clients associés au serveur Workflow Automation (WFA) spécifique. Vous pouvez accéder à cette fenêtre en sélectionnant Paramètres, puis, sous Configuration, cliquez sur Préférences.' 
+---
+= Fenêtre Préférences
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La fenêtre Préférences vous permet d'afficher et de modifier les options d'actualisation et de journalisation de tous les clients associés au serveur Workflow Automation (WFA) spécifique. Vous pouvez accéder à cette fenêtre en sélectionnant *Paramètres* et sous *Configuration*, cliquez sur *Préférences*.
+
+* *Activer l'actualisation automatique*
++
+Vous permet de choisir l'actualisation automatique du client, qui est déclenchée par le serveur. Cette option est sélectionnée par défaut. Lorsque cette option est sélectionnée, les tables WFA suivantes sont automatiquement actualisées :
+
++
+** Statut d'exécution
+** Sources des données
+** Réservations
+
+
+
+
+Si cette option n'est pas sélectionnée, les tables ne sont pas mises à jour tant que vous n'avez pas cliqué sur *Actualiser*. Cette case est cochée par défaut.
+
+* *Intervalle d'actualisation (secondes)*
++
+Vous permet de sélectionner l'intervalle d'actualisation. La valeur par défaut est 3 secondes.
+
+* *Nombre maximum de lignes à afficher*
++
+Vous permet de cliquer sur la valeur dans la colonne *taille max* et de modifier le nombre de lignes que le serveur récupère et affiche pour l'utilisateur par type de liste.
+
++
+Par exemple, le paramètre *Workflow Execution* affiche le nombre d'exécutions d'historique passées à l'utilisateur. Les valeurs par défaut sont les suivantes :
+
++
+** Exécution du workflow : 100
+** Historique des acquisitions : 30
+** Réservations : 100
+** Ajouter des lignes de stock : 1000
++
+Vous permet de spécifier le nombre maximal de résultats à obtenir par inventaire. La valeur par défaut est 1000.
+
+
+
+
+
+
+
+== Bouton de commande
+
+* *Enregistrer*
++
+Enregistre les paramètres de configuration.
+
+

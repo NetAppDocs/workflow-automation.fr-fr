@@ -1,0 +1,29 @@
+---
+permalink: workflows/concept-how-you-execute-custom-rest-end-points.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, provide, mechanism, configure, custom, end points, execute, help, architect, configure, easy, understand, intuitive, uniform, resource, identifiers, follow, conventions, post, put, delete, based, semantics, client, code, developers 
+summary: 'OnCommand Workflow Automation (WFA) fournit un mécanisme qui permet de configurer les points DE terminaison REST personnalisés pour exécuter les flux de travail. Les points DE terminaison REST personnalisés permettent à un architecte de configurer des identifiants de ressources (URI) faciles à comprendre, intuitifs et uniformes pour exécuter des flux de travail, qui respectent les conventions REST de POST, PUT ou DELETE en fonction de la sémantique du flux de travail. Ces URI facilitent le développement de code client pour les développeurs client.' 
+---
+= Comment exécuter des points de terminaison DE REPOS personnalisés
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation (WFA) fournit un mécanisme qui permet de configurer les points DE terminaison REST personnalisés pour exécuter les flux de travail. Les points DE terminaison REST personnalisés permettent à un architecte de configurer des identifiants de ressources (URI) faciles à comprendre, intuitifs et uniformes pour exécuter des flux de travail, qui respectent les conventions REST de POST, PUT ou DELETE en fonction de la sémantique du flux de travail. Ces URI facilitent le développement de code client pour les développeurs client.
+
+WFA vous permet de configurer un chemin URI personnalisé pour l'exécution des flux de travail via les appels d'API. Chaque segment du chemin URI peut être une chaîne ou un nom valide de l'entrée utilisateur du flux de travail entre parenthèses, par exemple, `/devops/\{ProjectName}/clone.` Le workflow peut être appelé comme un appel à `_https_://WFAServer: HTTPS_PORT/rest/devops/Project1/clone/jobs.`
+
+La validation du chemin URI est la suivante :
+
+* Le chemin DE REPOS doit commencer par «»/».
+* Les caractères autorisés sont des lettres, des chiffres et des traits de soulignement.
+* Le nom d'entrée utilisateur doit être entouré par « »{}».
++
+
+NOTE: Vous devez vérifier que la valeur entourée par « »{} » est un nom d'entrée utilisateur valide.
+
+* Il ne doit y avoir aucun segment de chemin vide, par exemple //, /{}/, etc.
+* La configuration de la méthode HTTP et la configuration du chemin URI personnalisé doivent être configurées ou non.
+

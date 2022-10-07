@@ -1,0 +1,114 @@
+---
+permalink: workflows/reference-guidelines-for-logging.html 
+sidebar: sidebar 
+keywords: aware, guidelines, logging, writing, powershell, perl, script, oncommand, workflow, automation 
+summary: 'Vous devez tenir compte des instructions à suivre pour la connexion lors de l"écriture d"un script PowerShell ou Perl pour OnCommand Workflow Automation (WFA).' 
+---
+= Instructions pour l'enregistrement
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez tenir compte des instructions à suivre pour la connexion lors de l'écriture d'un script PowerShell ou Perl pour OnCommand Workflow Automation (WFA).
+
+
+
+== La connexion PowerShell
+
+[cols="2*"]
+|===
+| Directives | Exemple 
+
+
+ a| 
+Utilisez l'applet de commande Get-WFALogger pour la consignation.
+ a| 
+[listing]
+----
+Get-WFALogger -Info -message “Creating volume”
+----
+
+
+ a| 
+Consigner toutes les actions nécessitant une interaction avec des packages internes tels que Data ONTAP, VMware et PowerCLI.tous les messages de journal sont disponibles dans les journaux d'exécution dans l'historique d'état d'exécution des flux de travail.
+ a| 
+Aucune
+
+
+
+ a| 
+Consignez tous les arguments pertinents transmis aux packages internes.
+ a| 
+Aucune
+
+
+
+ a| 
+Utilisez les niveaux de journal appropriés lorsque vous utilisez l'applet de commande Get-WFALogger, en fonction du contexte d'utilisation. -Info, -Error, -Waren et -Debug sont les différents niveaux de journal disponibles. Si un niveau de journal n'est pas spécifié, le niveau de journal par défaut est Déboguer.
+ a| 
+Aucune
+
+|===
+
+
+== Journalisation Perl
+
+[cols="2*"]
+|===
+| Directives | Exemple 
+
+
+ a| 
+Utilisez WFAUtil sendLog pour la consignation.
+ a| 
+[listing]
+----
+my wfa_util = WFAUtil->new();
+eval {
+$wfa_util->sendLog('INFO', "Connecting to the
+cluster: $DestinationCluster");
+}
+----
+
+
+ a| 
+Consignez chaque action nécessitant une interaction avec des éléments externes à la commande, tels que Data ONTAP, VMware et WFA. Tous les messages de journal que vous créez à l'aide de la routine WFAUtil sendLog sont stockés dans la base de données WFA. Ces messages de journal sont disponibles pour le workflow et la commande exécutés.
+ a| 
+Aucune
+
+
+
+ a| 
+Consigner tous les arguments pertinents transmis à la routine appelée.
+ a| 
+Aucune
+
+
+
+ a| 
+Utilisez les niveaux de journal appropriés.-Info, -erreur, -avertir et -Debug sont les différents niveaux de journal disponibles.
+ a| 
+Aucune
+
+
+
+ a| 
+Lors de la connexion au niveau -Info, soyez précis et concis. Ne spécifiez pas de détails d'implémentation tels que le nom de classe et le nom de fonction dans les messages de journal. Décrivez l'étape exacte ou l'erreur exacte en anglais.
+ a| 
+L'extrait de code suivant montre un exemple de bon message et un message incorrect :
+
+[listing]
+----
+$wfa_util->sendLog('WARN', "Removing volume:
+'.$VolumeName);
+# Good Message
+----
+[listing]
+----
+$wfa_util->sendLog('WARN', 'Invoking volume-
+destroy ZAPI: '.$VolumeName);
+# Bad message
+----
+|===

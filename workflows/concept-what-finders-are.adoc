@@ -1,0 +1,20 @@
+---
+permalink: workflows/concept-what-finders-are.html 
+sidebar: sidebar 
+keywords: finders, combination, filters, together, identify, common, results, workflows, select, required, resources, execution 
+summary: 'Un Finder est une combinaison d"un ou de plusieurs filtres utilisés ensemble pour identifier les résultats communs. Vous pouvez utiliser un outil de recherche dans vos workflows pour sélectionner les ressources requises pour l"exécution du workflow.' 
+---
+= Ce que sont les finders
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un Finder est une combinaison d'un ou de plusieurs filtres utilisés ensemble pour identifier les résultats communs. Vous pouvez utiliser un outil de recherche dans vos workflows pour sélectionner les ressources requises pour l'exécution du workflow.
+
+Les finders peuvent appliquer un ordre de tri pour différencier les résultats applicables. Les finders renvoient la meilleure ressource en fonction des critères de sélection et du tri.
+
+Les finders renvoient un résultat ou aucun résultat ; ils peuvent donc être utilisés pour vérifier l'existence de certains éléments de stockage. Toutefois, lorsqu'un Finder est utilisé dans le cadre d'une définition de ligne répétée, les jeux de résultats servent à former la liste des membres du groupe. Les filtres utilisés dans les finders renvoient au minimum la clé naturelle du type de dictionnaire, mais peuvent renvoyer des champs supplémentaires dont la valeur peut être référencée. Un ordre de tri peut être appliqué à n'importe quel champ renvoyé de la requête SQL d'un filtre.
+
+Vous pouvez tester les résultats d'un viseur. Lors du test d'un détecteur, vous pouvez afficher les résultats communs de tous les filtres WFA, où le résultat effectif du détecteur est mis en évidence dans les résultats. Lors de l'utilisation d'un détecteur dans un flux de travail, vous pouvez créer un message d'erreur personnalisé afin de transmettre des informations pertinentes à l'opérateur de stockage.

@@ -1,0 +1,45 @@
+---
+permalink: rhel-install/task-migrate-the-oncommand-workflow-automation-installation-linux.html 
+sidebar: sidebar 
+keywords: migrate, oncommand, workflow, automation, installation 
+summary: 'Vous pouvez migrer une installation OnCommand Workflow Automation (WFA) pour conserver la clé de base de données WFA unique installée au cours de l"installation de WFA.' 
+---
+= Migrez l'installation de OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez migrer une installation OnCommand Workflow Automation (WFA) pour conserver la clé de base de données WFA unique installée au cours de l'installation de WFA.
+
+* Cette procédure ne doit être effectuée que si vous souhaitez migrer une installation WFA incluant la clé de base de données WFA sur un serveur différent.
+* Une restauration de base de données WFA ne migre pas la clé WFA.
+* La migration d'une installation WFA ne migre pas les certificats SSL.
+* Le chemin d'installation par défaut de WFA est utilisé dans cette procédure.
++
+Si vous avez modifié l'emplacement par défaut lors de l'installation, vous devez utiliser le chemin d'installation WFA modifié.
+
+
+
+.Étapes
+. Accédez à WFA via un navigateur web en tant qu'administrateur.
+. Sauvegarder la base de données WFA.
+. Ouvrez une invite du shell sur le serveur WFA et modifiez les répertoires à l'emplacement suivant : WFA_install_location/wfa/bin/
+. Entrez ce qui suit à l'invite du shell pour obtenir la clé de base de données :
++
+`./wfa -key`
+
+. Notez la clé de base de données qui s'affiche.
+. Désinstaller WFA.
+. Installation de WFA sur le système requis
+. Ouvrez une invite du shell sur le serveur WFA et remplacez les répertoires par l'emplacement suivant : WFA_install_location/wfa/bin/
+. À l'invite du shell, installez la clé de base de données en entrant la commande suivante :
++
+`./wfa -key=yourdatabasekey`
+
++
+Votredatabase ekey est la clé que vous avez notée lors de l'installation précédente de WFA.
+
+. Restaurez la base de données WFA à partir de la sauvegarde que vous avez créée.
+

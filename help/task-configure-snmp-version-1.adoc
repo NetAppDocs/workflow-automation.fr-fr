@@ -1,0 +1,33 @@
+---
+permalink: help/task-configure-snmp-version-1.html 
+sidebar: sidebar 
+keywords: configure, version 1, snmp 
+summary: Configurer SNMP version 1 
+---
+= Configurer SNMP version 1
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+.Étapes
+. Connectez-vous à WFA via un navigateur Web en tant qu'utilisateur administrateur, puis accédez au serveur WFA.
+. Cliquez sur *Paramètres* et sous *Configuration*, cliquez sur *SNMP*.
+. Cochez la case *Activer SNMP*.
+. Dans la liste déroulante **version**, sélectionnez *version 1*.
+. Entrez une adresse IPv4 ou IPv6 ou le nom d'hôte, ainsi que le numéro de port de l'hôte de gestion.
++
+WFA envoie des traps SNMP au numéro de port spécifié. Le numéro de port par défaut est 162.
+
+. Dans la section *notifier le*, cochez une ou plusieurs des cases suivantes :
++
+** L'exécution du workflow a démarré
+** L'exécution du workflow a réussi
+** Échec/échec partiel de l'exécution du workflow
+** Exécution du workflow en attente d'approbation
+** Échec de l'acquisition
+
+
+. Cliquez sur *Envoyer notification de test* pour vérifier les paramètres.
+. Cliquez sur *Enregistrer*.
+

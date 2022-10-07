@@ -1,0 +1,74 @@
+---
+permalink: workflows/concept-what-return-parameters-are.html 
+sidebar: sidebar 
+keywords: return, parameters, available, after, planning, phase, workflow, values, useful, debugging, workflow, work, debug 
+summary: 'Les paramètres de retour sont des paramètres disponibles après la phase de planification d"un workflow. Les valeurs renvoyées par ces paramètres sont utiles pour le débogage d"un flux de travail. Vous devez comprendre comment les paramètres de retour fonctionnent et quels paramètres peuvent être utilisés comme paramètres de retour pour les flux de travail de débogage.' 
+---
+= Fonctionnement des paramètres de retour
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les paramètres de retour sont des paramètres disponibles après la phase de planification d'un workflow. Les valeurs renvoyées par ces paramètres sont utiles pour le débogage d'un flux de travail. Vous devez comprendre comment les paramètres de retour fonctionnent et quels paramètres peuvent être utilisés comme paramètres de retour pour les flux de travail de débogage.
+
+Vous pouvez désigner un ensemble de paramètres, tels que des attributs de variables, des expressions et des valeurs d'entrée utilisateur, dans un flux de travail comme paramètres de retour. Pendant l'exécution du workflow, les valeurs des paramètres désignés sont renseignées dans la phase de planification et l'exécution du flux de travail démarre. Les valeurs de ces paramètres sont alors renvoyées comme elles ont été calculées dans cette exécution spécifique du flux de travail. Si vous souhaitez déboguer le flux de travail, vous pouvez faire référence aux valeurs renvoyées par les paramètres.
+
+Vous pouvez spécifier les paramètres de retour requis dans un flux de travail lorsque vous souhaitez voir les valeurs calculées ou sélectionnées pour ces paramètres. Par exemple, lorsque vous utilisez la logique de sélection de ressources pour sélectionner un agrégat dans un flux de travail, vous pouvez spécifier agrégat comme paramètre de retour afin de voir l'agrégat sélectionné lors de la planification du flux de travail.
+
+Avant de vous référer aux valeurs des paramètres de retour pour le débogage de votre flux de travail, vous devez confirmer que l'exécution du flux de travail est terminée. Les valeurs des paramètres de retour sont définies pour chaque exécution de flux de travail. Si vous avez ajouté un paramètre de retour après plusieurs exécutions d'un flux de travail, la valeur de ce paramètre n'est disponible que pour les exécutions après l'ajout du paramètre.
+
+
+
+== Paramètres pouvant être utilisés comme paramètres de retour
+
+[cols="2*"]
+|===
+| Paramètres de retour | Exemple 
+
+
+ a| 
+Attributs variables scalaires
+ a| 
+`volume1.name,` qui est un attribut de la variable « nom de volume »
+
+
+
+ a| 
+Constantes
+ a| 
+MAX_VOLUME_SIZE
+
+
+
+ a| 
+Entrées utilisateur
+ a| 
+$clustername
+
+
+
+ a| 
+Expressions MVEL qui impliquent des attributs variables, des constantes et des entrées utilisateur
+ a| 
+volume1.name+'-'+$clusterName
+
+
+
+ a| 
+Paramètre de retour qu'une commande ajoute lors de l'exécution
+ a| 
+Le `$volumeUUID` Un paramètre est ajouté comme paramètre de retour lorsque vous utilisez la ligne suivante dans une commande PowerShell : `Add-WfaWorkflowParameter -Name "VolumeUUID" -Value "`12345`" -AddAsReturnParameter $true.`
+
+|===
+
+
+== Exemples de paramètres de retour dans des flux de travail prédéfinis
+
+Si vous voulez comprendre comment les paramètres de retour sont spécifiés, vous pouvez ouvrir les flux de travail prédéfinis suivants dans Designer et passer en revue les paramètres de retour spécifiés :
+
+* Créer un volume NFS dans un vFiler
+* Créez un partage CIFS en qtree dans un vFiler
+* Créez un partage CIFS de volume Data ONTAP en cluster
+

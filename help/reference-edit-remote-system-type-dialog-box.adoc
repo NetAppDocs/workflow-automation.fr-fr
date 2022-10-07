@@ -1,0 +1,76 @@
+---
+permalink: help/reference-edit-remote-system-type-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, remote, system, type, dialog box, enable, modify, name, description, version, protocol, default port, timeout, existing, certified 
+summary: 'La boîte de dialogue Modifier le type de système distant vous permet de modifier le nom, la description, la version, le protocole, le port par défaut, et expiration par défaut d"un type de système distant existant. Vous ne pouvez pas modifier un type de système à distance certifié NetApp.' 
+---
+= Boîte de dialogue Modifier le type de système distant
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La boîte de dialogue Modifier le type de système distant vous permet de modifier le nom, la description, la version, le protocole, le port par défaut, et expiration par défaut d'un type de système distant existant. Vous ne pouvez pas modifier un type de système à distance certifié NetApp.
+
+* Onglet Détails
+* Script de validation
+
+
+
+
+== Onglet Détails
+
+Permet de modifier les détails du type de système distant, tels que le nom, la description, la version et le protocole de connexion.
+
+* *Nom*
++
+Permet de modifier le nom du type de système distant.
+
+* *Description*
++
+Permet de modifier la description du type de système distant.
+
+* *Version*
++
+Permet de modifier le numéro de version du type de système distant dans `major.minor.revision` format--par exemple, 1.0.0.
+
+* *Protocole de connexion*
++
+Permet de sélectionner l'un des protocoles suivants à utiliser par OnCommand Workflow Automation (WFA) lors de la connexion au système distant :
+
++
+** HTTPS avec retour au HTTP
++
+La connexion utilise principalement HTTPS. En cas d'échec de la connexion via HTTPS, HTTP est utilisé. Si la connexion via HTTP échoue également, la tentative de connexion est interrompue.
+
+** HTTPS uniquement
+** HTTP uniquement
+** Personnalisées
+
+
+
+
+Lorsque vous sélectionnez un protocole de connexion, les champs Protocole, Port par défaut et délai par défaut (sec) sont renseignés avec les données.
+
+
+
+== Script de validation
+
+Vous permet de fournir un script de validation pour tester la connectivité du système distant. Le script de validation doit être écrit en Perl et doit inclure la fonction suivante : checkCredentials `($host, $user, $password, $protocol, $port, $timeout).` Lors de la validation, WFA appelle la fonction checkCredentials avec les valeurs configurées pour le type de système distant et le protocole de connexion. La fonction renvoie la valeur « 1 » lors de la validation réussie de la connectivité ou « 0 » en cas d'échec de la validation de la connexion.
+
+Vous pouvez cliquer sur *Tester Perl script* pour exécuter le script afin de tester la connectivité.
+
+
+
+== Boutons de commande
+
+* *Enregistrer*
++
+Enregistre les paramètres de configuration modifiés du type de système distant et ferme la boîte de dialogue.
+
+* *Annuler*
++
+Annule les modifications, le cas échéant, et ferme la boîte de dialogue.
+
+

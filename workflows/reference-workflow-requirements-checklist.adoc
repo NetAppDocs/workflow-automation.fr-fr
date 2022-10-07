@@ -1,0 +1,230 @@
+---
+permalink: workflows/reference-workflow-requirements-checklist.html 
+sidebar: sidebar 
+keywords: workflow, requirements, checklist, include, details, requirements, commands, user, input, resources, planned, workflow, identify, gap 
+summary: La liste de contrôle des exigences du workflow comprend des exigences détaillées concernant un workflow planifié, telles que les commandes, les entrées utilisateur et les ressources. Vous pouvez utiliser la liste de contrôle pour planifier vos flux de travail et identifier les lacunes dans les exigences. 
+---
+= Exemple de liste de contrôle des exigences de workflow
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La liste de contrôle des exigences du flux de travail inclut des exigences détaillées (commandes, saisie utilisateur et ressources) pour un workflow planifié. Vous pouvez utiliser la liste de contrôle pour planifier vos flux de travail et identifier les lacunes dans les exigences.
+
+
+
+== Exemple de liste de contrôle des exigences
+
+L'exemple de liste de contrôle des exigences de flux de travail suivant répertorie les exigences du workflow « Créer un volume clustered Data ONTAP ». Vous pouvez utiliser cet exemple de liste de contrôle comme modèle pour répertorier vos exigences de flux de travail.
+
+[cols="2*"]
+|===
+| Conditions requises | Description 
+
+
+ a| 
+Nom du flux de travail
+ a| 
+Créez un volume clustered Data ONTAP
+
+
+
+ a| 
+Catégorie
+ a| 
+Provisionnement du stockage
+
+
+
+ a| 
+Description
+ a| 
+Le workflow crée un nouveau volume dans un SVM spécifique. Ce workflow a été conçu pour un scénario dans lequel un volume est provisionné et délégué pour une utilisation ultérieure.
+
+
+
+ a| 
+Description de haut niveau du fonctionnement du flux de travail
+ a| 
+* Le SVM qui contient le volume est spécifié par l'utilisateur (cluster, noms SVM).
+* Un volume est créé en fonction de la taille spécifiée.
+* La configuration du volume est décrite dans un modèle.
+
+
+
+
+ a| 
+Détails
+ a| 
+* Utilisez la commande *Créer un volume cm*
+* Détails de la commande pour *Créer un volume cm* :
++
+** L'exécution est définie comme toujours
+** Les détails du volume sont spécifiés en remplissant les attributs du volume
+** Utilisez le modèle *Paramètres d'espace garanti* pour configurer le volume
+** Le nom et la taille du volume sont fournis par l'utilisateur.
++
+Le volume sera monté dans le namespace du SVM en tant que `/volname` (sous l'espace de noms racine).
+
+** Utilisez la fonction *actualVolumeSize* car la réserve SNAP sera de 5 %.
+** La référence SVM est définie avec la logique de sélection de ressources suivante :
++
+*** CM SVM by key -- recherche SVM par nom et le cluster, qui est fourni par l'utilisateur
+*** Cm SVM par type -- seules les SVM de données (type = cluster)
+*** SVM par état -- (état = en cours d'exécution)
+
+
+** La référence d'agrégat est définie avec la logique de sélection de ressources comme un chercheur prédéfini (agrégat cm par seuils d'espace et type RAID) :
++
+*** Agrégat CM par capacité disponible (capacité = taille du volume à provisionner, cluster donné par l'utilisateur)
+*** CM agrégat par délégation à SVM
+*** Agrégat EN CM par type de RAID (RAID-DP)
+*** L'agrégat CM n'est pas aggr0
+*** Agrégat CM en % de taille utilisé (seuil = 90, espaceToProvisioned = taille fournie, puisque la garantie est un volume)
+*** Agrégat CM par surengagement (seuil = 300, espaceToBeAllocalisé = taille du volume provisionné)
+*** Sélectionnez l'agrégat avec un espace libre maximal
+
+
+
+
+
+
+|===
+[cols="3*"]
+|===
+| Nom | Type | Description (valeurs de données, validation, etc.) 
+
+
+ a| 
+Cluster
+ a| 
+Requête verrouillée (tabulaire)
+ a| 
+* Cluster hébergeant la SVM
+* La requête peut être affichée sous forme de tableau avec l'adresse principale et le nom du cluster
+* Trier par nom par ordre alphabétique
+
+
+
+
+ a| 
+SVM
+ a| 
+Requête verrouillée
+ a| 
+* SVM dans laquelle le volume est provisionné
+* Query ne doit afficher que les noms SVM appartenant au cluster sélectionné dans l'entrée précédente
++
+Afficher uniquement les SVM de type cluster, et non les SVM admin ou node (type colonne of cm_Storage.vserver)
+
+* Trier par ordre alphabétique
+
+
+
+
+ a| 
+Volumétrie
+ a| 
+Chaîne
+ a| 
+* Nom du volume à créer
+
+
+
+
+ a| 
+Taille en Go
+ a| 
+Entier
+ a| 
+* Taille du volume à provisionner
+* Taille des données (la réserve Snapshot doit être prise en compte)
+
+
+|===
+*Commandes*
+
+[cols="3*"]
+|===
+| Nom | Description | État 
+
+
+ a| 
+Créer un volume cm
+ a| 
+Crée un volume au sein du SVM
+ a| 
+Existant
+
+|===
+*Paramètres de retour*
+
+[cols="2*"]
+|===
+| Nom | Valeur 
+
+
+ a| 
+Nom du volume
+ a| 
+Nom du volume provisionné
+
+
+
+ a| 
+Nom de l'agrégat
+ a| 
+Nom de l'agrégat sélectionné
+
+
+
+ a| 
+Nom du nœud
+ a| 
+Nom du nœud
+
+
+
+ a| 
+Nom du cluster
+ a| 
+Nom du cluster
+
+|===
+*Lacunes et questions*
+
+[cols="2*"]
+|===
+
+
+ a| 
+1.
+ a| 
+
+
+
+ a| 
+2.
+ a| 
+
+
+
+ a| 
+3.
+ a| 
+
+
+
+ a| 
+4.
+ a| 
+
+
+
+ a| 
+5.
+ a| 
+
+|===

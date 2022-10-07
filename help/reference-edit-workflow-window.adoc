@@ -1,0 +1,273 @@
+---
+permalink: help/reference-edit-workflow-window.html 
+sidebar: sidebar 
+keywords: workflow, window, display, select, associated, commands, parameters, blue boxes, columns, arranged, sequential, order, execution, left, right, variables, objects, gray boxes 
+summary: 'La fenêtre Workflow <nom du flux de travail> affiche le flux de travail sélectionné ainsi que ses commandes et paramètres associés. Les commandes associées au flux de travail sont affichées sous forme de cases bleues dans des colonnes disposées dans l"ordre séquentiel d"exécution, de gauche à droite. Les variables et les objets de chaque commande sont affichés sous la forme de cases grises.' 
+---
+= Fenêtre Workflow <nom du flux de travail>
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La fenêtre Workflow <nom du flux de travail> affiche le flux de travail sélectionné ainsi que ses commandes et paramètres associés. Les commandes associées au flux de travail sont affichées sous forme de cases bleues dans des colonnes disposées dans l'ordre séquentiel d'exécution, de gauche à droite. Les variables et les objets de chaque commande sont affichés sous la forme de cases grises.
+
+
+
+== Onglet flux de travail
+
+L'onglet flux de travail vous permet de sélectionner et d'utiliser des flux de travail et des commandes enfant, et de personnaliser le nom d'affichage.
+
+* *Étapes disponibles*
++
+La fournit une liste des workflows et commandes enfants disponibles que vous pouvez ajouter à votre flux de travail.
+
++
+Vous pouvez rechercher des flux de travail ou des commandes enfant en utilisant le nom, le schéma et la version logicielle minimale comme chaînes de recherche dans la zone de texte.
+
++
+Vous pouvez personnaliser l'affichage du flux de travail en réorganisant l'ordre des commandes. Pour réorganiser les commandes, vous pouvez faire glisser et déposer les commandes dans l'ordre souhaité. Un double-clic sur une commande déplace cette commande vers la fin de la liste. Vous pouvez modifier le nom d'affichage en double-cliquant sur le nom d'affichage de la commande dans la zone bleue. Vous pouvez supprimer une commande en déplaçant le curseur sur la case bleue, puis en cliquant sur « X » dans le coin supérieur droit.
+
++
+Vous pouvez cliquer sur le numéro de ligne pour exécuter diverses fonctions sur la ligne.
+
++
+** *Insérer une ligne*
++
+Insère une nouvelle ligne au-dessus ou en dessous de la ligne sélectionnée dans le flux de travail.
+
+** *Copier ligne*
++
+Copie la ligne sélectionnée du flux de travail et l'enregistre dans le presse-papiers. Les détails de répétition définis pour la ligne sont copiés lorsqu'une ligne est copiée.
+
+** *Répétez la ligne*
++
+Ouvre la boîte de dialogue Détails de la répétition de ligne, qui permet de spécifier le type de répétition.
+
+** *Ajouter une condition*
++
+Ouvre la condition de la boîte de dialogue ligne <numéro de ligne>, qui vous permet de sélectionner une condition. La condition sélectionnée s'applique à toutes les commandes de la ligne. Toutes les commandes de la ligne ne seront exécutées que si la condition sélectionnée est remplie.
+
+** *Supprimer la ligne*
++
+Supprime la ligne sélectionnée du flux de travail.
+
+
+
+* *Coller ligne*
++
+Colle la ligne copiée au-dessus ou en dessous de la ligne sélectionnée. Cette option est disponible après avoir sélectionné la fonction Copier ligne.
+
+
+
+
+
+== Onglet Détails
+
+L'onglet Détails vous permet de fournir des informations générales sur le flux de travail.
+
+* *Nom du flux de travail*
++
+Vous permet de spécifier le nom du flux de travail à l'aide d'une chaîne alphanumérique.
+
+* *Version entité*
++
+Vous permet de saisir un numéro de version pour le flux de travail dans `major.minor.revision` format--par exemple, 1.0.0.
+
+* *Catégories*
++
+Affiche la catégorie associée au flux de travail. Vous pouvez affecter un flux de travail à une catégorie à partir de la fenêtre Catégorie.
+
+* *Description du workflow*
++
+Vous permet de saisir une description du flux de travail. Vous pouvez cliquer dans le champ pour ouvrir la boîte de dialogue Modifier la description.
+
+* * Prêt pour la production*
++
+Permet de marquer le flux de travail prêt pour la production, ce qui permet d'exécuter le flux de travail et de le voir dans la fenêtre flux de travail.
+
+* *Considérer les éléments réservés*
++
+Vous permet d'utiliser la fonction de réservation pour le flux de travail, lorsque les ressources sélectionnées sont disponibles pour le flux de travail jusqu'à ce que la période d'expiration de la réservation soit configurée. La fonction de réservation vous permet d'exclure des ressources réservées par d'autres flux de travail lors de la sélection de ressources.
+
++
+
+NOTE: Vous ne devez pas cocher cette case si vous avez besoin que les filtres recherchent uniquement le contenu du cache persistant sans tenir compte des réservations définies par d'autres flux de travail.
+
+* *Activer la validation de l'existence d'élément*
++
+Permet de valider l'existence d'éléments et d'éviter l'échec de certaines actions lors de l'exécution des flux de travail. Par exemple, vous pouvez éviter de créer un volume dans une matrice portant le même nom que celui d'un volume existant.
+
+* *Versions logicielles minimales*
++
+Spécifie les versions minimales du logiciel requises pour exécuter le flux de travail. À titre d'exemple, le logiciel peut être Clustered Data ONTAP 8.2.0 et vCenter 6.0. Les versions s'affichent sous forme de valeurs séparées par des virgules.
+
+
+
+
+
+== Entrées utilisateur
+
+L'onglet entrées utilisateur permet d'afficher et de modifier les attributs d'entrée utilisateur créés lors de la définition des objets de flux de travail et des entrées utilisateur créées. Les valeurs des attributs d'entrée utilisateur sont remplies lorsque vous prévisualisez ou exécutez le flux de travail.
+
+Vous pouvez double-cliquer sur l'entrée utilisateur que vous souhaitez modifier, ce qui ouvre la boîte de dialogue Modifier la variable : <user_INPUT>, ce qui vous permet de modifier l'entrée utilisateur.
+
+Vous pouvez personnaliser l'affichage du tableau en réorganisant l'ordre des colonnes. Pour réorganiser les colonnes, vous pouvez faire glisser et déposer les colonnes dans l'ordre souhaité. Toutefois, vous ne pouvez pas masquer ou supprimer ces colonnes.
+
+* *Nom*
++
+Affiche le nom de l'attribut d'entrée utilisateur.
+
+* *Nom d'affichage*
++
+Affiche le nom qui est affiché à l'utilisateur du flux de travail.
+
+* *Type*
++
+Affiche le type d'entrée utilisateur, par exemple chaîne, requête, booléen, table, ou mot de passe.
+
+* *Valeurs*
++
+Affiche les valeurs autorisées pour l'entrée utilisateur, par exemple la plage des nombres et l'expression régulière des chaînes.
+
+* *Valeur par défaut*
++
+Affiche la valeur par défaut de l'entrée utilisateur.
+
+* *Dépendance d'entrée*
++
+Affiche une autre entrée utilisateur de la liste qui fournit une valeur à l'entrée utilisateur sélectionnée.
+
+* *Groupe*
++
+Affiche le nom du groupe pour les attributs d'entrée utilisateur.
+
+* *Obligatoire*
++
+Affiche l'état de l'entrée utilisateur. Si la case est cochée, les attributs d'entrée utilisateur sont obligatoires pour l'exécution du flux de travail.
+
+* *Boutons de commande*
++
+** *Haut*
++
+Déplace l'entrée sélectionnée d'une ligne vers le haut dans le tableau.
+
+** *Bas*
++
+Déplace l'entrée sélectionnée d'une ligne vers le bas dans le tableau.
+
+
+
+
+
+
+
+== Onglet constantes
+
+L'onglet constantes vous permet de définir la valeur des constantes pouvant être utilisées plusieurs fois dans le flux de travail. Vous pouvez indiquer la valeur suivante comme valeur des constantes :
+
+* Chiffres
+* Chaînes
+* Expressions MVEL
+* Fonctions
+* Entrées utilisateur
+* Variables
+
+
+Vous pouvez personnaliser l'affichage du tableau en triant chaque colonne, ainsi qu'en réorganisant l'ordre des colonnes.
+
+* *Nom*
++
+Affiche le nom de la constante.
+
+* *Description*
++
+Vous permet de spécifier une description pour la constante.
+
+* *Valeur*
++
+Vous permet de spécifier une valeur pour la constante.
+
+* *Boutons de commande*
++
+** *Ajouter*
++
+Ajoute une nouvelle ligne dans la table des constantes.
+
+** *Supprimer*
++
+Supprime la ligne sélectionnée de la table des constantes.
+
+
+
++
+Vous pouvez également cliquer avec le bouton droit de la souris sur les constantes pour utiliser la fonctionnalité de copie et de collage.
+
+
+
+
+
+== Paramètres de retour
+
+L'onglet Paramètres de retour vous permet de définir et de fournir une description des paramètres de retour du flux de travail qui peuvent être affichés à partir de la fenêtre surveillance ou des services Web.
+
+* *Valeur du paramètre*
++
+Vous permet de spécifier la valeur du paramètre.
+
+* *Nom du paramètre*
++
+Vous permet de spécifier le nom du paramètre.
+
+* *Description*
++
+Vous permet de spécifier une description pour le paramètre sélectionné.
+
+* *Boutons de commande*
++
+** *Ajouter ligne*
++
+Ajoute une nouvelle ligne dans le tableau Paramètres de retour.
+
+** *Supprimer la ligne*
++
+Supprime la ligne sélectionnée du tableau Paramètres de retour.
+
+
+
+
+
+
+
+== Contenu de l'aide
+
+L'onglet contenu de l'aide vous permet d'ajouter, d'afficher et de supprimer le contenu de l'aide du flux de travail. Le contenu de l'aide de workflow fournit des informations sur le flux de travail des opérateurs de stockage.
+
+
+
+== Onglet Avancé
+
+L'onglet Avancé vous permet de configurer un chemin URI personnalisé pour l'exécution du flux de travail via des appels API. Chaque segment du chemin URI peut être une chaîne ou un nom valide de l'entrée utilisateur du flux de travail entre parenthèses.
+
+Par exemple, /devops/\{ProjectName}/clone. Le workflow peut être appelé comme un appel à _https:_//WFA-Server:HTTPS_PORT/REST/devops/Project1/clone/travaux.
+
+
+
+== Boutons de commande
+
+Les boutons de commande sont disponibles en bas de la fenêtre de flux de travail. Vous pouvez également accéder aux commandes à partir du menu contextuel de la fenêtre.
+
+* *Aperçu*
++
+Ouvre la boîte de dialogue Aperçu du flux de travail, qui permet de spécifier les attributs d'entrée utilisateur.
+
+* *Enregistrer sous*
++
+Permet d'enregistrer le flux de travail sous un nouveau nom.
+
+* *Enregistrer*
++
+Enregistre les paramètres de configuration.
+
+

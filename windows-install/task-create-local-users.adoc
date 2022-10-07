@@ -1,0 +1,55 @@
+---
+permalink: windows-install/task-create-local-users.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, create, local users 
+summary: 'OnCommand Workflow Automation (WFA) vous permet de créer et de gérer des utilisateurs WFA locaux avec des autorisations spécifiques pour différents rôles, tels qu"invité, opérateur, approbateur, architecte, l"administrateur et la sauvegarde.' 
+---
+= Créez des utilisateurs locaux
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation (WFA) vous permet de créer et de gérer des utilisateurs WFA locaux avec des autorisations spécifiques pour différents rôles, tels qu'invité, opérateur, approbateur, architecte, l'administrateur et la sauvegarde.
+
+Vous devez avoir installé WFA et vous connecter en tant qu'administrateur.
+
+WFA vous permet de créer des utilisateurs pour les rôles suivants :
+
+* *Invité*
++
+Cet utilisateur peut afficher le portail et l'état de l'exécution d'un flux de travail, et peut être averti d'un changement de statut d'exécution d'un flux de travail.
+
+* *Opérateur*
++
+Cet utilisateur est autorisé à prévisualiser et à exécuter des flux de travail pour lesquels l'utilisateur a accès.
+
+* *Approbateur*
++
+Cet utilisateur est autorisé à prévisualiser, exécuter, approuver et rejeter les flux de travail pour lesquels l'utilisateur a accès.
+
++
+
+NOTE: Il est recommandé de fournir l'ID d'e-mail de l'approbateur. S'il existe plusieurs approbateurs, vous pouvez fournir un ID d'e-mail de groupe dans le champ *E-mail*.
+
+* *Architecte*
++
+Cet utilisateur dispose d'un accès complet pour créer des flux de travail, mais ne peut pas modifier les paramètres globaux du serveur WFA.
+
+* *Admin*
++
+Cet utilisateur dispose d'un accès complet au serveur WFA.
+
+* *Sauvegarde*
++
+Il s'agit du seul utilisateur pouvant générer des sauvegardes à distance du serveur WFA. Toutefois, l'utilisateur est limité à tout autre accès.
+
+
+
+.Étapes
+. Cliquez sur *Paramètres* et sous *gestion*, cliquez sur *utilisateurs*.
+. Créez un nouvel utilisateur en cliquant sur image:../media/new_wfa_icon.gif["Nouvelle icône"] dans la barre d'outils.
+. Entrez les informations requises dans la boîte de dialogue nouvel utilisateur.
+. Cliquez sur *Enregistrer*.
+

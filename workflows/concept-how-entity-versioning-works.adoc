@@ -1,0 +1,181 @@
+---
+permalink: workflows/concept-how-entity-versioning-works.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, entities, commands, version number, easily, manage, change 
+summary: 'Les entités OnCommand Workflow Automation (WFA), telles que les commandes et les workflows, sont versionnées. Vous pouvez utiliser les numéros de version pour gérer facilement les modifications apportées aux entités WFA.' 
+---
+= Fonctionnement de la gestion des versions d'entité
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les entités OnCommand Workflow Automation (WFA), telles que les commandes et les workflows, sont versionnées. Vous pouvez utiliser les numéros de version pour gérer facilement les modifications apportées aux entités WFA.
+
+Chaque entité WFA inclut un numéro de version dans `major.minor.revision` format--par exemple, 1.1.20. Vous pouvez inclure jusqu'à trois chiffres dans chaque partie du numéro de version.
+
+Avant de modifier le numéro de version d'une entité WFA, vous devez connaître les règles suivantes :
+
+* Les numéros de version ne peuvent pas être modifiés de la version actuelle à une version antérieure.
+* Chaque partie de la version doit être un nombre compris entre 0 et 999.
+* Par défaut, les nouvelles entités WFA sont versionnées sous 1.0.0.
+* Le numéro de version d'une entité est conservé lors du clonage ou en utilisant *Enregistrer sous* pour enregistrer une copie de l'entité.
+* Dans une installation WFA, plusieurs versions d'une entité ne peuvent pas exister.
+
+
+Lorsque vous mettez à jour la version d'une entité WFA, la version de son entité parent immédiate est automatiquement mise à jour. Par exemple, la mise à jour de la version de la commande *Create Volume* met à jour le flux de travail *Create an NFS Volume*, car le flux de travail *Create an NFS Volume* est une entité parent immédiate de la commande *Create Volume*. La mise à jour automatique des versions est appliquée comme suit :
+
+* La modification de la version majeure d'une entité met à jour la version mineure de ses entités parents immédiates.
+* La modification de la version mineure d'une entité met à jour la version de révision de ses entités parents immédiates.
+* La modification de la version de révision d'une entité ne met à jour aucune partie de la version de ses entités parent immédiates.
+
+
+Le tableau suivant répertorie les entités WFA et leurs entités parent immédiates :
+
+[cols="2*"]
+|===
+| Entité | Entité parent immédiate 
+
+
+ a| 
+Requête de cache
+ a| 
+* Type de source de données
+
+
+
+
+ a| 
+Modèle
+ a| 
+* Flux de travail
+
+
+
+
+ a| 
+Fonction
+ a| 
+* Flux de travail
+* Modèle
+
+
+
+NOTE: Si une fonction contient des caractères spéciaux ou mixtes, la version de ses entités parents immédiates peut ne pas être mise à jour.
+
+
+
+ a| 
+Dictionnaire
+ a| 
+* Modèle
+* Filtre
+* Requête de cache
+* Commande
+* Types de source de données utilisant la méthode de script
+
+
+
+
+ a| 
+Commande
+ a| 
+* Flux de travail
+
+
+
+
+ a| 
+Filtre
+ a| 
+* Finder
+* Flux de travail
+
+
+
+
+ a| 
+Finder
+ a| 
+* Flux de travail
+
+
+
+
+ a| 
+Type de source de données
+ a| 
+Aucune
+
+
+
+ a| 
+Flux de travail
+ a| 
+Aucune
+
+|===
+Vous pouvez rechercher une entité dans WFA en utilisant les parties du numéro de version ou le numéro de version complet.
+
+Si vous supprimez une entité parent, les entités enfants sont conservées et leur version n'est pas mise à jour pour la suppression.
+
+
+
+== Fonctionnement de la gestion des versions lors de l'importation d'entités
+
+Si vous importez des entités à partir de versions antérieures à Workflow Automation 2.2, les entités sont versionnées comme 1.0.0, par défaut. Si l'entité importée est déjà présente dans le serveur WFA, l'entité existante est remplacée par l'entité importée.
+
+Les modifications potentielles des entités WFA au cours d'une importation sont les suivantes :
+
+* Mise à niveau des entités
++
+Les entités sont remplacées par une version ultérieure.
+
+* Retour arrière des entités
++
+Les entités sont remplacées par une version antérieure.
+
++
+
+NOTE: Lorsque vous effectuez une restauration d'une entité, la version de ses entités parents immédiates est mise à jour.
+
+* Importation de nouvelles entités
+
+
+
+NOTE: Vous ne pouvez pas importer des entités de manière sélective à partir d'un `.dar` fichier.
+
+Si une version ultérieure d'une entité est importée, la version de ses entités parents immédiates est mise à jour.
+
+S'il existe plusieurs entités enfants pour l'entité parent importée, seul le degré de modification le plus élevé (majeur, mineur ou révision) pour les entités enfants est appliqué à l'entité parent. Les exemples suivants expliquent le fonctionnement de cette règle :
+
+* Pour une entité parent importée, s'il existe une entité enfant avec une modification mineure et une autre entité enfant avec une modification de révision, la modification mineure est appliquée à l'entité parent.
++
+La partie de révision de la version du parent est incrémentée.
+
+* Pour une entité parent importée, s'il existe une entité enfant avec une modification majeure et une autre entité enfant avec une modification mineure, la modification majeure est appliquée à l'entité parent.
++
+La partie mineure de la version du parent est incrémentée.
+
+
+
+
+
+== Exemple de la manière dont les versions des entités enfants importées affectent la version du parent
+
+Considérez le workflow suivant dans WFA: « Create Volume and export using NFS - Custom » 1.0.0.
+
+Les commandes existantes incluses dans le workflow sont les suivantes :
+
+* « Créer une politique d'exportation - personnalisée » 1.0.0
+* « Créer un volume - personnalisé » 1.0.0
+
+
+Les commandes incluses dans le `.dar` le fichier à importer est le suivant :
+
+* « Créer une politique d'exportation - personnalisée » 1.1.0
+* « Créer un volume - personnalisé » 2.0.0
+
+
+Lorsque vous importez cette opération `.dar` Fichier, la version mineure du flux de travail « Créer un volume et exporter à l'aide de NFS - personnalisé » est incrémentée à 1.1.0.

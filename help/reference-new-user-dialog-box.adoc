@@ -1,0 +1,76 @@
+---
+permalink: help/reference-new-user-dialog-box.html 
+sidebar: sidebar 
+keywords: new, user, dialog box, enable, create, account 
+summary: La boîte de dialogue nouvel utilisateur vous permet de créer un nouveau compte utilisateur. 
+---
+= Boîte de dialogue nouvel utilisateur
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La boîte de dialogue nouvel utilisateur vous permet de créer un nouveau compte utilisateur.
+
+* *Nom d'utilisateur*
++
+Spécifie le nom d'utilisateur.
+
+* *Rôle*
++
+Vous permet de sélectionner l'un des rôles d'utilisateur suivants :
+
++
+** Invité : cet utilisateur peut uniquement afficher l'état d'exécution d'un flux de travail ou être informé d'une modification de l'état d'exécution d'un flux de travail.
+** Opérateur : cet utilisateur est autorisé à prévisualiser et à exécuter des flux de travail pour lesquels l'utilisateur a accès.
+** Architecte : cet utilisateur dispose d'un accès complet à la création des flux de travail, mais ne peut modifier les paramètres globaux du serveur WFA.
+** Admin : cet utilisateur dispose d'un accès complet au serveur WFA.
+** Sauvegarde : cet utilisateur est le seul utilisateur qui peut générer des sauvegardes du serveur WFA à distance. Toutefois, l'utilisateur est limité par tout autre accès.
+
+
+* *E-mail*
++
+Vous permet de spécifier l'adresse e-mail de l'utilisateur à laquelle les notifications sont envoyées si l'option notifier activé est sélectionnée.
+
+* *Mot de passe*
++
+Spécifie le mot de passe de l'utilisateur.
+
+* *Confirmer*
++
+Spécifie à nouveau le mot de passe.
+
+* *Notifier le*
++
+Vous permet de sélectionner le moment où l'utilisateur du compte doit être averti par e-mail. Les notifications d'état d'exécution du workflow sont spécifiques aux flux de travail exécutés par l'utilisateur. Vous pouvez sélectionner n'importe quelle combinaison des options suivantes :
+
++
+** Début de l'exécution du workflow : informe l'utilisateur lors du démarrage de l'exécution du workflow.
+** Echec/réussite partielle de l'exécution du workflow : informe l'utilisateur en cas d'échec de l'exécution du workflow ou si le workflow a été exécuté avec succès, même en cas d'échec d'une ou de plusieurs étapes.
++
+L'exécution est terminée car les étapes ayant échoué ont été configurées de sorte que l'exécution du flux de travail se poursuit même lorsque l'étape a échoué.
+
+** Exécution du workflow réussie : informe l'utilisateur lorsque l'exécution du workflow a réussi.
+** Exécution du workflow en attente d'approbation : notifie l'utilisateur si l'exécution du workflow attend l'approbation d'un utilisateur opérateur ou architecte, en fonction du paramètre de configuration WFA.
+** Échec de l'acquisition : avertit l'utilisateur en cas d'échec de l'acquisition de données pour les sources de données.
++
+Cette option n'est activée que pour les utilisateurs Admin et Architect.
+
+
+
+
+
+
+
+== Boutons de commande
+
+* *Enregistrer*
++
+Enregistre les paramètres de configuration et ferme la boîte de dialogue.
+
+* *Annuler*
++
+Annule les modifications, le cas échéant, et ferme la boîte de dialogue.
+
+

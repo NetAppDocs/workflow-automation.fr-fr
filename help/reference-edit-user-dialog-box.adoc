@@ -1,0 +1,74 @@
+---
+permalink: help/reference-edit-user-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, user, dialog box, enable, view, modify, account, settings 
+summary: 'La boîte de dialogue Modifier l"utilisateur vous permet d"afficher et de modifier les paramètres du compte utilisateur.' 
+---
+= Boîte de dialogue Modifier l'utilisateur
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La boîte de dialogue Modifier l'utilisateur vous permet d'afficher et de modifier les paramètres du compte utilisateur.
+
+En fonction de vos privilèges de compte et de votre rôle, il se peut que vous n'ayez pas accès à la fenêtre utilisateurs. Cependant, vous pouvez modifier les paramètres de votre compte en sélectionnant *Paramètres*, et sous *gestion*, cliquez sur *Paramètres du compte*.
+
+
+NOTE: Les champs que vous pouvez modifier dépendent de votre rôle et de vos privilèges de compte.
+
+* *Nom*
++
+Affiche le nom d'utilisateur du compte d'utilisateur.
+
+* *Rôle*
++
+Affiche le rôle attribué au compte utilisateur.
+
+* *E-mail*
++
+Spécifie l'e-mail du compte utilisateur auquel les notifications sont envoyées si une option notifier sur est sélectionnée.
+
+* *Changer mot de passe*
++
+Vous permet de modifier le mot de passe actuel du compte utilisateur. Lorsque cette case est cochée, les champs suivants sont obligatoires :
+
++
+** *Nouveau mot de passe*--Spécifie le nouveau mot de passe.
+** *Confirmer*--Spécifie à nouveau le nouveau mot de passe.
+
+
+* *Notifier le*
++
+Vous permet de sélectionner le moment où l'utilisateur du compte doit être averti par e-mail pendant l'exécution du flux de travail. Lorsque cette case est cochée, vous pouvez sélectionner n'importe quelle combinaison des options suivantes :
+
++
+** Début de l'exécution du workflow : informe l'utilisateur lors du démarrage de l'exécution du workflow.
+** Echec/réussite partielle de l'exécution du workflow : informe l'utilisateur en cas d'échec de l'exécution du workflow ou si le workflow a été exécuté avec succès, même en cas d'échec d'une ou de plusieurs étapes.
++
+L'exécution est terminée car les étapes ayant échoué ont été configurées de sorte que l'exécution du flux de travail se poursuit même lorsque l'étape a échoué.
+
+** Exécution du workflow réussie : informe l'utilisateur lorsque l'exécution du workflow a réussi.
+** Exécution du workflow en attente d'approbation : notifie l'utilisateur si l'exécution du workflow attend l'approbation d'un utilisateur opérateur ou architecte, en fonction du paramètre de configuration WFA.
+** Échec de l'acquisition : avertit l'utilisateur en cas d'échec de l'acquisition de données pour les sources de données.
++
+Cette option n'est activée que pour les utilisateurs Admin et Architect.
+
+
+
+
+
+
+
+== Boutons de commande
+
+* *Enregistrer*
++
+Enregistre les paramètres de configuration et ferme la boîte de dialogue.
+
+* *Annuler*
++
+Annule les modifications, le cas échéant, et ferme la boîte de dialogue.
+
+

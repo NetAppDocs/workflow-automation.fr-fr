@@ -1,0 +1,137 @@
+---
+permalink: help/task-set-up-a-data-source.html 
+sidebar: sidebar 
+keywords: set up, connection, data, source, oncommand, source, workflow, autumation, acquire 
+summary: 'Vous devez établir une connexion avec une source de données dans OnCommand Workflow Automation (WFA) pour pouvoir acquérir des données à partir de cette source.' 
+---
+= Configurer une source de données
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez établir une connexion avec une source de données dans OnCommand Workflow Automation (WFA) pour pouvoir acquérir des données à partir de cette source.
+
+*Ce dont vous aurez besoin*
+
+* Pour les versions Active IQ Unified Manager antérieures à 6.0, vous devez avoir exécuté la dernière version de l'outil ocsetup sur le serveur Unified Manager afin d'activer et de configurer l'accès en lecture seule à distance de la base de données.
+* Pour Active IQ Unified Manager6.0 ou version ultérieure, vous devez avoir créé un compte utilisateur de base de données sur le serveur Unified Manager.
++
+Consultez l'aide en ligne de _OnCommand Unified Manager_ pour plus de détails.
+
+* Le port TCP des connexions entrantes sur le serveur Unified Manager doit être ouvert.
++
+Consultez la documentation de votre pare-feu pour plus de détails.
+
++
+Les numéros de port TCP par défaut sont les suivants :
+
++
+[cols="3*"]
+|===
+| Numéro de port TCP | Version du serveur Unified Manager | Description 
+
+
+ a| 
+2638
+ a| 
+5.x
+ a| 
+Serveur de base de données Sybase SQL Anywhere
+
+
+
+ a| 
+3306
+ a| 
+6.x
+ a| 
+Serveur de base de données MySQL
+
+|===
+* Pour Performance Advisor, vous devez avoir créé un compte utilisateur Active IQ Unified Manager ayant le rôle minimal de GlobalRead.
++
+Consultez l'aide en ligne de _OnCommand Unified Manager_ pour plus de détails.
+
+* Le port TCP pour les connexions entrantes sur le serveur VMware vCenter doit être ouvert.
++
+Le numéro de port TCP par défaut est 443. Consultez la documentation de votre pare-feu pour plus de détails.
+
+
+
+*À propos de cette tâche*
+
+Cette procédure permet d'ajouter plusieurs sources de données de serveur Unified Manager à WFA. Cependant, vous ne devez pas utiliser cette procédure pour coupler Unified Manager Server 6.3 et les versions ultérieures avec WFA et utiliser la fonctionnalité de protection du serveur Unified Manager.
+
+Pour plus d'informations sur le couplage de WFA au serveur Unified Manager 6.x, consultez l'aide en ligne de _OnCommand Unified Manager_.
+
+
+NOTE: Lors de la configuration d'une source de données avec WFA, vous devez savoir que les types de sources de données Active IQ Unified Manager 6.0, 6.1 et 6.2 sont obsolètes dans la version WFA 4.0, et que ces types de sources de données ne seront pas pris en charge dans les prochaines versions.
+
+.Étapes
+. Accédez à WFA à l'aide d'un navigateur Web.
+. Cliquez sur *Paramètres* et sous *Configuration*, cliquez sur *sources de données*.
+. Choisissez l'action appropriée :
++
+[cols="2*"]
+|===
+| Pour... | Procédez comme ça... 
+
+
+ a| 
+Créer une nouvelle source de données
+ a| 
+Cliquez sur image:../media/new_wfa_icon.gif["Nouvelle icône"] dans la barre d'outils.
+
+
+
+ a| 
+Modifiez une source de données restaurée si vous avez mis à niveau WFA
+ a| 
+Sélectionnez l'entrée de la source de données existante, puis cliquez sur image:../media/edit_wfa_icon.gif["Icône Modifier"] dans la barre d'outils.
+
+|===
++
+Si vous avez ajouté une source de données de serveur Unified Manager à WFA, puis mis à niveau la version du serveur Unified Manager, WFA ne reconnaîtra pas la version mise à niveau du serveur Unified Manager. Vous devez supprimer la version précédente du serveur Unified Manager, puis ajouter la version mise à niveau du serveur Unified Manager à WFA.
+
+. Dans la boîte de dialogue *Nouvelle source de données*, sélectionnez le type de source de données requis et entrez un nom pour la source de données et le nom d'hôte.
++
+En fonction du type de source de données sélectionné, les champs port, nom d'utilisateur, mot de passe et délai d'attente peuvent être automatiquement renseignés avec les données par défaut, si disponibles. Vous pouvez modifier ces entrées si nécessaire.
+
+. Choisissez une action appropriée :
++
+[cols="2*"]
+|===
+| Pour... | Procédez comme ça... 
+
+
+ a| 
+Versions Active IQ Unified Manager antérieures à 6.0
+ a| 
+Entrez le nom d'utilisateur et le mot de passe que vous avez utilisés pour remplacer les informations d'identification par défaut lors de l'exécution de l'outil ocsetup.
+
+
+
+ a| 
+Active IQ Unified Manager 6.3 et versions ultérieures
+ a| 
+Entrez les informations d'identification du compte utilisateur de la base de données que vous avez créé sur le serveur Unified Manager. Voir l'aide en ligne de _OnCommand Unified Manager_ pour plus de détails sur la création d'un compte utilisateur de base de données.
+
+
+
+ a| 
+Performance Advisor pour (versions Active IQ Unified Manager antérieures à 6.0)
+ a| 
+Entrez les informations d'identification d'un utilisateur Active IQ Unified Manager ayant le rôle minimum de GlobalRead.
+
+[NOTE]
+====
+Vous ne devez pas fournir les informations d'identification d'un compte utilisateur de base de données Active IQ Unified Manager créé à l'aide de l'interface de ligne de commande ou de l'outil ocsetup.
+
+====
+|===
+. Cliquez sur *Enregistrer*.
+. *Facultatif :* dans le tableau sources de données, sélectionnez la source de données, puis cliquez sur image:../media/acquire_now_wfa_icon.gif["Icône acquérir maintenant"] dans la barre d'outils.
+. Vérifier l'état du processus d'acquisition de données.
+

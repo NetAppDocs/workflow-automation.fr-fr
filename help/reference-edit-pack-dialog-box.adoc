@@ -1,0 +1,112 @@
+---
+permalink: help/reference-edit-pack-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, pack, dialog, enable 
+summary: La boîte de dialogue Modifier le pack vous permet de modifier le pack. 
+---
+= Boîte de dialogue Modifier le pack
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La boîte de dialogue Modifier le pack vous permet de modifier le pack.
+
+* Onglet Détails
+* Contenu de l'emballage
+
+
+
+
+== Onglet Détails
+
+* *Nom*
++
+Permet d'entrer un nom et d'enregistrer le pack.
+
+* *Version*
++
+Permet d'entrer une version et d'enregistrer le pack.
+
+* *Auteur*
++
+Permet d'entrer le nom de l'auteur et d'enregistrer le pack.
+
+* *Description*
++
+Permet de saisir une description et d'enregistrer le pack.
+
+
+
+
+
+== Contenu de l'emballage
+
+* *Workflow*
++
+L'option *Workflow* vous permet d'afficher les *Nom* et *version entité* du flux de travail.
+
+* *Finders*
++
+L'option *Finders* vous permet d'afficher les *Nom* et *version entité* du Finder.
+
+* *Filtres*
++
+L'option *Filters* vous permet d'afficher les *Nom* et *version entité* du filtre.
+
+* *Commandes*
++
+L'option *Commands* vous permet d'afficher les *Nom* et *version entité* de la commande.
+
+* *Fonctions*
++
+L'option *Functions* vous permet d'afficher les *Nom* et *version entité* de la fonction.
+
+* *Modèles*
++
+L'option *Templates* permet d'afficher les *Nom* et *version entité* du modèle.
+
+* *Dictionnaire*
++
+L'option *Dictionnaire* vous permet d'afficher les *Nom* et *version entité* du dictionnaire.
+
+* *Schémas*
++
+L'option *schémas* vous permet d'afficher les *Nom* et *version entité* du schéma.
+
+* *Requêtes de cache*
++
+L'option requêtes *cache* permet d'afficher les *Nom* et *version entité* de la requête de cache.
+
+* *Types de sources de données SQL*
++
+L'option *SQL Data Source types* permet d'afficher les *Nom* et *version entité* du type de source de données SQL.
+
+* *Types de sources de données de script*
++
+L'option *script Data Source types* permet d'afficher les *Nom* et *version entité* du type de source de données de script.
+
+* *Catégories*
++
+L'option *Categories* permet d'afficher les *Nom* et *version entité* de la catégorie.
+
+* *Types de systèmes distants*
++
+L'option *Remote System types* permet d'afficher les *Name* et *Entity version* du type de système distant.
+
+
+
+
+
+== Boutons de commande
+
+* *Enregistrer*
++
+Enregistre le pack et ferme la boîte de dialogue.
+
+* *Annuler*
++
+Ferme la boîte de dialogue sans enregistrer.
+
+

@@ -1,0 +1,14 @@
+---
+permalink: workflows/concept-understanding-workflow-automation-designer.html 
+sidebar: sidebar 
+keywords: create, workflows, automation, designer, use, building blocks, finders, filters, commands, understanding, important, before, start 
+summary: 'Vous créez des flux de travail dans le concepteur Workflow Automation (WFA) à l"aide des éléments de base tels que des finders, des filtres et des commandes. Avant de créer vos workflows, il est important de connaître les éléments de base et le processus de création des flux de travail.' 
+---
+= Présentation du concepteur de Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous créez des flux de travail dans le concepteur Workflow Automation (WFA) à l'aide des éléments de base tels que des finders, des filtres et des commandes. Avant de créer vos workflows, il est important de connaître les éléments de base et le processus de création des flux de travail.

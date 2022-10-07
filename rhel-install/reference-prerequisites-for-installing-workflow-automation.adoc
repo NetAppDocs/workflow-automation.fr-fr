@@ -1,0 +1,133 @@
+---
+permalink: rhel-install/reference-prerequisites-for-installing-workflow-automation.html 
+sidebar: sidebar 
+keywords: prerequisites, install, workflow, automation 
+summary: 'Avant d"installer OnCommand Workflow Automation (WFA), vous devez vérifier que vous disposez des informations requises et que vous avez terminé certaines tâches.' 
+---
+= Conditions préalables à l'installation de Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant d'installer OnCommand Workflow Automation (WFA), vous devez vérifier que vous disposez des informations requises et que vous avez terminé certaines tâches.
+
+Avant d'installer WFA sur un système, vous devez avoir terminé les tâches suivantes :
+
+* Téléchargement du fichier d'installation WFA à partir du site de support NetApp et copie le fichier vers le serveur sur lequel vous souhaitez installer WFA
++
+
+NOTE: Vous devez disposer d'identifiants valides pour vous connecter au site du support NetApp. Si vous ne disposez pas d'identifiants valides, vous pouvez vous inscrire sur le site de support NetApp pour obtenir ces identifiants.
+
+* Vérifier que le système a accès aux éléments suivants, le cas échéant :
++
+** Contrôleurs de stockage
+** Active IQ Unified Manager
+
+
+
+
+[NOTE]
+====
+Si votre environnement nécessite une accessibilité SSH (Secure Shell), vous devez vous assurer que SSH est activé sur les contrôleurs cibles.
+
+====
+* Vérifier que Perl v5.10.1 est installé
+
+
+
+
+== Informations de configuration requises
+
+[cols="3*"]
+|===
+| Unité ou système | Détails | Objectif 
+
+
+ a| 
+Pour les systèmes
+ a| 
+* Adresse IP
+* Nom d'utilisateur et mot de passe
+
+ a| 
+Effectuer des opérations sur les systèmes de stockage
+
+[NOTE]
+====
+Des identifiants root ou admin sont requis pour le stockage (baies).
+
+====
+
+
+ a| 
+Référentiels externes tels que OnCommand Balance et bases de données personnalisées
+ a| 
+* Adresse IP
+* Nom d'utilisateur et mot de passe d'un compte utilisateur en lecture seule
+
+ a| 
+Acquérir dataVous devez créer le contenu WFA approprié, tel que les entrées de dictionnaire et les requêtes en cache pour les référentiels externes, afin d'acquérir des données à partir des référentiels externes.
+
+
+
+ a| 
+Serveur de messagerie
+ a| 
+* Adresse IP
+* Nom d'utilisateur et mot de passe
+
+
+
+NOTE: Le nom d'utilisateur et le mot de passe sont requis si votre serveur de messagerie nécessite une authentification.
+ a| 
+Recevez des notifications WFA par e-mail
+
+
+
+ a| 
+Serveur AutoSupport
+ a| 
+* Hôte de messagerie
+
+ a| 
+Envoyer des messages AutoSupport via SMTPsi aucun hôte de messagerie n'est configuré, vous pouvez utiliser HTTP ou HTTPS pour envoyer des messages AutoSupport.
+
+
+
+ a| 
+Serveur LDAP Microsoft Active Directory (AD
+ a| 
+* Adresse IP
+* Nom d'utilisateur et mot de passe
+* Nom du groupe
+
+ a| 
+Authentifier et autoriser via AD LDAP ou AD LDAPS
+
+
+
+ a| 
+Application de gestion SNMP
+ a| 
+* Adresse IP
+* Port
+
+ a| 
+Réception de notifications SNMP WFA
+
+
+
+ a| 
+Serveur Syslog
+ a| 
+* Adresse IP
+
+ a| 
+Envoyer les données du journal
+
+|===
+*Informations connexes*
+
+https://mysupport.netapp.com/site/["Support NetApp"^]

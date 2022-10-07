@@ -1,0 +1,156 @@
+---
+permalink: workflows/reference-guidelines-for-error-handling.html 
+sidebar: sidebar 
+keywords: aware, guidelines, error, handling, writing, powershell, perl, script, oncommand, workflow, automation 
+summary: 'Vous devez connaître les consignes relatives à la gestion des erreurs lors de l"écriture d"un script PowerShell ou Perl pour OnCommand Workflow Automation (WFA).' 
+---
+= Consignes de gestion des erreurs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez connaître les consignes relatives à la gestion des erreurs lors de l'écriture d'un script PowerShell ou Perl pour OnCommand Workflow Automation (WFA).
+
+
+
+== Gestion des erreurs PowerShell
+
+[cols="2*"]
+|===
+| Directives | Exemple 
+
+
+ a| 
+Les paramètres communs ajoutés aux applets de commande par le runtime PowerShell comprennent des paramètres de gestion des erreurs tels que ErrorAction et WarningAction :
+
+* Le paramètre ErrorAction détermine comment une cmdlet doit réagir à une erreur de non-fin à partir de la commande.
+* Le paramètre WarningAction détermine comment une cmdlet doit réagir à un avertissement de la commande.
+* Stop, SilentlyCongue, Inquid et continue sont les valeurs valides pour les paramètres ErrorAction et WarningAction.
+
+
+Pour plus d'informations, vous pouvez utiliser le `Get-Help about_CommonParameters` Commande dans l'interface de ligne de commandes PowerShell.
+ a| 
+ErrorAction : l'exemple suivant montre comment gérer une erreur de non-fin en tant qu'erreur de fin :
+
+[listing]
+----
+New-NcIgroup-Name $IgroupName-Protocol $Protocol-Type$OSType-ErrorActionstop
+----
+Warningaction
+
+[listing]
+----
+New-VM-Name $VMName-VM $SourceVM-DataStore$DataStoreName-VMHost$VMHost-WarningActionSilentlyContinue
+----
+
+
+ a| 
+Utilisez l'instruction générale « try/Catch » si le type d'exception entrante est inconnu.
+ a| 
+[listing]
+----
+try
+{
+"In Try/catch block"
+}
+catch
+{
+"Got exception"
+}
+----
+
+
+ a| 
+Utilisez l'instruction « try/Catch » spécifique si le type d'exception entrante est connu.
+ a| 
+[listing]
+----
+try
+{
+"In Try/catch block"
+}
+catch[System.Net.WebExceptional], [System.IO.
+IOException]
+{
+"Got exception"
+}
+----
+
+
+ a| 
+Utilisez la déclaration « enfin » pour libérer des ressources.
+ a| 
+[listing]
+----
+try
+{
+"In Try/catch block"
+}
+catch
+{
+"Got exception"
+}
+finally
+{
+"Release resources"
+}
+----
+
+
+ a| 
+Utilisez les variables automatiques de PowerShell pour accéder aux informations relatives aux exceptions.
+ a| 
+[listing]
+----
+try
+{
+Get-WFALogger -Info -message $("Creating
+Ipspace: " + $Ipspace)
+New-NaNetIpspace-Name $Ipspace
+}
+catch
+{
+Throw "Failed to create Ipspace. Message:
+" + $_.Exception.Message;
+}
+----
+|===
+
+
+== Gestion des erreurs Perl
+
+[cols="2*"]
+|===
+| Directives | Exemple 
+
+
+ a| 
+Perl n'inclut pas la prise en charge du langage natif pour les blocs Try/Catch. Utilisez des blocs d'évaluation pour vérifier et gérer les erreurs. Conserver les blocs d'évaluation aussi petits que possible.
+ a| 
+[listing]
+----
+eval {
+
+$wfa_util->sendLog('INFO',
+"Quiescing the relationship :
+$DestinationCluster://$DestinationVserver
+/$DestinationVolume"
+    );
+$server->snapmirror_quiesce(
+'destination-vserver' => $DestinationVserver,
+'destination-volume'  => $DestinationVolume
+    );
+$wfa_util->sendLog('INFO', 'Quiesce operation
+started successfully.');
+};
+
+$wfa_util->checkEvalFailure(
+"Failed to quiesce the SnapMirror relationship
+$DestinationCluster://$DestinationVserver
+/$DestinationVolume",
+    $@
+);
+----
+|===

@@ -1,0 +1,167 @@
+---
+permalink: help/reference-schemes-window.html 
+sidebar: sidebar 
+keywords: scheme, window, display, available, scheme, enable, manage, oncommand, workflow, automation, acquire, data, relevant, environment 
+summary: 'La fenêtre schémas affiche les schémas disponibles et vous permet de gérer les schémas. OnCommand Workflow Automation (WFA) utilise des schémas pour acquérir des données pertinentes pour un environnement.' 
+---
+= La fenêtre schémas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La fenêtre schémas affiche les schémas disponibles et vous permet de gérer les schémas. OnCommand Workflow Automation (WFA) utilise des schémas pour acquérir des données pertinentes pour un environnement.
+
+Un schéma représente le modèle de données d'un système. Le modèle de données est un ensemble d'entrées de dictionnaire. Vous pouvez définir un schéma, puis définir un type de source de données. La source de données définit la façon dont les données sont acquises et le schéma est rempli. Par exemple, un schéma _vc_ contient des données pertinentes pour votre environnement virtuel, telles que des machines virtuelles, des hôtes et des datastores.
+
+
+
+== Table de schémas
+
+La table schémas répertorie les entrées de schéma disponibles. Chaque entrée est identifiée comme l'une des suivantes :
+
+* image:../media/community_certification.gif[""] - contenu créé par les utilisateurs
+* image:../media/ps_certified_icon_wfa.gif[""] - Contenu développé par les Services professionnels (PS), qui n'est disponible que sur des installations personnalisées réalisées par les Services professionnels
+* image:../media/community_certification.gif[""] - packs développés par les utilisateurs
+* image:../media/lock_icon_wfa.gif[""] - contenu créé par les utilisateurs verrouillés
+* image:../media/netapp_certified.gif[""] - Contenu certifié NetApp
+
+
+Vous pouvez personnaliser l'affichage du tableau à l'aide des fonctions de filtrage et de tri disponibles pour chaque colonne, ainsi qu'en réorganisant l'ordre des colonnes.
+
+* image:../media/filter_icon_wfa.gif["Icône de filtre"] active ou désactive le filtrage pour l'ensemble de la table. Un "x" rouge apparaît sur l'icône si le filtrage est désactivé.
+* Double-cliquer image:../media/filter_icon_wfa.gif["Icône de filtre"] efface et réinitialise les sélections de filtrage.
+* image:../media/wfa_filter_icon.gif["Icône de filtre"] sur chaque en-tête de colonne, vous pouvez effectuer un filtrage en fonction du contenu des colonnes. Cliquez sur image:../media/wfa_filter_icon.gif["Icône de filtre"] dans une colonne, vous pouvez filtrer un élément spécifique dans la liste déroulante ou sur tous les éléments disponibles.
+* Cliquer sur l'en-tête de colonne permet de basculer entre l'ordre croissant et décroissant de tri. Vous pouvez identifier l'ordre de tri appliqué à l'aide des flèches de tri (image:../media/wfa_sortarrow_up_icon.gif["Icône de tri"] pour les valeurs ascendantes et image:../media/wfa_sortarrow_down_icon.gif["Icône de tri"] pour décroissant).
+* Pour réorganiser l'emplacement des colonnes, vous pouvez faire glisser et déposer les colonnes dans l'ordre voulu. Toutefois, vous ne pouvez pas masquer ou supprimer ces colonnes.
+* Cliquez sur la zone de texte filtre *Search* pour rechercher un contenu spécifique. En outre, vous pouvez effectuer une recherche à l'aide des opérateurs pris en charge pour le type de colonne applicable, alphabétique ou numérique.
+
+
+La table schémas contient les colonnes suivantes :
+
+* *Certification*
++
+Indique si le schéma est créé par l'utilisateur (image:../media/community_certification.gif[""]), PS (image:../media/ps_certified_icon_wfa.gif[""]), communauté (image:../media/community_certification.gif[""]), verrouillé par l'utilisateur (image:../media/lock_icon_wfa.gif[""]) Ou certifié NetApp (image:../media/netapp_certified.gif[""]).
+
+* *Nom*
++
+Affiche le nom du schéma.
+
++
+Vous pouvez rechercher un schéma en saisissant son nom dans la zone de texte filtre *Search*.
+
+* *Nom d'affichage*
++
+Affiche le nom du schéma.
+
++
+Vous pouvez rechercher un schéma en saisissant son nom dans la zone de texte filtre *Search*.
+
+* *Version entité*
++
+Affiche le numéro de version de l'objet dans `major.minor.revision` format--par exemple, 1.0.0.
+
++
+Vous pouvez rechercher un schéma en saisissant le numéro de version dans la zone de texte filtre *Search*.
+
+* *Description*
++
+Affiche la description du schéma.
+
++
+Vous pouvez rechercher un schéma en saisissant sa description dans la zone de texte filtre *Search*.
+
+* *Type*
++
+Indique si le schéma est utilisé pour acquérir des données à partir d'un système distant ou directement à partir de flux de travail ou de commandes. Les valeurs possibles sont acquisition de la source de données et autres.
+
++
+Vous pouvez rechercher des schémas en saisissant le type dans la zone de texte filtre *Search*.
+
+* *Réinitialiser le drapeau*
++
+Indique si le schéma est réinitialisé au cours du cycle d'acquisition de données suivant. Les valeurs possibles sont vrai et faux.
+
+* *Dernière mise à jour*
++
+Affiche la date et l'heure de la dernière mise à jour du schéma.
+
++
+Vous pouvez rechercher des schémas en sélectionnant la catégorie de temps requise dans la liste déroulante de filtre.
+
+* *Mis à jour par*
++
+Affiche le nom de l'utilisateur qui a mis à jour le schéma.
+
++
+Vous pouvez rechercher des schémas en saisissant le nom d'utilisateur dans la zone de texte filtre *Search*.
+
+* *Verrouillé par*
++
+Affiche le nom de l'utilisateur qui a verrouillé le schéma.
+
++
+Vous pouvez rechercher des schémas en saisissant le nom d'utilisateur dans la zone de texte filtre *Search*.
+
+
+
+
+
+== Barre d'outils
+
+La barre d'outils se trouve au-dessus de l'en-tête de colonne. Vous pouvez utiliser les icônes de la barre d'outils pour effectuer diverses actions. Vous pouvez également accéder à ces actions à partir du menu contextuel de la fenêtre.
+
+* *image:../media/new_wfa_icon.gif["Nouvelle icône"] (Nouveau)*
++
+Ouvre la boîte de dialogue Nouveau schéma, qui permet de créer un nouveau schéma.
+
+* *image:../media/edit_wfa_icon.gif["Icône Modifier"] (Modifier)*
++
+Ouvre la boîte de dialogue Schéma <Nom du schéma> pour le schéma sélectionné, qui vous permet de modifier le schéma.
+
+* *image:../media/lock_wfa_icon.gif["Icône de verrouillage"] (Verrouillage)*
++
+Ouvre la boîte de dialogue Verrouiller la confirmation du schéma, qui vous permet de verrouiller le schéma sélectionné. Cette option n'est activée que pour les schémas que vous avez créés.
+
+* *image:../media/unlock_wfa_icon.gif["Icône de déverrouillage"] (Déverrouiller)*
++
+Ouvre la boîte de dialogue déverrouiller le schéma de confirmation, qui vous permet de déverrouiller le schéma sélectionné. Cette option n'est activée que pour les schémas que vous avez verrouillés. Les administrateurs peuvent déverrouiller des schémas verrouillés par d'autres utilisateurs.
+
+* *image:../media/delete_wfa_icon.gif["Icône Supprimer"] (Supprimer)*
++
+Ouvre la boîte de dialogue de confirmation Supprimer le schéma, qui permet de supprimer les schémas créés par l'utilisateur sélectionnés.
+
++
+
+NOTE: Vous ne pouvez pas supprimer un schéma WFA ou PS.
+
+* *image:../media/export_wfa_icon.gif["Icône Exporter"] (Exportation)*
++
+Permet d'exporter le schéma créé par l'utilisateur sélectionné.
+
++
+
+NOTE: Vous ne pouvez pas exporter un schéma WFA ou PS.
+
+* *image:../media/reset_scheme_wfa_icon.gif["Icône de réinitialisation du schéma"] (Schéma de réinitialisation)*
++
+Vous permet de réinitialiser le schéma au cours du cycle d'acquisition de données suivant.
+
+* *image:../media/add_to_pack.png["icône ajouter au pack"] (Ajouter au pack)*
++
+Ouvre la boîte de dialogue Ajouter aux schémas de composition à emporter, qui permet d'ajouter le schéma et ses entités fiables à un pack, modifiable.
+
++
+
+NOTE: La fonction Ajouter au pack n'est activée que pour les schémas pour lesquels la certification est définie sur *aucun.*
+
+* *image:../media/remove_from_pack.png["icône supprimer du pack"] (Retirer du paquet)*
++
+Ouvre la boîte de dialogue Supprimer des schémas de composition à emporter pour le schéma sélectionné, qui vous permet de supprimer ou de supprimer le schéma du pack.
+
++
+
+NOTE: La fonction Supprimer du pack n'est activée que pour les schémas pour lesquels la certification est définie sur *aucun.*
+
+

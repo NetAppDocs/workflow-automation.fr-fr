@@ -1,0 +1,60 @@
+---
+permalink: rhel-install/task-upgrade-from-wfa-4-2.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, upgrade, later 
+summary: 'Vous pouvez effectuer une mise à niveau sans déplacement des données depuis OnCommand Workflow Automation (WFA) 3.1 ou version ultérieure vers la dernière version disponible de WFA afin d"utiliser les nouvelles fonctionnalités et améliorations.' 
+---
+= Mise à niveau depuis OnCommand Workflow Automation 3.1 ou version ultérieure
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez effectuer une mise à niveau sans déplacement des données depuis OnCommand Workflow Automation (WFA) 3.1 ou version ultérieure vers la dernière version disponible de WFA afin d'utiliser les nouvelles fonctionnalités et améliorations.
+
+Vous devez avoir téléchargé le fichier binaire .bin du site de support NetApp vers la machine hôte WFA.
+
+Vous ne pouvez effectuer des restaurations vers WFA 5.1 que depuis WFA 5.0 ou 4.2. Une sauvegarde de base de données WFA peut uniquement être restaurée sur un système qui exécute la même version ou une version plus récente de WFA.
+
+La connexion au cluster WFA 5.1 doit accepter le certificat SSL. Lors de la mise à jour d'une version antérieure de WFA vers WFA 5.1, vous devez certifier la connexion au cluster. Enregistrez les détails de la connexion au cluster pour la certification du cluster après la mise à niveau sans déplacement.
+
+Vous ne pouvez pas installer MYSQL seul lors de la mise à niveau à partir de versions antérieures de WFA. Vous pouvez installer MySQL seul :
+
+* Lorsque vous effectuez une mise à niveau depuis WFA 4.2 vers des versions ultérieures de WFA.
+* Mettre à niveau à partir de WFA 3.1 ou version ultérieure en choisissant l'une des méthodes suivantes :
++
+** Installation interactive
++
+... Accédez au fichier binaire .bin dans la machine hôte WFA, puis exécutez le fichier.
+... Suivez les instructions à l'écran pour terminer la mise à niveau.
+
+
+** Installation silencieuse
++
+À l'invite du shell :
+
++
+`./WFA-version_number-build_number.bin [-y] [-u admin_user_name] [-p admin_user_password]`
+
++
+*Exemple:*
+
++
+`./WFA-3.1-Z3234343435.bin -y -u admin -p Company*234`
+
++
+Pendant la mise à niveau silencieuse, vous devez inclure des valeurs pour toutes les options de commande suivantes :
+
++
+*** `-y` ignore la confirmation d'installation.
+*** `-u` spécifie le nom d'utilisateur admin.
+*** `-p` spécifie le mot de passe administrateur.
++
+Si vous n'avez pas fourni le mot de passe d'administrateur, vous devez entrer le mot de passe lorsque vous y êtes invité.
+
+
+
+
+
+

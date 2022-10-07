@@ -1,0 +1,16 @@
+---
+permalink: help/reference-oncommand-workflow-automation-designer-features.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, include, various, feature, help, design, storage 
+summary: OnCommand Workflow Automation inclut diverses fonctionnalités pour vous aider dans la conception des flux de travail de stockage. 
+---
+= Fonctions du concepteur OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation inclut diverses fonctionnalités pour vous aider dans la conception des flux de travail de stockage.
+
+Pour plus d'informations sur les fonctions, reportez-vous aux rubriques suivantes.

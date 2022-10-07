@@ -1,0 +1,37 @@
+---
+permalink: workflows/task-create-recurring-schedules.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, provide, schedule, options, execute, specific, time, create, recurring, associate, routinely 
+summary: 'OnCommand Workflow Automation (WFA) propose deux options de planification pour les flux de travail. Vous pouvez planifier l"exécution d"un workflow une fois à un moment donné ou créer des plannings récurrents et associer les planifications aux flux de travail afin que les flux de travail soient régulièrement exécutés.' 
+---
+= Créer des planifications récurrentes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation (WFA) propose deux options de planification pour les flux de travail. Vous pouvez planifier l'exécution d'un workflow une fois à un moment donné ou créer des plannings récurrents et associer les planifications aux flux de travail afin que les flux de travail soient régulièrement exécutés.
+
+Un programme que vous avez créé peut être réutilisé et associé à plusieurs flux de travail.
+
+.Étapes
+. Cliquez sur *exécution* > *plannings*.
+. Cliquez sur image:../media/new_wfa_icon.gif["Nouvelle icône"] dans la barre d'outils.
+. Dans la boîte de dialogue *Nouveau programme*, entrez ou sélectionnez un nom, une description et une fréquence pour le programme.
++
+Pour la fréquence, vous devez entrer l'heure au format 24 heures. L'heure du serveur WFA est appliquée aux planifications.
+
+. Cliquez sur *OK*.
+
+
+
+
+== Une fois que vous avez terminé
+
+* Vous pouvez associer le planning à un flux de travail lorsque vous exécutez le flux de travail en utilisant l'option *Exécuter de façon récurrence*.
+* Vous pouvez afficher les détails d'un flux de travail et son association avec un programme en cliquant sur *exécution* > *plannings récurrents*.
++
+La planification des ressources et de l'exécution des workflows planifiés une fois est effectuée immédiatement lorsque les flux de travail sont planifiés. Toutefois, la planification de ressources et d'exécution des flux de travail avec un planning récurrent se produit à l'heure planifiée et non à l'heure où la planification est associée à un flux de travail.
+
+

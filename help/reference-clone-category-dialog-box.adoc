@@ -1,0 +1,62 @@
+---
+permalink: help/reference-clone-category-dialog-box.html 
+sidebar: sidebar 
+keywords: clone, category, dialog box, enable, copy, workflow 
+summary: La boîte de dialogue Cloner la catégorie vous permet de copier une catégorie de flux de travail et de la modifier. 
+---
+= Cloner la boîte de dialogue Catégorie
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La boîte de dialogue Cloner la catégorie vous permet de copier une catégorie de flux de travail et de la modifier.
+
+* *Nom*
++
+Permet de modifier le nom de la catégorie. Le nom de la catégorie que vous avez sélectionnée comme clone est utilisé comme nom du clone, puis ajouté - copie par défaut.
+
+* *Description*
++
+Permet de saisir une description pour la catégorie.
+
+* *Flux de travail disponibles*
++
+Affiche tous les flux de travail disponibles qui ne sont pas déplacés vers la zone flux de travail sélectionnés.
+
+* *Flux de travail sélectionnés*
++
+Affiche tous les flux de travail sélectionnés pour la catégorie.
+
+* *Catégorie utilisée pour l'autorisation de workflow*
++
+Permet de sélectionner des utilisateurs avec un rôle d'opérateur pouvant exécuter la catégorie. Par défaut, la case n'est pas cochée et la catégorie est disponible pour tous les utilisateurs.
+
+* *Opérateurs disponibles*
++
+Affiche tous les utilisateurs ayant le rôle d'opérateur.
+
+* *Opérateurs sélectionnés*
++
+Affiche les utilisateurs autorisés à exécuter la catégorie.
+
+
+
+
+
+== Boutons de commande
+
+* *Boutons de sélection*
++
+Vous permet de déplacer l'entrée sélectionnée d'une boîte à l'autre.
+
+* *Enregistrer*
++
+Enregistre la catégorie et ferme la boîte de dialogue.
+
+* *Annuler*
++
+N'enregistre pas la catégorie et ferme la boîte de dialogue.
+
+

@@ -1,0 +1,109 @@
+---
+permalink: help/reference-resource-selection-dialog-box.html 
+sidebar: sidebar 
+keywords: resource, selection, dialog box, enable, search, map, command 
+summary: La boîte de dialogue sélection des ressources vous permet de rechercher des ressources et de mapper les ressources sur une commande. 
+---
+= Boîte de dialogue sélection de ressources
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La boîte de dialogue sélection des ressources vous permet de rechercher des ressources et de mapper les ressources sur une commande.
+
+* Sélectionnez <objet dictionnaire> par onglet
+* Onglet Avancé
+
+
+
+
+== Sélectionnez <objet dictionnaire> par onglet
+
+Cet onglet vous permet de spécifier un chercheur ou des filtres comme critères de recherche et de saisir des attributs pour les critères de recherche sélectionnés. Vous pouvez également enregistrer les filtres sélectionnés en tant que recherche.
+
+* *Définir des règles de filtre*
++
+Vous permet de définir un ensemble de règles pour les ressources d'entrée du dictionnaire, telles que les unités vFiler, les agrégats et les machines virtuelles.
+
++
+Les règles de filtre peuvent contenir un ou plusieurs groupes de règles.
+
++
+Une règle se compose d'un attribut d'entrée de dictionnaire, d'un opérateur et d'une valeur. L'attribut peut également inclure des attributs de ses références. Vous pouvez par exemple spécifier une règle pour les agrégats comme suit : répertoriez tous les agrégats avec un nom commençant par la chaîne « aggr » et ayant une taille disponible supérieure à 5 Go. La première règle du groupe est l'attribut « nom », l'opérateur « définir avec » et la valeur « aggr ». La deuxième règle du même groupe est l'attribut « Available_size_mb », avec l'opérateur « »> » et la valeur « 5000 ».
+
++
+L'option *définir les règles de filtre* est désactivée si vous avez sélectionné un Finder.
+
++
+Vous pouvez effacer les valeurs spécifiées en cliquant sur le bouton *Réinitialiser*.
+
+* *Sélectionnez une ressource par ses touches naturelles*
++
+Vous permet de sélectionner une ressource en fonction des touches naturelles de la ressource.
+
+* *Finder*
++
+Permet de sélectionner un viseur dans la liste. *Aucun* est sélectionné par défaut.
+
++
+Les filtres sont affichés sous la liste de recherche. Vous ne pouvez pas sélectionner de filtres si vous avez sélectionné un détecteur.
+
+* *Paramètres*
++
+Vous permet de saisir les valeurs du Finder ou des filtres sélectionnés. Vous devez entrer toutes les valeurs requises pour remplir les critères de recherche.
+
+* *Boutons de commande*
++
+** *Enregistrer comme Finder*
++
+Enregistre les filtres sélectionnés en tant que recherche.
+
+** *Test*
++
+Vous permet de tester les paramètres des filtres sélectionnés avant de spécifier les valeurs dans la zone Paramètres.
+
+** *OK*
++
+Enregistre les paramètres de configuration et ferme la boîte de dialogue.
+
+** *Annuler*
++
+Annule les modifications, le cas échéant, et ferme la boîte de dialogue.
+
+
+
+
+
+
+
+== Onglet Avancé
+
+Cet onglet vous permet de spécifier le moment où la recherche doit être effectuée et vous permet de trier les attributs de ressource et l'état des attributs de ressource.
+
+* *Exécuter cette recherche toujours*
++
+Exécute la recherche sans restriction lors de l'exécution de la commande.
+
+* *Exécuter la recherche uniquement lorsque l'expression suivante est vraie*
++
+Exécute la recherche uniquement lorsque la valeur de l'attribut facultatif spécifié dans la case est « vrai ». Vous pouvez utiliser la syntaxe MVFLEX expression Language (MVEL) pour spécifier l'attribut facultatif.
+
+* *Table de tri*
++
+Affiche les attributs et l'ordre de tri des filtres sélectionnés dans l'onglet *Sélectionner <objet dictionnaire> par*. L'ordre de tri est significatif pour la sélection de ressources--par exemple, si vous avez sélectionné l'ordre décroissant pour les agrégats, l'agrégat avec le maximum `available_space` est sélectionné comme ressource. Pour modifier l'ordre de tri d'un attribut, vous pouvez cliquer sur la colonne d'état de l'attribut et sélectionner l'ordre de tri requis dans la liste.
+
+* *Boutons de commande*
++
+** *Haut*
++
+Déplace l'entrée sélectionnée d'une ligne vers le haut dans la table de tri.
+
+** *Bas*
++
+Déplace l'entrée sélectionnée d'une ligne vers le bas dans la table de tri.
+
+
+
+

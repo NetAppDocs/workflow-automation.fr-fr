@@ -1,0 +1,25 @@
+---
+permalink: rhel-install/task-back-up-oncommand-workflow-automation-database-using-the-web-portal.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, back up, wfa database, web portal 
+summary: 'Vous pouvez sauvegarder la base de données OnCommand Workflow Automation (WFA) à partir du portail Web et utiliser le fichier de sauvegarde pour la restauration des données. Vous ne pouvez pas effectuer de sauvegarde complète à partir du portail Web.' 
+---
+= Sauvegarder la base de données WFA à partir du portail Web
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez sauvegarder la base de données OnCommand Workflow Automation (WFA) à partir du portail Web et utiliser le fichier de sauvegarde pour la restauration des données. Vous ne pouvez pas effectuer de sauvegarde complète à partir du portail Web.
+
+Vous devez disposer des informations d'identification admin ou Architect pour effectuer cette tâche.
+
+Un utilisateur WFA ayant le rôle de sauvegarde ne peut pas se connecter au portail Web pour effectuer une sauvegarde. Les utilisateurs WFA ayant un rôle de sauvegarde ne peuvent effectuer que des sauvegardes à distance ou par script.
+
+.Étapes
+. Connectez-vous à l'interface graphique Web WFA en tant qu'administrateur.
+. Cliquez sur *Paramètres* et sous *Maintenance*, cliquez sur *Backup & Restore*.
+. Cliquez sur *Backup*.
+. Dans la boîte de dialogue qui s'ouvre, sélectionnez un emplacement, puis enregistrez le fichier.
+

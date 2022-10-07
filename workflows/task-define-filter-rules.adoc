@@ -1,0 +1,79 @@
+---
+permalink: workflows/task-define-filter-rules.html 
+sidebar: sidebar 
+keywords: define, set, rules, filtering, dictionary, entry, resources, units, aggregates, virtual, machines, customize, existing, workflows, create 
+summary: 'Vous pouvez définir un ensemble de règles de filtrage des ressources d"entrée du dictionnaire telles que les unités vFiler, les agrégats et les machines virtuelles. Vous pouvez personnaliser les règles des flux de travail existants et des nouveaux flux de travail pendant que vous les créez.' 
+---
+= Définir des règles de filtre
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez définir un ensemble de règles de filtrage des ressources d'entrée du dictionnaire telles que les unités vFiler, les agrégats et les machines virtuelles. Vous pouvez personnaliser les règles des flux de travail existants et des nouveaux flux de travail pendant que vous les créez.
+
+.Étapes
+. Connectez-vous à WFA via un navigateur Web en tant qu'administrateur.
+. Cliquez sur *Workflow Design* > *Workflow*.
+. Dans la fenêtre *Workflow*, double-cliquez sur le flux de travail à modifier.
++
+La fenêtre Workflow <nom du flux de travail> s'affiche.
+
+. Définissez un ensemble de règles en choisissant l'une des options suivantes :
++
+[cols="2*"]
+|===
+| Les fonctions que vous recherchez... | Alors, procédez comme ça... 
+
+
+ a| 
+Recherchez des ressources lorsque les commandes d'une ligne sont répétées
+ a| 
+.. Cliquez sur un numéro de ligne et sélectionnez *répéter ligne*.
+.. Dans la boîte de dialogue répétitions de lignes, sélectionnez l'option *pour chaque ressource du groupe* dans la liste déroulante *répétitions*.
+.. Sélectionnez un type de ressource.
+.. Cliquez sur le lien *entrer les critères de recherche*.
+
+
+
+
+ a| 
+Rechercher les ressources requises dans les entrées de commande
+ a| 
+.. Cliquez sur image:../media/add_object_wfa_icon.gif["Icône pour ajouter une commande"].
+.. Dans la boîte de dialogue Paramètres de <nom_commande>, sélectionnez l'option *en recherchant l'option <objet dictionnaire>* existante dans la liste déroulante *définir <objet dictionnaire>*.
+.. Cliquez sur le lien *entrer les critères de recherche*.
+
+
+
+
+ a| 
+Recherchez les ressources référencées par des variables dans les entrées de commande
+ a| 
+.. Cliquez sur image:../media/add_object_wfa_icon.gif["Icône pour ajouter une commande"].
+.. Dans la boîte de dialogue Paramètres pour <nom_commande>, sélectionnez l'option *en remplissant les attributs* dans la liste déroulante *définir <objet dictionnaire>*.
+.. Cliquez sur image:../media/ellipses.gif[""] pour un champ marqué par image:../media/resource_selection_icon_wfa.gif["Icône pour les objets de référence"].
+
+
+
+
+ a| 
+Entrées de commande de nom de type chaîne
+ a| 
+.. Cliquez sur image:../media/add_object_wfa_icon.gif["Icône pour ajouter une commande"].
+.. Dans la boîte de dialogue Paramètres pour <nom_commande>, sélectionnez l'option *en remplissant les attributs* dans la liste déroulante *définir <objet dictionnaire>*.
+.. Cliquez sur image:../media/ellipses.gif["Icône pour ellipses"] pour un champ de chaîne.
+
+
+|===
+. Dans la boîte de dialogue *Resource Selection* (sélection de ressources*), cochez la case *Define filter rules* (définir les règles de filtre*).
++
+Si vous avez sélectionné l'une des options dans la liste déroulante Finder de la boîte de dialogue sélection de ressources, la case définir les règles de filtre est désactivée. La valeur du Finder doit être définie sur « aucun » pour que les règles de filtre définies soient activées.
+
+. Entrez l'attribut, l'opérateur et la valeur de la règle.
++
+La valeur doit être fournie avec des guillemets simples. Les règles de filtre peuvent contenir un ou plusieurs groupes.
+
+. Cliquez sur *OK*.
+

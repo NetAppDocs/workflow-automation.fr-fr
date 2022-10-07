@@ -1,0 +1,104 @@
+---
+permalink: help/reference-row-repetition-details-dialog-box.html 
+sidebar: sidebar 
+keywords: row, repetition, details, dialog box, enable, specify, parameters, row, repeated 
+summary: La boîte de dialogue Détails de la répétition de ligne vous permet de spécifier comment les paramètres de la ligne doivent être répétés. 
+---
+= Boîte de dialogue Détails de la répétition de ligne
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La boîte de dialogue Détails de la répétition de ligne vous permet de spécifier comment les paramètres de la ligne doivent être répétés.
+
+
+
+== Se répète
+
+Vous permet de sélectionner le type de répétition souhaité. L'option *nombre de fois* est sélectionnée par défaut.
+
+* *Nombre de fois*
++
+Vous permet de spécifier les éléments suivants :
+
++
+** Nombre d'exécution de la ligne spécifique
+** Variable d'index
+** Variables
+** *Nombre de fois*
++
+Permet de spécifier un chiffre pour le nombre d'exécution de la ligne spécifique.
+
+** *Variable d'index*
++
+Permet de spécifier le nom de la variable d'index pour la répétition de ligne.
+
+** *Variables*
++
+Vous permet d'inclure des variables supplémentaires qui doivent être utilisées pendant la répétition de ligne.
+
++
+*** *Ajouter*
++
+Ajoute une nouvelle ligne dans la table des variables.
+
+*** *Supprimer*
++
+Supprime la ligne sélectionnée de la table des variables.
+
+
+
+
+
+* *Pour chaque ressource d'un groupe*
++
+Vous permet de spécifier les éléments suivants :
+
++
+** Type de ressource
+** Critères de recherche de ressources
+** Variable de ressource
+** Variable d'index
+** Variable de taille de groupe
+** Variables
+** *Type de ressource*
++
+Permet de sélectionner le type de ressource.
+
+** *Critères de recherche de ressources*
++
+Ouvre la boîte de dialogue sélection des ressources, qui permet de spécifier les critères de recherche des ressources du type de ressource sélectionné. La boucle est exécutée pour chaque ressource recherchée en fonction des critères spécifiés.
+
+** *Variable de ressource*
++
+Permet d'entrer un nom pour la variable de ressource.
+
+** *Variable d'index*
++
+Permet de spécifier l'index pour la répétition de ligne.
+
+** *Variable de taille de groupe*
++
+Permet d'entrer un nom pour la variable de taille de groupe.
+
+** *Variables*
++
+Vous permet d'inclure des variables supplémentaires qui doivent être utilisées pendant la répétition de ligne.
+
+
+
+* *Boutons de commande*
++
+** *OK*
++
+Enregistre les paramètres et ferme la boîte de dialogue.
+
+** *Annuler*
++
+N'enregistre pas les modifications, le cas échéant, et ferme la boîte de dialogue.
+
+
+
+

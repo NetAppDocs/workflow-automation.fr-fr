@@ -1,0 +1,152 @@
+---
+permalink: workflows/reference-guidelines-for-commands.html 
+sidebar: sidebar 
+keywords: must, aware, guidelines, create, commands, oncommand, workflow, automation 
+summary: 'Vous devez connaître les instructions à suivre pour créer des commandes dans OnCommand Workflow Automation (WFA).' 
+---
+= Instructions pour les commandes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous devez connaître les instructions à suivre pour créer des commandes dans OnCommand Workflow Automation (WFA).
+
+[cols="2*"]
+|===
+| Directives | Exemple 
+
+
+ a| 
+Utiliser un nom facilement identifiable pour les commandes.
+ a| 
+`Create Qtree`
+
+
+
+ a| 
+Utilisez des espaces pour délimiter les mots et chaque mot doit commencer par un caractère en majuscules.
+ a| 
+`Create Volume`
+
+
+
+ a| 
+Fournissez une description pour expliquer la fonctionnalité de la commande, y compris le résultat attendu des paramètres facultatifs.
+ a| 
+Aucune
+
+
+
+ a| 
+Par défaut, le délai d'attente des commandes standard est de 600 secondes. Le délai par défaut est défini lors de la création de la commande. Modifiez la valeur par défaut uniquement si la commande peut prendre plus de temps.
+ a| 
+`Create Volume` commande
+
+
+
+ a| 
+Dans le cas d'opérations de longue durée, créez deux commandes : l'une pour appeler l'opération de longue durée et l'autre pour signaler périodiquement la progression de l'opération. La première commande doit être un `Standard Execution` le type de commande et le second doit être `Wait for Condition` type de commande.
+ a| 
+`Create VSM` et `Wait for VSM` commandes
+
+
+
+ a| 
+Préfixer le `Wait for condition` Noms de commande avec « attendre » pour une identification facile.
+ a| 
+`Wait for CM Volume Move`
+
+
+
+ a| 
+Utilisez un intervalle d'attente approprié pour les commandes « attendre condition ». La valeur spécifiée régit l'intervalle d'exécution de la commande d'interrogation pour vérifier si l'opération longue durée est terminée.
+ a| 
+intervalle d'échantillonnage de 60 s pour le `Wait for VSM` commande
+
+
+
+ a| 
+Pour le `Wait for condition` les commandes, utilisez un délai d'attente approprié en fonction du temps prévu pour l'opération de longue durée. Le temps prévu peut être considérablement plus long si l'opération implique un transfert de données sur un réseau.
+ a| 
+Un transfert de ligne de base VSM peut prendre plusieurs jours. Par conséquent, le délai spécifié est de 6 jours.
+
+|===
+
+
+== Représentation de chaîne
+
+La représentation de chaîne d'une commande affiche les détails d'une commande dans une conception de flux de travail lors de la planification et de l'exécution. Seuls les paramètres de commande peuvent être utilisés dans la représentation de chaîne d'une commande.
+
+[cols="2*"]
+|===
+| Directives | Exemple 
+
+
+ a| 
+Évitez d'utiliser des attributs qui n'ont aucune valeur. Un attribut sans valeur s'affiche sous la forme NA.
+ a| 
+Volname 10.68.66.212[NA]aggr1/testVol7
+
+
+
+ a| 
+Séparez les différentes entrées de la représentation de chaîne à l'aide des délimiteurs suivants : [ ] , / :
+ a| 
+`_ArrayName[ArrayIp]_`
+
+
+
+ a| 
+Fournir des étiquettes significatives à chaque valeur dans la représentation de chaîne.
+ a| 
+`_Volume name=VolumeName_`
+
+|===
+
+
+== Langage de définition de commande
+
+Les commandes peuvent être écrites à l'aide des langages de script pris en charge suivants :
+
+* PowerShell
+* Perl
+
+
+
+
+== Définition du paramètre de commande
+
+Les paramètres de la commande sont décrits par Nom, Description, Type, une valeur par défaut pour le paramètre et si le paramètre est obligatoire. Le type de paramètre peut être String, Boolean, Integer, long, Double, Enum, DateTime, Capacity, Array, Hashtable, Mot de passe ou XmlDocument. Bien que les valeurs de la plupart des types soient intuitives, les valeurs de Array et Hashtable doivent être dans un format particulier, comme décrit dans le tableau suivant :
+
+[cols="2*"]
+|===
+| Directives | Exemple 
+
+
+ a| 
+Assurez-vous que la valeur d'un type d'entrée Tableau est une liste de valeurs séparées par des virgules.
+ a| 
+[listing]
+----
+[parameter(Mandatory=$false,
+HelpMessage="Months in which the schedule executes.")]
+[array]$CronMonths
+----
+L'entrée est passée comme suit : 0,3,6,9
+
+
+
+ a| 
+Assurez-vous que la valeur d'un type d'entrée Hashtable est une liste de paires clé=valeur, séparées par un point-virgule.
+ a| 
+[listing]
+----
+[parameter(Mandatory=$false,
+HelpMessage="Volume names and size (in MB)")]
+[hashtable]$VolumeNamesAndSize
+----
+L'entrée est transmise comme suit : Volume1=100;Volume2=250;Volume3=50
+
+|===

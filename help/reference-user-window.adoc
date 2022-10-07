@@ -1,0 +1,149 @@
+---
+permalink: help/reference-user-window.html 
+sidebar: sidebar 
+keywords: users, window, enable, view, create, edit, delete, oncommand, workflow, automation, access, settings, under, management 
+summary: 'La fenêtre utilisateurs vous permet d"afficher, de créer, de modifier et de supprimer les utilisateurs de OnCommand Workflow Automation (WFA). Vous pouvez accéder à cette fenêtre en sélectionnant Paramètres et en cliquant sur utilisateurs sous gestion.' 
+---
+= Fenêtre utilisateurs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La fenêtre utilisateurs vous permet d'afficher, de créer, de modifier et de supprimer les utilisateurs de OnCommand Workflow Automation (WFA). Vous pouvez accéder à cette fenêtre en sélectionnant *Paramètres* et sous *gestion*, cliquez sur *utilisateurs*.
+
+
+NOTE: En fonction de votre rôle et de vos privilèges de compte, il se peut que cette fenêtre ne s'affiche pas.
+
+
+
+== Tableau utilisateurs
+
+La fenêtre utilisateurs affiche les utilisateurs existants. Vous pouvez personnaliser l'affichage du tableau à l'aide des fonctions de filtrage et de tri disponibles pour chaque colonne, ainsi qu'en réorganisant l'ordre des colonnes.
+
+* image:../media/filter_icon_wfa.gif["Icône de filtre"] active ou désactive le filtrage pour l'ensemble de la table. Un "x" rouge apparaît sur l'icône si le filtrage est désactivé.
+* Double-cliquer image:../media/filter_icon_wfa.gif["Icône de filtre"] efface et réinitialise les sélections de filtrage.
+* image:../media/wfa_filter_icon.gif["Icône de filtre"] sur chaque en-tête de colonne, vous pouvez effectuer un filtrage en fonction du contenu des colonnes. Cliquez sur image:../media/wfa_filter_icon.gif["Icône de filtre"] dans une colonne, vous pouvez filtrer un élément spécifique dans la liste déroulante ou sur tous les éléments disponibles.
+* Cliquer sur l'en-tête de colonne permet de basculer entre l'ordre croissant et décroissant de tri. Vous pouvez identifier l'ordre de tri appliqué à l'aide des flèches de tri (image:../media/wfa_sortarrow_up_icon.gif["Icône de tri"] pour les valeurs ascendantes et image:../media/wfa_sortarrow_down_icon.gif["Icône de tri"] pour décroissant).
+* Pour réorganiser l'emplacement des colonnes, vous pouvez faire glisser et déposer les colonnes dans l'ordre voulu. Toutefois, vous ne pouvez pas masquer ou supprimer ces colonnes.
+* Cliquez sur la zone de texte filtre *Search* pour rechercher un contenu spécifique. En outre, vous pouvez effectuer une recherche à l'aide des opérateurs pris en charge pour le type de colonne applicable, alphabétique ou numérique.
+
+
+Le tableau suivant répertorie les opérateurs pris en charge pour les colonnes alphabétiques et numériques dans la table utilisateurs, disponibles dans la zone de texte filtre *Search*.
+
+[cols="2*"]
+|===
+| Alphabétique | Valeur numérique 
+
+
+ a| 
+* Contient
+* Ne contient pas
+* Commence par
+* Se termine par
+* Égal à
+* N'est pas égal
+* Réinitialiser
+
+ a| 
+* Égal à
+* N'est pas égal
+* Inférieur à
+* Supérieur à
+* Inférieur ou égal à
+* Supérieur ou égal à
+* Entre
+* Réinitialiser
+
+
+|===
+Le tableau utilisateurs contient les colonnes suivantes :
+
+* *Nom d'utilisateur*
++
+Affiche le nom d'utilisateur du compte.
+
+* *Rôle*
++
+Affiche le rôle attribué à l'utilisateur. Les rôles peuvent comprendre l'un des éléments suivants :
+
++
+** *Invité*
++
+Cet utilisateur peut uniquement afficher l'état d'exécution d'un flux de travail ou être informé d'une modification de l'état d'exécution d'un flux de travail.
+
+** *Opérateur*
++
+Cet utilisateur est autorisé à prévisualiser et à exécuter des flux de travail pour lesquels l'utilisateur a accès.
+
+** *Approbateur*
++
+Cet utilisateur est autorisé à prévisualiser, exécuter, approuver et rejeter les flux de travail pour lesquels l'utilisateur a accès.
+
++
+
+NOTE: Vous devez fournir l'ID e-mail de l'approbateur et l'état du flux de travail qui doit être notifié à l'approbateur. S'il existe plusieurs approbateurs, vous pouvez fournir un ID d'e-mail de groupe dans le champ *E-mail*.
+
+** *Architecte*
++
+Cet utilisateur dispose d'un accès complet pour créer des flux de travail, mais ne peut pas modifier les paramètres globaux du serveur WFA.
+
+** *Admin*
++
+Cet utilisateur dispose d'un accès complet au serveur WFA.
+
++
+
+NOTE: Vous devez configurer au moins un utilisateur admin.
+
+** *Sauvegarde*
++
+Il s'agit du seul utilisateur capable de générer des sauvegardes du serveur WFA à distance. Toutefois, cet utilisateur est limité à tout autre accès.
+
+
+
+* *Catégories*
++
+Affiche la catégorie de flux de travail attribuée à un opérateur, qui fournit l'autorisation et les privilèges de flux de travail à l'opérateur désigné.
+
++
+Vous pouvez définir ce paramètre d'autorisation en cliquant sur *Content Management* > *Categories*.
+
+* *E-mail*
++
+Affiche l'adresse électronique de l'utilisateur. Vous pouvez utiliser cet e-mail pour recevoir une notification sur l'état du flux de travail.
+
+* *Notifications activées*
++
+Indique si l'utilisateur peut recevoir des notifications par e-mail (vrai ou faux) sur l'état des exécutions de flux de travail déclenchées par cet utilisateur.
+
+* *LDAP*
++
+Indique si l'utilisateur est provisionné par le biais du serveur Active Directory externe accessible par LDAP (vrai ou faux).
+
+* *Groupe Active Directory*
++
+Indique si l'utilisateur fait partie de groupes LDAP ou Active Directory.
+
+
+
+
+
+== Barre d'outils
+
+La barre d'outils se trouve au-dessus de l'en-tête de colonne. Vous pouvez utiliser les icônes de la barre d'outils pour effectuer diverses actions. Vous pouvez également accéder à ces actions à partir du menu contextuel de la fenêtre.
+
+* *image:../media/new_wfa_icon.gif["Nouvelle icône"] (Nouveau)*
++
+Ouvre la boîte de dialogue nouvel utilisateur, qui permet d'ajouter un nouveau compte utilisateur.
+
+* *image:../media/edit_wfa_icon.gif["Icône Modifier"] (Modifier)*
++
+Ouvre la boîte de dialogue Modifier l'utilisateur, qui permet de modifier le compte utilisateur sélectionné.
+
+* *image:../media/delete_wfa_icon.gif["Icône Supprimer"] (Supprimer)*
++
+Ouvre la boîte de dialogue de confirmation de suppression d'utilisateur, qui permet de supprimer le compte utilisateur sélectionné.
+
+

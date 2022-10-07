@@ -1,0 +1,184 @@
+---
+permalink: rhel-install/reference-ports-required-for-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: ports, required, workflow, automation 
+summary: 'Si vous utilisez un pare-feu, vous devez connaître les ports requis pour Workflow Automation (WFA).' 
+---
+= Ports requis pour Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si vous utilisez un pare-feu, vous devez connaître les ports requis pour Workflow Automation (WFA).
+
+Les numéros de port par défaut sont répertoriés dans cette section. Si vous souhaitez utiliser un numéro de port non par défaut, vous devez ouvrir ce port pour la communication. Pour plus de détails, consultez la documentation de votre pare-feu.
+
+Le tableau suivant répertorie les ports par défaut qui doivent être ouverts sur le serveur WFA:
+
+[cols="4*"]
+|===
+| Port | Protocole | Direction | Objectif 
+
+
+ a| 
+80 février 443
+ a| 
+HTTP, HTTPS
+ a| 
+Entrant
+ a| 
+Ouverture de WFA et connexion
+
+
+
+ a| 
+80 février 443, 22
+ a| 
+HTTP, HTTPS, SSH
+ a| 
+Sortant
+ a| 
+Exécution de commandes (ZAPI, PowerCLI)
+
+
+
+ a| 
+445 février 139, 389, 636
+ a| 
+Microsoft-DS, NetBIOS-ssn, AD LDAP, AD LDAPS
+ a| 
+Sortant
+ a| 
+Authentification LDAP Microsoft Active Directory
+
+
+
+ a| 
+161
+ a| 
+SNMP
+ a| 
+Sortant
+ a| 
+Envoi de messages SNMP sur l'état des flux de travail
+
+
+
+ a| 
+3306
+ a| 
+MySQL
+ a| 
+Entrant
+ a| 
+Mise en cache utilisateur en lecture seule
+
+
+
+ a| 
+25
+ a| 
+SMTP
+ a| 
+Sortant
+ a| 
+Notification par courrier électronique
+
+
+
+ a| 
+80 février 443, 25
+ a| 
+HTTP, HTTPS, SMTP
+ a| 
+Sortant
+ a| 
+Envoi de messages AutoSupport
+
+
+
+ a| 
+514
+ a| 
+Syslog
+ a| 
+Sortant
+ a| 
+Envoi de journaux à un serveur syslog
+
+|===
+Le tableau suivant répertorie les ports par défaut qui doivent être ouverts sur le serveur Unified Manager :
+
+[cols="4*"]
+|===
+| Port | Protocole | Direction | Objectif 
+
+
+ a| 
+2638
+ a| 
+Sybase
+ a| 
+Entrant
+ a| 
+Mise en cache de données Active IQ Unified Manager antérieure à 6.0
+
+
+
+ a| 
+3306
+ a| 
+MySQL
+ a| 
+Entrant
+ a| 
+Mise en cache de données depuis Active IQ Unified Manager 6.0 et versions ultérieures
+
+
+
+ a| 
+8088 février 8488
+ a| 
+HTTP, HTTPS
+ a| 
+Entrant
+ a| 
+Mise en cache des données à partir de Performance Advisor, qui fait partie de Active IQ Unified Manager avant la version 6.0
+
+|===
+Le tableau suivant répertorie le port par défaut qui doit être ouvert sur le vCenter VMware :
+
+[cols="4*"]
+|===
+| Port | Protocole | Direction | Objectif 
+
+
+ a| 
+443
+ a| 
+HTTPS
+ a| 
+Entrant
+ a| 
+Mise en cache des données depuis VMware vCenter
+
+|===
+Le tableau suivant répertorie le port par défaut qui doit être ouvert sur la machine hôte SNMP :
+
+[cols="4*"]
+|===
+| Port | Protocole | Direction | Objectif 
+
+
+ a| 
+162
+ a| 
+SNMP
+ a| 
+Entrant
+ a| 
+Réception de messages SNMP sur l'état des flux de travail
+
+|===

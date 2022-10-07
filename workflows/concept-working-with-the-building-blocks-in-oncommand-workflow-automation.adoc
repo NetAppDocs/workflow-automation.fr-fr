@@ -1,0 +1,28 @@
+---
+permalink: workflows/concept-working-with-the-building-blocks-in-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: workflow, automation, consist, several, building, blocks, include, library, predefined, provide, create, requirements, organization 
+summary: 'Les flux de travail WFA (Workflow Automation) comprennent plusieurs éléments de base, et WFA comprend une bibliothèque d"éléments de base prédéfinis. Vous pouvez utiliser les éléments de base fournis par WFA pour créer des flux de production adaptés aux besoins de votre entreprise.' 
+---
+= Utilisation des éléments de base de OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les flux de travail WFA (Workflow Automation) comprennent plusieurs éléments de base, et WFA comprend une bibliothèque d'éléments de base prédéfinis. Vous pouvez utiliser les éléments de base fournis par WFA pour créer des flux de production adaptés aux besoins de votre entreprise.
+
+WFA fournit la structure pour les processus d'automatisation du stockage. La flexibilité de WFA repose sur la conception des flux de travail à l'aide des éléments de base des flux de travail.
+
+Les éléments de base WFA sont les suivants :
+
+* Entrées du dictionnaire
+* Commandes
+* Filtres
+* Finders
+* Fonctions
+* Modèles
+
+
+Vous devez comprendre comment les éléments de base de WFA sont utilisés pour vous aider à créer les flux de travail.

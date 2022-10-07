@@ -1,0 +1,36 @@
+---
+permalink: help/reference-portal-workflow-window.html 
+sidebar: sidebar 
+keywords: workflow, window, displays, ready, production, edit, execute, authorization, access, clicking 
+summary: 'La fenêtre flux de travail affiche les flux de travail marqués comme prêts pour la production. Vous pouvez modifier ou exécuter les flux de travail pour lesquels vous disposez d"une autorisation. Vous pouvez accéder à cette fenêtre en cliquant sur l"onglet workflows.' 
+---
+= Fenêtre de flux de travail
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La fenêtre flux de travail affiche les flux de travail marqués comme prêts pour la production. Vous pouvez modifier ou exécuter les flux de travail pour lesquels vous disposez d'une autorisation. Vous pouvez accéder à cette fenêtre en cliquant sur l'onglet workflows.
+
+
+
+== Volet catégories
+
+Le volet des catégories vous permet de rechercher des flux de travail par catégories. Un flux de travail qui n'est affecté à aucune catégorie est répertorié sous « aucune catégorie ». À droite de l'en-tête de catégorie, le nombre total de flux de travail dans cette catégorie est affiché. Ce numéro inclut les flux de production marqués comme prêts pour la production. Par exemple, "Data protection (7)" indique que sept flux de travail sont prêts pour la production dans la catégorie "protection des données".
+
+
+
+== Schémas
+
+Le menu schémas vous permet de sélectionner les schémas.
+
+Les schémas affichés sont basés sur la sélection effectuée par l'administrateur dans l'option Afficher le contenu pour les schémas sous *Paramètres* > *Configuration* > *Paramètres de workflow*. Vous pouvez sélectionner les schémas que vous souhaitez afficher en cochant ou décochant les cases correspondantes. Cette sélection n'est valide que pour la session en cours.
+
+
+
+== Volet flux de travail
+
+Les flux de travail marqués prêt pour la production sont affichés sous forme de cases grises dans le volet flux de travail. Les zones de flux de travail incluent le nom du flux de travail et une icône pour indiquer que le mode est pris en charge par le flux de travail. Vous pouvez exécuter un flux de travail en cliquant sur la zone flux de travail.
+
+Si vous êtes administrateur ou architecte, vous pouvez modifier un flux de travail en cliquant sur le bouton image:../media/portal_edit_object_wfa_icon.gif[""] icône. Le image:../media/info_icon_execute_wfa.gif[""] l'icône fournit des informations supplémentaires sur le flux de travail.

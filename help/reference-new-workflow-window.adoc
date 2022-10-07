@@ -1,0 +1,110 @@
+---
+permalink: help/reference-new-workflow-window.html 
+sidebar: sidebar 
+keywords: new, workflow, window, display, created, associated, command 
+summary: La fenêtre Nouveau flux de travail affiche un flux de travail nouvellement créé et ses commandes associées. 
+---
+= Nouvelle fenêtre Workflow
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La fenêtre *Nouveau flux de travail* affiche un nouveau flux de travail créé et ses commandes associées.
+
+
+
+== Nouveau workflow
+
+La fenêtre *Nouveau flux de travail* affiche le nom du flux de travail dans l'en-tête de la fenêtre. Les commandes associées sont affichées sous la forme de cases bleues dans les colonnes qui sont présentées dans l'ordre séquentiel de l'exécution--lues de gauche à droite, de haut en bas. Les variables et les objets de chaque commande sont affichés sous forme de zones grises dans la colonne de la commande.
+
+* *Insérer une ligne*
++
+Ajoute une nouvelle ligne au-dessus ou en dessous de la ligne sélectionnée dans le flux de travail.
+
++
+Vous pouvez cliquer sur image:../media/add_row2_wfa_icon.gif[""] pour ajouter une ligne sous la dernière ligne disponible.
+
+* *Copier ligne*
++
+Copie la ligne sélectionnée du flux de travail et l'enregistre dans le presse-papiers. La copie d'une ligne ne copie pas l'ensemble de détails de répétition pour la ligne.
+
+* *Coller ligne*
++
+Place le dernier élément enregistré dans le presse-papiers dans une nouvelle ligne sous la ligne sélectionnée. Les noms uniques sont utilisés pour les variables ; cependant, les variables des expressions ne sont pas modifiées.
+
+* *Répétez la ligne*
++
+Ouvre la boîte de dialogue *Détails de la répétition de ligne*.
+
+* *Modifier la répétition de ligne*
++
+Ouvre la boîte de dialogue *Détails de la répétition de ligne*, qui permet de modifier le jeu d'actions *répéter ligne* pour la ligne sélectionnée.
+
+* *Supprimer la répétition de ligne*
++
+Annule l'action *répéter ligne* définie dans la boîte de dialogue *Détails de la répétition de ligne* pour la ligne sélectionnée.
+
+* *Ajouter une condition*
++
+Ouvre la boîte de dialogue Conditions pour la ligne <numéro de ligne>, qui permet de sélectionner une condition. La condition sélectionnée s'applique à toutes les commandes de la ligne. Toutes les commandes de la ligne ne seront exécutées que si la condition sélectionnée est remplie.
+
+* *Supprimer la ligne*
++
+Supprime la ligne sélectionnée du flux de travail.
+
+* *Nouveau point d'approbation*
++
+Vous pouvez cliquer sur image:../media/approval_point_disabled.gif[""] Pour ouvrir la boîte de dialogue *Nouveau point d'approbation*, qui vous permet d'ajouter un point d'approbation avant l'exécution de la commande.
+
+* *Modifier point d'approbation*
++
+Vous pouvez cliquer sur image:../media/approval_point_enabled.gif[""] Pour ouvrir la boîte de dialogue *Edit Approval point*, qui vous permet de modifier le commentaire du point d'approbation.
+
+* *Ajouter des paramètres de commande*
++
+Ajoute des paramètres pour une commande dans la ligne sélectionnée.
+
++
+Vous pouvez placer votre curseur sous la commande sélectionnée, sur la ligne requise, puis cliquer sur image:../media/add_object_wfa_icon.gif[""] Pour ouvrir la boîte de dialogue Paramètres de <nom_commande>.
+
+* *Modifier les paramètres de commande*
++
+Ouvre la boîte de dialogue Paramètres pour <nom_commande> pour vous permettre de modifier les paramètres sélectionnés pour une commande.
+
++
+Vous pouvez placer le curseur sur la zone grise à modifier et cliquer pour ouvrir la boîte de dialogue Paramètres de <nom_commande>.
+
+* *Supprimer les paramètres de commande*
++
+Supprime le paramètre.
+
++
+Vous pouvez déplacer le curseur sur la zone grise à supprimer et cliquer sur « X » dans le coin supérieur droit de la zone grise.
+
+
+
+
+
+== Boutons de commande
+
+Les boutons de commande sont disponibles en bas de la fenêtre de flux de travail. Vous pouvez également accéder aux commandes à partir du menu contextuel de la fenêtre.
+
+* *Aperçu*
++
+Ouvre la boîte de dialogue *Aperçu du flux de travail*, qui vous permet de spécifier les attributs d'entrée utilisateur.
+
+* *Enregistrer sous*
++
+Permet d'enregistrer le flux de travail sous un nouveau nom.
+
+* *Enregistrer*
++
+Enregistre le flux de travail.
+
+* *Fermer*
++
+Ferme la fenêtre. Au cours du processus, si des modifications ont été apportées à la configuration, une boîte de dialogue *Enregistrer la confirmation des modifications* s'ouvre, vous invitant à enregistrer les modifications, à fermer la fenêtre sans enregistrer les modifications ou à annuler l'action de fermeture.
+
+

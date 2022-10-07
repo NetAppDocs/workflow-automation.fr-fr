@@ -1,0 +1,174 @@
+---
+permalink: workflows/reference-references-to-learning-material.html 
+sidebar: sidebar 
+keywords: aware, certain, scripting, programming, practices, create, advanced, workflow, automation, reference, material, learn, option, building blocks 
+summary: 'Afin de créer des workflows WFA (Advanced Workflow Automation), vous devez connaître certaines pratiques de script et de programmation. Vous pouvez utiliser les matériaux de référence pour en savoir plus sur les options requises avant de créer des éléments de base ou des workflows WFA.' 
+---
+= Références à du matériel d'apprentissage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Afin de créer des workflows WFA (Advanced Workflow Automation), vous devez connaître certaines pratiques de script et de programmation. Vous pouvez utiliser les matériaux de référence pour en savoir plus sur les options requises avant de créer des éléments de base ou des workflows WFA.
+
+
+
+== Windows PowerShell
+
+WFA utilise des scripts PowerShell pour les opérations de flux de travail. Le tableau suivant contient des références à des supports de formation pour PowerShell :
+
+[cols="2*"]
+|===
+
+
+ a| 
+Mise en route de Windows PowerShell
+ a| 
+http://msdn.microsoft.com/en-us/library/windows/desktop/aa973757(v=vs.85).aspx[]
+
+
+
+ a| 
+Développement PowerShell -- Environnement de script intégré (ISE)
+ a| 
+https://docs.microsoft.com/en-us/powershell/scripting/windows-powershell/ise/introducing-the-windows-powershell-ise?view=powershell-7.2[]
+
+
+
+ a| 
+_.NET lignes directrices de dénomination des cadres_
+ a| 
+http://msdn.microsoft.com/en-us/library/xzf533w0%28v=vs.71%29.aspx[]
+
+
+
+ a| 
+Style de code PowerShell
+ a| 
+http://get-powershell.com/post/2011/04/13/Extra-Points-for-Style-when-writing-PowerShell-Code.aspx[]
+
+
+
+ a| 
+Enfin, PowerShell Try-and-and-Catch
+ a| 
+http://technet.microsoft.com/en-us/library/dd315350.aspx[]
+
+
+
+ a| 
+Variables automatiques PowerShell
+ a| 
+http://technet.microsoft.com/en-us/library/dd347675.aspx[]
+
+
+
+ a| 
+Rapport d'erreurs PowerShell
+ a| 
+https://docs.microsoft.com/en-us/powershell/scripting/developer/cmdlet/error-reporting-concepts?view=powershell-7.2[]
+
+
+
+ a| 
+Paramètres communs de PowerShell
+ a| 
+https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7.2[]
+
+|===
+
+
+== Kit Data ONTAP PowerShell
+
+Le kit Data ONTAP PowerShell est fourni avec WFA. Vous pouvez utiliser les applets de commande du kit PowerShell pour appeler des commandes Data ONTAP à partir d'un script PowerShell. Pour plus d'informations, consultez l'aide du kit d'outils PowerShell _Data ONTAP_, accessible à partir de l'emplacement suivant : `WFA_install_location\WFA\PoSH\Modules\DataONTAP\webhelp\index.html.`
+
+`_WFA_install_location_` Correspond au répertoire d'installation de WFA, et `C:\Program Files\NetApp` est le répertoire d'installation par défaut.
+
+Le tableau suivant contient des références à des informations sur le kit Data ONTAP PowerShell :
+
+[cols="2*"]
+|===
+
+
+ a| 
+Articles du kit d'outils ONTAP PowerShell
+ a| 
+https://community.netapp.com/t5/Tech-OnTap-Articles/The-Data-ONTAP-PowerShell-Toolkit/ta-p/85933[]
+
+
+
+ a| 
+Communauté NetApp dédiée au kit PowerShell ONTAP
+ a| 
+https://community.netapp.com/t5/forums/filteredbylabelpage/board-id/microsoft-cloud-and-virtualization-discussions/label-name/powershell%20toolkit[]
+
+|===
+
+
+== Perl
+
+WFA prend en charge les commandes Perl pour les opérations des workflows. Lorsque vous installez WFA, les modules Perl et Perl requis sont installés sur le serveur WFA.
+
+https://docs.activestate.com/activeperl/5.26/perl/["Guide de l'utilisateur ActivePerl"^]
+
+Vous pouvez également accéder au _ActivePerl User Guide_ à partir de l'emplacement suivant : `WFA_install_location\WFA\Perl64\html\index.html.`
+
+`_WFA_install_location_` Correspond au répertoire d'installation de WFA, et `C:\Program Files\NetApp is the default installation directory.`` WFA utilise des scripts Perl pour les opérations de workflow. Le tableau suivant contient des références à du matériel d'apprentissage pour Perl :
+
+[cols="2*"]
+|===
+
+
+ a| 
+Perl moderne: 2014
+ a| 
+http://modernperlbooks.com/books/modern_perl_2014/index.html[]
+
+
+
+ a| 
+Documentation de programmation Perl
+ a| 
+http://perldoc.perl.org/[]
+
+
+
+ a| 
+Langage de programmation Perl
+ a| 
+http://www.perl.org/[]
+
+|===
+
+
+== SDK de gestion NetApp
+
+Les modules Perl requis du SDK de gestion NetApp sont fournis avec WFA. Ces modules Perl sont requis pour utiliser les commandes Perl dans WFA. Pour en savoir plus, consultez la documentation du SDK de gestion NetApp, accessible à partir de l'emplacement suivant : `WFA_install_location\WFA\perl\NMSDK\html.`
+
+`WFA_install_location` Correspond au répertoire d'installation de WFA, et `C:\Program Files\NetApp` est le répertoire d'installation par défaut.
+
+
+
+== Langage de requête structuré (SQL)
+
+La syntaxe DE SÉLECTION SQL est utilisée dans les filtres et pour remplir les entrées utilisateur.
+
+http://dev.mysql.com/doc/refman/5.1/en/select.html["Syntaxe DE MYSQL SELECT"^]
+
+
+
+== MVFLEX expression Language (MVEL)
+
+Vous pouvez utiliser les syntaxes d'expression MVEL dans les flux de travail WFA--par exemple, dans les fonctions et variables.
+
+Pour plus d'informations, reportez-vous au _MVEL Language Guide_.
+
+
+
+== Expressions régulières
+
+Vous pouvez utiliser l'expression régulière (regex) dans WFA.
+
+https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/RegExp.html["ActionScript 3.0 à l'aide d'expressions régulières"^]

@@ -1,0 +1,52 @@
+---
+permalink: help/reference-new-schedule-dialog-box.html 
+sidebar: sidebar 
+keywords: use, new, schedule, dialog box, create, workflow, execute, specified, frequency, monday 
+summary: 'Vous pouvez utiliser la boîte de dialogue Nouvelle planification pour créer un programme pour n"importe quel flux de travail afin que le flux de travail soit exécuté à une fréquence spécifiée. Par exemple, vous pouvez planifier l"exécution d"un flux de travail tous les lundis.' 
+---
+= Nouvelle planification
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser la boîte de dialogue Nouvelle planification pour créer un programme pour n'importe quel flux de travail afin que le flux de travail soit exécuté à une fréquence spécifiée. Par exemple, vous pouvez planifier l'exécution d'un flux de travail tous les lundis.
+
+
+
+== Nouvelles propriétés de configuration de planification
+
+* *Nom*
++
+Vous permet de spécifier un nom pour le planning.
+
+* *Description*
++
+Vous permet de saisir une description pour le planning.
+
+* *Fréquence*
++
+Vous permet de spécifier la fréquence à laquelle le flux de travail associé à la planification doit être exécuté. L'option horaire est sélectionnée par défaut. La fréquence peut être horaire, quotidienne, hebdomadaire ou mensuelle.
+
++
+Par exemple, si vous souhaitez qu'un flux de travail soit exécuté tous les mardis à 9 H, vous devez sélectionner l'option hebdomadaire et saisir l'heure sous `9:00` et jour comme `Tuesday.` Vous devez utiliser deux-points lorsque vous spécifiez l'heure.
+
++
+Le format d'heure 24 heures est pris en charge. Les données saisies seront basées sur l'heure du serveur.
+
+
+
+
+
+== Boutons de commande
+
+* *OK*
++
+Enregistre les paramètres de configuration et ferme la boîte de dialogue.
+
+* *Annuler*
++
+Annule les modifications, le cas échéant, et ferme la boîte de dialogue.
+
+

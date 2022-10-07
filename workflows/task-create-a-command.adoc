@@ -1,0 +1,138 @@
+---
+permalink: workflows/task-create-a-command.html 
+sidebar: sidebar 
+keywords: create, wfa command, complete, specific, task, workflow, predefined, suitable 
+summary: 'Vous pouvez créer une commande WFA pour mener à bien une tâche spécifique dans votre workflow, si aucune commande WFA prédéfinie n"est adaptée à cette tâche.' 
+---
+= Créer une commande
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez créer une commande WFA pour mener à bien une tâche spécifique dans votre workflow, si aucune commande WFA prédéfinie n'est adaptée à cette tâche.
+
+Vous devez savoir comment écrire le code requis pour la commande à l'aide de PowerShell ou Perl.
+
+.Étapes
+. Cliquez sur *Workflow Design* > *commandes*.
+. Cliquez sur image:../media/new_wfa_icon.gif["Nouvelle icône"] dans la barre d'outils.
+. Dans l'onglet *Propriétés* de la boîte de dialogue *Nouvelle définition de commande*, entrez ou sélectionnez les détails requis dans les champs *Nom*, *Description* et *délai*.
++
+.. Dans le champ *String Representation*, entrez une représentation de chaîne pour la commande à l'aide de la syntaxe MVEL.
++
+`+VolumeName + "=>" + SnapshotName+`
+
++
+La représentation de chaîne d'une commande est utilisée pour afficher les informations que vous souhaitez voir dans la conception du flux de travail lors de la planification et de l'exécution. Vous devez utiliser uniquement les paramètres de la commande dans la représentation de chaîne pour une commande.
+
+.. *Facultatif:* si vous créez une commande wait, sélectionnez *Wait for condition* dans la section *Command type* et définissez la valeur requise dans le champ *Waiting interval (s)*.
+
+
+. Dans l'onglet *Code*, effectuez les opérations suivantes :
++
+.. Sélectionnez le langage de script requis pour la commande dans la liste *langage script*.
++
+Vous pouvez cliquer sur + et sélectionner une autre langue pour la commande.
+
+.. Entrez le code approprié pour la commande dans l'onglet langue sélectionnée.
++
+Si vous souhaitez utiliser le type de mot de passe pour les entrées utilisateur dans le script PowerShell, vous devez créer un alias pour le paramètre et inclure `_Password` dans l'attribut. Pour le script Perl, vous pouvez spécifier le type comme *Mot de passe* dans l'onglet *Paramètres Définition*.
+
++
+
+NOTE: Les caractères spéciaux suivants ne sont pas pris en charge dans l'éditeur de commandes : « < », « & amp » et les balises XML « < > ».
+
++
+[listing]
+----
+param (
+  [parameter(Mandatory=$false, HelpMessage="Specify an AD administrator password.")]
+  [Alias("ADAdminPassword_Password")]  [string]$ADAdminPassword
+)
+----
+
+
+. Dans l'onglet *Paramètres Définition*, effectuez les opérations suivantes :
++
+.. Cliquez sur *découvrir les paramètres* pour remplir la table de définition des paramètres.
++
+Les paramètres et leurs attributs sont extraits du code et affichés dans le tableau. Par exemple, les paramètres Array et VolumeName sont extraits du code suivant :
+
++
+[listing]
+----
+param (
+  [parameter(Mandatory=$true, HelpMessage="Array name or IP address")]
+  [string]$Array,
+
+  [parameter(Mandatory=$true, HelpMessage="Volume name")]
+  [string]$VolumeName,
+)
+----
+.. Cliquez sur la colonne de description des paramètres pour modifier la description.
++
+Vous ne pouvez pas modifier un autre champ de cet onglet.
+
+
+
+. Dans l'onglet *mappage des paramètres*, effectuez les opérations suivantes pour chaque paramètre :
++
+.. Dans la colonne *Type*, sélectionnez l'objet de dictionnaire approprié.
+.. Dans la colonne *attribut* , entrez ou sélectionnez les attributs appropriés pour l'objet dictionnaire dans la liste.
++
+Après avoir saisi un attribut, vous pouvez entrer un point (.) et inclure un autre attribut de cet objet.
+
++
+Entrez `cm_storage.volume` comme type et `aggregate.name` Comme attribut pour le paramètre AggregateName.
+
+.. Dans la colonne *Nom d'objet*, entrez un nom d'objet.
++
+Le nom de l'objet est utilisé pour regrouper les paramètres sous un onglet dans la boîte de dialogue Paramètres pour <commande> lorsque vous spécifiez les détails de la commande dans un flux de travail.
+
+
+
++
+Les paramètres non mappés s'affichent dans l'onglet *autres paramètres* de la boîte de dialogue Paramètres pour <commande> lorsque vous spécifiez les détails de la commande dans un flux de travail.
+
+. Dans l'onglet *réservation*, entrez un script de réservation à l'aide de requêtes SQL pour réserver les ressources requises par la commande lors d'une exécution de workflow planifiée :
++
+.. *Facultatif:* dans le champ *réservation représentation*, entrez une représentation de chaîne pour la réservation à l'aide de la syntaxe MVEL.
++
+`"Ajouter une règle pour le libellé SnapMirror `
+
++
+`" + SnapMirrorLabel + "[.code]` À la règle SnapMirror `
+
++
+`" + PolicyName + "`"`
+
++
+La représentation de chaîne est utilisée pour afficher les détails des ressources réservées dans la fenêtre Réservations.
+
+
+
++
+
+NOTE: Le script de réservation ne doit pas effectuer d'opération sur les bases de données, à l'exception des cm_Storage, cm_performance, stockage, performance, vc, et des schémas personnalisés.
+
+. *Facultatif:* dans l'onglet *Verification*, entrez une requête SQL pour vérifier si la commande a affecté les sources de données et le cache WFA comme prévu afin que la réservation puisse être supprimée.
++
+La requête SQL que vous entrez ne peut être que constituée d'instructions de SÉLECTION SQL.
+
++
+.. Cliquez sur *Test Verification* pour tester le script de vérification.
+.. Dans la boîte de dialogue *Vérification*, entrez les paramètres de test requis.
+.. Si vous ne souhaitez pas utiliser les données de réservation pour tester le script de vérification, effacez le champ *use *réservation data in test*.
+.. Cliquez sur *Test*.
+.. Après avoir vérifié le résultat du test, fermez la boîte de dialogue.
+
+
+. Cliquez sur *Test* pour tester la commande.
+. Dans la boîte de dialogue *Test Command <nom de la commande>*, cliquez sur *Test*.
++
+Le résultat du test s'affiche dans la section messages du journal de la boîte de dialogue.
+
+. Cliquez sur *Enregistrer*.
+

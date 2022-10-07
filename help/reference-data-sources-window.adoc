@@ -1,0 +1,254 @@
+---
+permalink: help/reference-data-sources-window.html 
+sidebar: sidebar 
+keywords: data, source, window, enable, view, edit, delete, exist, acquire, access, settings, setup 
+summary: 'La fenêtre sources de données vous permet d"afficher, de modifier et de supprimer des sources de données existantes, de créer de nouvelles sources de données et d"acquérir une source de données. Vous pouvez accéder à cette fenêtre en sélectionnant Paramètres, puis, sous Configuration, cliquez sur sources de données.' 
+---
+= Fenêtre sources de données
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La fenêtre sources de données vous permet d'afficher, de modifier et de supprimer des sources de données existantes, de créer de nouvelles sources de données et d'acquérir une source de données. Vous pouvez accéder à cette fenêtre en sélectionnant *Paramètres* et sous *Configuration*, cliquez sur *sources de données*.
+
+Une source de données est une structure de données en lecture seule qui contient des informations sur l'origine des données d'une base de données spécifique. Les sources de données doivent être définies avant d'interroger les environnements. Par exemple, une source de données peut être une base de données Active IQ Unified Manager contenant des informations sur un environnement de stockage ou une base de données VMware contenant des informations sur un data Center.
+
+* Tableau des sources de données
+* Table historique
+* Barre d'outils
+
+
+
+
+== Tableau des sources de données
+
+Le tableau sources de données répertorie les sources de données existantes. Vous pouvez personnaliser l'affichage du tableau à l'aide des fonctions de filtrage et de tri disponibles pour chaque colonne, ainsi qu'en réorganisant l'ordre des colonnes.
+
+* image:../media/filter_icon_wfa.gif["Icône de filtre"] active ou désactive le filtrage pour l'ensemble de la table. Un "x" rouge apparaît sur l'icône si le filtrage est désactivé.
+* Double-cliquer image:../media/filter_icon_wfa.gif["Icône de filtre"] efface et réinitialise les sélections de filtrage.
+* image:../media/wfa_filter_icon.gif["Icône de filtre"] sur chaque en-tête de colonne, vous pouvez effectuer un filtrage en fonction du contenu des colonnes. Cliquez sur image:../media/wfa_filter_icon.gif["Icône de filtre"] dans une colonne, vous pouvez filtrer un élément spécifique dans la liste déroulante ou sur tous les éléments disponibles.
+* Cliquer sur l'en-tête de colonne permet de basculer entre l'ordre croissant et décroissant de tri. Vous pouvez identifier l'ordre de tri appliqué à l'aide des flèches de tri (image:../media/wfa_sortarrow_up_icon.gif["Icône de tri"] pour les valeurs ascendantes et image:../media/wfa_sortarrow_down_icon.gif["Icône de tri"] pour décroissant).
+* Pour réorganiser l'emplacement des colonnes, vous pouvez faire glisser et déposer les colonnes dans l'ordre voulu. Toutefois, vous ne pouvez pas masquer ou supprimer ces colonnes.
+* Cliquez sur la zone de texte filtre *Search* pour rechercher un contenu spécifique. En outre, vous pouvez effectuer une recherche à l'aide des opérateurs pris en charge pour le type de colonne applicable, alphabétique ou numérique.
+
+
+Le tableau suivant répertorie les opérateurs pris en charge pour les colonnes alphabétiques et numériques dans la table sources de données, disponible dans la zone de texte filtre *Search*.
+
+[cols="2*"]
+|===
+| Alphabétique | Valeur numérique 
+
+
+ a| 
+* Contient
+* Ne contient pas
+* Commence par
+* Se termine par
+* Égal à
+* N'est pas égal
+* Réinitialiser
+
+ a| 
+* Égal à
+* N'est pas égal
+* Inférieur à
+* Supérieur à
+* Inférieur ou égal à
+* Supérieur ou égal à
+* Entre
+* Réinitialiser
+
+
+|===
+La table sources de données contient les colonnes suivantes :
+
+* *Nom*
++
+Affiche le nom de la source de données.
+
+* *Type de source de données*
++
+Affiche le type de source de données.
+
+* *Nom d'hôte*
++
+Affiche le nom d'hôte ou l'adresse IP de la source de données.
+
+* *Schéma*
++
+Affiche le schéma de mise en cache associé à la source de données. Par exemple, un schéma de mise en cache des machines virtuelles contient des données pertinentes pour votre environnement virtuel, telles que des ordinateurs virtuels, des hôtes et des datastores. Les informations pertinentes sur le schéma sont obtenues à partir de la source de données.
+
+* *Intervalle (minutes)*
++
+Affiche l'intervalle (en minutes) entre deux acquisitions consécutives d'une source de données.
+
+* *Heure de début*
++
+Affiche la date et l'heure du démarrage du processus d'acquisition de données.
+
++
+Cliquez sur l'icône de calendrier dans la zone de texte filtre *Search* pour rechercher des sources de données avec une date de début spécifique.
+
+* *Durée (secondes)*
++
+Affiche le temps (en secondes) nécessaire pour traiter la dernière acquisition de données à partir de la source de données.
+
+* *Statut*
++
+Affiche l'état du processus d'acquisition de données actuel (le cas échéant) ou du dernier processus d'acquisition de données. Les options d'état sont les suivantes :
+
++
+** Tout
+** Abandon
+** Annulée
+** Terminé
+** Échec
+** Pas d'acquisition
+** Obsolète
+** En attente
+** Exécution
+** Planifié
+
+
+* *Message*
++
+Affiche un message d'erreur lorsque le processus d'acquisition de données rencontre et s'arrête.
+
+
+
+
+
+== Table historique
+
+La table Historique affiche dans l'en-tête le nom de la source de données sélectionnée dans la table Source de données et répertorie les détails de chaque processus d'acquisition de données pour la source de données sélectionnée. La liste des processus est mise à jour de manière dynamique au fur et à mesure que les processus d'acquisition des données se produisent. Vous pouvez personnaliser l'affichage du tableau à l'aide des fonctions de filtrage et de tri disponibles pour chaque colonne, ainsi qu'en réorganisant l'ordre des colonnes.
+
+* image:../media/filter_icon_wfa.gif["Icône de filtre"] active ou désactive le filtrage pour l'ensemble de la table. Un "x" rouge apparaît sur l'icône si le filtrage est désactivé.
+* Double-cliquer image:../media/filter_icon_wfa.gif["Icône de filtre"] efface et réinitialise les sélections de filtrage.
+* image:../media/wfa_filter_icon.gif["Icône de filtre"] sur chaque en-tête de colonne, vous pouvez effectuer un filtrage en fonction du contenu des colonnes. Cliquez sur image:../media/wfa_filter_icon.gif["Icône de filtre"] dans une colonne, vous pouvez filtrer un élément spécifique dans la liste déroulante ou sur tous les éléments disponibles.
+* Cliquer sur l'en-tête de colonne permet de basculer entre l'ordre croissant et décroissant de tri. Vous pouvez identifier l'ordre de tri appliqué à l'aide des flèches de tri (image:../media/wfa_sortarrow_up_icon.gif["Icône de tri"] pour les valeurs ascendantes et image:../media/wfa_sortarrow_down_icon.gif["Icône de tri"] pour décroissant).
+* Pour réorganiser l'emplacement des colonnes, vous pouvez faire glisser et déposer les colonnes dans l'ordre voulu. Toutefois, vous ne pouvez pas masquer ou supprimer ces colonnes.
+* Cliquez sur la zone de texte filtre *Search* pour rechercher un contenu spécifique. En outre, vous pouvez effectuer une recherche à l'aide des opérateurs pris en charge pour le type de colonne applicable, alphabétique ou numérique.
+
+
+Le tableau suivant répertorie les opérateurs pris en charge pour les colonnes alphabétiques et numériques dans la table Historique, disponible dans la zone de texte filtre *Search*.
+
+[cols="2*"]
+|===
+| Alphabétique | Valeur numérique 
+
+
+ a| 
+* Contient
+* Ne contient pas
+* Commence par
+* Se termine par
+* Égal à
+* N'est pas égal
+* Réinitialiser
+
+ a| 
+* Égal à
+* N'est pas égal
+* Inférieur à
+* Supérieur à
+* Inférieur ou égal à
+* Supérieur ou égal à
+* Entre
+* Réinitialiser
+
+
+|===
+La table Historique contient les colonnes suivantes :
+
+* *ID*
++
+Affiche le numéro d'identification du processus d'acquisition de données.
+
++
+Le numéro d'identification est unique et est attribué par le serveur lorsqu'il démarre le processus d'acquisition des données.
+
+* *Heure de début*
++
+Affiche la date et l'heure du démarrage du processus d'acquisition de données.
+
++
+Cliquez sur l'icône de calendrier dans la zone de texte filtre *Search* pour rechercher les processus d'acquisition de données lancés à une date spécifique.
+
+* *Durée (secondes)*
++
+Affiche la durée (en secondes) du dernier processus d'acquisition à partir de la source de données.
+
+* *Acquisition planifiée*
++
+Affiche la date et l'heure planifiées pour le processus d'acquisition des données.
+
++
+Cliquez sur l'icône de calendrier dans la zone de texte filtre *Search* pour rechercher les acquisitions de données programmées pour une date spécifique.
+
+* *Type de planification*
++
+Affiche le type d'horaire. Les types de planification sont les suivants :
+
++
+** Tout
+** Immédiate
+** Récurrent
+** Inconnu
+
+
+* *Statut*
++
+Affiche l'état du processus d'acquisition de données actuel (le cas échéant) ou du dernier processus d'acquisition de données. Les options d'état sont les suivantes :
+
++
+** Tout
+** Abandon
+** Annulée
+** Terminé
+** Échec
+** Obsolète
+** En attente
+** Exécution
+** Planifié
+** Pas d'acquisition
+
+
+* *Message*
++
+Affiche un message sur l'erreur qui s'est produite pendant le processus d'acquisition de données, lorsque le processus a été arrêté et n'a pas pu continuer.
+
+
+
+
+
+== Barre d'outils
+
+La barre d'outils se trouve au-dessus des en-têtes de colonne de la table sources de données. Vous pouvez utiliser les icônes de la barre d'outils pour effectuer diverses actions. Vous pouvez également effectuer ces opérations en cliquant avec le bouton droit de la souris dans la fenêtre.
+
+* *image:../media/new_wfa_icon.gif["Nouvelle icône"] (Nouveau)*
++
+Ouvre la boîte de dialogue Nouvelle source de données, qui permet d'ajouter une nouvelle source de données.
+
+* *image:../media/edit_wfa_icon.gif["Icône Modifier"] (Modifier)*
++
+Ouvre la boîte de dialogue Modifier la source de données, qui permet de modifier la source de données sélectionnée.
+
+* *image:../media/delete_wfa_icon.gif["Icône Supprimer"] (Supprimer)*
++
+Ouvre la boîte de dialogue de confirmation Supprimer la source de données, qui permet de supprimer la source de données sélectionnée.
+
+* *image:../media/acquire_now_wfa_icon.gif["Icône acquérir maintenant"] (Acquérir maintenant)*
++
+Lance le processus d'acquisition pour la source de données sélectionnée.
+
+* *image:../media/reset_scheme_wfa_icon.gif["Icône de réinitialisation du schéma"] (Schéma de réinitialisation)*
++
+Ouvre la boîte de dialogue de confirmation de réinitialisation du schéma. Cette boîte de dialogue vous permet de réinitialiser le stockage du cache pour le schéma sélectionné. Le cache est réinitialisé lors du processus d'acquisition de données suivant.
+
++
+
+IMPORTANT: Le processus de réinitialisation supprime toutes les données mises en cache, y compris toutes les tables. L'intégralité du cache est créée à partir du démarrage lors du prochain processus d'acquisition des données.
+
+

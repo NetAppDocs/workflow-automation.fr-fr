@@ -1,0 +1,25 @@
+---
+permalink: workflows/concept-what-continue-on-failure-is.html 
+sidebar: sidebar 
+keywords: continue, failure, feature, help, configure, step, workflow, execution, address, resolve, issue, cause, accessing, wfa.log file, click, icon 
+summary: 'La fonction Continuer en cas d"échec vous aide à configurer une étape dans un flux de travail afin que l"exécution du flux de travail puisse continuer même si l"étape échoue. Vous pouvez résoudre les étapes ayant échoué et résoudre le problème qui a provoqué l"échec de l"étape en accédant au fichier wfa.log ou en cliquant sur l"icône.' 
+---
+= Fonctionnement de la continuité en cas d'échec
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La fonction Continuer en cas d'échec vous aide à configurer une étape dans un flux de travail afin que l'exécution du flux de travail puisse continuer même si l'étape échoue. Vous pouvez résoudre les étapes ayant échoué et résoudre le problème qui a provoqué l'échec de l'étape en accédant au `wfa.log` ou en cliquant sur image:../media/info_icon_execute_wfa.gif[""] icône.
+
+Un flot de travaux ayant une ou plusieurs étapes ayant échoué est à l'état partiellement réussi une fois l'exécution terminée. Vous pouvez configurer une étape pour que l'exécution du flux de travail se poursuit même si l'étape échoue en sélectionnant l'option requise dans l'onglet Avancé de la boîte de dialogue Paramètres de <nom_commande>.
+
+Si une étape n'est pas configurée pour continuer en cas d'échec, l'exécution du flux de travail est abandonnée en cas d'échec de l'étape.
+
+Si une étape configurée pour continuer en cas d'échec échoue, vous pouvez définir le flux de travail à exécuter à l'aide de l'une des options suivantes :
+
+* Abandonner l'exécution du workflow (option par défaut)
+* Poursuivre l'exécution à partir de l'étape suivante
+* Poursuivre l'exécution à partir de la ligne suivante
+

@@ -1,0 +1,60 @@
+---
+permalink: help/reference-new-approval-point-dialog-box.html 
+sidebar: sidebar 
+keywords: new, approval, point, dialog box, enable, add, point, checkpoint, workflow, pause, execution, resume 
+summary: 'La boîte de dialogue Nouveau point d"approbation vous permet d"ajouter un point d"approbation en tant que point de contrôle dans un flux de travail pour interrompre l"exécution du flux de travail et le reprendre en fonction de votre approbation.' 
+---
+= Boîte de dialogue Nouveau point d'approbation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La boîte de dialogue Nouveau point d'approbation vous permet d'ajouter un point d'approbation en tant que point de contrôle dans un flux de travail pour interrompre l'exécution du flux de travail et le reprendre en fonction de votre approbation.
+
+* *Entrez un commentaire (facultatif)*
++
+Vous permet de fournir des informations telles que l'heure de modification, l'utilisateur et les commentaires, ce qui vous permet de voir quand et pourquoi l'exécution du flux de travail a été interrompue ou reprise.
+
++
+Les commentaires des points d'approbation peuvent inclure des expressions MVFLEX expression Language (MVEL).
+
+* *Entrez la condition d'exécution (le cas échéant)*
++
+Permet de spécifier des conditions pour l'exécution d'une commande :
+
++
+** Toujours
++
+Exécute la commande sans condition.
+
+** Si la variable suivante a été trouvée
++
+Permet d'exécuter une commande uniquement lorsque la variable spécifiée est trouvée. Vous pouvez spécifier la variable dans la zone.
+
+** Si la variable suivante est introuvable
++
+Permet d'exécuter une commande uniquement lorsque la variable spécifiée est introuvable. Vous pouvez spécifier la variable dans la zone.
+
+** Si l'expression suivante EST VRAIE
++
+Vous permet d'exécuter une commande uniquement lorsque l'expression MVEL spécifiée est « vrai ». Vous pouvez spécifier l'expression dans la zone.
+
+
+
+
+
+
+
+== Boutons de commande
+
+* *OK*
++
+Permet d'ajouter le point d'approbation.
+
+* *Annuler*
++
+Annule les modifications, le cas échéant, et ferme la boîte de dialogue.
+
+

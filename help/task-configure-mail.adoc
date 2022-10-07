@@ -1,0 +1,32 @@
+---
+permalink: help/task-configure-mail.html 
+sidebar: sidebar 
+keywords: configure, oncommand, workflow, automation, email, notifications, operations, fail 
+summary: 'Vous pouvez configurer OnCommand Workflow Automation (WFA) pour vous envoyer des notifications par e-mail concernant les opérations de flux de travail, par exemple le flux de travail démarré ou l"échec du flux de travail.' 
+---
+= Configurez les notifications par e-mail
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez configurer OnCommand Workflow Automation (WFA) pour vous envoyer des notifications par e-mail concernant les opérations de flux de travail, par exemple le flux de travail démarré ou l'échec du flux de travail.
+
+*Ce dont vous aurez besoin*
+
+Vous devez avoir configuré un hôte de messagerie dans votre environnement.
+
+.Étapes
+. Connectez-vous à WFA via un navigateur Web en tant qu'administrateur.
+. Cliquez sur *Paramètres* et sous *Configuration*, cliquez sur *Mail*.
+. Entrez les informations requises dans les champs.
+. *Facultatif:* Testez les paramètres de courrier en effectuant les étapes suivantes :
++
+.. Cliquez sur *Envoyer courriel test*.
+.. Dans la boîte de dialogue *Tester la connexion*, entrez l'adresse électronique à laquelle vous souhaitez envoyer l'e-mail.
+.. Cliquez sur *Test*.
+
+
+. Cliquez sur *Enregistrer*.
+
