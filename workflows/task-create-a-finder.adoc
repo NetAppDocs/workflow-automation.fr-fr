@@ -13,6 +13,7 @@ summary: 'Vous pouvez créer un outil de recherche WFA qui peut rechercher des r
 [role="lead"]
 Vous pouvez créer un outil de recherche WFA qui peut rechercher des ressources si il n'existe pas de outil de recherche WFA prédéfini adapté pour rechercher les ressources requises.
 
+.Ce dont vous avez besoin
 Vous devez avoir créé les filtres requis qui sont utilisés dans le Finder.
 
 .Étapes

@@ -13,6 +13,7 @@ summary: 'Vous pouvez personnaliser vos workflows en fonction de vos besoins. Pa
 [role="lead"]
 Vous pouvez personnaliser vos workflows en fonction de vos besoins. Par exemple, vous pouvez modifier le paramètre prédéfini _Create a Volume et a CIFS share_ workflow pour inclure la déduplication et la compression.
 
+.Description de la tâche
 La personnalisation et les illustrations de cette tâche sont des exemples. Vous pouvez modifier les flux de travail WFA en fonction de vos besoins.
 
 .Étapes

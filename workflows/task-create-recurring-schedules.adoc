@@ -13,6 +13,7 @@ summary: 'OnCommand Workflow Automation (WFA) propose deux options de planificat
 [role="lead"]
 OnCommand Workflow Automation (WFA) propose deux options de planification pour les flux de travail. Vous pouvez planifier l'exécution d'un workflow une fois à un moment donné ou créer des plannings récurrents et associer les planifications aux flux de travail afin que les flux de travail soient régulièrement exécutés.
 
+.Description de la tâche
 Un programme que vous avez créé peut être réutilisé et associé à plusieurs flux de travail.
 
 .Étapes

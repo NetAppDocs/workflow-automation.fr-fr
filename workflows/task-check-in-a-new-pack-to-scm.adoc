@@ -13,6 +13,7 @@ summary: 'Vous pouvez créer un nouveau pack de flux de travail avec OnCommand W
 [role="lead"]
 Vous pouvez créer un nouveau pack de flux de travail avec OnCommand Workflow Automation (WFA) et le vérifier dans gestion du contrôle source (SCM).
 
+.Ce dont vous avez besoin
 SCM doit être configuré et vous devez disposer des informations d'identification admin ou Architect.
 
 .Étapes

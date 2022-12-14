@@ -13,8 +13,10 @@ summary: 'Vous pouvez personnaliser un workflow Workflow Automation (WFA) préd�
 [role="lead"]
 Vous pouvez personnaliser un workflow Workflow Automation (WFA) prédéfini s'il n'existe pas de workflow adapté à vos besoins.
 
+.Ce dont vous avez besoin
 Vous devez avoir identifié les modifications requises pour le flux de travail prédéfini.
 
+.Description de la tâche
 Les questions et demandes de support relatives aux éléments suivants doivent être adressées à la communauté WFA :
 
 * Tout contenu téléchargé depuis la communauté WFA

@@ -13,6 +13,7 @@ summary: 'Vous pouvez restaurer un pack vers la version précédente dans la ges
 [role="lead"]
 Vous pouvez restaurer un pack vers la version précédente dans la gestion du contrôle source (SCM) et l'importer dans OnCommand Workflow Automation (WFA).
 
+.Ce dont vous avez besoin
 Le SCM doit être configuré et vous devez disposer des informations d'identification admin ou architecte.
 
 .Étapes

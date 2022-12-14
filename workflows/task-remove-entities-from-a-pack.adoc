@@ -13,8 +13,10 @@ summary: 'Vous pouvez supprimer un pack des entités dans OnCommand Workflow Aut
 [role="lead"]
 Vous pouvez supprimer un pack des entités dans OnCommand Workflow Automation (WFA) et archiver le pack mis à jour sur le serveur SCM (Source Control Management).
 
+.Ce dont vous avez besoin
 Le SCM doit être configuré et vous devez disposer des informations d'identification admin ou architecte.
 
+.Description de la tâche
 Vous pouvez supprimer un pack des entités suivantes :
 
 * Flux de travail

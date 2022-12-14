@@ -13,8 +13,10 @@ summary: 'Vous pouvez mettre à jour un pack dans le serveur de gestion du contr
 [role="lead"]
 Vous pouvez mettre à jour un pack dans le serveur de gestion du contrôle source (SCM), puis importer le pack mis à jour dans OnCommand Workflow Automation (WFA).
 
+.Ce dont vous avez besoin
 Le SCM doit être configuré et vous devez disposer des informations d'identification admin ou architecte
 
+.Description de la tâche
 Si vous apportez des modifications ou des mises à jour à un pack sur le serveur SCM, l'administrateur ou l'architecte doit résoudre les conflits, le cas échéant, à l'aide des outils diff fournis par SCM. WFA adapte le fichier diff XML pour n'afficher que les modifications pertinentes.
 
 Avant d'importer le pack, vous êtes averti des modifications apportées au contenu du pack WFA.

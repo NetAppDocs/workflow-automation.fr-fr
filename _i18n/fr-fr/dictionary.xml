@@ -1823,7 +1823,6 @@
   <block id="4cbfde3a19f5d005cf8261b0bb430b7f" category="paragraph">La partie de révision de la version du parent est incrémentée.</block>
   <block id="d7d1e94040d0db242bd0715e18936312" category="list-text">Pour une entité parent importée, s'il existe une entité enfant avec une modification majeure et une autre entité enfant avec une modification mineure, la modification majeure est appliquée à l'entité parent.</block>
   <block id="f9fa8cd679701244506f03bb27d3e6bd" category="paragraph">La partie mineure de la version du parent est incrémentée.</block>
-  <block id="68ffa545cfbbcadb199c9d2611a48489" category="section-title">Exemple de la manière dont les versions des entités enfants importées affectent la version du parent</block>
   <block id="23abdafa0b89fdf1d3f675e40785b94c" category="paragraph">Considérez le workflow suivant dans WFA: « Create Volume and export using NFS - Custom » 1.0.0.</block>
   <block id="a5e5a0545f86d8ee001df235dbe1a17d" category="paragraph">Les commandes existantes incluses dans le workflow sont les suivantes :</block>
   <block id="7e507227bcca2d438ffdf48b933be1c1" category="list-text">« Créer une politique d'exportation - personnalisée » 1.0.0</block>
@@ -3950,7 +3949,6 @@
   <block id="b384df20639478a4010aeb41dd568585" category="admonition">Vous devez vérifier que la valeur entourée par « »{} » est un nom d'entrée utilisateur valide.</block>
   <block id="92e33913b906226ebcef3c2bc5298a69" category="list-text">Il ne doit y avoir aucun segment de chemin vide, par exemple //, /{}/, etc.</block>
   <block id="4d3ae8e5502274cc4386b371d50806f0" category="list-text">La configuration de la méthode HTTP et la configuration du chemin URI personnalisé doivent être configurées ou non.</block>
-  <block id="a711863513c11f3a6d86294acc7be0ba" category="list-title">Ce dont vous avez besoin, 8217;ll</block>
   <block id="bbe48fb854ea022537208eeeff822f91" category="list-title">Description de la tâche</block>
   <block id="d3cbefe40773d0c198b4816d5fa2f014" category="paragraph">Exporter tout le contenu créé par l'utilisateur en tant que contenu unique<block ref="3749c24ca801aa5f87c60fe395b6eda0" prefix=" " category="inline-code"></block> fichier</block>
   <block id="7702c1a3ef2b0250a32af83e0d290fba" category="list-text">Dans la boîte de dialogue *Enregistrer sous*, indiquez l'emplacement où vous souhaitez enregistrer le<block ref="3749c24ca801aa5f87c60fe395b6eda0" prefix=" " category="inline-code"></block> Puis cliquez sur *Enregistrer*.</block>
@@ -4907,4 +4905,6 @@
   <block id="4c14da102137cfdc0846add51f76dd18" category="sidebar">Configuration de l'aide OnCommand Workflow Automation</block>
   <block id="492ccb4e44088a9740d152295f938bfb" category="sidebar">Configurer l'aide SNMP</block>
   <block id="9af2f59c7f6e2e7dc584af7ea83ef4d7" category="sidebar">Fenêtre Workflow &lt;nom du flux de travail&gt;</block>
+  <block id="639ca019cb526012d0366b7ba96c7dde" category="section-title">Exemple de la manière dont les versions des entités enfants importées affectent la version du parent</block>
+  <block id="d59db7846bd10b6d60d21543df9faa9e" category="paragraph-title">Ce dont vous avez besoin</block>
 </blocks>

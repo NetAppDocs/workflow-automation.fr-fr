@@ -13,6 +13,7 @@ summary: 'Vous pouvez ajouter une ou plusieurs entités à un pack de flux de tr
 [role="lead"]
 Vous pouvez ajouter une ou plusieurs entités à un pack de flux de travail dans OnCommand Workflow Automation (WFA) pour répondre à vos besoins d'intégration et d'automatisation du stockage.
 
+.Description de la tâche
 Vous pouvez supprimer un pack des entités suivantes :
 
 * Flux de travail

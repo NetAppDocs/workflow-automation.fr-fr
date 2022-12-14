@@ -13,6 +13,7 @@ summary: 'Vous pouvez créer un filtre WFA qui peut rechercher des ressources s"
 [role="lead"]
 Vous pouvez créer un filtre WFA qui peut rechercher des ressources s'il n'existe pas de filtre WFA prédéfini adapté à la tâche.
 
+.Ce dont vous avez besoin
 Vous devez connaître les syntaxes SQL appropriées pour créer le filtre.
 
 .Étapes

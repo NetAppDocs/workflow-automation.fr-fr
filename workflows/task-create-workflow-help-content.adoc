@@ -13,8 +13,10 @@ summary: 'Les administrateurs et architectes OnCommand Workflow Automation (WFA)
 [role="lead"]
 Les administrateurs et architectes OnCommand Workflow Automation (WFA), qui conçoivent des workflows, peuvent créer du contenu d'aide pour les workflows et l'inclure dans le workflow.
 
+.Ce dont vous avez besoin
 Vous devez savoir comment créer des pages Web à l'aide de HTML.
 
+.Description de la tâche
 L'aide doit fournir des informations sur le workflow et les entrées utilisateur pour le workflow à l'opérateur de stockage qui exécute le workflow.
 
 .Étapes

@@ -13,6 +13,7 @@ summary: 'Vous pouvez tester les scripts de réservation que vous avez écrits p
 [role="lead"]
 Vous pouvez tester les scripts de réservation que vous avez écrits pour les commandes OnCommand Workflow Automation (WFA) sur la base de données de jeux de données afin de vous assurer que les scripts fonctionnent correctement et qu'ils n'affectent pas les tables de base de données WFA.
 
+.Description de la tâche
 Le chemin d'installation par défaut de WFA est utilisé dans cette procédure. Si vous avez modifié l'emplacement par défaut lors de l'installation, vous devez utiliser le chemin d'installation WFA modifié.
 
 .Étapes

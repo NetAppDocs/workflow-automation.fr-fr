@@ -13,6 +13,7 @@ summary: 'Vous pouvez définir une requête de cache lorsque vous souhaitez mett
 [role="lead"]
 Vous pouvez définir une requête de cache lorsque vous souhaitez mettre en cache des informations sur un objet de dictionnaire dans la base de données WFA à partir d'un type de source de données. Vous pouvez créer une requête de cache et l'associer à une entrée de dictionnaire et à un ou plusieurs types de source de données, tels que Active IQ Unified Manager 6.1.
 
+.Ce dont vous avez besoin
 Vous devez connaître les syntaxes SQL appropriées pour créer une requête de cache.
 
 .Étapes

@@ -13,13 +13,14 @@ summary: 'Vous pouvez utiliser Workflow Automation (WFA) pour créer des flux de
 [role="lead"]
 Vous pouvez utiliser Workflow Automation (WFA) pour créer des flux de travail pour des tâches telles que le provisionnement, la migration et la désaffectation du stockage pour les bases de données ou les systèmes de fichiers. Vous devez créer des flux de travail lorsque les flux de travail WFA prédéfinis ne correspondent pas à vos exigences.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez avoir compris les concepts relatifs aux éléments de base WFA.
 * Vous devez avoir compris les fonctionnalités telles que la répétition de la ligne, les points d'approbation et la sélection des ressources requises pour votre flux de travail.
 * Vous devez avoir terminé la planification requise pour votre workflow, y compris la liste de contrôle des exigences du workflow.
 * Vous devez avoir créé le contenu de l'aide qui fournit des informations sur le flux de travail aux opérateurs de stockage.
 
 
+.Description de la tâche
 La construction de chaque workflow peut varier en fonction de l'objectif et des exigences du workflow. Cette tâche ne fournit pas d'instructions pour un flux de travail spécifique, mais fournit des instructions générales pour créer un flux de travail.
 
 .Étapes

@@ -13,8 +13,10 @@ summary: 'Vous pouvez créer une fonction WFA qui peut être utilisée comme uti
 [role="lead"]
 Vous pouvez créer une fonction WFA qui peut être utilisée comme utilitaire, en l'absence de fonction WFA prédéfinie qui ne convient pas à votre tâche.
 
+.Ce dont vous avez besoin
 Vous devez connaître les syntaxes MVFLEX expression Language (MVEL) pour créer une fonction.
 
+.Description de la tâche
 Vous devez inclure les éléments suivants pour les définitions de fonction :
 
 * Nom : nom de la fonction

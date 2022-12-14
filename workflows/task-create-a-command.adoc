@@ -13,6 +13,7 @@ summary: 'Vous pouvez créer une commande WFA pour mener à bien une tâche spé
 [role="lead"]
 Vous pouvez créer une commande WFA pour mener à bien une tâche spécifique dans votre workflow, si aucune commande WFA prédéfinie n'est adaptée à cette tâche.
 
+.Ce dont vous avez besoin
 Vous devez savoir comment écrire le code requis pour la commande à l'aide de PowerShell ou Perl.
 
 .Étapes

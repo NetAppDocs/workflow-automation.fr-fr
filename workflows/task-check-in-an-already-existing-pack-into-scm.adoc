@@ -13,6 +13,7 @@ summary: 'Vous pouvez archiver les packs existants sur le serveur SCM (Source Co
 [role="lead"]
 Vous pouvez archiver les packs existants sur le serveur SCM (Source Control Management) à partir de OnCommand Workflow Automation (WFA).
 
+.Ce dont vous avez besoin
 Le SCM doit être configuré et vous devez disposer des informations d'identification admin ou architecte.
 
 .Étapes

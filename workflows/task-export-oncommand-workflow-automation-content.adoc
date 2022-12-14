@@ -13,7 +13,7 @@ summary: 'Vous pouvez enregistrer le contenu OnCommand Workflow Automation (WFA)
 [role="lead"]
 Vous pouvez enregistrer le contenu OnCommand Workflow Automation (WFA) créé par les utilisateurs sous forme de `.dar` classez et partagez le contenu avec d'autres utilisateurs. Le contenu WFA peut inclure tout le contenu créé par l'utilisateur ou des éléments spécifiques, tels que des workflows, des finders, des commandes et des termes au dictionnaire.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Vous devez avoir accès au contenu WFA que vous souhaitez exporter.
 * Si le contenu à exporter contient des références à un contenu certifié, les packs de contenu certifiés correspondants doivent être disponibles sur le système lors de l'importation du contenu.
 +
