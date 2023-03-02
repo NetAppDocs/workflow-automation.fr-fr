@@ -195,12 +195,7 @@
   <block id="6da6e44dc9987246944fdf9de3d4e794" category="paragraph">Syslog</block>
   <block id="2975351d18f6b6cc0f00ab465dbb31ef" category="paragraph">Envoi de journaux à un serveur syslog</block>
   <block id="886093243084825f398ae29b24861ceb" category="paragraph">Le tableau suivant répertorie les ports par défaut qui doivent être ouverts sur le serveur Unified Manager :</block>
-  <block id="06c284d3f757b15c02f47f3ff06dc275" category="paragraph">2638</block>
-  <block id="4e6ac8e997ca8f5896cbc28cad3ede24" category="paragraph">Sybase</block>
-  <block id="97d22c4200c50a78603b99f64abefbd5" category="paragraph">Mise en cache de données Active IQ Unified Manager antérieure à 6.0</block>
   <block id="7fd34732c43ed1c77aa28c7cebea1acf" category="paragraph">Mise en cache de données depuis Active IQ Unified Manager 6.0 et versions ultérieures</block>
-  <block id="c2431245e313e6c2fb21537cf8c60e15" category="paragraph">8088 février 8488</block>
-  <block id="7b19e159d97af652b6091979fc7173f5" category="paragraph">Mise en cache des données à partir de Performance Advisor, qui fait partie de Active IQ Unified Manager avant la version 6.0</block>
   <block id="42ad4e935313e6d8619faa0c109c4b92" category="paragraph">Le tableau suivant répertorie le port par défaut qui doit être ouvert sur le vCenter VMware :</block>
   <block id="13f3cf8c531952d72e5847c4183e6910" category="paragraph">443</block>
   <block id="0e8433f9a404f1f3ba601c14b026d321" category="paragraph">HTTPS</block>
@@ -692,7 +687,6 @@
   <block id="d69780fad6759e5f649c22c649327d31" category="paragraph">Le fichier peut être modifié pour prendre en charge des chiffrements supplémentaires comme suit :</block>
   <block id="24856dbc0a3b9e55bf33f94ba0bc7792" category="summary">Vous devez établir une connexion avec une source de données dans OnCommand Workflow Automation (WFA) pour pouvoir acquérir des données à partir de cette source.</block>
   <block id="fa9021218f4bfd84ad59e7452d519f2d" category="doc">Configurer une source de données</block>
-  <block id="63280af4d8cba0858ac1dff86ceeed0c" category="list-text">Pour les versions Active IQ Unified Manager antérieures à 6.0, vous devez avoir exécuté la dernière version de l'outil ocsetup sur le serveur Unified Manager afin d'activer et de configurer l'accès en lecture seule à distance de la base de données.</block>
   <block id="f03b31ab5e7ee797f31fba5695a8e7a4" category="list-text">Pour Active IQ Unified Manager6.0 ou version ultérieure, vous devez avoir créé un compte utilisateur de base de données sur le serveur Unified Manager.</block>
   <block id="731d8fd16ef341f5ba2ee8e6445885f1" category="paragraph">Consultez l'aide en ligne de _OnCommand Unified Manager_ pour plus de détails.</block>
   <block id="1aeeceb7211593642d7ca1f8a79dde77" category="list-text">Le port TCP des connexions entrantes sur le serveur Unified Manager doit être ouvert.</block>
@@ -701,8 +695,6 @@
   <block id="7d2578b5ef3fcde7596cf509d8c62bd1" category="cell">Numéro de port TCP</block>
   <block id="b95aa9b32e368a8ea35037d171bb7505" category="cell">Version du serveur Unified Manager</block>
   <block id="b5a7adde1af5c87d7fd797b6245c2a39" category="cell">Description</block>
-  <block id="fbb954d1cb26c988d8f75dff9ba7ee7d" category="paragraph">5.x</block>
-  <block id="6ef6d5474ca30598a3bfe534f33c9c81" category="paragraph">Serveur de base de données Sybase SQL Anywhere</block>
   <block id="4b482edf238f3e07a3e0c730e500a608" category="paragraph">6.x</block>
   <block id="df55d916b5a005baf61e609993b7a1d3" category="paragraph">Serveur de base de données MySQL</block>
   <block id="23628462c384be0f669955210d825d30" category="list-text">Pour Performance Advisor, vous devez avoir créé un compte utilisateur Active IQ Unified Manager ayant le rôle minimal de GlobalRead.</block>
@@ -723,12 +715,8 @@
   <block id="d6904816f2de30b1c0a34644d52e49b3" category="list-text">Dans la boîte de dialogue Nouvelle source de données, sélectionnez le type de source de données requis et entrez un nom pour la source de données et le nom d'hôte.</block>
   <block id="4bf06b7c0419db9c339b3ad9943b84d5" category="list-text">Choisissez une action appropriée :</block>
   <block id="0ba2b3e0a887666765eb2d690768c576" category="cell">Pour...</block>
-  <block id="9b81833dee31a4fba0f609d1219a5f57" category="paragraph">Versions Active IQ Unified Manager antérieures à 6.0</block>
-  <block id="95f0b5290415893233cc34de5758d586" category="paragraph">Entrez le nom d'utilisateur et le mot de passe que vous avez utilisés pour remplacer les informations d'identification par défaut lors de l'exécution de l'outil ocsetup.</block>
   <block id="667785fae0085225c5366c4a23da8190" category="paragraph">Active IQ Unified Manager 6.3 et versions ultérieures</block>
   <block id="f4e2003dab44b20be7ebbdc4d0aca893" category="paragraph">Entrez les informations d'identification du compte utilisateur de la base de données que vous avez créé sur le serveur Unified Manager. Voir l'aide en ligne de _OnCommand Unified Manager_ pour plus de détails sur la création d'un compte utilisateur de base de données.</block>
-  <block id="8e98ef93e911e1cfc94baedd532e1d80" category="paragraph">Performance Advisor pour (versions Active IQ Unified Manager antérieures à 6.0)</block>
-  <block id="5b7c5e612c4bc4c6daf1f284fc0eaf76" category="paragraph">Entrez les informations d'identification d'un utilisateur Active IQ Unified Manager ayant le rôle minimum de GlobalRead.</block>
   <block id="c4d0dc56b9499d93190e5d1eeb6a770a" category="admonition">Vous ne devez pas fournir les informations d'identification d'un compte utilisateur de base de données Active IQ Unified Manager créé à l'aide de l'interface de ligne de commande ou de l'outil ocsetup.</block>
   <block id="f86acc9f9950d8a7a9f9ce8b00fbcc2d" category="list-text">Dans le tableau sources de données, sélectionnez la source de données, puis cliquez sur <block ref="c2776c8a16f4f4e86dfb37f8f9994a4a" category="inline-image-macro-rx" type="image"></block> dans la barre d'outils.</block>
   <block id="94e9cfa0dcd7b46d1b7bed8dce6e9058" category="list-text">Vérifier l'état du processus d'acquisition de données.</block>
@@ -1479,13 +1467,11 @@
   <block id="3b57547caa3754998fa617bd92514f25" category="list-text">*Nom d'utilisateur*</block>
   <block id="52b05e16a9a17b06bf497ba0b43f97f1" category="paragraph">Affiche le nom d'utilisateur associé, le cas échéant, pour le type de source de données sélectionné.</block>
   <block id="fad77f4cfa7f6147e14a8144a2223548" category="paragraph">Vous devez spécifier le nom d'utilisateur approprié pour que cette source de données remplace le nom d'utilisateur par défaut :</block>
-  <block id="01824cdc73f1bb9f3a0db8ad9f278350" category="list-text">Pour les versions de Unified Manager antérieures à 6.0, vous devez saisir le nom d'utilisateur que vous avez utilisé pour remplacer les informations d'identification par défaut lors de l'exécution de ocsetup.</block>
   <block id="1be837a80c4ac40aee1c47275a875d4e" category="list-text">Pour Unified Manager 6.0 et les versions ultérieures, vous devez saisir le nom d'utilisateur du compte d'utilisateur de la base de données que vous avez créé sur le serveur Unified Manager.</block>
   <block id="c8b27eb46c2a5c0fb13ef146da5d7275" category="list-text">Pour Performance Advisor, vous devez saisir le nom d'utilisateur d'un utilisateur Active IQ Unified Manager ayant le rôle minimum GlobalRead.</block>
   <block id="519a06883e7db4dbb9a21eeecb16986a" category="list-text">*Mot de passe*</block>
   <block id="c19285b1dc2d9b23f090a9dcd3410350" category="paragraph">Permet de spécifier un mot de passe pour le type de source de données sélectionné.</block>
   <block id="762c1006bd5346ccb3d6a361bc396180" category="paragraph">Vous devez spécifier un mot de passe pour remplacer le mot de passe par défaut du nom d'utilisateur de cette source de données :</block>
-  <block id="d4a1a1ffb5e2a4b4635dad41af54ad29" category="list-text">Pour les versions de Unified Manager antérieures à 6.0, vous devez saisir le mot de passe que vous avez utilisé pour remplacer les informations d'identification par défaut lors de l'exécution de ocsetup.</block>
   <block id="072827f4a25b9a1ce3d7e6ce73b02d67" category="list-text">Pour Unified Manager 6.0 et versions ultérieures, vous devez saisir le mot de passe du compte utilisateur de la base de données que vous avez créé sur le serveur.</block>
   <block id="ecfba22e42f64033dc9376f578c73ffb" category="list-text">Pour Performance Advisor, vous devez saisir le mot de passe d'un utilisateur Unified Manager ayant le rôle minimal de GlobalRead.</block>
   <block id="7a8d3dc7f0e719542e9e706dbca4f3ec" category="list-text">*Base de données*</block>
@@ -3215,7 +3201,6 @@
   <block id="94d9c7f972dbda0ee147341b3687cfe3" category="paragraph">Vous permet d'entrer une requête SQL pour vérifier l'utilisation des ressources réservées par le script de réservation. Il vérifie également si le cache WFA est mis à jour et supprime la réservation après l'acquisition d'un cache.</block>
   <block id="7c0452a44785f9c17bb51b522806f371" category="summary">La fenêtre cache Queries vous permet de gérer les requêtes de cache pour les entrées du dictionnaire WFA et leurs types de source de données associés.</block>
   <block id="fe934c5c006c32e2f5a1eddc16c8312d" category="doc">Fenêtre cache Queries</block>
-  <block id="3d6f64a6ca1bcff688912eefa7f9bbed" category="paragraph">Une requête de cache est une requête SQL qui récupère les données requises à partir de la table spécifiée dans la requête. Une requête de cache est associée à une entrée de dictionnaire et à un ou plusieurs types de source de données--par exemple, une requête de cache pour *Volume (stockage)* est associée à la fois aux types de source de données Active IQ Unified Manager 5.1 et 5.2. Vous pouvez définir une requête de cache lorsque vous souhaitez récupérer certaines informations, par exemple un volume issu d'une table d'un Active IQ Unified Manager 6.0 source de données, dans le cache de WFA.</block>
   <block id="182669ed4820368e35e16bb8ff900501" category="list-text">Tableau requêtes de cache</block>
   <block id="0f46985dd4907e3a7315a59939693c1a" category="section-title">Liste des requêtes de cache</block>
   <block id="dedb53beee8d0629f134068ea225f74b" category="paragraph">Le tableau requêtes de cache répertorie les entrées de dictionnaire et leurs types de sources de données associés. Vous pouvez personnaliser l'affichage du tableau à l'aide des fonctions de filtrage et de tri disponibles pour chaque colonne, ainsi qu'en réorganisant l'ordre des colonnes.</block>
@@ -3671,9 +3656,7 @@
   <block id="03f7b3e56f9a4a1d0486e4dbd2218749" category="paragraph">Vous pouvez modifier le port par défaut et spécifier un port différent pour la source de données.</block>
   <block id="299023258a447a9925099e3b666f411e" category="paragraph">Affiche le schéma associé au type de source de données sélectionné--par exemple _cm_Storage_ pour Active IQ Unified Manager - 6.0 (MYSQL).</block>
   <block id="92a3898c45164517cd39085ac8ca6f75" category="paragraph">Cette propriété ne peut pas être modifiée.</block>
-  <block id="94cd2dc12c886407b83df24073c3fbaf" category="list-text">Pour les versions Active IQ Unified Manager antérieures à 6.0, vous devez entrer le nom d'utilisateur que vous avez utilisé pour remplacer les informations d'identification par défaut lors de l'exécution de ocsetup.</block>
   <block id="6994d1382a97ce24d633fe0364fe4baa" category="list-text">Pour Active IQ Unified Manager 6.0 et versions ultérieures, vous devez entrer le nom d'utilisateur du compte d'utilisateur de la base de données que vous avez créé sur le serveur Active IQ Unified Manager.</block>
-  <block id="9ca1092f012d395fbc5dac7a2b872f58" category="list-text">Pour les versions Active IQ Unified Manager antérieures à 6.0, vous devez saisir le mot de passe que vous avez utilisé pour remplacer les informations d'identification par défaut lors de l'exécution de ocsetup.</block>
   <block id="1993c51f1b9689c14f75481a9d7f5f44" category="list-text">Pour Active IQ Unified Manager 6.0 et versions ultérieures, vous devez saisir le mot de passe du compte utilisateur de la base de données que vous avez créé sur le serveur Active IQ Unified Manager.</block>
   <block id="ff2d9c6d918b6522d94d56fa170d4144" category="list-text">Pour Performance Advisor, vous devez saisir le mot de passe d'un utilisateur Active IQ Unified Manager ayant le rôle minimal de GlobalRead.</block>
   <block id="fb5864e754f2712674ea29bdc8f4b920" category="list-text">Type de source de données basé sur des scripts : 1440 (performance et vc)</block>
@@ -4492,7 +4475,6 @@
   <block id="7ae089fbf80f6b18bf1973d9ae3af6c8" category="cell">Si vous avez sélectionné...</block>
   <block id="9778840a0100cb30c982876741b0b5a2" category="paragraph">SQL</block>
   <block id="88381311eb47da741a4d0f73ef520fb1" category="paragraph">Dans la liste *Driver type*, sélectionnez l'un des pilotes suivants qui convient à la source de données :</block>
-  <block id="5e20823f83b63582726b65a7ea629ed8" category="list-text">*Sybase jConnect3*</block>
   <block id="9985bfec1629ffdbc2501ffe2c6009aa" category="list-text">*Connecteur MySQL/J*</block>
   <block id="21cd4f6fe21a7a1a50297203f1801051" category="list-text">*Pilote JDBC serveur MySQL 3.0*</block>
   <block id="65b0ace1e497208f5d6fed9f4cdd1392" category="list-text">*Pilote JDBC Oracle 11.2.0.3*</block>
@@ -4907,4 +4889,6 @@
   <block id="9af2f59c7f6e2e7dc584af7ea83ef4d7" category="sidebar">Fenêtre Workflow &lt;nom du flux de travail&gt;</block>
   <block id="639ca019cb526012d0366b7ba96c7dde" category="section-title">Exemple de la manière dont les versions des entités enfants importées affectent la version du parent</block>
   <block id="d59db7846bd10b6d60d21543df9faa9e" category="paragraph-title">Ce dont vous avez besoin</block>
+  <block id="95b047c12d2722d91f1fa5029054c1c1" category="list-text">Pour Active IQ Unified Manager 6.0 et versions ultérieures, vous devez avoir créé un compte utilisateur de base de données sur le serveur Unified Manager.</block>
+  <block id="2a80a7250b34ee4443310c696c4d77fa" category="paragraph">Une requête de cache est une requête SQL qui récupère les données requises à partir de la table spécifiée dans la requête. Une requête de cache est associée à une entrée de dictionnaire et à un ou plusieurs types de sources de données. Vous pouvez définir une requête de cache lorsque vous souhaitez récupérer certaines informations, telles que le volume d'un tableau d'une source de données OnCommand Unified Manager 6.0 dans le cache WFA.</block>
 </blocks>

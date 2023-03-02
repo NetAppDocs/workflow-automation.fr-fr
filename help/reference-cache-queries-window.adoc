@@ -13,7 +13,7 @@ summary: La fenêtre cache Queries vous permet de gérer les requêtes de cache 
 [role="lead"]
 La fenêtre cache Queries vous permet de gérer les requêtes de cache pour les entrées du dictionnaire WFA et leurs types de source de données associés.
 
-Une requête de cache est une requête SQL qui récupère les données requises à partir de la table spécifiée dans la requête. Une requête de cache est associée à une entrée de dictionnaire et à un ou plusieurs types de source de données--par exemple, une requête de cache pour *Volume (stockage)* est associée à la fois aux types de source de données Active IQ Unified Manager 5.1 et 5.2. Vous pouvez définir une requête de cache lorsque vous souhaitez récupérer certaines informations, par exemple un volume issu d'une table d'un Active IQ Unified Manager 6.0 source de données, dans le cache de WFA.
+Une requête de cache est une requête SQL qui récupère les données requises à partir de la table spécifiée dans la requête. Une requête de cache est associée à une entrée de dictionnaire et à un ou plusieurs types de sources de données. Vous pouvez définir une requête de cache lorsque vous souhaitez récupérer certaines informations, telles que le volume d'un tableau d'une source de données OnCommand Unified Manager 6.0 dans le cache WFA.
 
 * Tableau requêtes de cache
 * Barre d'outils

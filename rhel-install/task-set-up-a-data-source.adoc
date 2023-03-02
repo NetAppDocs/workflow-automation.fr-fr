@@ -13,7 +13,6 @@ summary: 'Vous devez établir une connexion avec une source de données dans OnC
 [role="lead"]
 Vous devez établir une connexion avec une source de données dans OnCommand Workflow Automation (WFA) pour pouvoir acquérir des données à partir de cette source.
 
-* Pour les versions Active IQ Unified Manager antérieures à 6.0, vous devez avoir exécuté la dernière version de l'outil ocsetup sur le serveur Unified Manager afin d'activer et de configurer l'accès en lecture seule à distance de la base de données.
 * Pour Active IQ Unified Manager6.0 ou version ultérieure, vous devez avoir créé un compte utilisateur de base de données sur le serveur Unified Manager.
 +
 Consultez l'aide en ligne de _OnCommand Unified Manager_ pour plus de détails.
@@ -29,15 +28,6 @@ Les numéros de port TCP par défaut sont les suivants :
 [cols="3*"]
 |===
 | Numéro de port TCP | Version du serveur Unified Manager | Description 
-
-
- a| 
-2638
- a| 
-5.x
- a| 
-Serveur de base de données Sybase SQL Anywhere
-
 
 
  a| 
@@ -105,23 +95,9 @@ En fonction du type de source de données sélectionné, les champs port, nom d'
 
 
  a| 
-Versions Active IQ Unified Manager antérieures à 6.0
- a| 
-Entrez le nom d'utilisateur et le mot de passe que vous avez utilisés pour remplacer les informations d'identification par défaut lors de l'exécution de l'outil ocsetup.
-
-
-
- a| 
 Active IQ Unified Manager 6.3 et versions ultérieures
  a| 
 Entrez les informations d'identification du compte utilisateur de la base de données que vous avez créé sur le serveur Unified Manager. Voir l'aide en ligne de _OnCommand Unified Manager_ pour plus de détails sur la création d'un compte utilisateur de base de données.
-
-
-
- a| 
-Performance Advisor pour (versions Active IQ Unified Manager antérieures à 6.0)
- a| 
-Entrez les informations d'identification d'un utilisateur Active IQ Unified Manager ayant le rôle minimum de GlobalRead.
 
 
 NOTE: Vous ne devez pas fournir les informations d'identification d'un compte utilisateur de base de données Active IQ Unified Manager créé à l'aide de l'interface de ligne de commande ou de l'outil ocsetup.

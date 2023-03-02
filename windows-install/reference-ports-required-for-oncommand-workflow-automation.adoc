@@ -117,17 +117,6 @@ Le tableau suivant répertorie les ports par défaut qui doivent être ouverts s
 
 
  a| 
-2638
- a| 
-Sybase
- a| 
-Entrant
- a| 
-Mise en cache de données Active IQ Unified Manager antérieure à 6.0
-
-
-
- a| 
 3306
  a| 
 MySQL
@@ -135,17 +124,6 @@ MySQL
 Entrant
  a| 
 Mise en cache de données depuis Active IQ Unified Manager 6.0 et versions ultérieures
-
-
-
- a| 
-8088 février 8488
- a| 
-HTTP, HTTPS
- a| 
-Entrant
- a| 
-Mise en cache des données à partir de Performance Advisor, qui fait partie de Active IQ Unified Manager avant la version 6.0
 
 |===
 Le tableau suivant répertorie le port par défaut qui doit être ouvert sur le vCenter VMware :

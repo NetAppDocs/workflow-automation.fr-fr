@@ -52,7 +52,6 @@ Affiche le nom d'utilisateur associé, le cas échéant, pour le type de source 
 Vous devez spécifier le nom d'utilisateur approprié pour que cette source de données remplace le nom d'utilisateur par défaut :
 
 +
-** Pour les versions de Unified Manager antérieures à 6.0, vous devez saisir le nom d'utilisateur que vous avez utilisé pour remplacer les informations d'identification par défaut lors de l'exécution de ocsetup.
 ** Pour Unified Manager 6.0 et les versions ultérieures, vous devez saisir le nom d'utilisateur du compte d'utilisateur de la base de données que vous avez créé sur le serveur Unified Manager.
 ** Pour Performance Advisor, vous devez saisir le nom d'utilisateur d'un utilisateur Active IQ Unified Manager ayant le rôle minimum GlobalRead.
 
@@ -65,7 +64,6 @@ Permet de spécifier un mot de passe pour le type de source de données sélecti
 Vous devez spécifier un mot de passe pour remplacer le mot de passe par défaut du nom d'utilisateur de cette source de données :
 
 +
-** Pour les versions de Unified Manager antérieures à 6.0, vous devez saisir le mot de passe que vous avez utilisé pour remplacer les informations d'identification par défaut lors de l'exécution de ocsetup.
 ** Pour Unified Manager 6.0 et versions ultérieures, vous devez saisir le mot de passe du compte utilisateur de la base de données que vous avez créé sur le serveur.
 ** Pour Performance Advisor, vous devez saisir le mot de passe d'un utilisateur Unified Manager ayant le rôle minimal de GlobalRead.
 

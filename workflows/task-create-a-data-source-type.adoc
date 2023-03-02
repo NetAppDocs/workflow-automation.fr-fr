@@ -41,7 +41,6 @@ SQL
  a| 
 Dans la liste *Driver type*, sélectionnez l'un des pilotes suivants qui convient à la source de données :
 
-** *Sybase jConnect3*
 ** *Connecteur MySQL/J*
 ** *Pilote JDBC serveur MySQL 3.0*
 ** *Pilote JDBC Oracle 11.2.0.3*
