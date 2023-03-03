@@ -33,6 +33,7 @@ Les numéros de port TCP par défaut sont les suivants :
 
 
  a| 
+3306
  a| 
 6.x
  a| 
