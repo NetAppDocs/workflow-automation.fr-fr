@@ -1,6 +1,6 @@
 ---
 settings:
-  name: OnCommand Workflow Automation 5.1
+  name: OnCommand Workflow Automation
   internal:
     pdf_enabled: true
   prod:
@@ -9,7 +9,7 @@ settings:
   langs: fr-fr,us-en,de-de,es-es,it-it,pt-br,ja-jp,ko-kr,zh-cn,zh-tw
 sidebar:
   entries:
-  - title: Documentation OnCommand Workflow Automation 5.1
+  - title: Documents OnCommand Workflow Automation
     url: "/index.html"
   - title: Notes de mise à jour
     url: "/reference-releasenotes.html"

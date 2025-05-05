@@ -4829,7 +4829,6 @@
   <block id="67e906e41e25f2160dff7ec37a4025c8" category="paragraph"><block ref="67e906e41e25f2160dff7ec37a4025c8" category="inline-link-macro-rx"></block></block>
   <block id="be1eea5d445cbbf31758e65db5dba3ec" category="inline-link-macro">Notes de version de OnCommand Workflow Automation 5.1</block>
   <block id="2c688079bed052f6b40f9d8df8fcddc1" category="paragraph"><block ref="2c688079bed052f6b40f9d8df8fcddc1" category="inline-link-macro-rx"></block></block>
-  <block id="95026804993f8a9226db7022cae41c9f" category="sidebar">Documentation OnCommand Workflow Automation 5.1</block>
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">Notes de mise à jour</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">Commencez</block>
   <block id="5dd03e8d039863e563e049be198c3fd3" category="sidebar">Notes de version</block>
@@ -4891,4 +4890,5 @@
   <block id="d59db7846bd10b6d60d21543df9faa9e" category="paragraph-title">Ce dont vous avez besoin</block>
   <block id="95b047c12d2722d91f1fa5029054c1c1" category="list-text">Pour Active IQ Unified Manager 6.0 et versions ultérieures, vous devez avoir créé un compte utilisateur de base de données sur le serveur Unified Manager.</block>
   <block id="2a80a7250b34ee4443310c696c4d77fa" category="paragraph">Une requête de cache est une requête SQL qui récupère les données requises à partir de la table spécifiée dans la requête. Une requête de cache est associée à une entrée de dictionnaire et à un ou plusieurs types de sources de données. Vous pouvez définir une requête de cache lorsque vous souhaitez récupérer certaines informations, telles que le volume d'un tableau d'une source de données OnCommand Unified Manager 6.0 dans le cache WFA.</block>
+  <block id="0d47320e619045e2de820e0c0e5fbcf0" category="sidebar">Documents OnCommand Workflow Automation</block>
 </blocks>
