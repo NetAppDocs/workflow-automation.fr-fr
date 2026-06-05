@@ -2799,10 +2799,6 @@
   <block id="8666bc51a1cc870e3888000988b65ced" category="list-text">_Menu:Workflow_[Workflow &gt; répéter ligne &gt; variables &gt; variables pour _valeur_initiale_ et _expression_]</block>
   <block id="ff7e63fadbe3949bbe931dd3956edfd1" category="list-text">_Menu:Workflow_[Workflow &gt; répéter ligne &gt; répétitions &gt; pour chaque ressource d'un groupe &gt; critères de recherche de ressources &gt; Paramètres à filtrer]</block>
   <block id="f5eda7302a1f97f3b71b6295177f729d" category="list-text">_Menu:Workflow_[Workflow &gt; Ajouter une condition &gt; si l'expression suivante est VRAIE]</block>
-  <block id="7f708cbf579cfb33720a3dee4b01d12a" category="summary">Le site Storage Automation Store comprend des packs de flux de travail de stockage automatisés certifiés NetApp conçus pour être utilisés avec OnCommand Workflow Automation (WFA). Vous pouvez télécharger les packs, puis les importer dans WFA pour les exécuter.</block>
-  <block id="8d4a01616f98e4ae340eaff4fe4e8ee5" category="doc">La fenêtre du Storage Automation Store</block>
-  <block id="0479c8cefca250b39d519545313f1b42" category="inline-link">Le Storage Automation Store</block>
-  <block id="0a972f757d015f7e2a7d235f796edff5" category="paragraph">Les workflows automatisés sont disponibles dans<block ref="f6a0eb706f83f492c2c35b6ee06cdf08" category="inline-link-rx"></block></block>
   <block id="16d6d0b7f66189d41d50a10566b188bb" category="summary">La fenêtre programmes vous permet de créer, de modifier et de supprimer la planification d'un flux de travail. Vous pouvez planifier l'exécution d'un flux de travail à une date et une heure particulières. Vous pouvez accéder à cette fenêtre en sélectionnant exécution &gt; plannings.</block>
   <block id="91431d3d1e615183059911d8c2c2cf4d" category="doc">La fenêtre plannings</block>
   <block id="cf2df765c6c6ad8ef929fe142e2bca57" category="paragraph">La fenêtre programmes vous permet de créer, de modifier et de supprimer la planification d'un flux de travail. Vous pouvez planifier l'exécution d'un flux de travail à une date et une heure particulières. Vous pouvez accéder à cette fenêtre en sélectionnant *exécution* &gt; *programmes*.</block>
@@ -3794,8 +3790,6 @@
   <block id="344fd3d08b8a753bb79336ff586a35bf" category="paragraph"><block ref="344fd3d08b8a753bb79336ff586a35bf" category="inline-link-rx"></block></block>
   <block id="66c9c3348ac5b112ffe4b7b49623cc8d" category="paragraph">_.NET lignes directrices de dénomination des cadres_</block>
   <block id="91b02b940dd07cc66de00d6a764f898d" category="paragraph"><block ref="91b02b940dd07cc66de00d6a764f898d" category="inline-link-rx"></block></block>
-  <block id="0a5e35cd941b62c63e913a9f92c3687d" category="paragraph">Style de code PowerShell</block>
-  <block id="5d338dfe4d3ddf51bc90dec3ee99b477" category="paragraph"><block ref="5d338dfe4d3ddf51bc90dec3ee99b477" category="inline-link-rx"></block></block>
   <block id="8afa48e351f3a31c1fa8007756fd80a3" category="paragraph">Enfin, PowerShell Try-and-and-Catch</block>
   <block id="8d1c69b97d5a89835f2b05eabd27ceb4" category="paragraph"><block ref="8d1c69b97d5a89835f2b05eabd27ceb4" category="inline-link-rx"></block></block>
   <block id="8a6937456d987ab411de106bbfe44717" category="paragraph">Variables automatiques PowerShell</block>
@@ -3815,7 +3809,6 @@
   <block id="0114ad06d728f1834e36fe1a39574ef4" category="section-title">Perl</block>
   <block id="c897da42b0f175bc57bbeacb4bea82b1" category="paragraph">WFA prend en charge les commandes Perl pour les opérations des workflows. Lorsque vous installez WFA, les modules Perl et Perl requis sont installés sur le serveur WFA.</block>
   <block id="b61229c78dccf475da69f2cac6d600c0" category="inline-link">Guide de l'utilisateur ActivePerl</block>
-  <block id="2b145b62478784ba1e7fd97785e8a3e8" category="paragraph"><block ref="2b145b62478784ba1e7fd97785e8a3e8" category="inline-link-rx"></block></block>
   <block id="efb2bc95007f6681acbc99549e71a915" category="paragraph">Vous pouvez également accéder au _ActivePerl User Guide_ à partir de l'emplacement suivant :<block ref="b2f072ae5ac331bfc81e54a571e3b262" prefix=" " category="inline-code"></block></block>
   <block id="a840cd16314687a519be4b506df20df5" category="paragraph"><block ref="dad45893e852e8dac5ac00e8a6bc97a2" prefix="" category="inline-code"></block> Correspond au répertoire d'installation de WFA, et<block ref="7dcdd7b62fbc5921c5b2bb52fe0d0571" prefix=" " category="inline-code"></block>` WFA utilise des scripts Perl pour les opérations de workflow. Le tableau suivant contient des références à du matériel d'apprentissage pour Perl :</block>
   <block id="6c6471c226957740be8fc6faa4c49add" category="paragraph">Perl moderne: 2014</block>
@@ -4895,4 +4888,7 @@
   <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">Source ouverte</block>
+  <block id="941fd7ae4cd08576b1633f32f28cc5a7" category="paragraph">Apprentissage PowerShell</block>
+  <block id="6e53aee4223f5f2fcc8de117d4eb8ee1" category="paragraph"><block ref="6e53aee4223f5f2fcc8de117d4eb8ee1" category="inline-link-rx"></block></block>
+  <block id="02d4497b4f8a4d93145ea6baefd3c796" category="paragraph"><block ref="02d4497b4f8a4d93145ea6baefd3c796" category="inline-link-rx"></block></block>
 </blocks>

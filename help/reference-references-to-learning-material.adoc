@@ -45,9 +45,9 @@ http://msdn.microsoft.com/en-us/library/xzf533w0%28v=vs.71%29.aspx[]
 
 
  a| 
-Style de code PowerShell
+Apprentissage PowerShell
  a| 
-http://get-powershell.com/post/2011/04/13/Extra-Points-for-Style-when-writing-PowerShell-Code.aspx[]
+https://learn.microsoft.com/en-us/powershell/scripting/learn/ps101/00-introduction?view=powershell-7.6[]
 
 
 
@@ -111,7 +111,7 @@ https://community.netapp.com/t5/forums/filteredbylabelpage/board-id/microsoft-cl
 
 WFA prend en charge les commandes Perl pour les opérations des workflows. Lorsque vous installez WFA, les modules Perl et Perl requis sont installés sur le serveur WFA.
 
-https://docs.activestate.com/activeperl/5.26/perl/["Guide de l'utilisateur ActivePerl"^]
+https://sanweb.lib.msu.edu/DMC/Euglena/Euglena%20Literature%20Metadata/Perl/html/index.html?page=readme.html["Guide de l'utilisateur ActivePerl"^]
 
 Vous pouvez également accéder au _ActivePerl User Guide_ à partir de l'emplacement suivant : `WFA_install_location\WFA\Perl64\html\index.html.`
 
